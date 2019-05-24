@@ -1,0 +1,3 @@
+[submodule "devon4ng.wiki"]
+	path = devon4ng.wiki
+	url = https://github.com/devonfw/devon4ng.wiki.git

@@ -1,3 +1,6 @@
 [submodule "devon4ng.wiki"]
 	path = devon4ng.wiki
 	url = https://github.com/devonfw/devon4ng.wiki.git
+[submodule "my-thai-star.wiki"]
+	path = my-thai-star.wiki
+	url = https://github.com/devonfw/my-thai-star.wiki.git

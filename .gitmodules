@@ -4,3 +4,6 @@
 [submodule "my-thai-star.wiki"]
 	path = my-thai-star.wiki
 	url = https://github.com/devonfw/my-thai-star.wiki.git
+[submodule "devonfw-shop-floor.wiki"]
+	path = devonfw-shop-floor.wiki
+	url = https://github.com/devonfw/devonfw-shop-floor.wiki.git

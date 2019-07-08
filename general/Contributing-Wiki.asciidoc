@@ -1,0 +1,122 @@
+:toc: macro
+toc::[]
+
+:doctype: book
+:reproducible:
+:source-highlighter: rouge
+:listing-caption: Listing
+
+== Wiki Contributions
+
+Our wikis are written in the so called _AsciiDoc_ format. Check the https://powerman.name/doc/asciidoc[AsciiDoc cheatsheet] and the http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[AsciiDoc quick reference] for more information. Knowing the following basic features should allow you to convert your Word documents into the Wiki friendly AsciiDoc format. 
+
+It is mandatory to follow the <<Contributor Covenant Code of Conduct,code of conduct>> that must be present in the root of every OSS or private project as `CODE_OF_CONDUCT.asciidoc` or `CODE_OF_CONDUCT.md`. 
+
+=== Text styles
+
+_Italic Text_
+
+[source]
+----
+_Italic Text_
+----
+
+*Bold Text*
+
+[source]
+----
+*Bold Text*
+----
+
++Mono Spaced Text+
+
+[source]
+----
++Mono Spaced Text+
+----
+
+Text in ^Superscript^
+
+[source]
+----
+Text in ^Superscript^
+----
+
+Text in ~Subscript~
+
+[source]
+----
+Text in ~Subscript~
+----
+
+=== Titles
+
+A title can be initiated like this:
+
+[source]
+----
+= Level 1 header
+== Level 2 header
+== Level 3 header
+...
+----
+
+=== Lists
+
+Ordered and unordered lists can be created like this:
+
+[source]
+----
+Ordered list:
+. Item 1
+. Item 2
+. Item 3
+. ...
+
+Unordered list:
+* Item 1
+* Item 2
+* Item 3
+* ...
+----
+
+=== Tables
+
+The following example shows how a table can be created. Note that the _header_ flag is optional.
+
+[source]
+----
+[options="header"]
+|===
+|Header 1|Header 2| Header 3
+|  Item 1|  Item 2|   Item 3
+|     ...|     ...|      ...
+|===
+----
+
+=== Source Code
+
+If you want to show off some code examples, you can use the _code block_:
+
+[source]
+----
+[source]
+ ----
+ Some source code
+ ----
+----
+
+You can also specify which script language is used. This will allow GitHUb to use a matching color scheme. Therefore, just type in the type of code used:
+
+[source]
+----
+[source, bash]
+----
+
+or
+
+[source]
+----
+[source, java]
+----
+

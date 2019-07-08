@@ -1,0 +1,283 @@
+:toc: macro
+toc::[]
+
+:doctype: book
+:reproducible:
+:source-highlighter: rouge
+:listing-caption: Listing
+
+== devonfw Release notes 3.0 “Fry”
+
+=== Introduction
+
+We are proud to announce the immediate release of devonfw version 3.0 (code named “Fry” during development). This version is the consolidation of Open Source, focused on the major namespace change ever in the platform, removing the OASP references and adopting the new devonfw names for each technical stack or framework. 
+
+The new stack names are the following:
+
+* devon4j, former OASP4J, is the new name for Java. 
+* devon4ng, former OASP4JS, is the new one for Angular.
+* devon4net, is the new .NET stack.
+* devon4X, is the new stack for Xamarin development.
+* devon4node, is the new devonfw incubator for node.js. 
+
+The new devon4j version was created directly from the latest oasp4j version (3.0.0). Hence it brings all the features and values that oasp4j offered. However, the namespace migration was used to do some housekeeping and remove deprecated code as well as reduce dependencies. Therefore your data-access layer will no longer have to depend on any third party except for devon4j as well as of course the JPA. We also have improved the application template that now comes with a modern JSON logging ready for docker and logstash based environments.
+
+To help you upgrading we introduced a migration feature in devcon. This can automatically migrate your code from oasp4j (even older versions starting from 2.4.0) to the latest version of devon4j. There might be some small manual changes left to do but 90% of the migration will be done automatically for you. 
+
+Besides, the first version of the devonfw plugin for SonarQube has been released. It extends SonarQube with the ability to validate your code according to the devon4j architecture. More details at https://github.com/devonfw/sonar-devon-plugin.
+
+This is the first release that integrates the new devonfw .NET framework, called devon4net, and Xamarin for mobile native development, devon4X. devon4NET and devon4X are the Capgemini standard frameworks for .NET and Xamarin software development. With the two new family members devonfw provides guidance and acceleration for the major software development platforms in our industry. Their interoperability provides you the assurance your multichannel solution will be consistent across web and mobile channels.
+
+“Fry” release contains lots of improvements in our Mr.Checker E2E Testing Framework, including a complete E2E sample inside our reference application My Thai Star. Besides Mr.Checker, we include as an incubator Testar, a test tool (and framework)  to test applications at the GUI level whose objective is to solve part of the maintenance problem affecting tests by automatically generating test cases based on a structure that is automatically derived from the GUI. Testar is not included to replace Mr.Checker but rather to provide development teams with a series of interesting options which go beyond what Mr.Checker already provides. 
+
+Apart from Mr.Checker, engagements can now use Testar as an extra option for testing. This is a tool that enables the automated system testing of desktop, web and mobile applications at the GUI level. Testar has been added as an incubator to the platform awaiting further development during 2019.
+
+The new incubator for node.js, called devon4node, has been included and implemented in several internal projects. This incubator is based on the Nest framework https://www.nestjs.com/. Nest is a framework for building efficient, scalable Node.js server-side applications. It uses progressive JavaScript, is built with TypeScript (preserves compatibility with pure JavaScript) and combines elements of OOP (Object Oriented Programming), FP (Functional Programming), and FRP (Functional Reactive Programming). Under the hood, Nest makes use of Express, but also provides compatibility with a wide range of other libraries (e.g. Fastify). This allows for easy use of the myriad third-party plugins which are available.
+
+In order to facilitate the utilization of Microsoft Visual Studio Code in devonfw, we have developed and included the new devonfw Platform Extension Pack with lots of features to develop and test applications with this IDE in languages and frameworks such as TypeScript, JavaScript, .NET, Java, Rust, C++ and many more. More information at https://marketplace.visualstudio.com/items?itemName=devonfw.devonfw-extension-pack. Also, you can contribute to this extension in this GitHub repository https://github.com/devonfw/devonfw-extension-pack-vscode. 
+
+There is a whole range of new features and improvements which can be seen in that light. The My Thai Star sample app has now been upgraded to devon4j and devon4ng, a new devon4node backend implementation has been included that is seamless interchangeable, an E2E MrChecker sample project, CICD and deployment scripts and lots of bugs have been fixed. 
+
+Last but not least, the projects wikis and the devonfw Guide has once again been updated accordingly before the big refactor that will be addressed in the following release in 2019. 
+
+=== Changes and new features
+
+==== Devonfw dist 
+
+* Eclipse 2018.9 integrated
+** CheckStyle Plugin updated.
+** SonarLint Plugin updated.
+** Git Plugin updated.
+** FindBugs Plugin updated.
+** Cobigen plugin updated. 
+* Other Software
+** Visual Studio Code latest version included and preconfigured with the devonfw Platform Extension Pack. 
+** Ant updated to latest.
+** Maven updated to latest.
+** Java updated to latest.
+** Nodejs LTS updated to latest.
+** @angular/cli included.
+** Yarn package manager updated.
+** Python3 updated.
+** Spyder3 IDE integrated in python3 installation updated.
+** devon4ng-application-template for Angular 7 at workspaces/examples
+** devon4ng-ionic-application-template for Ionic 3.20 at workspace/samples
+
+==== My Thay Star Sample Application
+
+The new release of My Thai Star has focused on the following improvements:
+
+* Release 1.12.2.
+* devon4j:
+** devon4j 3.0.0 integrated.
+** Spring Boot 2.0.4 integrated.
+** Spring Data integration.
+** New pagination and search system.
+** Bug fixes.
+* devon4ng:
+** Client devon4ng updated to Angular 7.
+** Angular Material and Covalent UI frameworks updated.
+** Electron framework integrated. 
+* devon4node
+** TypeScript 3.1.3.
+** Based on Nest framework.
+** Aligned with devon4j.
+** Complete backend implementation.
+** TypeORM integrated with SQLite database configuration.
+** Webpack bundler.
+** Nodemon runner.
+** Jest unit tests.
+* Mr.Checker
+** Example cases for end-to-end test.
+** Production line configuration.
+** CICD
+** Improved integration with Production Line
+** New deployment from artifact
+** New CICD pipelines
+** New deployment pipelines
+** Automated creation of pipelines in Jenkins
+
+==== Documentation updates
+
+The following contents in the devonfw guide have been updated:
+
+* Upgrade of all the new devonfw named assets.
+** devon4j
+** devon4ng
+** Mr.Checker
+* Electron integration cookbook.
+* Updated cookbook about Swagger.  
+* Removed deprecated entries.
+
+Apart from this the documentation has been reviewed and some typos and errors have been fixed. 
+
+The current development of the guide has been moved to https://github.com/devonfw-forge/devon-guide/wiki in order to be available as the rest of OSS assets.
+
+==== devon4j
+
+The following changes have been incorporated in devon4j:
+
+* Spring Boot 2.0.4 Integrated.
+* Spring Data layer Integrated.
+* Decouple mmm.util.*
+* Removed depreciated restaurant sample.
+* Updated Pagination support for Spring Data
+* Add support for hana as dbType.
+* Bugfixes.
+
+==== devon4ng
+
+The following changes have been incorporated in devon4ng:
+
+* New client application architecture guide https://github.com/devonfw/devon4ng/wiki  
+* Angular CLI 7,
+* Angular 7,
+* Angular Material 7 and Covalent 2.0.0-beta.7,
+* Ionic 3.20.0,
+* Cordova 8.0.0,
+* devon4ng Angular application template updated to Angular 7 with visual improvements and bugfixes https://github.com/devonfw/devon4ng-application-template  
+* devon4ng Ionic application template updated and improved https://github.com/devonfw/devon4ng-ionic-application-template  
+* PWA enabled.
+* Electron integrated to run My Thai Star as a desktop application in Windows, Linux or macOS. 
+
+==== devon4net
+
+Some of the highlights of devon4net 1.0 are:
+
+* External configuration file for each environment.
+* .NET Core 2.1.X working solution (Latest 2.1.402).
+* Packages and solution templates published on nuget.org.
+* Full components customization by config file.
+* Docker ready (My Thai Star sample fully working on docker).
+* Port specification by configuration.
+* Dependency injection by Microsoft .NET Core.
+* Automapper support.
+* Entity framework ORM (Unit of work, async methods).
+* .NET Standard library 2.0 ready.
+* Multi-platform support: Windows, Linux, Mac.
+* Samples: My Thai Star back-end, Google API integration, Azure login, AOP with Castle.
+* Documentation site.
+* SPA page support.
+
+And included the following features:
+
+* Logging: 
+** Text File. 
+** Sqlite database support. 
+** Serilog Seq Server support. 
+** Graylog integration ready through TCP/UDP/HTTP protocols. 
+** API Call params interception (simple and compose objects). 
+** API error exception management.
+* Swagger:
+** Swagger auto generating client from comments and annotations on controller classes. 
+** Full swagger client customization (Version, Title, Description, Terms, License, Json endpoint definition).
+* JWT: 
+** Issuer, audience, token expiration customization by external file configuration. 
+** Token generation via certificate. 
+** MVC inherited classes to access JWT user properties. 
+** API method security access based on JWT Claims.
+* CORS:
+** Simple CORS definition ready. 
+** Multiple CORS domain origin definition with specific headers and verbs.
+* Headers: 
+** Automatic header injection with middleware. 
+** Supported header definitions: AccessControlExposeHeader, StrictTransportSecurityHeader, XFrameOptionsHeader, XssProtectionHeader, XContentTypeOptionsHeader, ContentSecurityPolicyHeader, PermittedCrossDomainPoliciesHeader, ReferrerPolicyHeader.
+* Reporting server: 
+** Partial implementation of reporting server based on My-FyiReporting (now runs on linux container).
+* Testing: 
+** Integration test template with sqlite support.
+** Unit test template. 
+** Moq, xunit frameworks integrated.
+
+==== devon4X
+
+Some of the highlights of the new devonfw Xamarin framework are:
+
+* Based on Excalibur framework by Hans Harts (https://github.com/Xciles/Excalibur).
+* Updated to latest MVVMCross 6 version.
+* My Thai Star Excalibur forms sample.
+* Xamarin Forms template available on nuget.org.
+
+==== AppSec Quick Solution Guide
+ 
+This release incorporates a new Solution Guide for Application Security based on the state of the art in OWASP based application security. The purpose of this guide is to offer quick solutions for common application security issues for all applications based on devonfw.  It’s often the case that we need our systems to comply to certain sets of security requirements and standards. Each of these requirements needs to be understood, addressed and converted to code or project activity. We want this guide to prevent the wheel from being reinvented over and over again and to give clear hints and solutions to common security problems.
+
+* The wiki can be accessed here: https://github.com/devonfw/devonfw-security/wiki
+* The PDF can be accessed here: https://github.com/devonfw/devonfw-security
+
+==== CobiGen
+
+* CobiGen core new features:
+** CobiGen_Templates will not need to be imported into the workspace anymore. However, If you want to adapt them, you can still click on a button that automatically imports them for you.
+** CobiGen_Templates can be updated by one-click whenever the user wants to have the latest version.
+** Added the possibility to reference external increments on configuration level. This is used for reducing the number of duplicated templates.
+* CobiGen_Templates project and docs updated: 
+** Spring standard has been followed better than ever.
+** Interface templates get automatically relocated to the api project. Needed for following the new devon4j standard.
+* CobiGen Angular:
+** Angular 7 generation improved based on the updated application template.
+** Pagination changed to fit Spring standard.
+* CobiGen Ionic: Pagination changed to fit Spring standard.
+* CobiGen OpenAPI plugin released with multiple bug-fixes and other functionalities like:
+** Response and parameter types are parsed properly when they are a reference to an entity.
+** Parameters defined on the body of a request are being read correctly.
+
+==== Devcon 
+
+A new version of Devcon has been released. Fixes and new features include:
+
+* Updated to match current devon4j
+* Update to download Linux distribution.
+* Custom modules creation improvements.
+* Code Migration feature added
+* Bugfixes. 
+
+==== Devonfw OSS Modules
+
+Modules upgraded to be used in new devon4j projects:
+
+* Reporting module
+* WinAuth AD Module
+* WinAuth SSO Module
+* I18n Module
+* Async Module
+* Integration Module
+* Microservice Module
+* Compose for Redis Module 
+
+See: https://github.com/devonfw/devon/wiki#devonfw-modules  
+
+==== Devonfw Testing 
+
+===== Mr.Checker
+
+The Mr.Checker Test Framework is an automated testing framework for functional testing of web applications, API web services, Service Virtualization, Security and in coming future native mobile apps, and databases. All modules have tangible examples of how to build resilient integration test cases based on delivered functions. Mr.Checker updates and improvements:
+
+* Examples available under embedded project “MrChecker-App-Under-Test” and in project wiki: https://github.com/devonfw/devonfw-testing/wiki 
+* How to install: 
+** Wiki : https://github.com/devonfw/devonfw-testing/wiki/How-to-install  
+* Release Note: 
+** module selenium - 3.8.1.13:
+*** headless browser
+*** enable browser options 
+** module DevOps :
+*** Jenkinsfile align with ProductionLine 
+
+
+===== Testar
+
+We have added Test*, Testar, as an incubator to the available test tools within devonfw. This ground-breaking tool is being developed by the Technical University of Valencia (UPV). In 2019 Capgemini will co-develop Testar with the UPV. 
+
+Testar is a tool that enables the automated system testing of desktop, web and mobile applications at the GUI level. 
+
+With Testar, you can start testing immediately. It automatically generates and executes test sequences based on a structure that is automatically derived from the UI through the accessibility API. Testar can detect the violation of general-purpose system requirements and you can use plugins to customize your tests.
+
+You do not need test scripts and maintenance of it. The tests are random and are generated and executed automatically.
+
+If you need to do directed tests you can create scripts to test specific requirements of your application.
+
+Testar is included in the devonfw distro or can be downloaded from https://testar.org/download/.  
+
+The Github repository can be found at o: https://github.com/TESTARtool/TESTAR.
+
+

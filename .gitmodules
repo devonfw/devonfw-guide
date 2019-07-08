@@ -7,3 +7,6 @@
 [submodule "devonfw-shop-floor.wiki"]
 	path = devonfw-shop-floor.wiki
 	url = https://github.com/devonfw/devonfw-shop-floor.wiki.git
+[submodule "devonfw-testing.wiki"]
+	path = devonfw-testing.wiki
+	url = https://github.com/devonfw/devonfw-testing.wiki.git

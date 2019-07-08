@@ -1,0 +1,18 @@
+:toc: macro
+toc::[]
+
+:doctype: book
+:reproducible:
+:source-highlighter: rouge
+:listing-caption: Listing
+
+== Development Guidelines
+
+* *Always ask before creating a pull request.* To avoid duplication efforts, its better to discuss it with us first or create an issue.
+* *All code must be reviewed via a pull request.* Before anything can be merged, it must be reviewed by other developer and ideally at least 2 others.
+* *Use git flow processes.* Start a feature, release, or hotfix branch, and you should never commit and push directly to master.
+* *Code should adhere to lint and codestyle tests.* While you can commit code that doesn't validate but still works, it is encouraged to validate your code. It saves other's headaches down the road.
+* *Code must pass existing tests when submitting a pull request.* If your code breaks a test, it needs to be updated to pass the tests before merging.
+* *New code should come with proper tests.* Your code should come with proper test coverage, ideally 95%, minimum 80%, before it can be merged.
+* *Bug fixes must come with a test.* Any bug fixes should come with an appropriate test to verify the bug is fixed, and does not return.
+* *Code structure should be maintained.* The structure of the repo and files has been carefully crafted, and any deviations from that should be only done when agreed upon by the entire community.

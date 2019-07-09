@@ -10,3 +10,6 @@
 [submodule "devonfw-testing.wiki"]
 	path = devonfw-testing.wiki
 	url = https://github.com/devonfw/devonfw-testing.wiki.git
+[submodule "devon4j.wiki"]
+	path = devon4j.wiki
+	url = https://github.com/devonfw/devon4j.wiki.git

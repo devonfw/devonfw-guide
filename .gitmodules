@@ -16,3 +16,6 @@
 [submodule "cicdgen.wiki"]
 	path = cicdgen.wiki
 	url = https://github.com/devonfw/cicdgen.wiki.git
+[submodule "devon4net.wiki"]
+	path = devon4net.wiki
+	url = https://github.com/devonfw/devon4net.wiki.git

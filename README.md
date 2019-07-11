@@ -76,7 +76,7 @@ If you want to use your own docgen version you have to add its pom.xml file in d
 
 ### Generate the PDF
 
-To generating a PDF of this guide using docgen you have to:
+To generate a PDF of this guide using docgen you have to:
 
 * Download or clone this repository.
 * Run the command below in a console:

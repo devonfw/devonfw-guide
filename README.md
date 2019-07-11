@@ -55,7 +55,7 @@ Each submodule contains a master file *name-of-the-wiki.wiki/master-name-of-the-
 ---
 **TIP**
 
-<version> tag under <parent> should specify the current docgen version. Newer versions could include bug fixes.
+**version** tag under **parent** should specify the current docgen version. Newer versions could include bug fixes.
 
 ---
 

@@ -1,0 +1,191 @@
+:toc: macro
+toc::[]
+
+
+:doctype: book
+:reproducible:
+:source-highlighter: rouge
+:listing-caption: Listing
+
+
+== devonfw Release notes 3.1 “Goku”
+
+
+=== Introduction
+We are proud to announce the immediate release of devonfw version 3.1 (code named “Goku” during development). This version is ...
+
+=== Changes and new features
+
+
+==== Devonfw dist 
+
+* Eclipse 2018.9 integrated
+** CheckStyle Plugin updated.
+** SonarLint Plugin updated.
+** Git Plugin updated.
+** FindBugs Plugin updated.
+** Cobigen plugin updated. 
+* Other Software
+** Visual Studio Code latest version included and preconfigured with the devonfw Platform Extension Pack. 
+** Ant updated to latest.
+** Maven updated to latest.
+** Java updated to latest.
+** Nodejs LTS updated to latest.
+** @angular/cli included.
+** Yarn package manager updated.
+** Python3 updated.
+** Spyder3 IDE integrated in python3 installation updated.
+** devon4ng-application-template for Angular 7 at workspaces/examples
+** devon4ng-ionic-application-template for Ionic 3.20 at workspace/samples
+
+
+==== My Thay Star Sample Application
+The new release of My Thai Star has focused on the following improvements:
+
+* Release 3.1.0.
+* devon4j:
+** devon4j 3.1.0 integrated.
+** Spring Boot 2.1.6 integrated.
+** SAP 4/HANA prediction use case.
+** Bug fixes.
+* devon4ng:
+** SAP 4/HANA prediction use case.
+** 2FA togglable (two factor authentication).
+** NgRx integration in process (PR #234).
+* devon4node
+** TypeScript 3.1.3.
+** Based on Nest framework.
+** Aligned with devon4j.
+** Complete backend implementation.
+** TypeORM integrated with SQLite database configuration.
+** Webpack bundler.
+** Nodemon runner.
+** Jest unit tests.
+* Mr.Checker
+** Example cases for end-to-end test.
+** Production line configuration.
+** CICD
+** Improved integration with Production Line
+** New Traefik load balancer and reverse proxy
+** New deployment from artifact
+** New CICD pipelines
+** New deployment pipelines
+** Automated creation of pipelines in Jenkins
+
+==== Documentation updates
+This release addresses the new documentation workflow, being now possible to keep the documentation synced with any change. The new documentation includes the following contents:
+* Getting started
+* Contribution guide
+* Devcon 
+* Release notes
+* devon4j documentation
+* devon4ng documentation
+* devon4net documentation
+* devonfw-shop-floor documentation
+* cicdgen documentation
+* devonfw testing with MrChecker
+* My Thai Star documentation
+
+==== devon4j
+The following changes have been incorporated in devon4j:
+
+* Spring Boot 2.0.4 Integrated.
+* Spring Data layer Integrated.
+* Decouple mmm.util.*
+* Removed depreciated restaurant sample.
+* Updated Pagination support for Spring Data
+* Add support for hana as dbType.
+* Bugfixes.
+
+==== devon4ng
+The following changes have been incorporated in devon4ng:
+
+* Angular CLI 8,
+* Angular 8,
+* Angular Material 8,
+* Ionic 4,
+* Capacitor 1.0 as Cordova replacement,
+* NgRx 8 support for State Management, 
+* devon4ng Angular application template updated to Angular 8 with visual improvements and bugfixes https://github.com/devonfw/devon4ng-application-template 
+* devon4ng Ionic application template updated and improved https://github.com/devonfw/devon4ng-ionic-application-template 
+* New devon4ng Angular application template with state management using Angular 8 and NgRx 8 https://github.com/devonfw/devon4ng-ngrx-template
+* New devon4ng library https://github.com/devonfw/devon4ng-library that includes the following libraries:
+** Cache Module for Angular 7+ projects.
+** Authorization Module for Angular 7+ projects.
+* New use cases with documentation and samples:
+** Web Components with Angular Elements
+** Initial configuration with App Initializer pattern
+** Error Handling
+** PWA with Angular and Ionic
+** Lazy Loading
+** Library construction
+** Layout with Angular Material
+** Theming with Angular Material
+
+==== devon4net
+* New circuit breaker component to communicate microservices via HTTP
+* Resolved the update packages issue
+
+==== AppSec Quick Solution Guide
+This release incorporates a new Solution Guide for Application Security based on the state of the art in OWASP based application security. The purpose of this guide is to offer quick solutions for common application security issues for all applications based on devonfw. It’s often the case that we need our systems to comply to certain sets of security requirements and standards. Each of these requirements needs to be understood, addressed and converted to code or project activity. We want this guide to prevent the wheel from being reinvented over and over again and to give clear hints and solutions to common security problems.
+* The wiki can be accessed here: https://github.com/devonfw/devonfw-security/wiki
+* The PDF can be accessed here: https://github.com/devonfw/devonfw-security
+
+==== CobiGen
+* CobiGen core new features:
+** CobiGen CLI: Now you can use CobiGen within the devonfw console. For the first time.
+*** Performance improves greatly in the CLI thanks to the lack of GUI.
+*** You will be able to use path globs for selecting multiple input files.
+*** We have implemented a search functionality so that you can easily search for increments or templates.
+** First steps taken on CobiGen refactoring: With the new refactoring we will be able to decouple Cobigen completely from the target language/format and input language/format. This will facilitate the creation of parsers and mergers in any language.
+*** NashornJS has been deprecated: It was used for executing JavaScript code inside JVM.
+*** 
+** Added the possibility to reference external increments on configuration level. This is used for reducing the number of duplicated templates.
+* CobiGen_Templates project and docs updated: 
+** Spring standard has been followed better than ever.
+** Interface templates get automatically relocated to the api project. Needed for following the new devon4j standard.
+* CobiGen Angular:
+** Angular 8 generation improved based on the updated application template.
+** Pagination changed to fit Spring standard.
+* CobiGen Ionic: Pagination changed to fit Spring standard.
+* CobiGen OpenAPI plugin released with multiple bug-fixes and other functionalities like:
+** Response and parameter types are parsed properly when they are a reference to an entity.
+** Parameters defined on the body of a request are being read correctly.
+
+
+==== Devcon 
+A new version of Devcon has been released. Fixes and new features include:
+
+* Updated to match current devon4j
+* Update to download Linux distribution.
+* Custom modules creation improvements.
+* Code Migration feature added
+* Bugfixes. 
+
+==== Devonfw OSS Modules
+Modules upgraded to be used in new devon4j projects:
+
+* Reporting module
+* WinAuth AD Module
+* WinAuth SSO Module
+* I18n Module
+* Async Module
+* Integration Module
+* Microservice Module
+* Compose for Redis Module 
+See: https://github.com/devonfw/devon/wiki#devonfw-modules 
+
+==== Devonfw Testing 
+
+
+===== Mr.Checker
+The Mr.Checker Test Framework is an automated testing framework for functional testing of web applications, API web services, Service Virtualization, Security and in coming future native mobile apps, and databases. All modules have tangible examples of how to build resilient integration test cases based on delivered functions. Mr.Checker updates and improvements:
+* Examples available under embedded project “MrChecker-App-Under-Test” and in project wiki: https://github.com/devonfw/devonfw-testing/wiki 
+* How to install: 
+** Wiki : https://github.com/devonfw/devonfw-testing/wiki/How-to-install 
+* Release Note: 
+** module selenium - 3.8.1.13:
+*** headless browser
+*** enable browser options 
+** module DevOps :
+*** Jenkinsfile align with Production Line 

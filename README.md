@@ -3,13 +3,13 @@
 
 This repository contains a collection of guides and documents from the different devonfw's modules, such as:
 
-* cicdgen: Tool for generating CI/CD configurations for devonfw projects.
-* devon4j: Module for Java
-* devon4net: Module for .net
-* devon4ng: Module for Angular
-* devonfw shop floor: Set of documentation, tools and methodologies used to configure provisioning, development and uat environments used in devonfw projects.
-* devonfw testing: Module for testing.
-* My Thai Star: devonfw reference application.
+* **cicdgen**: Tool for generating CI/CD configurations for devonfw projects.
+* **devon4j**: Module for Java
+* **devon4net**: Module for .net
+* **devon4ng**: Module for Angular
+* **devonfw shop floor**: Set of documentation, tools and methodologies used to configure provisioning, development and uat environments used in devonfw projects.
+* **devonfw testing**: Module for testing.
+* **My Thai Star**: devonfw reference application.
 
 
 ## How is this guide organized
@@ -76,12 +76,15 @@ If you want to use your own docgen version you have to add its pom.xml file in d
 
 ### Generate the PDF
 
-Generating a PDF with docgen is as easy as running the command below in a console
+To generating a PDF of this guide using docgen you have to:
+
+* Download or clone this repository.
+* Run the command below in a console:
 
 ```bash
-$ mvn clean package
+route-to-devonfw-guide$ mvn clean package
 ```
 
-The result can be found at devonfw-guide/target/generated/docs
+The result can be found at *devonfw-guide/target/generated/docs*
 
 

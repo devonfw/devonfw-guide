@@ -1,15 +1,3 @@
-=== Getting Started
-
-include::getting-started-what-is-devonfw.asciidoc[leveloffset=2]
-include::getting-started-why-should-i-use-devonfw.asciidoc[leveloffset=2]
-include::getting-started-download-and-setup.asciidoc[leveloffset=2]
-include::getting-started-the-devon-ide.asciidoc[leveloffset=2]
-
-=== Devcon
-
-include::devcon-command-developers-guide.asciidoc[leveloffset=2]
-include::devcon-command-reference.asciidoc[leveloffset=2]
-
 === Contributing Guide
 
 include::Contributing-Code.asciidoc[leveloffset=2]

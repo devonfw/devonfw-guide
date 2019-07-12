@@ -1,0 +1,16 @@
+=== Contributing Guide
+
+include::Contributing-Code.asciidoc[leveloffset=2]
+include::Contributing-Code-of-Conduct.asciidoc[leveloffset=2]
+include::Contributing-Development-Guidelines.asciidoc[leveloffset=2]
+include::Contributing-Git-Fork-Guide.asciidoc[leveloffset=2]
+include::Contributing-Wiki.asciidoc[leveloffset=2]
+
+=== Release Notes
+
+include::release-notes-version-3.1.asciidoc[leveloffset=2]
+include::release-notes-version-3.0.asciidoc[leveloffset=2]
+include::release-notes-version-2.4.asciidoc[leveloffset=2]
+include::release-notes-version-2.3.asciidoc[leveloffset=2]
+include::release-notes-version-2.2.asciidoc[leveloffset=2]
+include::release-notes-version-2.1.asciidoc[leveloffset=2]

@@ -1,0 +1,39 @@
+language: java
+dist: trusty
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y imagemagick
+env:
+  global:
+    - ORG="devonfw"
+    - EMAIL="icsddevonfwsupport.apps2@capgemini.com"
+    - REPO_CONSOLIDATE="devonfw-guide"
+    - REPO_DOCGEN="devon-docgen"
+    - GH_REPO_CONSOLIDATE="github.com/${ORG}/${REPO_CONSOLIDATE}.git"
+    - GH_REPO_DOCGEN="github.com/${ORG}/${REPO_DOCGEN}.git"
+    - secure: OmBtP3blxBoLckNQRrN02v0XjHmf1xoyL6qPOOYUyzodVb35Y73bvWXW4+v6FMZSKwlHunADq+TNy6BAqrdRK09rmeL1ErQKz59rOkOg/aZpNb+NE+Hyz/MNotEUZkLCM8lfH+ycLVtmbn3aWEzSzTNYg6/EaZc17YQIR7zZx8GLqGqg1FB6MRdVs8053/u4QwVG9dLhPsha3KPLju3jEZz3+9vCIV2RIslZajLwiXVGww2hBCFXoJZoloaatHdECdIin2HyoQWDK9fzXc81OQh6cQ7/Un0qT2QOCZiExw0J9b8rIpRBDsKnrTiiZ6zae/JaZZH9t1gr4jMmur3CRDhWsjhA8UpmjU5n3hb7o5lPAcPtubE1beJyIKMLbXARKTk03Nbq5qgPa+iRNqtDtUjeQAn1QUeLBx71cgA7kAywd8QzRZJ7DkirTxnGGGRSIyWM9+7JZF0/vcqHtnVKjqRXwdq5m3JxdyEy8sdrbbQJwoMwLb81g5lKWzUzB8bJJAfF0rJ53MddFcjZW6OGh2oLTDZgJ4Xw0NSa3dQYQ2we0sJiz7ttU8ifJ6JtMK/0GIrHS2Z2a0P5fK3pzgQ1vJWTZfkfsgp4U5n+7CaTHcHOiaUcdd4g5EbazoL469bi8iLx/eogH7hWcViTLyeh6u9M8FmL/PnXSzJ1lJQjxtI=
+stages:
+  - name: PDF
+    if: type = push
+jobs:
+  include:
+    - stage: PDF
+      script:
+        # Clone devonfw docgen to copy pom.xml from docgen to the root folder
+        - git clone https://${GH_REPO_DOCGEN}
+        - cp ./${REPO_DOCGEN}/pom.xml ./
+        # Clone devonfw guide repository and fix PNG images
+        - git clone --recurse-submodules https://${GH_REPO_CONSOLIDATE}
+        - cd ${REPO_CONSOLIDATE}
+        - find . -name '*.png' -exec mogrify -interlace none -format png {} +
+        # Generate PDF
+        - mvn clean package
+        - mv ./target/generated-docs/master.pdf ./devonfw_guide.pdf
+        - rm -rf ./target/generated-docs
+        - git config user.email ${EMAIL}
+        - git config user.name ${USER}
+        # Commit and push new devonfw guide
+        - git add ./devonfw_guide.pdf
+        - git commit -m "PDF devonfw guide | Travis CI build number $TRAVIS_BUILD_NUMBER"
+        - git remote add origin-pdf "https://${USER}:${GITHUB_TOKEN}@${GH_REPO_CONSOLIDATE}"
+        - git push origin-pdf master

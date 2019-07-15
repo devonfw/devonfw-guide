@@ -32,7 +32,7 @@ jobs:
         - cd ${REPO_CONSOLIDATE}
         - find . -iname '*.png' -exec mogrify -interlace none -format png {} +
         # Generate PDF
-        - mvn clean package
+        - mvn clean package -Ddocgen.images.dir=images,documentation
         - mv ./target/generated-docs/master.pdf ./devonfw_guide.pdf
         - rm -rf ./target/generated-docs
         - git config user.email ${EMAIL}

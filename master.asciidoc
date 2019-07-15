@@ -1,5 +1,4 @@
-devonfw guide
-=============
+= devonfw guide
 :front-cover-image: image::./images/Capgemini_Logo_2COL_RGB.png[]
 
 include::general/master-general-start[]

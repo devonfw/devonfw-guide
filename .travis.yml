@@ -32,7 +32,8 @@ jobs:
       script:
         # Fix PNG images (devonfw-guide already cloned)
         - cd ${REPO_CONSOLIDATE}
-        - find . -iname '*.png' -exec mogrify -interlace none -format png {} +
+        - find . -name '*.png' -exec mogrify -interlace none -format png {} +
+        - find . -name '*.PNG' -exec mogrify -interlace none -format PNG {} +
         # Generate PDF
         - mvn clean package -Ddocgen.images.dir=images,documentation
         - mv ./target/generated-docs/master.pdf ./devonfw_guide.pdf

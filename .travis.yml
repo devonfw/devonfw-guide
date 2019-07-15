@@ -25,7 +25,7 @@ jobs:
     - stage: PDF
       script:
         # Clone devonfw docgen to copy pom.xml from docgen to the root folder
-        - git clone https://${GH_REPO_DOCGEN}
+        - git clone -b pom-upgrades --single-branch https://${GH_REPO_DOCGEN}
         - cp ./${REPO_DOCGEN}/pom.xml ./
         # Clone devonfw guide repository and fix PNG images
         - git clone --recurse-submodules https://${GH_REPO_CONSOLIDATE}

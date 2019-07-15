@@ -18,17 +18,18 @@ stages:
   - name: PDF
     if: type = push
 before_install:
+  - cd ..
   - sudo apt-get update
   - sudo apt-get install -y imagemagick
   # Clone devonfw docgen to copy pom.xml from docgen to the root folder
   - git clone -b pom-upgrades --single-branch https://github.com/jambulud/devon-docgen
   - cp ./${REPO_DOCGEN}/pom.xml ./
+  - pwd && ls -l
 jobs:
   include:
     - stage: PDF
       script:
-        # Clone devonfw guide repository and fix PNG images
-        - git clone --recurse-submodules https://${GH_REPO_CONSOLIDATE}
+        # Fix PNG images (devonfw-guide already cloned)
         - cd ${REPO_CONSOLIDATE}
         - find . -iname '*.png' -exec mogrify -interlace none -format png {} +
         # Generate PDF

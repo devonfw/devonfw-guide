@@ -17,6 +17,7 @@ env:
 stages:
   - name: PDF
     if: type = push
+install: true
 before_install:
   - cd ..
   - sudo apt-get update

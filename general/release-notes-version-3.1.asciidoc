@@ -19,9 +19,27 @@ This is now possible as we have established a new workflow and rules during deve
 
 image::images/documentation_workflow.png[link="images/documentation_workflow.png"]
 
-The devonfw-shop-floor project has got a lot of updates in order to make even easier the creation of devonfw projects with CICD pipelines that run on the Production Line and deploy on Red Hat OpenShift Clusters and in general Docker environments. See the details below. 
+The devonfw-shop-floor project has got a lot of updates in order to make even easier the creation of devonfw projects with CICD pipelines that run on the Production Line, deploy on Red Hat OpenShift Clusters and in general Docker environments. See the details below. 
 
 This release includes the very first version of our devonfw-ide tool that will allow users to automate devonfw setup and update the development environment. This tool will become the default devonfw setup tool in future releases. For more information please visit the repository https://github.com/devonfw/devon-ide.
+
+Following the same collaboration model we used in order to improve the integration of devonfw with Red Hat OpenShift that allowed us to get the Open Shift Primed certification from Red Hat, we have been working alongside with SAP HANA developers in order to support this database in the devonfw platform. This model was based on the contribution and review of pull requests in our reference application My Thai Star. In this case, SAP developers collaborated with the following two new use cases:
+
+* Prediction of future demand
+* Geospatial analysis and clustering of customers
+
+More info at https://blogs.sap.com/2019/06/17/introducing-devonfw-support-for-sap-hana/.
+
+Last but not least the devonfw extension pack for VS Code has been improved with the latest extensions and helpers for this IDE. Among many others you can now use:
+
+* Remote development on Docker containers and VMs https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack 
+* Dependency Analysis for maven and npm https://marketplace.visualstudio.com/items?itemName=redhat.fabric8-analytics 
+* React Native Tools https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native 
+* NgRx Snippets https://marketplace.visualstudio.com/itemdetails?itemName=hardikpthv.NgRxSnippets
+
+Also it is worth the try of the updated support for Java and Spring Boot development in VS Code. Check it out for yourself!
+
+More information at https://marketplace.visualstudio.com/items?itemName=devonfw.devonfw-extension-pack. Also, you can contribute to this extension in this GitHub repository https://github.com/devonfw/devonfw-extension-pack-vscode.
 
 === Changes and new features
 
@@ -223,8 +241,9 @@ The Mr.Checker Test Framework is an automated testing framework for functional t
 * How to install: 
 ** Wiki : https://github.com/devonfw/devonfw-testing/wiki/How-to-install 
 * Release Note: 
-** module selenium - 3.8.1.13:
-*** headless browser
-*** enable browser options 
-** module DevOps:
-*** Jenkinsfile align with Production Line 
+** module selenium - 3.8.2.1:
+*** possibility to define version of driver in properties.file
+*** automatic driver download if the version is not specified
+*** possibility to run with different browser options
+*** module webAPI – 1.2.1:
+*** possibility to connect to the remote WireMock server

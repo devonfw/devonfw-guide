@@ -31,6 +31,7 @@ jobs:
   include:
     - stage: PDF
       script:
+        - git checkout master
         # Fix PNG images (devonfw-guide already cloned)
         - cd ${REPO_CONSOLIDATE}
         - find . -name '*.png' -exec mogrify -interlace none -format png {} +

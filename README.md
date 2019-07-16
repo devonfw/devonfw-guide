@@ -17,6 +17,7 @@ This repository contains a collection of guides and documents from the different
 - **devonfw shop floor**: Set of documentation, tools and methodologies used to configure provisioning, development and uat environments used in devonfw projects.
 - **devonfw testing**: Module for testing.
 - **My Thai Star**: devonfw reference application.
+- **CobiGen**: Code-based incremental generator.
 
 ## How is this guide organized
 

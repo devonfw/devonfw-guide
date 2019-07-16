@@ -16,7 +16,7 @@ env:
     - secure: OmBtP3blxBoLckNQRrN02v0XjHmf1xoyL6qPOOYUyzodVb35Y73bvWXW4+v6FMZSKwlHunADq+TNy6BAqrdRK09rmeL1ErQKz59rOkOg/aZpNb+NE+Hyz/MNotEUZkLCM8lfH+ycLVtmbn3aWEzSzTNYg6/EaZc17YQIR7zZx8GLqGqg1FB6MRdVs8053/u4QwVG9dLhPsha3KPLju3jEZz3+9vCIV2RIslZajLwiXVGww2hBCFXoJZoloaatHdECdIin2HyoQWDK9fzXc81OQh6cQ7/Un0qT2QOCZiExw0J9b8rIpRBDsKnrTiiZ6zae/JaZZH9t1gr4jMmur3CRDhWsjhA8UpmjU5n3hb7o5lPAcPtubE1beJyIKMLbXARKTk03Nbq5qgPa+iRNqtDtUjeQAn1QUeLBx71cgA7kAywd8QzRZJ7DkirTxnGGGRSIyWM9+7JZF0/vcqHtnVKjqRXwdq5m3JxdyEy8sdrbbQJwoMwLb81g5lKWzUzB8bJJAfF0rJ53MddFcjZW6OGh2oLTDZgJ4Xw0NSa3dQYQ2we0sJiz7ttU8ifJ6JtMK/0GIrHS2Z2a0P5fK3pzgQ1vJWTZfkfsgp4U5n+7CaTHcHOiaUcdd4g5EbazoL469bi8iLx/eogH7hWcViTLyeh6u9M8FmL/PnXSzJ1lJQjxtI=
 stages:
   - name: PDF
-    if: (type = push) AND (commit_message !~ /^PDF devonfw guide \| Travis CI build number.*$)
+    if: (type = push) AND (commit_message !~ /^PDF devonfw guide \| Travis CI build number.*$/)
 install: true
 before_install:
   - JAVA_TOOL_OPTIONS=-Xmx2g java -version

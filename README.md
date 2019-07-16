@@ -88,3 +88,10 @@ route-to-devonfw-guide$ mvn clean package
 The result can be found at *devonfw-guide/target/generated/docs*
 
 
+---
+**IMPORTANT**
+
+If your directory contains huge amounts of files, maven can throw a OutOfMemoryError. More info at [Maven OutOfMemoryError](https://cwiki.apache.org/confluence/display/MAVEN/OutOfMemoryError)
+
+---
+

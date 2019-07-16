@@ -1,0 +1,35 @@
+= devonfw guide
+:front-cover-image: image::./images/Capgemini_Logo_2COL_RGB.png[]
+
+include::general/master-general-start[]
+
+== devon4j documentation
+
+include::devon4j.wiki/master-devon4j[]
+
+== devon4ng documentation
+
+include::devon4ng.wiki/master-devon4ng[]
+
+== devon4net documentation
+
+include::devon4net.wiki/master-devon4net[]
+
+== devonfw shop floor documentation
+
+include::devonfw-shop-floor.wiki/master-devonfw-shop-floor[]
+
+== cicdgen documentation
+
+include::cicdgen.wiki/master-cicdgen[]
+
+== devonfw testing with MrChecker documentation
+
+include::devonfw-testing.wiki/master-devonfw-testing[]
+
+== My Thai star documentation
+
+include::my-thai-star.wiki/master-my-thai-star[]
+
+include::general/master-general-end[]
+

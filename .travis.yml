@@ -19,6 +19,7 @@ stages:
     if: type = push
 install: true
 before_install:
+  - JAVA_TOOL_OPTIONS=-Xmx2g java -version
   - cd ..
   - sudo apt-get update
   - sudo apt-get install -y imagemagick
@@ -37,7 +38,6 @@ jobs:
         # Generate PDF
         - mvn clean package -Ddocgen.images.dir=images,documentation
         - mv ./target/generated-docs/master.pdf ./devonfw_guide.pdf
-        - rm -rf ./target/generated-docs
         - git config user.email ${EMAIL}
         - git config user.name ${USER}
         # Commit and push new devonfw guide

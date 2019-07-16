@@ -10,7 +10,7 @@ Download the **continuously updated devonfw guide** from [here](https://github.c
 
 This repository contains a collection of guides and documents from the different devonfw's modules, such as:
 
-- **cicdgen**: Tool for generating CI/CD configurations for devonfw projects.
+- **cicdgen**: Tool to generate CI/CD configurations for devonfw projects.
 - **devon4j**: Module for Java
 - **devon4net**: Module for .net
 - **devon4ng**: Module for Angular

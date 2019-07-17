@@ -6,12 +6,12 @@ toc::[]
 :source-highlighter: rouge
 :listing-caption: Listing
 
-== devonfw Release notes 2.2 "Courage"
+= devonfw Release notes 2.2 "Courage"
 
-=== Production Line Integration
+== Production Line Integration
 devonfw is now fully supported on the Production Line v1.3 and the coming v2.0. Besides that, we now "eat our own dogfood" as the whole devonfw project, all "buildable assets", now run on the Production Line.
 
-=== OASP4js 2.0
+== OASP4js 2.0
 
 The main focus of the Courage release is the renewed introduction of "OASP for JavaScript", or OASP4js. This new version is a completely new implementation based on Angular (version 4). This new "stack" comes with:
 
@@ -36,10 +36,10 @@ https://github.com/oasp/oasp4js-application-template
 https://github.com/oasp/oasp4js-angular-catalog
 https://github.com/oasp/my-thai-star/tree/develop/angular
 
-=== A new OASP Portal
+== A new OASP Portal
 As part of the new framework(s) we have also done a complete redesign of the OASP Portal website at http://oasp.io/ which should make all things related with OASP more accessible and easier to find. 
 
-=== New Cobigen 
+== New Cobigen 
 
 Major changes in this release:
 
@@ -74,7 +74,7 @@ Major changes in this release:
 
 See: https://github.com/devonfw/tools-cobigen/releases
 
-=== MyThaiStar: New Restaurant Example, reference implementation & Methodology showcase
+== MyThaiStar: New Restaurant Example, reference implementation & Methodology showcase
 
 A major part of the new devonfw release is the incorporation of a new application, "my-thai-star" which among others:
 
@@ -92,7 +92,7 @@ See:     https://github.com/oasp/my-thai-star
          https://github.com/oasp/my-thai-star/wiki
 
 
-=== The new OASP Tutorial
+== The new OASP Tutorial
 The OASP Tutorial is a new part of the combined OASP / devonfw documentation which changes the focus of how people can get started with the platform
 
 There are tutorials for OASP4j, OASP4js (Angular), OASP4fn and more to come. My-Thai-Star is used throughout the tutorial series to demonstrate the basic principles, architecture, and good practices of the different OASP "stacks". There is an elaborated exercise where the readers get to write their own application "JumpTheQueue". 
@@ -104,7 +104,7 @@ Oasp4j tutorial: https://github.com/oasp/oasp-tutorial-sources/wiki/OASP4jGettin
 Oasp4js tutorial: https://github.com/oasp/oasp-tutorial-sources/wiki/OASP4jsGettingStartedHome
 Oasp4fn tutorial: https://github.com/oasp/oasp-tutorial-sources/wiki/OASP4FnGettingStartedHome
 
-=== OASP4j 2.4.0
+== OASP4j 2.4.0
 
 "OASP for Java" or OASP4j now includes updated versions of the latest stable versions of Spring Boot and the Spring Framework and all related dependencies. This allows guaranteed, stable, execution of any devonfw 2.X application on the latest versions of the Industry Standard Spring stack. 
 Another important new feature is a new testing architecture/infrastructure. All database options are updated to the latest versions as well as guaranteed to function on all Application Servers which should cause less friction and configuration time when starting a new OASP4j project. 
@@ -134,30 +134,30 @@ See: https://github.com/oasp/oasp4j
 
 Wiki: https://github.com/oasp/oasp4j/wiki
 
-=== Microservices Netflix
+== Microservices Netflix
 devonfw now includes a microservices implementation based on Spring Cloud Netflix. It provides a Netflix OSS integrations for Spring Boot apps through autoconfiguration and binding to the Spring Environment. It  offers microservices archetypes and a complete user guide with all the details to start creating microservices with devonfw.
 
 See: https://github.com/devonfw/devon/wiki/devon-microservices
 
-=== devonfw distribution based on Eclipse OOMPH
+== devonfw distribution based on Eclipse OOMPH
 The new Eclipse devonfw distribution is now based on Eclipse OOMPH, which allows us, an any engagement, to create and manage the distribution more effectively by formalizing the setup instructions so they can be performed automatically (due to a blocking issue postponed to devonfw 2.2.1 which will be released a few weeks after 2.2.0)
 
-=== Visual Studio Code / Atom
+== Visual Studio Code / Atom
 The devonfw distro now contains Visual Studio Code alongside Eclipse in order to provide a default, state of the art, environment for web based development.
 
 See: https://github.com/oasp/oasp-vscode-ide
 
-=== More I18N options
+== More I18N options
 The platform now contains more documentation and a conversion utility which makes it easier to share i18n resource files between the different frameworks.
 
 See: https://github.com/devonfw/devon/wiki/cookbook-i18n-resource-converter
 
-=== Spring Integration as devonfw Module
+== Spring Integration as devonfw Module
 This release includes a new module based on the Java Message Service (JMS) and Spring Integration which provides a communication system (sender/subscriber) out-of-the-box with simple channels (only to send and read messages), request and reply channels (to send messages and responses) and request & reply asynchronously channels.
 
 See: https://github.com/devonfw/devon/wiki/cookbook-integration-module
 
-=== devonfw Harvest contributions
+== devonfw Harvest contributions
 devonfw contains a whole series of new components obtained through the Harvesting process. Examples are : 
 
 * New backend IP module Compose for Redis: management component for cloud environments. Redis is an open-source, blazingly fast, key/value low maintenance store. Compose's platform gives you a configuration pre-tuned for high availability and locked down with additional security features. The component will manage the service connection and the main methods to manage the key/values on the storage. The library used is "lettuce".
@@ -174,7 +174,7 @@ devonfw contains a whole series of new components obtained through the Harvestin
 
 See: https://github.com/devonfw/devon/wiki/cookbook-compose-for-redis-module
 
-=== More Deployment options to JEE Application Servers and Docker/CloudFoundry
+== More Deployment options to JEE Application Servers and Docker/CloudFoundry
 
 The platform now fully supports deployment on the latest version of Weblogic, Websphere, Wildfly (JBoss) as well as Docker and Cloudfoundtry
 
@@ -182,12 +182,12 @@ See:    https://github.com/devonfw/devon/wiki/Deployment-on-WebLogic
     https://github.com/devonfw/devon/wiki/cookbook-Deployment-on-WebSphere
     https://github.com/devonfw/devon/wiki/cookbook-Deployment-on-Wildfly
 
-=== Devcon on Linux
+== Devcon on Linux
 Devcon is now fully supported on Linux which, together with the devonfw distro running on Linux, makes devonfw fully multi-platform and Cloud compatible (as Linux is the default OS in the Cloud!)
 
 See: https://github.com/devonfw/devcon/releases
 
-=== New OASP Incubators
+== New OASP Incubators
 From different Business Units (countries) have contributed "incubator" frameworks:
 
 - OASP4NET (Stack based on .NET Core / .NET "Classic" (4.6))

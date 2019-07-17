@@ -1,11 +1,11 @@
-=== Getting Started
+= Getting Started
 
-include::getting-started-what-is-devonfw.asciidoc[leveloffset=2]
-include::getting-started-why-should-i-use-devonfw.asciidoc[leveloffset=2]
-include::getting-started-download-and-setup.asciidoc[leveloffset=2]
-include::getting-started-the-devon-ide.asciidoc[leveloffset=2]
+include::getting-started-what-is-devonfw.asciidoc[leveloffset=1]
+include::getting-started-why-should-i-use-devonfw.asciidoc[leveloffset=1]
+include::getting-started-download-and-setup.asciidoc[leveloffset=1]
+include::getting-started-the-devon-ide.asciidoc[leveloffset=1]
 
-=== Devcon
+= Devcon
 
-include::devcon-command-developers-guide.asciidoc[leveloffset=2]
-include::devcon-command-reference.asciidoc[leveloffset=2]
+include::devcon-command-developers-guide.asciidoc[leveloffset=1]
+include::devcon-command-reference.asciidoc[leveloffset=1]

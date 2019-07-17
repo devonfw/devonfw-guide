@@ -6,9 +6,9 @@ toc::[]
 :source-highlighter: rouge
 :listing-caption: Listing
 
-== devonfw Release notes 2.4 “EVE”
+= devonfw Release notes 2.4 “EVE”
 
-=== Introduction
+== Introduction
 
 We are proud to announce the immediate release of devonfw version 2.4 (code named “EVE” during development). This version is the first one that fully embraces Open Source, including components like the documentation assets and Cobigen. Most of the IP (Intellectual Property or proprietary) part of devonfw are now published under the Apache License version 2.0 (with the documentation under the Creative Commons License (Attribution-NoDerivatives)). This includes the GitHub repositories where all the code and documentation is located. All of these repositories are now open for public viewing as well. 
 
@@ -25,9 +25,9 @@ There is a whole range of new features and improvements which can be seen in tha
 Last but not least, this release contains the formal publication of the devonfw Methodology or The Accelerated Solution Design - an Industry Standards based solution design and specification (documentation) methodology for Agile (and less-than-agile) projects. 
 
 
-=== Changes and new features
+== Changes and new features
 
-==== devonfw 2.4 is Open Source
+=== devonfw 2.4 is Open Source
 
 This version is the first release of devonfw that fully embraces Open Source, including components like the documentation assets and Cobigen. This is done in response to intensive market pressure and demands from the MU´s (Public Sector France, Netherlands)
 
@@ -37,7 +37,7 @@ So you can now use the devonfw distribution (the "zip" file), Cobigen, the devon
 
 *Note:* there are still some components which are IP and are not published under an OSS license. The class room trainings, the Sencha components and some Cobigen templates. But these are not includes in the distribution nor documentation and are now completely maintained separately. 
 
-==== devonfw dist 
+=== devonfw dist 
 
 * Eclipse Oxygen integrated
 ** CheckStyle Plugin updated.
@@ -58,7 +58,7 @@ So you can now use the devonfw distribution (the "zip" file), Cobigen, the devon
 ** OASP4JS-application-template for Angular 6 at workspaces/examples
 
 
-==== My Thay Star Sample Application
+=== My Thay Star Sample Application
 
 The new release of My Thai Star has focused on the following improvements:
 
@@ -75,7 +75,7 @@ The new release of My Thai Star has focused on the following improvements:
 ** Routing fade animations.
 ** Compodoc included to generate dynamically frontend documentation. 
 
-==== Documentation updates
+=== Documentation updates
 The following contents in the devonfw guide have been updated:
 
 * devonfw OSS modules documentation.
@@ -87,7 +87,7 @@ Apart from this the documentation has been reviewed and some typos and errors ha
 
 The current development of the guide has been moved to https://github.com/oasp-forge/devon-guide/wiki in order to be available as the rest of OSS assets.
 
-==== OASP4J
+=== OASP4J
 The following changes have been incorporated in OASP4J:
 
 * Integrate batch with archetype.
@@ -99,7 +99,7 @@ The following changes have been incorporated in OASP4J:
 * Upgrade to Flyway 4.
 * Fix for issue with Java 1.8 and QueryDSL #599.
 
-==== OASP4JS
+=== OASP4JS
 The following changes have been incorporated in OASP4JS:
 
 * First version of the new client application architecture guide https://github.com/oasp-forge/oasp4js-wiki/wiki 
@@ -112,14 +112,14 @@ The following changes have been incorporated in OASP4JS:
 * OASP4JS Ionic application template updated and improved https://github.com/oasp/oasp4js-ionic-application-template 
 * PWA enabled.
 
-==== AppSec Quick Solution Guide
+=== AppSec Quick Solution Guide
  
 This release incorporates a new Solution Guide for Application Security based on the state of the art in OWASP based application security. The purpose of this guide is to offer quick solutions for common application security issues for all applications based on devonfw.  It’s often the case that we need our systems to comply to certain sets of security requirements and standards. Each of these requirements needs to be understood, addressed and converted to code or project activity. We want this guide to prevent the wheel from being reinvented over and over again and to give clear hints and solutions to common security problems.
 
 * The wiki can be accessed here: https://github.com/devonfw/devonfw-security/wiki
 * The PDF can be accessed here: https://github.com/devonfw/devonfw-security
  
-==== CobiGen
+=== CobiGen
 * CobiGen_Templates project and docs updated.
 * CobiGen Angular 6 generation improved based on the updated application template
 * CobiGen Ionic CRUD App generation based on Ionic application template. Although a first version was already implemented, it has been deeply improved:
@@ -137,7 +137,7 @@ This release incorporates a new Solution Guide for Application Security based on
 ** Enabled having a class with more than one relationship to another class (more than one property of the same type).
 * CobiGen Text merger plugin has been extended and now it is able to merge text blocks. This means, for example, that the generation and merging of AsciiDoc documentation is possible. Documented here.
 
-==== Devcon 
+=== Devcon 
 A new version of Devcon has been released. Fixes and new features include:
 
 * Now Devcon is OSS, with public repository at https://github.com/devonfw/devcon 
@@ -146,7 +146,7 @@ A new version of Devcon has been released. Fixes and new features include:
 * Custom modules creation improvements.
 * Bugfixes. 
 
-==== devonfw OSS Modules
+=== devonfw OSS Modules
 * Existing devonfw IP modules have been moved to OSS. 
 ** They can now be accessed in any OASP4J project as optional dependencies from Maven Central.
 ** The repository now has public access https://github.com/devonfw/devon
@@ -162,7 +162,7 @@ A new version of Devcon has been released. Fixes and new features include:
 
 See: https://github.com/devonfw/devon/wiki#devonfw-modules  
 
-==== devonfw Shop Floor 
+=== devonfw Shop Floor 
 
 * devonfw Shop Floor 4 Docker
 ** Docker-based CICD environment
@@ -183,7 +183,7 @@ See: https://github.com/devonfw/devon/wiki#devonfw-modules
 This incubator is intended to be a compilation of DevOps experiences from the devonfw perspective. “How we use our devonfw projects in DevOps environments”. Integration with the Production Line, creation and service integration of a Docker-based CI environment and deploying devonfw applications in an OpenShift Origin cluster using devonfw templates.
 See: https://github.com/devonfw/devonfw-shop-floor
 
-==== devonfw Testing 
+=== devonfw Testing 
 
 The MrChecker Test Framework is an automated testing framework for functional testing of web applications, API web services, Service Virtualization, Security and in coming future native mobile apps, and databases. All modules have tangible examples of how to build resilient integration test cases based on delivered functions. 
 
@@ -206,7 +206,7 @@ The MrChecker Test Framework is an automated testing framework for functional te
 *** dockerfile for Test environment execution
 *** CI + CD as jenkinsfile code
 
-==== devonfw methodology: Accelerated Solution Design
+=== devonfw methodology: Accelerated Solution Design
 
 One of the prime challenges in Distributed Agile Delivery is the maintenance of a common understanding and unity of intent among all participants in the process of creating a product. That is: how can you guarantee that different parties in the client, different providers, all in different locations and time zones during a particular period of time actually understand the requirements of the client, the proposed solution space and the state of implementation.
 

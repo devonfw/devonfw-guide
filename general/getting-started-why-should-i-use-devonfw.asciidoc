@@ -6,26 +6,26 @@ toc::[]
 :source-highlighter: rouge
 :listing-caption: Listing
 
-== Why should I use devonfw?
+= Why should I use devonfw?
 
 Devonnfw aims at providing a framework which is oriented at development of web applications based on the Java EE programming model using the Spring framework project as the default implementation.
 
-=== Objectives
+== Objectives
 
-==== Standardization 
+=== Standardization 
 
 It means that to stop reinventing the Wheel in thousands of projects, hundreds of centers, dozens of countries. This also includes rationalize, harmonize and standardize all development assets all over the group and industrialize the software development process
 
 
-==== Industrialization of Innovative technologies & “Digital” 
+=== Industrialization of Innovative technologies & “Digital” 
 
 devonfw needs to standardize & industrialize. But not just large volume, “traditional” custom software development. devonfw needs to offer a standardized platform which contains a range of state of the art methodologies and technology options. devonfw needs to support agile development by small teams utilizing the latest technologies for Mobile, IoT and the Cloud
 
-==== Deliver & Improve Business Value
+=== Deliver & Improve Business Value
 
 image::images/introduction/devon_quality_agility.png[,width="250", link="images/introduction/devon_quality_agility.png"]
 
-==== Efficiency
+=== Efficiency
 
  - Up to 20% reduction in time to market with faster delivery due to automation and reuse.
 
@@ -33,7 +33,7 @@ image::images/introduction/devon_quality_agility.png[,width="250", link="images/
 
  - Flat pyramid and rightshore, ready for juniors.
 
-==== Quality
+=== Quality
 
  - State of the Art architecture and design. 
 
@@ -46,7 +46,7 @@ image::images/introduction/devon_quality_agility.png[,width="250", link="images/
  - Standardized automated quality checks.
 
 
-==== Agility
+=== Agility
 
  - Focus on business functionality not on technical.
 
@@ -61,15 +61,15 @@ image::images/introduction/devon_quality_agility.png[,width="250", link="images/
  - PoCs and Prototypes in days not months.
 
 
-=== Features
+== Features
 
-==== Everything in a single zip
+=== Everything in a single zip
 
 The devonfw distributions is packaged in a _zip_ file that includes all the http://devonfw.github.io/index.html[Custom Tools], http://devonfw.github.io/index.html[Software] and configurations.
 
 Having all the dependencies self-contained in the distribution's _zip_ file, users don't need to install or configure anything. Just extracting the _zip_ content is enough to have a fully functional _devonfw_.
 
-==== devonfw, the package
+=== devonfw, the package
 
 devonfw package provides:
 

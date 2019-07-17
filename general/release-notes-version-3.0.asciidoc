@@ -6,9 +6,9 @@ toc::[]
 :source-highlighter: rouge
 :listing-caption: Listing
 
-== devonfw Release notes 3.0 “Fry”
+= devonfw Release notes 3.0 “Fry”
 
-=== Introduction
+== Introduction
 
 We are proud to announce the immediate release of devonfw version 3.0 (code named “Fry” during development). This version is the consolidation of Open Source, focused on the major namespace change ever in the platform, removing the OASP references and adopting the new devonfw names for each technical stack or framework. 
 
@@ -40,9 +40,9 @@ There is a whole range of new features and improvements which can be seen in tha
 
 Last but not least, the projects wikis and the devonfw Guide has once again been updated accordingly before the big refactor that will be addressed in the following release in 2019. 
 
-=== Changes and new features
+== Changes and new features
 
-==== Devonfw dist 
+=== Devonfw dist 
 
 * Eclipse 2018.9 integrated
 ** CheckStyle Plugin updated.
@@ -63,7 +63,7 @@ Last but not least, the projects wikis and the devonfw Guide has once again been
 ** devon4ng-application-template for Angular 7 at workspaces/examples
 ** devon4ng-ionic-application-template for Ionic 3.20 at workspace/samples
 
-==== My Thay Star Sample Application
+=== My Thay Star Sample Application
 
 The new release of My Thai Star has focused on the following improvements:
 
@@ -97,7 +97,7 @@ The new release of My Thai Star has focused on the following improvements:
 ** New deployment pipelines
 ** Automated creation of pipelines in Jenkins
 
-==== Documentation updates
+=== Documentation updates
 
 The following contents in the devonfw guide have been updated:
 
@@ -113,7 +113,7 @@ Apart from this the documentation has been reviewed and some typos and errors ha
 
 The current development of the guide has been moved to https://github.com/devonfw-forge/devon-guide/wiki in order to be available as the rest of OSS assets.
 
-==== devon4j
+=== devon4j
 
 The following changes have been incorporated in devon4j:
 
@@ -125,7 +125,7 @@ The following changes have been incorporated in devon4j:
 * Add support for hana as dbType.
 * Bugfixes.
 
-==== devon4ng
+=== devon4ng
 
 The following changes have been incorporated in devon4ng:
 
@@ -140,7 +140,7 @@ The following changes have been incorporated in devon4ng:
 * PWA enabled.
 * Electron integrated to run My Thai Star as a desktop application in Windows, Linux or macOS. 
 
-==== devon4net
+=== devon4net
 
 Some of the highlights of devon4net 1.0 are:
 
@@ -189,7 +189,7 @@ And included the following features:
 ** Unit test template. 
 ** Moq, xunit frameworks integrated.
 
-==== devon4X
+=== devon4X
 
 Some of the highlights of the new devonfw Xamarin framework are:
 
@@ -198,14 +198,14 @@ Some of the highlights of the new devonfw Xamarin framework are:
 * My Thai Star Excalibur forms sample.
 * Xamarin Forms template available on nuget.org.
 
-==== AppSec Quick Solution Guide
+=== AppSec Quick Solution Guide
  
 This release incorporates a new Solution Guide for Application Security based on the state of the art in OWASP based application security. The purpose of this guide is to offer quick solutions for common application security issues for all applications based on devonfw.  It’s often the case that we need our systems to comply to certain sets of security requirements and standards. Each of these requirements needs to be understood, addressed and converted to code or project activity. We want this guide to prevent the wheel from being reinvented over and over again and to give clear hints and solutions to common security problems.
 
 * The wiki can be accessed here: https://github.com/devonfw/devonfw-security/wiki
 * The PDF can be accessed here: https://github.com/devonfw/devonfw-security
 
-==== CobiGen
+=== CobiGen
 
 * CobiGen core new features:
 ** CobiGen_Templates will not need to be imported into the workspace anymore. However, If you want to adapt them, you can still click on a button that automatically imports them for you.
@@ -222,7 +222,7 @@ This release incorporates a new Solution Guide for Application Security based on
 ** Response and parameter types are parsed properly when they are a reference to an entity.
 ** Parameters defined on the body of a request are being read correctly.
 
-==== Devcon 
+=== Devcon 
 
 A new version of Devcon has been released. Fixes and new features include:
 
@@ -232,7 +232,7 @@ A new version of Devcon has been released. Fixes and new features include:
 * Code Migration feature added
 * Bugfixes. 
 
-==== Devonfw OSS Modules
+=== Devonfw OSS Modules
 
 Modules upgraded to be used in new devon4j projects:
 
@@ -247,9 +247,9 @@ Modules upgraded to be used in new devon4j projects:
 
 See: https://github.com/devonfw/devon/wiki#devonfw-modules  
 
-==== Devonfw Testing 
+=== Devonfw Testing 
 
-===== Mr.Checker
+==== Mr.Checker
 
 The Mr.Checker Test Framework is an automated testing framework for functional testing of web applications, API web services, Service Virtualization, Security and in coming future native mobile apps, and databases. All modules have tangible examples of how to build resilient integration test cases based on delivered functions. Mr.Checker updates and improvements:
 
@@ -264,7 +264,7 @@ The Mr.Checker Test Framework is an automated testing framework for functional t
 *** Jenkinsfile align with ProductionLine 
 
 
-===== Testar
+==== Testar
 
 We have added Test*, Testar, as an incubator to the available test tools within devonfw. This ground-breaking tool is being developed by the Technical University of Valencia (UPV). In 2019 Capgemini will co-develop Testar with the UPV. 
 

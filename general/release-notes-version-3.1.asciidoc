@@ -8,10 +8,10 @@ toc::[]
 :listing-caption: Listing
 
 
-== devonfw Release notes 3.1 “Goku”
+= devonfw Release notes 3.1 “Goku”
 
 
-=== Introduction
+== Introduction
 
 We are proud to announce the immediate release of devonfw version 3.1 (code named “Goku” during development). This version is the first one that implements our new documentation workflow, that will allow users to get the updated documentation at any moment and not to wait for the next devonfw release.
 
@@ -41,9 +41,9 @@ Also it is worth the try of the updated support for Java and Spring Boot develop
 
 More information at https://marketplace.visualstudio.com/items?itemName=devonfw.devonfw-extension-pack. Also, you can contribute to this extension in this GitHub repository https://github.com/devonfw/devonfw-extension-pack-vscode.
 
-=== Changes and new features
+== Changes and new features
 
-==== Devonfw dist 
+=== Devonfw dist 
 
 * Eclipse 2018.12 integrated
 ** CheckStyle Plugin updated.
@@ -66,7 +66,7 @@ More information at https://marketplace.visualstudio.com/items?itemName=devonfw.
 ** devon4ng-ionic-application-template for Ionic 4 at workspace/samples
 
 
-==== My Thay Star Sample Application
+=== My Thay Star Sample Application
 
 The new release of My Thai Star has focused on the following improvements:
 
@@ -100,7 +100,7 @@ The new release of My Thai Star has focused on the following improvements:
 ** New deployment pipelines
 ** Automated creation of pipelines in Jenkins
 
-==== Documentation updates
+=== Documentation updates
 
 This release addresses the new documentation workflow, being now possible to keep the documentation synced with any change. The new documentation includes the following contents:
 
@@ -116,7 +116,7 @@ This release addresses the new documentation workflow, being now possible to kee
 * devonfw testing with MrChecker
 * My Thai Star documentation
 
-==== devon4j
+=== devon4j
 
 The following changes have been incorporated in devon4j:
 
@@ -131,7 +131,7 @@ The following changes have been incorporated in devon4j:
 * Added MasterCto
 * For all details see https://github.com/devonfw/devon4j/milestone/3?closed=1[milestone].
 
-==== devon4ng
+=== devon4ng
 
 The following changes have been incorporated in devon4ng:
 
@@ -157,21 +157,21 @@ The following changes have been incorporated in devon4ng:
 ** Layout with Angular Material
 ** Theming with Angular Material
 
-==== devon4net
+=== devon4net
 
 The following changes have been incorporated in devon4net:
 
 * New circuit breaker component to communicate microservices via HTTP
 * Resolved the update packages issue
 
-==== AppSec Quick Solution Guide
+=== AppSec Quick Solution Guide
 
 This release incorporates a new Solution Guide for Application Security based on the state of the art in OWASP based application security. The purpose of this guide is to offer quick solutions for common application security issues for all applications based on devonfw. It’s often the case that we need our systems to comply to certain sets of security requirements and standards. Each of these requirements needs to be understood, addressed and converted to code or project activity. We want this guide to prevent the wheel from being reinvented over and over again and to give clear hints and solutions to common security problems.
 
 * The wiki can be accessed here: https://github.com/devonfw/devonfw-security/wiki
 * The PDF can be accessed here: https://github.com/devonfw/devonfw-security
 
-==== CobiGen
+=== CobiGen
 
 * CobiGen core new features:
 ** CobiGen CLI: New command line interface for CobiGen. Using commands, you will be able to generate code the same way as you do with Eclipse. This means that you can use CobiGen on other IDEs like Visual Studio Code or IntelliJ. Please take a look into the documentation for more info.
@@ -190,7 +190,7 @@ This release incorporates a new Solution Guide for Application Security based on
 ** Java static and object initializers now get merged.
 ** Fixed bugs when downloading and adapting templates. 
 
-==== Devcon 
+=== Devcon 
 
 A new version of Devcon has been released. Fixes and new features include:
 
@@ -200,7 +200,7 @@ A new version of Devcon has been released. Fixes and new features include:
 * Code Migration feature added.
 * Bugfixes. 
 
-==== Devonfw OSS Modules
+=== Devonfw OSS Modules
 
 Modules upgraded to be used in new devon4j projects:
 
@@ -214,7 +214,7 @@ Modules upgraded to be used in new devon4j projects:
 * Compose for Redis Module 
 See: https://github.com/devonfw/devon/wiki#devonfw-modules 
 
-==== devonfw shop floor
+=== devonfw shop floor
 
 * Industrialization oriented to configure the provisioning environment provided by Production Line and deploy applications on an OpenShift cluster.
 * Added Jenkinsfiles to configure automatically OpenShift environments to deploy devonfw applications.
@@ -222,7 +222,7 @@ See: https://github.com/devonfw/devon/wiki#devonfw-modules
 * Upgrade the documentation with getting started guide to configure CICD in any devonfw project and deploy it.
 * Added new tool cicdgen to generate CICD code/files.
 
-===== cicdgen
+==== cicdgen
 
 cicdgen is a devonfw tool to generate all code/files related to CICD in your project. It's based on angular schematics and it has its own CLI.
 More information https://github.com/devonfw/cicdgen[here].
@@ -231,9 +231,9 @@ More information https://github.com/devonfw/cicdgen[here].
 * Option to deploy devonfw projects with Docker
 * Option to deploy devonfw projects with OpenShift
 
-==== Devonfw Testing 
+=== Devonfw Testing 
 
-===== Mr.Checker
+==== Mr.Checker
 
 The Mr.Checker Test Framework is an automated testing framework for functional testing of web applications, API web services, Service Virtualization, Security and in coming future native mobile apps, and databases. All modules have tangible examples of how to build resilient integration test cases based on delivered functions. Mr.Checker updates and improvements:
 

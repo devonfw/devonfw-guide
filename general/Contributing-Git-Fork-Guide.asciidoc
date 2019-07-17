@@ -6,15 +6,15 @@ toc::[]
 :source-highlighter: rouge
 :listing-caption: Listing
 
-== Working with forked repositories
+= Working with forked repositories
 
-=== Fork a repository
+== Fork a repository
 
 A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
 
 Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea.
 
-==== Propose changes to someone else's project
+=== Propose changes to someone else's project
 
 A great example of using forks to propose changes is for bug fixes. Rather than logging an issue for a bug you've found, you can:
 
@@ -24,7 +24,7 @@ A great example of using forks to propose changes is for bug fixes. Rather than 
 
 If the project owner likes your work, they might pull your fix into the original repository!
 
-==== How to fork a repository
+=== How to fork a repository
 
 GitHub, GitLab and Bitbucket have a very accesible option to fork any repository you can access to. For example, at GitHub you will only need to do the following:
 
@@ -37,7 +37,7 @@ In order to work locally you will need to pull your forked repository. Open the 
 $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ----
 
-=== Configuring a remote for a fork
+== Configuring a remote for a fork
 
 You must configure a remote that points to the upstream repository in Git to sync changes you make in a fork with the original repository. This also allows you to sync changes made in the original repository with the fork.
 
@@ -70,7 +70,7 @@ upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
 upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
 ----
 
-=== Syncing a fork
+== Syncing a fork
 
 Sync a fork of a repository to keep it up-to-date with the upstream repository.
 

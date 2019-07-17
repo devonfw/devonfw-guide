@@ -6,9 +6,9 @@ toc::[]
 :source-highlighter: rouge
 :listing-caption: Listing
 
-== Code Contributions
+= Code Contributions
 
-=== Notes on Code Contributions
+== Notes on Code Contributions
 
 Both projects, devon and OASP, are intended to be easy to contribute to. One service allowing such simplicity is GitHub was therefore selected as preferred collaboration platform.
 
@@ -16,23 +16,23 @@ In order to contribute code, git and GitHub specific pull-requests are being use
 
 It is mandatory to follow the <<Contributor Covenant Code of Conduct,code of conduct>> that must be present in the root of every OSS or private project as `CODE_OF_CONDUCT.asciidoc` or `CODE_OF_CONDUCT.md`. 
 
-=== Introduction to Git and GitHub
+== Introduction to Git and GitHub
 
 Git is a version control system used for a coordinated and versioned collaboration of computer files. It enables a project to be easily worked on by multiple developers and contributors.
 
 GitHub is an online repository used by deonvfw and OASP in order to host the corresponding files. Using the command line tool or the GUI Tool "GitHub Desktop" a user can easily manage project files. There are private and public repositories. Public ones (like OASP) can be accessed by everyone, private repositories (like devon) require access permissions.
 
-==== Creating a new user account
+=== Creating a new user account
 
 The devon and OASP projects use GitHub as hosting service. Therefore you'll need an account to allow collaboration. Visit https://github.com/join?source=header-home[this page] to create a new account. If available, use *your CORP username* as GitHub username and *your CORP email address*.
 
 A GitHub account is essential for contributing code and gaining permissions to access private repositories.
 
-==== Git Basics
+=== Git Basics
 
 An in-depth documentation on basic Git syntax and usage can be found on the https://git-scm.com/docs[official Git homepage]. Another helpful and easy to follow instruction can be found http://rogerdudler.github.io/git-guide/[here].
 
-=== Structure of our projects
+== Structure of our projects
 
 In total, there are three GitHub projects regarding OASP and devon:
 
@@ -57,7 +57,7 @@ This is a private repository. You have to be logged in and have permissions to a
 ** *develop*
 ** *master*
 
-=== Contributing to our projects
+== Contributing to our projects
 
 In order to contribute to our projects, developers must follow the following <<Development Guidelines,development guidelines>>. Other sources about contributing to devon/OASP:
 
@@ -74,7 +74,7 @@ In order to contribute to our projects, developers must follow the following <<D
 
 This files should be included at the root folder or in a `docs` folder. https://github.com/stevemao/github-issue-templates[This repository] is a good resource to find the perfect templates for issues and pull requests that fit in your repository. 
 
-==== Process of contributing code to the devon/OASP projects
+=== Process of contributing code to the devon/OASP projects
 
 * Use the issue tracker to check whether the issue you would like to be working on exists. Otherwise create a new issue.
 +
@@ -136,7 +136,7 @@ The language to be used for commit messages is English.
 +
 Use the tab "Pull requests" and the button labeled "New pull request". Afterwards you can _Choose different branches or forks above to discuss and review changes_.
 
-=== Reviewing Pull Requests
+== Reviewing Pull Requests
 
 Detailed information about revieweing can be found on the https://help.github.com/articles/reviewing-changes-in-pull-requests/[official topic on GitHub Pull Requests].
 

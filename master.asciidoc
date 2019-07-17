@@ -22,6 +22,8 @@ include::devonfw-shop-floor.wiki/master-devonfw-shop-floor[leveloffset=0]
 
 include::cicdgen.wiki/master-cicdgen[leveloffset=0]
 
+include::tools-cobigen.wiki/master-cobigen[leveloffset=0]
+
 include::devonfw-testing.wiki/master-devonfw-testing[leveloffset=0]
 
 include::my-thai-star.wiki/master-my-thai-star[leveloffset=0]

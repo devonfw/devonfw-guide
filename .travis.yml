@@ -7,6 +7,7 @@ cache:
     - "$HOME/.m2/repository"
 env:
   global:
+    - JAVA_TOOL_OPTIONS=-Xmx2g java -version
     - ORG="devonfw"
     - EMAIL="icsddevonfwsupport.apps2@capgemini.com"
     - REPO_CONSOLIDATE="devonfw-guide"
@@ -19,7 +20,6 @@ stages:
     if: (type = push) AND (commit_message !~ /^PDF devonfw guide \| Travis CI build number.*$/)
 install: true
 before_install:
-  - JAVA_TOOL_OPTIONS=-Xmx2g java -version
   - cd ..
   - sudo apt-get update
   - sudo apt-get install -y imagemagick

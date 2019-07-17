@@ -119,7 +119,7 @@ title_page:
   align: center
   logo:
       #image: image:C:/Capgemini/Devon-Guide/asciidoctor-devon-guide/images/devonfw.jpg[pdfwidth=50%]
-      image: image:./images/devonfw.jpg[pdfwidth=50%]
+      image: image:./images/devonfw.png[pdfwidth=50%]
       top: 30%
   title:
    # top: 55%

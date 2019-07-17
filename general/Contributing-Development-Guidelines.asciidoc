@@ -6,7 +6,7 @@ toc::[]
 :source-highlighter: rouge
 :listing-caption: Listing
 
-== Development Guidelines
+= Development Guidelines
 
 * *Always ask before creating a pull request.* To avoid duplication efforts, its better to discuss it with us first or create an issue.
 * *All code must be reviewed via a pull request.* Before anything can be merged, it must be reviewed by other developer and ideally at least 2 others.

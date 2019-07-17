@@ -6,9 +6,9 @@ toc::[]
 :source-highlighter: rouge
 :listing-caption: Listing
 
-== devonfw Release notes 2.3 "Dash"
+= devonfw Release notes 2.3 "Dash"
 
-=== Release: improving & strengthening the Platform
+== Release: improving & strengthening the Platform
  
 We are proud to announce the immediate release of *devonfw version 2.3* (code named “_Dash_” during development).  This release comes with a bit of a delay as we decided to wait for the publication of OASP4j 2.5. “Dash” contains a slew of new features but in essence it is already driven by what we expect to be the core focus of 2018: strengthening the platform and improving quality.
 
@@ -18,7 +18,7 @@ After one year and a half of rapid expansion, we expect the next release(s) of t
 
 There is a whole range of new features and improvements which can be seen in that light. OASP4j 2.5 changes and improves the package structure of the core Java framework. The My Thai Star sample app has now been fully integrated in the different frameworks and the devonfw Guide has once again been significantly expanded and improved. 
 
-=== An industrialized platform for the ADcenter
+== An industrialized platform for the ADcenter
 
 Although less visible to the overall devonfw community, an important driving force was (meaning that lots of work has been done in the context of) the creation of the ADcenter concept towards the end of 2017. Based on a radical transformation of on/near/offshore software delivery, the focus of the ADcenters is to deliver agile & accelerated “Rightshore” services with an emphasis on:
 
@@ -30,9 +30,9 @@ The first two ADcenters, in Valencia (Spain) and Bangalore (India), are already 
 
 The creation of the ADcenter is such a short time is visible proof that we´re getting closer to a situation where devonfw and Production Line are turning into the default development platform for APPS2, thereby standardizing all aspects of the software development life cycle: from training and design, architecture, devops and development,  all the way up to QA and deployment.  
 
-=== Changes and new features
+== Changes and new features
 
-==== devonfw dist 
+=== devonfw dist 
 
 The *devonfw dist*, or distribution, i.e. the central zip file which contains the main working environment for the devonfw developer, has been significantly enhanced. New features include: 
 
@@ -57,27 +57,27 @@ The *devonfw dist*, or distribution, i.e. the central zip file which contains th
 ** OASP4JS-application-template for Angular5 at workspaces/examples
 ** Devon4sencha starter templates updated
 
-==== OASP4j 2.5
+=== OASP4j 2.5
 
-===== Support for JAX-RS & JAX-WS clients
+==== Support for JAX-RS & JAX-WS clients
 
 With the aim to enhance the ease in consuming RESTful and SOAP web services, JAX-RS and JAX-WS clients have been introduced. They enable developers to concisely and efficiently implement portable client-side solutions that leverage existing and well-established client-side HTTP connector implementations. Furthermore, the getting started time for consuming web services has been considerably reduced with the default configuration out-of-the-box which can be tweaked as per individual project requirements. 
 
 See: https://github.com/oasp/oasp4j/issues/358
 
-===== Separate security logs for OASP4J log component
+==== Separate security logs for OASP4J log component
 
 Based on OWASP(Open Web Application Security Project), OASP4J aims to give developers more control and flexibility with the logging of security events and tracking of forensic information. Furthermore, it helps classifying the information in log messages and applying masking when necessary. It provides powerful security features while based on set of logging APIs developers are already familiar with over a decade of their experience with Log4J and its successors. 
 
 See: https://github.com/oasp/oasp4j/issues/569
 
-===== Support for Microservices
+==== Support for Microservices
 
 Integration of an OASP4J application to a Microservices environment can now be leveraged with this release of OASP4J. Introduction of service clients for RESTful and SOAP web services based on Java EE give developers agility and ease to access microservices in the Devon framework. It significantly cuts down the efforts on part of developers around boilerplate code and stresses more focus on the business code improving overall efficiency and quality of deliverables.
 
 See: https://github.com/oasp/oasp4j/pull/589/commits
 
-==== Cobigen
+=== Cobigen
 
 A new version of Cobigen has been included. New features include: 
  
@@ -87,18 +87,18 @@ A new version of Cobigen has been included. New features include:
 * Cobigen_Templates project and docs updated
 * Bugfixes and Hardening
 
-==== My Thai Star Sample Application
+=== My Thai Star Sample Application
 
 From this release on the My Thai Star application has been fully integrated in the different frameworks in the platform. Further more, a more modularized approach has been followed in the current release of My Thai star application to decouple client from implementation details. Which provides better encapsulation of code and dependency management for API and implementation classes. This has been achieved with creation of a new “API” module that contain interfaces for REST services and corresponding Request/Response objects. With existing “Core” module being dependent on “API” module. To read further you can follow the link https://github.com/oasp/my-thai-star/wiki/java-design#basic-architecture-details 
 
 Furthermore: an email and Twitter micro service were integrated in my-thai-star. This is just for demonstration purposes. A full micro service framework is already part of oasp4j 2.5.0
 
-==== Documentation refactoring
+=== Documentation refactoring
 
 The complete devonfw guide is restructured and refactored. Getting started guides are added for easy start with devonfw.Integration of the new Tutorial with the existing devonfw Guide whereby existing chapters of the previous tutorial were converted to Cookbook chapters. Asciidoctor is used for devonfw guide PDF generation. 
 See: https://github.com/devonfw/devon-guide/wiki
 
-==== OASP4JS
+=== OASP4JS
 
 The following changes have been incorporated in OASP4JS:
 
@@ -109,11 +109,11 @@ The following changes have been incorporated in OASP4JS:
 * Core and Shared Modules included to follow the recommended Angular projects structure, 
 * Yarn and NPM compliant since both lock files are included in order to get a stable installation.
 
-==== Admin interface for oasp4j apps 
+=== Admin interface for oasp4j apps 
 
 The new version includes an Integration of an admin interface for oasp4j apps (Spring Boot). This module is based on CodeCentric´s Spring Boot Admin (https://github.com/codecentric/spring-boot-admin). See: https://github.com/devonfw/devon-guide/wiki/Spring-boot-admin-Integration-with-devon4j
 
-==== Devcon 
+=== Devcon 
 
 A new version of Devcon has been released. Fixes and new features include:
 
@@ -121,7 +121,7 @@ A new version of Devcon has been released. Fixes and new features include:
 * New menu has been added - “other modules”, if menus are more than 10, other modules will display some menus.
 * A progress bar has been added for installing the distribution
 
-==== devonfw Modules
+=== devonfw Modules
 
 Existing devonfw modules can now be accessed with the help of starters following namespace devonfw-<module_name>-starter. Starters available for modules:
 
@@ -136,13 +136,13 @@ Existing devonfw modules can now be accessed with the help of starters following
 
 See: https://github.com/devonfw/devon/wiki#ip-modules 
 
-==== devonfw Shop Floor 
+=== devonfw Shop Floor 
 
 This incubator is intended to be a compilation of DevOps experiences from the devonfw perspective. “How we use our devonfw projects in DevOps environments”. Integration with the Production Line, creation and service integration of a Docker-based CI environment and deploying devonfw applications in an OpenShift Origin cluster using devonfw templates.
 
 See: https://github.com/devonfw/devonfw-shop-floor
 
-==== devonfw-testing 
+=== devonfw-testing 
 
 The Allure Test Framework is an automated testing framework for functional testing of web applications and in coming future native mobile apps, web services and databases. All modules have tangible examples of how to build resilient integration test cases based on delivered functions. 
 
@@ -166,7 +166,7 @@ The Allure Test Framework is an automated testing framework for functional testi
 
 See:  https://github.com/devonfw/devonfw-testing/wiki
 
-==== DOT.NET Framework incubators
+=== DOT.NET Framework incubators
 
 The .NET Core and Xamarin frameworks are still under development by a workgroup from The Netherlands, Spain, Poland, Italy, Norway and Germany. The 1.0 release is expected to be coming soon but the current incubator frameworks are already being used in several engagements.  Some features to highlight are:
 
@@ -183,21 +183,21 @@ The .NET Core and Xamarin frameworks are still under development by a workgroup 
 ** Backend (.NET Core)
 ** FrontEnd (Xamarin)
 
-==== devonfw has been Primed by Red Hat for OpenShift
+=== devonfw has been Primed by Red Hat for OpenShift
 
 OpenShift is a supported distribution of Kubernetes from Red Hat for container-based software deployment and management. It is using Docker containers and DevOps tools for accelerated application development. Using Openshift allows Capgemini to avoid Cloud Vendor lock-in. Openshift provides devonfw with a state of the art CI/CD environment (devonfw Shop Floor), providing devonfw with a platform for the whole development life cycle: from development to staging / deploy.
 
 See https://hub.openshift.com/primed/120-capgemini and https://github.com/oasp/s2i
 
-==== Harvested components and modules
+=== Harvested components and modules
 
 The devonfw Harvesting process continues to add valuable components and modules to the devonfw platform. The last months the following elements were contributed: 
 
-===== Service Client support (for Micro service Projects). 
+==== Service Client support (for Micro service Projects). 
 
 This client is for consuming microservices from other application.This solution is already very flexible and customizable.As of now,this is suitable for small and simple project where two or three microservices are invoked. Donated by Jörg Holwiller. See: https://github.com/devonfw/devon-microservices
 
-===== JHipster devonfw code generation
+==== JHipster devonfw code generation
 
 This compomnent was donated by the ADcenter in Valencia. It was made in order to comply with strong requirements (especially from the French BU) to use jHipster for code generation.
 
@@ -205,11 +205,11 @@ JHipster is a code generator based on Yeoman generators. Its default generator g
 
 See: https://github.com/devonfw/devon-guide/wiki/cookbook-devon-jhipster-module 
 
-===== Simple Jenkins task status dashboard
+==== Simple Jenkins task status dashboard
 
 This component has been donated by, has been harvested from system in use by, Capgemini  Valencia. This dashboard, apart from an optional gamification element, allows the display of multiple Jenkins instances. See: https://github.com/oasp/jenkins_view 
 
-==== And lots more, among others:
+=== And lots more, among others:
 
 * OASP4J/devonfw docker based build IN a docker process. See: https://github.com/devonfw/devon-guide/wiki/Dockerfile-for-the-maven-based-spring.io-projects
 

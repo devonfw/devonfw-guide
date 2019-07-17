@@ -6,13 +6,13 @@ toc::[]
 :source-highlighter: rouge
 :listing-caption: Listing
 
-== Wiki Contributions
+= Wiki Contributions
 
 Our wikis are written in the so called _AsciiDoc_ format. Check the https://powerman.name/doc/asciidoc[AsciiDoc cheatsheet] and the http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[AsciiDoc quick reference] for more information. Knowing the following basic features should allow you to convert your Word documents into the Wiki friendly AsciiDoc format. 
 
 It is mandatory to follow the <<Contributor Covenant Code of Conduct,code of conduct>> that must be present in the root of every OSS or private project as `CODE_OF_CONDUCT.asciidoc` or `CODE_OF_CONDUCT.md`. 
 
-=== Text styles
+== Text styles
 
 _Italic Text_
 
@@ -49,7 +49,7 @@ Text in ~Subscript~
 Text in ~Subscript~
 ----
 
-=== Titles
+== Titles
 
 A title can be initiated like this:
 
@@ -61,7 +61,7 @@ A title can be initiated like this:
 ...
 ----
 
-=== Lists
+== Lists
 
 Ordered and unordered lists can be created like this:
 
@@ -80,7 +80,7 @@ Unordered list:
 * ...
 ----
 
-=== Tables
+== Tables
 
 The following example shows how a table can be created. Note that the _header_ flag is optional.
 
@@ -94,7 +94,7 @@ The following example shows how a table can be created. Note that the _header_ f
 |===
 ----
 
-=== Source Code
+== Source Code
 
 If you want to show off some code examples, you can use the _code block_:
 

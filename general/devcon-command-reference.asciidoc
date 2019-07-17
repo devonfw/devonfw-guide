@@ -6,7 +6,7 @@ toc::[]
 :source-highlighter: rouge
 :listing-caption: Listing
 
-== Devcon Command Reference
+= Devcon Command Reference
 
 image::images/devconlogo_full.png[,align="center",width="200",Devcon, link="images/devconlogo_full.png"]
 
@@ -38,19 +38,19 @@ The current version of devcon has been released with the following modules
 in your Devcon version more modules may have been included. You can list them using the option `devon -h`
 ====
 
-=== dist
+== dist
 
 The _dist_ module is responsible for the tasks related with the distribution which means all the functionalities surrounding the configuration of the Devon distribution, including the obtention of the distribution itself.
 
-==== dist install
+=== dist install
 
 The _install_ command downloads a distribution from a Team Forge repository and after that extracts the file in a location defined by the user.
 
-===== dist install requirements
+==== dist install requirements
 
 A user with permissions to download files from Team Forge repository.
 
-===== _dist install_ parameters
+==== _dist install_ parameters
 
 The _install_ parameter needs four parameters to work properly:
 
@@ -62,7 +62,7 @@ The _install_ parameter needs four parameters to work properly:
 
 - *type*: the type of distribution. The options are _'oaspide'_ to download a devon4j based distribution or _'devondist'_ to download a Devon based distribution.
 
-===== _dist install_ example of usage
+==== _dist install_ example of usage
 A simple example of usage for this command would be the following
 
 [source,batch]
@@ -84,28 +84,28 @@ You must have in mind that this process can take a while, specially depending on
 
 After downloading and installing the distribution successfully installed. You can now follow the manual steps as described in the devonfw Guide or, alternatively, run 'devon dist init' to initialize the distribution.
 
-==== dist init
+=== dist init
 
 The _init_ command initializes a newly downloaded distribution.
 
-===== _dist init_ requirements
+==== _dist init_ requirements
 
 A new, not initialized distribution (running it on a configured distribution has no adverse side-effects).
 
-===== _dist init_ parameters
+==== _dist init_ parameters
 
 The _init_ parameter needs one parameter to work properly:
 
 - *path*: location of the Devon distribution (current dir if not given).
 
-==== dist s2
+=== dist s2
 
 The _s2_ command has been developed to automate the configuration process to use Devon as a Shared Service. This configuration is based on launching two scripts included in the Devon distributions, the _s2-init.bat_ and the _s2-create.bat_.
 The _*s2-init.bat*_ is responsible for configuring the _settings.xml_ file (located in the _conf/.m2_ directory). Basically enables the connection of _Maven_ with the _Artifactory_ repository, where the Devon modules are stored, and adds the user credentials for this connection.
 
 The _*s2-create.bat*_ creates a new project in the workspace of the distribution, and optionally does a checkout of a Subversion repository inside this new project. Finally the script creates a Eclipse _.bat_ starter related to the new project.
 
-===== _dist s2_ requirements
+==== _dist s2_ requirements
 
 - The command can be launched from any directory within a Devon distribution version 2.0.1 or higher. The Devon distribution is defined by having a _settings.json_ file located in the _conf_ directory. This file is a JSON object that defines parameters like the version of the distribution or the type which should be _devon-dist_ as is showed below.
 
@@ -122,7 +122,7 @@ The command will search for this file to get the root directory where the script
 
 Apart from this the _settings.xml_ file needs to be compatible with the Shared Services autoconfiguration script (_s2-init.bat_).
 
-===== _dist s2_ parameters
+==== _dist s2_ parameters
 
 So the _s2_ command needs six parameters to be able to complete the two phases:
 
@@ -142,7 +142,7 @@ So the _s2_ command needs six parameters to be able to complete the two phases:
 
 - *svnurl*: the url for the SVN provided by S2.
 
-===== _dist s2_ example of usage
+==== _dist s2_ example of usage
 
 A simple example of usage for this command would be the followings:
 
@@ -188,17 +188,17 @@ Finished creating/updating workspace: "TestProject"
 After this the `conf/.m2/settings.xml` file should have been configured and a new _TestProject_ directory must have been created in the _workspaces_ directory with all the files checked out from the svn repository and in the distribution root a new _eclipse-testproject.bat_ script must have been created too.
 
 
-==== dist info
+=== dist info
 
 The _info_ command provides very basic information about the Devon distribution, like type, version and path.
 
-===== _dist info_ parameters
+==== _dist info_ parameters
 
 The _dist info_ command has one optional parameter:
 
 - *path*: path to the distro. Uses current directory if not specified.
 
-=== doc
+== doc
 
 With this module we can access in a straightforward way to the documentation to get started with Devon framework. The commands of this module show information related with different components of Devon even opening in the default browser the sites related with them.
 
@@ -214,15 +214,15 @@ With this module we can access in a straightforward way to the documentation to 
 
 - `doc sencha`: Opens the Sencha Ext JS 6 documentation site.
 
-=== github
+== github
 
 This module is implemented to facilitate getting the Github code from devon4j and Devon repositories. It has only two commands, one to get the OAPS4J code and other to get the Devon code.
 
-==== github devon4j
+=== github devon4j
 
 This command clones the devon4j repository to the path that the user specifies in the parameters.
 
-===== _github devon4j_ parameters
+==== _github devon4j_ parameters
 
 The devon4j command needs only one parameter:
 
@@ -233,7 +233,7 @@ The devon4j command needs only one parameter:
 - *proxyPort*: Port parameter for optional Proxy configuration.
 
 
-===== _github devon4j_ example of usage
+==== _github devon4j_ example of usage
 
 A simple example of usage for this command would be the following
 
@@ -256,17 +256,17 @@ D:\Projects\devon4j>devon github devon4j -proxyHost 1.0.5.10 -proxyPort 8080
 ----
 
 
-==== github devoncode
+=== github devoncode
 
 This command clones the Devon repository to the path specified in the path parameter.
 
 
-===== _github devoncode_ requirements
+==== _github devoncode_ requirements
 
 A github user with download permissions over the Devon repository.
 
 
-===== _github devoncode_ parameters
+==== _github devoncode_ parameters
 
 The _devoncode_ command needs three parameters:
 
@@ -281,7 +281,7 @@ The _devoncode_ command needs three parameters:
 - *proxyPort*: Port parameter for optional Proxy configuration.
 
 
-===== _github devoncode_ example of usage
+==== _github devoncode_ example of usage
 
 A simple example of usage for this command would be the followingdevon
 
@@ -297,11 +297,11 @@ Also we can define, if necessary, a proxy configuration. The following example s
 D:\>devon github devoncode -path C:\Projects\devon -user John_g -pass 12345 -proxyHost 1.0.5.10 -proxyPort 8080
 ----
 
-=== help
+== help
 
 The help module is responsible for showing the help info to facilitate the user the knowledge to use the tool. It has only one command, the _guide_ command, that doesn't need any parameter and that basically prints a summary of the devcon general usage with a list of the global options and a list with the available modules
 
-==== _help_ example of usage
+=== _help_ example of usage
 
 [source,batch]
 ----
@@ -324,21 +324,21 @@ List of available modules:
 
 If you have follow this guide you can realize that the result is the same that is shown with other options as ```devon``` or ```devon -h```. This is because these options internally are using this module _help_.
 
-=== devon4j
+== devon4j
 
 This module groups all the devcon functionalities related to the server applications like creating, running and deploying server applications based on the devon4j project.
 
-==== devon4j create
+=== devon4j create
 
 This command creates a new server project based on the devon4j archetype.
 
-===== _devon4j create_ requirements
+==== _devon4j create_ requirements
 
 This command needs to be launched from within (or pointing to) a devonfw distribution.
 
 In a second term internally this command uses the _Maven_ plugin included in the devonfw distributions so in order to be able to use this plugin we should launch this command from a devonfw command line (use the _console.bat_ included in the devonfw distributions).
 
-===== _devon4j create_ parameters
+==== _devon4j create_ parameters
 
 This command uses five parameters (four of them mandatory).
 
@@ -352,7 +352,7 @@ This command uses five parameters (four of them mandatory).
 
 - *version*: the version for the project.
 
-===== _devon4j create_ example of usage
+==== _devon4j create_ example of usage
 
 A simple example of usage for this command would be the following
 
@@ -382,15 +382,15 @@ D:\>devon devon4j create -servername MyNewProject -serverpath D:\devon-dist\ -pa
 
 After that we should have a new _MyNewProject_ project created in the _devon-dist_ directory.
 
-==== devon4j run
+=== devon4j run
 
 With this command the user can run a server project application from the embedded tomcat server.
 
-===== _devon4j run_ requirements
+==== _devon4j run_ requirements
 
 The command can be launched within a Devon distribution version 2.0.1 or higher. Also verify that your _devon4j_ application has the devon.json file well configured.
 
-===== _devon4j run_ parameters
+==== _devon4j run_ parameters
 
 The _run_ command handles two parameters
 
@@ -398,7 +398,7 @@ The _run_ command handles two parameters
 
 - *port*: the port from which the app should be accessible.
 
-===== _devon4j run_ example of usage
+==== _devon4j run_ example of usage
 
 A simple example of usage for this command would be the following
 
@@ -438,21 +438,21 @@ Or providing the optional _path_ parameter
 D:\>devon devon4j run -port 8081 -path D:\devon-dist\workspaces\MyApp\core
 ----
 
-==== devon4j build
+=== devon4j build
 
 With this command the user can build a server project, is the equivalent to the `mvn clean install` command
 
-===== _devon4j build_ requirements
+==== _devon4j build_ requirements
 
 In order to work properly the command must be launched from within (or pointing to) a devon4j project directory (the devon4j project type is defined in a _devon.json_ file with parameter 'type' set to 'devon4j').
 
-===== _devon4j build_ parameters
+==== _devon4j build_ parameters
 
 This command only uses one parameter
 
 -*path*: the location of the server project. This is an optional parameter and if the user does not provide it devcon will use in its place the current directory from which the command has been launched.
 
-===== _devon4j build_ example of usage
+==== _devon4j build_ example of usage
 
 A simple example of usage for this command would be the following
 
@@ -489,21 +489,21 @@ Or using the optional parameter _path_
 D:\>devon devon4j build -path D:\devon-dist\workspaces\MyApp
 ----
 
-==== devon4j migrate
+=== devon4j migrate
 
 With this command the user can update server project to the latest version
 
-===== _devon4j migrate_ requirements
+==== _devon4j migrate_ requirements
 
 The migrate command need only the Project that's needs to migrate to latest version of devon4j 
 
-===== _devon4j migrate_ parameters
+==== _devon4j migrate_ parameters
 
 This command only uses one parameter
 
 -*projectPath*: the location of the server project that's needs to be updated.
 
-===== _devon4j migrate_ example of usage
+==== _devon4j migrate_ example of usage
 
 A simple example of usage for this command would be the following
 
@@ -562,19 +562,19 @@ auth.inMemoryAuthentication().withUser("waiter").password(this.passwordEncoder.e
         .password(this.passwordEncoder.encode("chief")).roles("Chief");
 ----
 
-=== devon4ng
+== devon4ng
 
 The devon4ng module is responsible for automating the tasks related to the client projects based on Angular.
 
-==== devon4ng create
+=== devon4ng create
 
 With this command the user can create a basic devon4ng app.
 
-===== _devon4ng create_ requirements
+==== _devon4ng create_ requirements
 
 This command must be used within a devonfw distribution with version 2.0.0 or higher. You can check your distribution's version looking at the conf/settings.json file.
 
-===== _devon4ng create_ parameters
+==== _devon4ng create_ parameters
 
 This command accepts two parameters:
 
@@ -582,7 +582,7 @@ This command accepts two parameters:
 
 - *clientpath*: the location for the new application. Is an optional parameter and if not provided by the user devcon will take as the path the directory from which the command has been launched.
 
-===== _devon4ng create_ example of usage
+==== _devon4ng create_ example of usage
 
 A simple example of usage for this command would be the following
 
@@ -611,15 +611,15 @@ If everything goes right a new directory _MyDevon4ngApp_ must have been created 
 
 The user can also use the next command _devon4ng build_ to do that last operation.
 
-==== devon4ng build
+=== devon4ng build
 
 With this command the user can resolve the dependencies of an _devon4ng_ app. The _devon4ng build_ command is the equivalent to the `ng build` command.
 
-===== _devon4ng build_ parameters
+==== _devon4ng build_ parameters
 
 - *path*: The location of the _devon4ng_ app. Is an optional parameter and if not provided devcon will use the current directory from which the command has been launched instead.
 
-===== _devon4ng build_ example of usage
+==== _devon4ng build_ example of usage
 
 A simple example of usage for this command would be the following
 
@@ -646,15 +646,15 @@ Or using the optional parameter _path_
 D:\devon-dist>devon devon4ng build -path D:\devon-dist\workspaces\MyDevon4ngApp
 ----
 
-==== devon4ng run
+=== devon4ng run
 
 In order to launch the _devon4ng_ apps devcon provides this _run_ command that can be launched even without parameters.
 
-===== _devon4ng run_ parameters
+==== _devon4ng run_ parameters
 
 The only parameter needed is the _clientpath_ that points to the client app. This is an optional parameter and if not provided devcon will use by default the directory from within the command is launched.
 
-===== _devon4ng run_ example of usage
+==== _devon4ng run_ example of usage
 
 A simple example of usage for this command would be the following
 
@@ -687,15 +687,15 @@ D:\devon-dist>devon devon4ng run -clientpath D:\devon-dist\workspaces\MyDevon4ng
 In both cases, after launching the command, the app should be available through a web browser in url `http://localhost:4200`.
 
 ////
-==== devon4ng jumpstart
+=== devon4ng jumpstart
 
 This command allows users to get the devon4ng sample app with all its dependencies included. The command downloads a zip file from Teamforge and extracts all its content in the user's environment.
 
-==== _devon4ng jumpstart_ requirements
+=== _devon4ng jumpstart_ requirements
 
 A user with permissions to download files from Team Forge repository.
 
-==== _devon4ng jumpstart_ parameters
+=== _devon4ng jumpstart_ parameters
 
 - *path*: the location for the devon4ng sample app file. Is an optional parameter, if not provided the current path will be used.
 
@@ -705,7 +705,7 @@ A user with permissions to download files from Team Forge repository.
 
 - *angularVersion*: Optional parameter to choose the Angular version in wich the sample app is based. The options are '1' to download devon4ng sample app based on Angular 1 and '2' to download devon4ng sample app based on Angular 2. When not provided by the user the default value for this parameter will be '1'.
 
-==== _devon4ng jumpstart_ example of usage
+=== _devon4ng jumpstart_ example of usage
 
 A simple example of usage for this command would be the following
 
@@ -734,19 +734,19 @@ Or using optional parameters to define a different location and the Angular vers
 D:\>devon devon4ng jumpstart -user john -password 1234 -path D:\my\custom\location -angularVersion 2
 ----
 ////
-=== project
+== project
 
 The _project_ module groups the funcionalities related to the combined server + client projects.
 
-==== project create
+=== project create
 
 With this command the user can automate the creation of a combined server and client project (Sencha or devon4ng).
 
-===== _project create_ requirements
+==== _project create_ requirements
 
 If you want to use a Sencha app as client you will need a github user with permissions to download the _devon4sencha_ repository.
 
-===== _project create_ parameters
+==== _project create_ parameters
 
 Basically this command needs the same paremeters as the 'subcommands' that is using behind (`devon4j create`, `devon4ng create`, `sencha workspace` and `sencha create`)
 
@@ -762,7 +762,7 @@ Basically this command needs the same paremeters as the 'subcommands' that is us
 
 - *createsenchaws*: is an optional parameter that indicates if the Sencha workspace needs to be created (by default its value is FALSE).
 
-===== _project create_ example of usage
+==== _project create_ example of usage
 
 A simple example of usage for this command would be the following
 
@@ -836,16 +836,16 @@ Other possible usages
 
   Will create a server app (sss) and a Sencha workspace with a Sencha app inside, all in current directory.
 
-==== project build
+=== project build
 
 This command will build both client and server project.
 
-===== _project build_ requirements
+==== _project build_ requirements
 
 In order to work properly, the command must be launched from within (or pointing to) a Devon distribution (the devon4j project type is defined in a _devon.json_ file with parameter 'type' set to 'devon4j' in the server project ).
 The directory from where build command is fired should contain client and server project at same level, and directory should contain a _devon.json_ which should have project type as _COMBINED_,and  client  project should contain a _devon.json_ file with parameter 'type' set to  'devon4ng' or 'devon4sencha'.
 
-==== _project build_ parameters
+=== _project build_ parameters
 
 The build command takes three parameters and two of them are mandatory.
 
@@ -855,7 +855,7 @@ The build command takes three parameters and two of them are mandatory.
 
 - *clientpath* : It should point to client directory i.e where the client code is located. Again a mandatory one.
 
-===== _project build_ example of usage
+==== _project build_ example of usage
 
 A simple example of usage for this command would be the following
 
@@ -872,11 +872,11 @@ path D:\FIN_IDE\devon4j-ide-all-2.0.0\clientdocproject type devon4ng
 Completed
 ----
 
-==== project deploy
+=== project deploy
 
 This command automates all the process described in the <<Deployment on Tomcat (Client/Server),deployment on tomcat>> section. It creates a new tomcat server associated to the combined server + client project in the _software_ directory of the distribution and launches it to make the project available in a browser.
 
-===== _project deploy_ requirements
+==== _project deploy_ requirements
 
 The command automates the packaging of the combined Server + Client project but the user must configure those apps to work properly so you need to varify that:
 
@@ -906,7 +906,7 @@ In the example above that `devon.json` file defines a server app (_myServerApp_)
 
 - The command must be launched from within a valid devonfw distribution.
 
-===== _project deploy_ parameters
+==== _project deploy_ parameters
 
 - *tomcatpath*: the path to the tomcat folder. Devcon will look for the distribution's Tomcat when this parameter is not provided.
 
@@ -918,7 +918,7 @@ In the example above that `devon.json` file defines a server app (_myServerApp_)
 
 - *path*: path for the combined project (current directory when not given).
 
-===== _project deploy_ example of usage
+==== _project deploy_ example of usage
 
 A simple example of usage for this command would be the following
 
@@ -946,15 +946,15 @@ If we use the optional parameter _path_
 D:\devon-dist>devon project deploy -path D:\devon-dist\workspaces\MyCombinedProject
 ----
 
-==== project run
+=== project run
 
 This command  runs the server & client project(unified build) in debug mode that is separate client and spring boot server.
 
-==== _project run_ requirements
+=== _project run_ requirements
 
 Please verify the _devon4j run_ and _devon4ng run_ or _sencha run_ requirements.
 
-==== _project run_ parameters
+=== _project run_ parameters
 
 - *clienttype* : This parameter shows which type of client is integrated with server i.e devon4ng or sencha and its a mandatory parameter
 
@@ -966,7 +966,7 @@ Please verify the _devon4j run_ and _devon4ng run_ or _sencha run_ requirements.
 
 - *serverpath* : Path to Server project Workspace (currentDir if not given).
 
-==== _project run_ example of usage
+=== _project run_ example of usage
 
 A simple example of usage for this command ( for client type devon4ng) would be the following
 
@@ -989,15 +989,15 @@ After launching the command, a browser should be opened and will show the welcom
 
 
 
-=== sencha
+== sencha
 
 _Sencha_ is a pure JavaScript application framework for building interactive cross platform web applications and is the view layer for web applications developed with Devon Framework. This module encapsulates the _Sencha Cmd_ functionality that is a command line tool to automate tasks around _Sencha_ apps.
 
-==== sencha run
+=== sencha run
 
 This command compiles in DEBUG mode and then runs the internal Sencha web server. Is the equivalent to the _Sencha Cmd_'s ```sencha app watch``` and does not need any parameter.
 
-===== _sencha run_ requirements
+==== _sencha run_ requirements
 
 We should launch the command from a Devon4Sencha project which is defined by a _devon.json_ file with parameter 'type' set to 'Devon4Sencha'
 
@@ -1007,7 +1007,7 @@ We should launch the command from a Devon4Sencha project which is defined by a _
   "type":"Devon4Sencha"}
 ----
 
-===== _sencha run_ example of usage
+==== _sencha run_ example of usage
 
 A simple example of usage for this command would be the following
 
@@ -1016,15 +1016,15 @@ A simple example of usage for this command would be the following
 D:\devon-dist\workspaces\senchaProject>devon sencha run
 ----
 
-==== sencha workspace
+=== sencha workspace
 
 With this command we can generate automatically a fully functional Sencha workspace in a directory of our machine.
 
-===== _sencha workspace_ requirements
+==== _sencha workspace_ requirements
 
 We will need a Github user with permissions to clone the _devon4sencha_ repository.
 
-===== _sencha workspace_ parameters
+==== _sencha workspace_ parameters
 
 The _sencha workspace_ command needs five parameters and four of them are mandatory.
 
@@ -1038,7 +1038,7 @@ The _sencha workspace_ command needs five parameters and four of them are mandat
 
 - *proxyPort*: Port parameter for optional Proxy configuration.
 
-===== _sencha workspace_ example of usage
+==== _sencha workspace_ example of usage
 
 A simple example of usage for this command would be the following
 
@@ -1060,15 +1060,15 @@ Also we can define, if necessary, a proxy configuration. The following example s
 D:\>devon sencha workspace -path D:\MyProject -username john -password 1234 -proxyHost 1.0.5.10 -proxyPort 8080
 ----
 
-==== sencha copyworkspace
+=== sencha copyworkspace
 
 With this command we can make create new Sencha workspace by making a copy from an existing Devon dist to a particular path
 
-===== _sencha copyworkspace_ requirements
+==== _sencha copyworkspace_ requirements
 
 There should be a devonfw distribution present which included the 'workspaces\examples\devon4sencha' folder
 
-===== _sencha copyworkspace_ parameters
+==== _sencha copyworkspace_ parameters
 
 The _sencha copyworkspace_ command needs two parameters. Both are optional.
 
@@ -1076,16 +1076,16 @@ The _sencha copyworkspace_ command needs two parameters. Both are optional.
 
 - *distpath*: the path to a devonfw Dist (Current directory if not provided)
 
-==== sencha build
+=== sencha build
 This command builds a Sencha Ext JS6 project. Is the equivalent to the _Sencha Cmd_'s ```sencha app build```.
 
-===== _sencha build_ parameters
+==== _sencha build_ parameters
 
 This command only has one parameter and it is optional
 
 - *appDir*: the path to the app to be built. If the user does not provide it devcon will use the current directory as the location of the Sencha app.
 
-===== _sencha build_ example of usage
+==== _sencha build_ example of usage
 
 A simple example of usage for this command would be the following
 
@@ -1117,15 +1117,15 @@ OUTPUT:[INF] Processing Build Descriptor : classic
 D:\>
 ----
 
-==== sencha create
+=== sencha create
 
 This command creates a new Sencha Ext JS6 app.
 
-===== _sencha create_ requirements
+==== _sencha create_ requirements
 
 The command must be launched within a Sencha workspace or pointing to a Sencha workspace using the optional parameter _workspacepath_. So in order to work properly first we will need to have a Sencha workspace ready in our local machine.
 
-===== _sencha create_ parameters
+==== _sencha create_ parameters
 
 The create parameters handles two parameters
 
@@ -1134,7 +1134,7 @@ The create parameters handles two parameters
 - *workspacepath*: optionally the user can specify the location of the Sencha workspace. If the user does not provide it the current directory will be use as default.
 
 
-===== _sencha create_ example of usage
+==== _sencha create_ example of usage
 
 A simple example of usage for this command would be the following
 
@@ -1166,15 +1166,15 @@ D:\>
 
 After that we will have a new Sencha app called _MyNewApp_ in our Sencha workspace.
 
-=== workspace
+== workspace
 
 This module handles all tasks related to distribution workspaces.
 
-==== workspace create
+=== workspace create
 
 This command automates the creation of new workspaces within the distribution with the default configuration including a new Eclipse _.bat_ starter related to the new project.
 
-===== workspace create parameters
+==== workspace create parameters
 
 The create command needs two parameters:
 
@@ -1182,7 +1182,7 @@ The create command needs two parameters:
 
 - *foldername*: the name for the new workspace.
 
-===== _workspace create_ example of usage
+==== _workspace create_ example of usage
 
 A simple example of usage for this command would be the following
 
@@ -1197,11 +1197,11 @@ Copyright (c) 2016 Capgemini
 
 As a result of that a new folder _newproject_ with the default project configuration should be created in the _C:\MyFolder\devon-dist\workspaces_ directory alongside an _eclipse-newproject.bat_ starter script in the root of the distribution.
 
-=== system
+== system
 
 This module contains system wide commands related to devcon.
 
-==== system install
+=== system install
 
 This command installs devcon on user's HOME directory or at an alternative path provided by user.
 
@@ -1219,11 +1219,11 @@ If you are behind a proxy you must configure the connection using the optional p
 > java -jar devcon.jar system install -proxyHost 1.0.5.10 -proxyPort 8080
 ----
 
-==== system update
+=== system update
 
 Launching this command the user can update the Devcon version installed to the last version available.
 
-===== _system update_ example of usage
+==== _system update_ example of usage
 
 A simple example of usage for this command would be the following
 

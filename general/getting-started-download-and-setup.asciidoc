@@ -6,13 +6,13 @@ toc::[]
 :source-highlighter: rouge
 :listing-caption: Listing
 
-== Download and Setup
+= Download and Setup
 
 In this section, you will learn how to setup the devonfw environment and start working on first project based on devonfw.
 
 The devonfw environment contains all software and tools necessary to develop the applications with devonfw.
 
-=== Prerequisites
+== Prerequisites
 
 In order to setup the environment, following are the prerequisites:
 
@@ -20,7 +20,7 @@ In order to setup the environment, following are the prerequisites:
 * 2GB of free disk space
 * The ZIP containing the latest devonfw distribution
 
-=== Download
+== Download
 The devonfw distributions can be obtained from the https://coconet.capgemini.com/sf/frs/do/listReleases/projects.apps2_devon/frs.devon_distribution[TeamForge releases library] and are packaged in a _zip_ file that includes all the needed tools, software and configurations
 
 image::images/devconlogo_imgonly.png[,width="50"]
@@ -29,7 +29,7 @@ image::images/devconlogo_imgonly.png[,width="50"]
 You can do it using devcon with the command `devon dist install`, learn more  <<dist install,here>>.
 After a successful installation, you can initialize it with the command `devon dist init`, learn more <<dist init,here>>.
 
-=== Setup the workspace
+== Setup the workspace
 
 1. Unzip the devonfw distribution into a directory of your choice. *The path to the devonfw distribution directory should contain no spaces*, to prevent problems with some of the tools.
 
@@ -48,8 +48,8 @@ image::images/download-install/devon_guide_environment_setup_2_create_workspace.
 
 *Note* : If you use a proxy to connect to the Internet, you have to manually configure it in Maven, Sencha Cmd and Eclipse. Next section explains about it.
 
-==== Manual Tool Configuration
-===== Maven
+=== Manual Tool Configuration
+==== Maven
 
 Open the file "conf/.m2/settings.xml" in an editor
 
@@ -63,7 +63,7 @@ image::images/download-install/devon_guide_environment_setup_4_proxy_maven.png[,
 
 If your proxy does not require authentication, simply remove the <username> and <password> lines.
 
-===== Sencha Cmd
+==== Sencha Cmd
 
 Open the file software/Sencha/Cmd/default/sencha.cfg in an editor
 
@@ -79,7 +79,7 @@ image::images/download-install/devon_guide_environment_setup_6_proxy_sencha.png[
 
 If your proxy does not require authentication, simply remove the "-Dhttp.proxyUser", "-DhttpProxyPassword", "-Dhttps.proxyUser" and "-Dhttps.proxyPassword" parameters.
 
-===== Eclipse
+==== Eclipse
 
 Open eclipse by executing "eclipse-main.bat".
 

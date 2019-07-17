@@ -1,35 +1,29 @@
 = devonfw guide
-:front-cover-image: image::./images/Capgemini_Logo_2COL_RGB.png[]
+:toc:
+:doctype: book
+:idprefix:
+:idseparator: -
+:reproducible:
+:source-highlighter: rouge
+:listing-caption: Listing
+:sectnums:
+:chapter-label:
+:partnums:
 
-include::general/master-general-start[]
+include::general/master-general-start[leveloffset=0]
 
-== devon4j documentation
+include::devon4j.wiki/master-devon4j[leveloffset=0]
 
-include::devon4j.wiki/master-devon4j[]
+include::devon4ng.wiki/master-devon4ng[leveloffset=0]
 
-== devon4ng documentation
+include::devon4net.wiki/master-devon4net[leveloffset=0]
 
-include::devon4ng.wiki/master-devon4ng[]
+include::devonfw-shop-floor.wiki/master-devonfw-shop-floor[leveloffset=0]
 
-== devon4net documentation
+include::cicdgen.wiki/master-cicdgen[leveloffset=0]
 
-include::devon4net.wiki/master-devon4net[]
+include::devonfw-testing.wiki/master-devonfw-testing[leveloffset=0]
 
-== devonfw shop floor documentation
+include::my-thai-star.wiki/master-my-thai-star[leveloffset=0]
 
-include::devonfw-shop-floor.wiki/master-devonfw-shop-floor[]
-
-== cicdgen documentation
-
-include::cicdgen.wiki/master-cicdgen[]
-
-== devonfw testing with MrChecker documentation
-
-include::devonfw-testing.wiki/master-devonfw-testing[]
-
-== My Thai star documentation
-
-include::my-thai-star.wiki/master-my-thai-star[]
-
-include::general/master-general-end[]
-
+include::general/master-general-end[leveloffset=0]

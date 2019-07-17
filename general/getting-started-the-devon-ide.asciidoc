@@ -6,13 +6,13 @@ toc::[]
 :source-highlighter: rouge
 :listing-caption: Listing
 
-== The Devon IDE
+= The Devon IDE
 
-=== Introduction
+== Introduction
 
 The Devon IDE is the general name for two distinct versions of a customized Eclipse which comes in a Open Source variant, called devon-ide, and a more extended version included in the "Devon Dist" which is only available for Capgemini engagements.
 
-==== Features and advantages
+=== Features and advantages
 
 devonfw comes with a fully featured IDE in order to simplify the installation, configuration and maintenance of this instrumental part of the development environment. As it is being included in the distribution, the IDE is ready to be used and some specific configuration of certain plugins only takes a few  minutes.
 
@@ -20,11 +20,11 @@ image::images/devon-ide/integrated-ide.png["Integrated IDE",width="450", link="i
 
 As with the remainder of the distribution, the advantage of this approach is that you can have as many instances of the -ide "installed" on your machine for different projects with different tools, tool versions and configurations. No physical installation and no tweaking of your operating system required. "Installations" of the Devon distribution do not interfere with each other nor with other installed software.
 
-==== Multiple Workspaces
+=== Multiple Workspaces
 
 There is inbuilt support for working with different workspaces on different branches. Create and update new workspaces with a few clicks. You can see the workspace name in the title-bar of your IDE so you do not get confused and work on the right branch.
 
-=== Cobigen
+== Cobigen
 
 In the Devon distribution we have a code generator to create CRUD code, called *Cobigen*. This is a generic incremental generator for end to end code generation tasks, mostly used in Java projects. Due to a template-based approach, CobiGen generates any set of text-based documents and document fragments.
 
@@ -32,27 +32,27 @@ image::images/devon-ide/cobigen.png[,width="450",link="images/devon-ide/cobigen.
 
 Cobigen is distributed in the Devon distribution as an Eclipse plugin, and is available to all Devon developers for Capgemini engagements. Due to the importance of this component and the scope of its functionality, it is fully described <<Getting Started Cobigen,here>>.
 
-=== IDE Plugins:
+== IDE Plugins:
 
 Since an application’s code can greatly vary, and every program can be written in lots of ways without being semantically different, IDE comes with pre-installed and pre-configured plugins that use some kind of a probabilistic approach, usually based on pattern matching, to determine which pieces of code should be reviewed. These hints are a real time-saver, helping you to review incoming changes and prevent bugs from propagating into the released artifacts. Apart from Cobigen mentioned in the previous paragraph, the IDE provides CheckStyle, SonarQube, FindBugs and SOAP-UI. Details of each can be found in subsequent sections.
 
-==== CheckStyle
+=== CheckStyle
 
-===== What is CheckStyle
+==== What is CheckStyle
 
 http://eclipse-cs.sourceforge.net/[CheckStyle] is a Open Source development tool to help you ensure that your Java code adheres to a set of coding standards. Checkstyle does this by inspecting your Java source code and pointing out items that deviate from a defined set of coding rules.
 
 With the Checkstyle IDE Plugin, your code is constantly inspected for coding standard deviations. Within the Eclipse workbench, you are immediately notified with the problems via the Eclipse Problems View and source code annotations similar to compiler errors or warnings.
 This ensures an extremely short feedback loop right at the developers fingertips.
 
-===== Why use CheckStyle
+==== Why use CheckStyle
 
 If your development team consists of more than one person, then obviously a common ground for coding standards (formatting rules, line lengths etc.) must be agreed upon - even if it is just for practical reasons to avoid superficial, format related merge conflicts.
 Checkstyle Plugin helps you define and easily apply those common rules.
 
 The plugin uses a project builder to check your project files with Checkstyle. Assuming the IDE Auto-Build feature is enabled, each modification of a project file will immediately get checked by Checkstyle on file save - giving you immediate feedback about the changes you made. To use a simple analogy, the Checkstyle Plug-in works very much like a compiler but instead of producing .class files, it produces warnings where the code violates Checkstyle rules. The discovered deviations are accessible in the Eclipse Problems View, as code editor annotations and via additional Checkstyle violations views.
 
-===== Installation of CheckStyle
+==== Installation of CheckStyle
 
 After IDE installation, IDE provides default checkstyle configuration file which has certain check rules specified .
 The set of rules used to check the code is highly configurable. A Checkstyle configuration specifies which check rules are validated against the code and with which severity violations will be reported. Once defined a Checkstyle configuration can be used across multiple projects. The IDE comes with several pre-defined Checkstyle configurations.
@@ -62,7 +62,7 @@ You can see violations in your workspace as shown in below figure.
 
 image::images/devon-ide/checkstyle.png["checkstyle", width = "450" , link="images/devon-ide/checkstyle.png"]
 
-===== Usage
+==== Usage
 
 So, once projects are created, follow steps mentioned below, to activate checkstyle:
 
@@ -100,17 +100,17 @@ On the left hand side of the editor an icon is shown for each line that contains
 Also note the editor annotations - they are there to make it even easier to see where the problems are.
 
 
-==== FindBugs
+=== FindBugs
 
-===== What is FindBugs
+==== What is FindBugs
 
 http://findbugs.sourceforge.net/[FindBugs]is an open source project for a static analysis of the Java bytecode to identify potential software bugs. Findbugs provides early feedback about potential errors in the code.
 
-===== Why use FindBugs
+==== Why use FindBugs
 
 It scans your code for bugs, breaking down the list of bugs in your code into a ranked list on a 20-point scale. The lower the number, the more hardcore the bug.This helps the developer to access these problems early in the development phase.
 
-===== Installation and Usage of FindBugs
+==== Installation and Usage of FindBugs
 
 IDE comes preinstalled with FindBugs plugin.
 
@@ -130,19 +130,19 @@ image::images/devon-ide/FindBugs3.png["ShowView bug Explorer",width="450",link="
 
 image::images/devon-ide/FindBugs4.png["bug Explorer",width="450",link="images/devon-ide/FindBugs4.png"]
 
-==== SonarLint
+=== SonarLint
 
-===== what is SonarLint
+==== what is SonarLint
 
 http://www.sonarlint.org/[SonarLint] is an open platform to manage code quality.
 It provides on-the-fly feedback to developers on new bugs and quality issues injected into their code..
 
-===== Why use SonarLint
+==== Why use SonarLint
 
 It covers seven aspects of code quality like junits, coding rules,comments,complexity,duplications, architecture and design and potential bugs.
 SonarLint has got a very efficient way of navigating, a balance between high-level view, dashboard and defect hunting tools. This enables to quickly uncover projects and / or components that are in analysis to establish action plans.
 
-===== Installation and usage of SonarLint
+==== Installation and usage of SonarLint
 
 IDE comes preinstalled with SonarLint.
 To configure it , please follow below steps:

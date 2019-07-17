@@ -6,7 +6,7 @@ toc::[]
 :source-highlighter: rouge
 :listing-caption: Listing
 
-== devonfw Introduction
+= devonfw Introduction
 
 image::images/devonfw-small.png[,align="center",width="200",devonfw, link="images/devonfw-small.png"]
 
@@ -14,17 +14,17 @@ Welcome to *devonfw*, the Devon Framework. This is a product of the CSD industri
 
 http://devonfw.github.io/index.html[Devon framework] is a development platform aiming for standardization of processes and productivity boost, that provides an architecture blueprint for Java/JavaScript applications, alongside a set of tools to provide a fully functional _out-of-the-box_ development environment.
 
-=== Building Blocks of the Platform
+== Building Blocks of the Platform
 
 image::images/introduction/devon_buildingblocks.png[,width="650",devonfw Building blocks,link="images/introduction/devon_buildingblocks.png"]
 
 devonfw uses a state-of-the-art open source core reference architecture for the server (today considered as commodity in the IT-industry) and on top of it an ever increasing number of high-value assets that are developed by Capgemini.
 
-=== devonfw Technology Stack
+== devonfw Technology Stack
 
 devonfw is composed of an Open Source part that can be freely used by other people and proprietary addons which are Capgemini IP and can be used only in Capgemini engagements.The Open Source part of devonfw is called _The Open Application Standard Platform_ (OASP) . It consist of
 
-==== Back-end solutions
+=== Back-end solutions
 
 - https://github.com/devonfw/devon4j[_devon4j_]: server implemented with Java. The OASP platform provides an implementation for Java based on https://spring.io/[Spring] and https://projects.spring.io/spring-boot/[Spring Boot].
 
@@ -32,7 +32,7 @@ devonfw is composed of an Open Source part that can be freely used by other peop
 
 - _Dot Net_ implementation. (Upcoming)
 
-==== Front-end solutions
+=== Front-end solutions
 
 For client applications, _devonfw_ includes two possible solutions based on _JavaScript_:
 
@@ -42,9 +42,9 @@ For client applications, _devonfw_ includes two possible solutions based on _Jav
 
 Check out the links for more details.
 
-=== Custom Tools
+== Custom Tools
 
-==== Pre-installed Software
+=== Pre-installed Software
 
 - _Eclipse_: pre-configured and fully functional IDE to develop Java based apps.
 
@@ -60,7 +60,7 @@ Check out the links for more details.
 
 - _Tomcat_: a web server ready to test the deploy of our artifacts.
 
-==== Devcon
+=== Devcon
 
 For project management and other life-cycle related tasks, _devonfw_ provides also https://github.com/devonfw/devcon[Devcon], a command line and graphic user interface cross platform tool.
 
@@ -70,13 +70,13 @@ image::images/devcon/devcon.png[,width="550", link="images/devon/devcon.png"]
 
 All those tasks can be done manually using _Maven_, _Tomcat_, _Sencha Cmd_, _Bower_, _Gulp_, etc. but with _Devcon_ users have the possibility of managing the projects without the necessity of dealing with all those different tools.
 
-==== Cobigen
+=== Cobigen
 
 _Cobigen_ is a code generator included in the context of _devonfw_ that allows users to generate all the structure and code of the components, helping to save a lot of time wasted in repetitive tasks.
 
 image::images/cobigen.png[,width="550", link="images/devon/cobigen.png"]
 
-=== devonfw Modules
+== devonfw Modules
 
 As a part of the goal of productivity boosting, _devonfw_ also provides a set of _modules_ to the developers, created from real projects requirements, that can be connected to projects for saving all the work of a new implementation.
 

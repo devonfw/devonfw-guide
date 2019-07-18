@@ -19,6 +19,8 @@ This is now possible as we have established a new workflow and rules during deve
 
 image::images/documentation_workflow.png[link="images/documentation_workflow.png"]
 
+This release includes the very first version of the new CobiGen CLI. Now using commands, you will be able to generate code the same way as you do with Eclipse. This means that you can use CobiGen on other IDEs like Visual Studio Code or IntelliJ. Please take a look at https://github.com/devonfw/tools-cobigen/wiki/howto_Cobigen-CLI-generation for more info.
+
 The devonfw-shop-floor project has got a lot of updates in order to make even easier the creation of devonfw projects with CICD pipelines that run on the Production Line, deploy on Red Hat OpenShift Clusters and in general Docker environments. See the details below. 
 
 This release includes the very first version of our devonfw-ide tool that will allow users to automate devonfw setup and update the development environment. This tool will become the default devonfw setup tool in future releases. For more information please visit the repository https://github.com/devonfw/devon-ide.

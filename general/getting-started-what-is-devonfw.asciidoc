@@ -10,9 +10,9 @@ toc::[]
 
 image::images/devonfw-small.png[,align="center",width="200",devonfw, link="images/devonfw-small.png"]
 
-Welcome to *devonfw*, the Devon Framework. This is a product of the CSD industrialization effort to bring a standardized platform for custom software development within Capgemini APPS2. This platform is aimed at engagements where clients do not force the use of a determined technology so we can offer a better alternative coming from our experience as a group.
+Welcome to *devonfw*, the devonfw platform. This is a product of the CSD industrialization effort to bring a standardized platform for custom software development within Capgemini APPS2. This platform is aimed at engagements where clients do not force the use of a determined technology so we can offer a better alternative coming from our experience as a group.
 
-http://devonfw.github.io/index.html[Devon framework] is a development platform aiming for standardization of processes and productivity boost, that provides an architecture blueprint for Java/JavaScript applications, alongside a set of tools to provide a fully functional _out-of-the-box_ development environment.
+http://www.devonfw.com[devonfw] is a development platform aiming for standardization of processes and productivity boost, that provides an architecture blueprint for Java/JavaScript applications, alongside a set of tools to provide a fully functional _out-of-the-box_ development environment.
 
 == Building Blocks of the Platform
 
@@ -22,23 +22,23 @@ devonfw uses a state-of-the-art open source core reference architecture for the 
 
 == devonfw Technology Stack
 
-devonfw is composed of an Open Source part that can be freely used by other people and proprietary addons which are Capgemini IP and can be used only in Capgemini engagements.The Open Source part of devonfw is called _The Open Application Standard Platform_ (OASP) . It consist of
+devonfw is fully Open Source and consists of the following technology stacks.
 
 === Back-end solutions
 
-- https://github.com/devonfw/devon4j[_devon4j_]: server implemented with Java. The OASP platform provides an implementation for Java based on https://spring.io/[Spring] and https://projects.spring.io/spring-boot/[Spring Boot].
+- https://github.com/devonfw/devon4j[_devon4j_]: server implemented with Java. The devonfw platform provides an implementation for Java based on https://spring.io/[Spring] and https://projects.spring.io/spring-boot/[Spring Boot].
 
-- https://github.com/oasp/oasp4fn[_OASP4FN_]: serverless implementation based on https://nodejs.org/en/[node.js].
+- https://github.com/devonfw/devon4net[_devon4net_]: server implementation based on https://dotnet.microsoft.com/[.NET].
 
-- _Dot Net_ implementation. (Upcoming)
+- https://github.com/devonfw/devon4node[_devon4node_]: server implementation based on https://nestjs.com/[NestJS].
 
 === Front-end solutions
 
-For client applications, _devonfw_ includes two possible solutions based on _JavaScript_:
+For client applications, _devonfw_ includes two possible solutions based on _TypeScript, JavaScript, C# and .NET_:
 
-- https://github.com/oasp/oasp4js-ng-project-seed[OASP4JS]: the _OASP_ implementation based on https://angular.io/[Angular] framework.
+- https://github.com/devonfw/devon4ng[devon4ng]: Frontend implementation based on https://angular.io/[Angular] and hybrid mobile implementation based on https://ionicframework.com/[Ionic].
 
-- https://github.com/devonfw/devon4sencha[devon4sencha]: a client solution based on the https://www.sencha.com/[Sencha] framework.
+- https://github.com/devonfw/devon4x[devon4X]: Mobile implementation based on https://docs.microsoft.com/xamarin/[Xamarin].
 
 Check out the links for more details.
 
@@ -48,13 +48,13 @@ Check out the links for more details.
 
 - _Eclipse_: pre-configured and fully functional IDE to develop Java based apps.
 
+- _Visual Studio Code_: pre-configured and fully functional IDE to develop applications. 
+
 - _Java_: all the Java environment configured and ready to be used within the distribution.
 
 - _Maven_: to manage project dependencies.
 
 - _Node_: a Node js environment configured and ready to be used within the distribution.
-
-- _Sencha_: devonfw also includes a installation of the _Sencha Cmd_ tool.
 
 - _Sonarqube_: a code quality tool.
 

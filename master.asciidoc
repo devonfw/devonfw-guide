@@ -1,4 +1,5 @@
 = devonfw guide
+Updated at {localdatetime}
 :toc:
 :doctype: book
 :idprefix:

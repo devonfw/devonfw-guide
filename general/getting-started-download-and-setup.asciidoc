@@ -21,7 +21,7 @@ In order to setup the environment, following are the prerequisites:
 * The ZIP containing the latest devonfw distribution
 
 == Download
-The devonfw distributions can be obtained from the https://coconet.capgemini.com/sf/frs/do/listReleases/projects.apps2_devon/frs.devon_distribution[TeamForge releases library] and are packaged in a _zip_ file that includes all the needed tools, software and configurations
+The devonfw distributions can be obtained from the http://de-mucevolve02/files/devonfw/[FTP releases library] and are packaged in a _zip_ file that includes all the needed tools, software and configurations. Browse to the **current** folder in order to get the latest version. 
 
 image::images/devconlogo_imgonly.png[,width="50"]
 .*Using devcon*

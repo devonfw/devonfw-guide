@@ -48,6 +48,24 @@ image::images/download-install/devon_guide_environment_setup_2_create_workspace.
 
 *Note* : If you use a proxy to connect to the Internet, you have to manually configure it in Maven, Sencha Cmd and Eclipse. Next section explains about it.
 
+== Setup the workspace (Linux)
+
+* Unzip the devonfw distribution into a directory of your choice. *The path to the devonfw distribution directory should contain no spaces*, to prevent problems with some of the tools.
+
+* Run the script: . env.sh
+
+image::images/download-install/run_env_sh.png[, width="550", run_env_sh, link="images/download-install/run_env_sh.png"]
+
+* Run the script: . create-or-update-workspace
+
+image::images/download-install/create_update_ws.png[, width="550", create_update_ws, link="images/download-install/create_update_ws.png"]
+
+These both . env.sh and . create-or-update-workspace will set all the softwares path that included with devon distribution like eclipse, maven , java etc. Also this will generate some file like eclipse_main used to invoke eclipse
+
+* For vscode setup we have to execute create-or-update-workspace-vs
+
+* There are a script initialize.sh and uninstallUI.sh . These scripts are for installing/uninstalling angular,node, python etc
+
 === Manual Tool Configuration
 ==== Maven
 

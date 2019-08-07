@@ -64,7 +64,7 @@ These both . env.sh and . create-or-update-workspace will set all the softwares 
 
 * For vscode setup we have to execute create-or-update-workspace-vs
 
-* There are a script initialize.sh and uninstallUI.sh.
+* There are a scripts initialize.sh and uninstallUI.sh.
 ** initialize.sh : It installs angular,node, python ant subversion
 ** uninstallUI.sh : It is use to uninstalls the above softwares
 

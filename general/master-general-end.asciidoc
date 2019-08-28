@@ -6,6 +6,10 @@ include::Contributing-Development-Guidelines.asciidoc[leveloffset=1]
 include::Contributing-Git-Fork-Guide.asciidoc[leveloffset=1]
 include::Contributing-Wiki.asciidoc[leveloffset=1]
 
+= OSS Compliance
+
+include::Cookbook-OSS-Compliance.asciidoc[leveloffset=1]
+
 = Release Notes
 
 include::release-notes-version-3.1.asciidoc[leveloffset=1]

@@ -1,0 +1,261 @@
+:toc: macro
+toc::[]
+
+:doctype: book
+:reproducible:
+:source-highlighter: rouge
+:listing-caption: Listing
+
+== Cookbook OSS Compliance
+
+This chapter helps you to gain transparency on OSS usage and reach OSS compliance in your project.
+
+=== Preface
+
+devonfw, as most Java software, makes strong use of Open Source Software (OSS). It is using about 150 OSS products on the server only and on the client even more. Using a platform like devonfw to develop your own custom solution requires handling contained OSS correctly, i.e acting _OSS-compliant_.
+
+Please read the Open Source policy of your company first, e.g. the https://talent.capgemini.com/media_library/Medias/Common_images/OSS_Policy__Final.pdf[Capgemini OSS Policy] which contains a short, comprehensive and well written explanation on relevant OSS-knowledge. Make sure you:
+
+* understand the copyleft effect and its effect in commercial projects
+* understand the 3 license categories: "permissive", "weak copyleft" and "strong copyleft" 
+* know prominent license types as e.g. "Apache-2.0" or GPL-3.0" and what copyleft-category they are in
+* are aware that some OSS offer dual/multi-licenses
+* Understand that OSS libraries often come with sub-dependencies of other OSS carying licenses themselfes
+
+To define sufficient OSS compliance measures, contact your IP officer or legal team as early as possible, especially if you develop software for clients.
+
+=== Obligations when using OSS
+
+If you create a custom solution containing OSS, this in legal sense is a "derived" work. If you distribute your derived work to your business client or any other legal entity in binary packaged form, the license obligations of contained OSS get into effect. Ignoring these leads to a license infringement which can create high damage.
+
+To carefully handle these obligations you must:
+
+* maintain an OSS inventory (to gain transparency on OSS usage and used licenses) 
+* check license conformity depending on usage/distribution in a commercial scenario
+* check license compatibility between used OSS-licenses
+* fulfill obligations defined by the OSS-licenses
+ 
+Obligations need to be checked per license. Frequent obligations are:
+
+* deliver the license terms of all used versions of the OSS licenses
+* not to change any copyright statements or warranty exclusions contained in the used OSS components
+* deliver the source code of the OSS components (e.g. on a data carrier)
+* when modifying OSS, track any source code modification (including date and name of the employee/company)
+* display OSS license notice in a user frontend (if any)
+* other obligations depending on individual license
+
+=== Automate OSS handling
+
+Carefully judging the OSS usage in your project is a MANUAL activity! However, collecting OSS information and fulfilling license obligations should be automated as much as possible. A prominent professional tool to automate OSS compliance is the commercial software "Blackduck". Unfortunately it is rather expensive - either purchased or used as Saas.
+
+The most recommended lightweight tooling is a combination of Maven plugins. We will mainly use the http://www.mojohaus.org/license-maven-plugin/[Mojo Maven License Plugin]. 
+
+=== Configure the Mojo Maven License Plugin 
+
+You can use it from commandline but this will limit the ability to sustainably configure it (shown later).
+Therefore we add it permanently as a build-plugin to the project parent-pom like this (already contained in OASP-parent-pom):
+
+[source,xml]
+--------
+<plugin>
+  <groupId>org.codehaus.mojo</groupId>
+  <artifactId>license-maven-plugin</artifactId>
+  <version>1.14</version>
+
+  <configuration>
+    <outputDirectory>${project.build.directory}/generated-resources</outputDirectory>
+    <sortArtifactByName>true</sortArtifactByName>
+    <includeTransitiveDependencies>true</includeTransitiveDependencies>
+    <!-- the "missing file" declares licenses for dependencies that could not be detected automatically -->
+    <useMissingFile>true</useMissingFile>
+    <!-- find the "missing files" in all child-projects at the following location -->
+    <missingFile>src/license/THIRD-PARTY.properties</missingFile>
+    <!-- if the "missing files" are not yet existing in child-projects they will be created automatically -->
+    <failOnMissing>false</failOnMissing>
+    <overrideFile>src/license/override-THIRD-PARTY.properties</overrideFile>
+    <!-- harmonize different ways of writing license names -->
+    <licenseMerges>
+      <licenseMerge>Apache-2.0|Apache 2.0</licenseMerge>
+      <licenseMerge>Apache-2.0|Apache License, Version 2.0</licenseMerge>
+      <licenseMerge>Apache-2.0|Apache Software License, Version 2.0</licenseMerge>
+      <licenseMerge>Apache-2.0|The Apache Software License, Version 2.0</licenseMerge>
+    </licenseMerges>
+    <encoding>utf-8</encoding>
+  </configuration>
+</plugin>
+--------
+
+In the config above there are several settings that help to permanently improve the result of an automated OSS scan. We explain these now.
+
+==== Declare additional licenses
+
+Sometimes the licenses of used OSS cannot be resolved automatically. That is not the mistake of the maven-license-tool, but the mistake of the OSS author who didn't make the respective license-information properly available. 
+
+Declare additional licenses in a "missing file" within _each_ maven-subproject: /src/license/THIRD-PARTY.properties. 
+
+[source,xml]
+--------
+# Generated by org.codehaus.mojo.license.AddThirdPartyMojo
+#-------------------------------------------------------------------------------
+# Already used licenses in project :
+# - ASF 2.0
+# - Apache 2
+...
+#-------------------------------------------------------------------------------
+# Please fill the missing licenses for dependencies :
+...
+dom4j--dom4j--1.6.1=BSD 3-Clause
+javax.servlet--jstl--1.2=CDDL
+...
+--------
+
+In case the use of "missing files" is activated, but the THIRD-PARTY.properties-file is not yet existing, the first run of an "aggregate-add-third-party" goal (see below) will fail. Luckily the license-plugin just helped us and created the properties-files automatically (in each maven-subproject) and prefilled it with:
+
+* a list of all detected licenses within the maven project
+* all OSS libraries where a license could not be detected automatically.
+
+You now need to fill in missing license information and rerun the plugin.
+
+==== Redefine wrongly detected licenses
+
+In case automatically detected licenses proof to be wrong by closer investigation, this wrong detection can be overwritten. Add a configuration to declare alternative licenses within each maven-subproject: /src/license/override-THIRD-PARTY.properties
+
+[source,xml]
+--------
+com.sun.mail--javax.mail--1.5.6=Common Development and Distribution License 1.1
+--------
+
+This can be also be useful for OSS that provides a multi-license to make a decision which license to actually choose .
+
+==== Merge licenses
+
+You will see that many prominent licenses come in all sorts of notations, e.g. Apache-2.0 as: "Apache 2" or "ASL-2.0" or "The Apache License, Version 2.0". The Mojo Maven License Plugin allows to harmonize different forms of a license-naming like this:
+
+[source,xml]
+--------
+    <!-- harmonize different ways of writing license names -->
+    <licenseMerges>
+      <licenseMerge>Apache-2.0|Apache 2.0</licenseMerge>
+      <licenseMerge>Apache-2.0|Apache License, Version 2.0</licenseMerge>
+      <licenseMerge>Apache-2.0|Apache Software License, Version 2.0</licenseMerge>
+      <licenseMerge>Apache-2.0|The Apache Software License, Version 2.0</licenseMerge>
+    </licenseMerges>
+--------
+
+License-names will be harmonized in the OSS report to one common term. We propose to harmonize to short-license-IDs defined by the https://spdx.org/[SPDX] standard.
+
+=== Retrieve licenses list
+
+For a quick initial judgement of OSS license situation run the following maven command from commandline:
+
+[source,bash]
+--------
+$ mvn license:license-list
+--------
+
+You receive the summary list of all used OSS licenses on the cmd-out.
+
+=== Create an OSS inventory
+
+To create an OSS inventory means to report on the overall bill of material of used OSS and corresponding licenses. 
+Within the parent project, run the following maven goal from command line.
+
+[source,bash]
+--------
+$ mvn license:aggregate-download-licenses -Dlicense.excludedScopes=test,provided
+--------
+
+Running the aggregate-download-licenses goal creates two results. 
+
+. a license.xml that contains all used OSS depenencies (even sub-dependencies) with respective license information
+. puts all used OSS-license-texts as html files into folder target/generated resources
+
+Carefully validate and judge the outcome of the license list. It is recommended to copy the license.xml to the project documentation and hand it over to your client. You may also import it into a spreadsheet to get a better overview.
+
+=== Create a THIRD PARTY file 
+
+Within Java software it is a common practice to add a "THIRD-PARTY" text file to the distribution. Contained is a summary-list of all used OSS and respective licenses. This can also be achieved with the Mojo Maven License Plugin.
+
+Within the parent project, run the following maven goal from command line.
+
+[source,bash]
+--------
+$ mvn license:aggregate-add-third-party -Dlicense.excludedScopes=test,provided
+--------
+
+Find the THIRD-PARTY.txt in the folder: target\generated-resources. The goal aggregate-add-third-party also profits from configuration as outlined above. 
+
+=== Download and package OSS SourceCode 
+
+Some OSS licenses require handing over the OSS source code which is packaged with your custom software to the client the solution is distributed to. It is a good practice to hand over the source code of _all_ used OSS to your client. Collecting all source code can be accomplished by another Maven plugin: Apache Maven Dependency Plugin.
+
+It downloads all OSS Source Jars into the folder: \target\sources across the parent and all child maven projects.
+
+You configure the plugin like this:
+
+[source,xml]
+--------
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-dependency-plugin</artifactId>
+  <version>3.0.2</version>
+
+  <configuration>
+    <classifier>sources</classifier>
+    <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
+    <outputDirectory>${project.build.directory}/sources</outputDirectory>
+  </configuration>
+  <executions>
+    <execution>
+      <id>src-dependencies</id>
+      <phase>package</phase>
+      <goals>
+        <!-- use unpack-dependencies instead if you want to explode the sources -->
+        <goal>copy-dependencies</goal>
+      </goals>
+    </execution>
+  </executions>
+</plugin>
+--------
+
+You run the plugin from commandline like this:
+
+[source,bash]
+--------
+$ mvn dependency:copy-dependencies -Dclassifier=sources
+--------
+
+The plugin provides another goal that also unzips the jars, which is not recommended, since contents get mixed up.
+ 
+Deliver the OSS source jars to your client with the release of your custom solution. This has been done physically - e.g. on DVD.
+
+=== Handle OSS within CI-process 
+
+To automate OSS handling in the regular build-process (which is not recommended to start with) you may declare the following executions and goals in your maven-configuration:
+
+[source,xml]
+--------
+<plugin>
+  ...
+  
+  <executions>
+    <execution>
+      <id>aggregate-add-third-party</id>
+      <phase>generate-resources</phase>
+      <goals>
+        <goal>aggregate-add-third-party</goal>
+      </goals>
+    </execution>
+
+    <execution>
+      <id>aggregate-download-licenses</id>
+      <phase>generate-resources</phase>
+      <goals>
+        <goal>aggregate-download-licenses</goal>
+      </goals>
+    </execution>
+  </executions>
+</plugin>
+--------
+
+Note that the build may fail in case the OSS information was not complete. Check the build-output to understand and resolve the issue - like e.g. add missing license information in the "missing file".

@@ -45,7 +45,7 @@ See: https://github.com/devonfw/devon-guide/wiki/cookbook-cobigen-advanced-use-c
 
 To make it easier for devonfw users to design and develop applications based on microservices, this release provides a series of archetypes and resources based on _Spring Cloud Netflix_ to automate the creation and configuration of microservices.
 
-New documentation ind de devonfw Guide contais all the details to start https://github.com/devonfw/devon-guide/wiki/devon-microservices[creating microservices with devonfw]
+New documentation ind de devonfw Guide contais all the details to start https://github.com/devonfw-forge/devon-guide/wiki/devon-microservices[creating microservices with devonfw]
 
 === Spring Integration Module
 

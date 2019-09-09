@@ -133,6 +133,9 @@ The language to be used for commit messages is English.
 +
 Use the tab "Pull requests" and the button labeled "New pull request". Afterwards you can _Choose different branches or forks above to discuss and review changes_.
 
+NOTE: Most of the devonfw projects include a **documents** folder that include the related documentation. It would be really interesting to add the documentation files of your new feature inside this pull request. +
+Bare in mind that, in case the changes have a big impact, the **devonfw core team** will request the necessary documentation in the pull request.
+
 == Reviewing Pull Requests
 
 Detailed information about revieweing can be found on the https://help.github.com/articles/reviewing-changes-in-pull-requests/[official topic on GitHub Pull Requests].

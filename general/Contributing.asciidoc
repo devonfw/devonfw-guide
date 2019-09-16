@@ -53,8 +53,8 @@ Tools we provide typically have a repository named like the tool they provide (o
 There is much more to discover.
 Browse our organizations to find out.
 
-=== Minimal pragmatic changes
-Please note that for trivial changes like a typo in the documentation you do not need to follow complex processes:
+=== Trivial changes
+Please note that for trivial changes like a typo in the documentation you do not need to follow a complex processes. Please do the following:
 
 * Just browse to the file online on github
 * Click on the small pencil icon on the top right of the file content

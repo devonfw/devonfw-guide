@@ -54,7 +54,7 @@ There is much more to discover.
 Browse our organizations to find out.
 
 === Minimal pragmatic changes
-Please note that for minimum changes like a typo in the documentation you do not need to follow complex processes:
+Please note that for trivial changes like a typo in the documentation you do not need to follow complex processes:
 
 * Just browse to the file online on github
 * Click on the small pencil icon on the top right of the file content

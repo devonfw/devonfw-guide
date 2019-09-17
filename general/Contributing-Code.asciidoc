@@ -8,6 +8,8 @@ toc::[]
 
 = Code Contributions
 
+Moved https://github.com/devonfw/devonfw/blob/master/documentation/contributing.asciidoc#contributing[here]. This document will be removed in the future.
+
 == Notes on Code Contributions
 
 devonfw platform is intended to be easy to contribute to. One service allowing such simplicity is GitHub was therefore selected as preferred collaboration platform.

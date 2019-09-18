@@ -8,7 +8,7 @@ toc::[]
 
 = Wiki Contributions
 
-Contributing guidelines moved https://github.com/devonfw/devonfw/blob/master/documentation/contributing.asciidoc#contributing[here]. Feel free to merge over what remains valuable from here. This document will be delted in the future.
+Contributing guidelines moved https://github.com/devonfw/.github/blob/master/CONTRIBUTING.asciidoc#contributing[here]. Feel free to merge over what remains valuable from here. This document will be delted in the future.
 
 Our wikis are written in the so called _AsciiDoc_ format. Check the https://powerman.name/doc/asciidoc[AsciiDoc cheatsheet] and the http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[AsciiDoc quick reference] for more information. Knowing the following basic features should allow you to convert your Word documents into the Wiki friendly AsciiDoc format. 
 

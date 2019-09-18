@@ -1,1 +1,1 @@
-Moved https://github.com/devonfw/devonfw/blob/master/documentation/contributing.asciidoc#contributing[here].
+Moved https://github.com/devonfw/.github/blob/master/CONTRIBUTING.asciidoc#contributing[here].

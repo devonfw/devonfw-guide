@@ -22,8 +22,8 @@ before_install:
   - sudo apt-get install -y imagemagick
 jobs:
   include:
-    - if: (type = push) AND (commit_message !~ /^PDF devonfw guide \| Travis CI build number.*$/)
     - stage: PDF
+      if: (type = push) AND (commit_message !~ /^PDF devonfw guide \| Travis CI build number.*$/)
       script:
         - git config --global user.email ${EMAIL}
         - git config --global user.name ${USER}
@@ -41,6 +41,7 @@ jobs:
         - git remote add origin-pdf "https://${USER}:${GITHUB_TOKEN}@${GH_REPO_CONSOLIDATE}"
         - git push origin-pdf master
     - stage: Update Website
+      if: (type = push) AND (commit_message !~ /^PDF devonfw guide \| Travis CI build number.*$/)
       script:
         # Update Website on success
         - git clone https://${USER}:${GITHUB_TOKEN}@github.com/${ORG}/devonfw-official-website.git --recurse-submodules

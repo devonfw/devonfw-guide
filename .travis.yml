@@ -20,10 +20,6 @@ before_install:
   - cd ..
   - sudo apt-get update
   - sudo apt-get install -y imagemagick
-  # Clone devonfw docgen to copy pom.xml from docgen to the root folder
-  - git clone -b pom-upgrades --single-branch https://github.com/jambulud/devon-docgen
-  - cp ./${REPO_DOCGEN}/pom.xml ./
-  - pwd && ls -l
 jobs:
   include:
     - if: (type = push) AND (commit_message !~ /^PDF devonfw guide \| Travis CI build number.*$/)
@@ -37,7 +33,7 @@ jobs:
         - find . -name '*.png' -exec mogrify -interlace none -format png {} +
         - find . -name '*.PNG' -exec mogrify -interlace none -format PNG {} +
         # Generate PDF
-        - mvn clean package -Ddocgen.images.dir=images,documentation
+        - mvn clean package -Ddocgen.images.dir=images,documentation -Doutput.format=pdf
         - mv ./target/generated-docs/master.pdf ./devonfw_guide.pdf
         # Commit and push new devonfw guide
         - git add ./devonfw_guide.pdf

@@ -45,7 +45,7 @@ jobs:
       script:
         # Update Website on success
         - git clone https://${USER}:${GITHUB_TOKEN}@github.com/${ORG}/devonfw-official-website.git --recurse-submodules
-        - cd devon-official-website/${REPO_CONSOLIDATE}
+        - cd devonfw-official-website/${REPO_CONSOLIDATE}
         - git checkout master
         - git pull
         - cd ..

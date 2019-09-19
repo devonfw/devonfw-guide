@@ -45,10 +45,10 @@ jobs:
       script:
         # Update Website on success
         - git clone https://${USER}:${GITHUB_TOKEN}@github.com/${ORG}/devonfw-official-website.git --recurse-submodules
-        - cd devon-official-website/${GH_REPO_CONSOLIDATE}
+        - cd devon-official-website/${REPO_CONSOLIDATE}
         - git checkout master
         - git pull
         - cd ..
-        - git add ${GH_REPO_CONSOLIDATE}
+        - git add ${REPO_CONSOLIDATE}
         - git commit -m"[DocUpdate]"
         - git push origin master

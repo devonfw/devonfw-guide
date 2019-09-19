@@ -31,6 +31,8 @@ jobs:
   include:
     - stage: PDF
       script:
+        - git config --global user.email ${EMAIL}
+        - git config --global user.name ${USER}
         # Fix PNG images (devonfw-guide already cloned)
         - cd ${REPO_CONSOLIDATE}
         - git checkout master
@@ -39,10 +41,17 @@ jobs:
         # Generate PDF
         - mvn clean package -Ddocgen.images.dir=images,documentation
         - mv ./target/generated-docs/master.pdf ./devonfw_guide.pdf
-        - git config user.email ${EMAIL}
-        - git config user.name ${USER}
         # Commit and push new devonfw guide
         - git add ./devonfw_guide.pdf
         - git commit -m "PDF devonfw guide | Travis CI build number $TRAVIS_BUILD_NUMBER"
         - git remote add origin-pdf "https://${USER}:${GITHUB_TOKEN}@${GH_REPO_CONSOLIDATE}"
         - git push origin-pdf master
+        # Update Website on success
+        - git clone https://${USER}:${GITHUB_TOKEN}@github.com/${ORG}/devonfw-official-website.git --recurse-submodules
+        - cd devon-official-website/${GH_REPO_CONSOLIDATE}
+        - git checkout master
+        - git pull
+        - cd ..
+        - git add ${GH_REPO_CONSOLIDATE}
+        - git commit -m"[DocUpdate]"
+        - git push origin master

@@ -14,6 +14,8 @@ Welcome to *devonfw*, the devonfw platform. This is a product of the CSD industr
 
 http://www.devonfw.com[devonfw] is a development platform aiming for standardization of processes and productivity boost, that provides an architecture blueprint for Java/JavaScript applications, alongside a set of tools to provide a fully functional _out-of-the-box_ development environment.
 
+Please note that the _devonfw_ name is a registered trademark of image:images/Capgemini_Logo_Small.png[,width="95", Capgemini, link="https://www.capgemini.com/"].
+
 == Building Blocks of the Platform
 
 image::images/introduction/devon_buildingblocks.png[,width="650",devonfw Building blocks,link="images/introduction/devon_buildingblocks.png"]

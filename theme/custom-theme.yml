@@ -316,7 +316,7 @@ footer:
     right:
       content: '{page-number}'
     left:
-      content: image:./images/capgemini-corner.png[width=80]
+      content: image:./images/devonfw-corner.png[width=80]
     center:
       content: This documentation is licensed under the Creative Commons License (Attribution-NoDerivatives 4.0 International).
 
@@ -324,7 +324,7 @@ footer:
     right:
       content: '{page-number}'
     left:
-      content: image:./images/capgemini-corner.png[width=80]
+      content: image:./images/devonfw-corner.png[width=80]
       #content: '{page-number} | {chapter-title}'
     center:
       content: This documentation is licensed under the Creative Commons License (Attribution-NoDerivatives 4.0 International).
@@ -343,14 +343,14 @@ header:
     center:
       content: Devonfw Guide v2.4.0
     left:
-      content: image:./images/capgemini-corner.png[width=80]
-    right:
       content: image:./images/devonfw-corner.png[width=80]
+    #right:
+      #content: image:./images/devonfw-corner.png[width=80]
 
   verso:
     center:
       content: Devonfw Guide v2.4.0
     left:
-      content: image:./images/capgemini-corner.png[width=80]
-    right:
       content: image:./images/devonfw-corner.png[width=80]
+    #right:
+      #content: image:./images/devonfw-corner.png[width=80]

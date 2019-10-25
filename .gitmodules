@@ -25,3 +25,6 @@
 [submodule "ide.wiki"]
 	path = ide.wiki
 	url = https://github.com/devonfw/ide.wiki.git
+[submodule "devon4node.wiki"]
+	path = devon4node.wiki
+	url = https://github.com/devonfw/devon4node.wiki.git

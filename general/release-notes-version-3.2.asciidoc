@@ -11,18 +11,21 @@ toc::[]
 = devonfw Release notes 3.2 “Homer”
 
 == Introduction
-We are proud to announce the immediate release of devonfw version 3.2 (code named “Homer” during development). This version is the first one that contains the new devonfw IDE by default, so there is no need to download a huge ZIP with the whole distribution regardless of the use to which it will be put. The new devonfw IDE CLI will allow any user to setup a customized development environment completely configured with access to all the devonfw features, frameworks and tools. As we access to the official IDEs this is also the first version macOS compatible. 
+We are proud to announce the immediate release of devonfw version 3.2 (code named “Homer” during development). This version is the first one that contains the new **devonfw IDE** by default, so there is no need to download a huge ZIP with the whole distribution regardless of the use to which it will be put. The new devonfw IDE CLI will allow any user to setup a customized development environment completely configured with access to all the devonfw features, frameworks and tools. As we access to the official IDEs this is also the first version macOS compatible. 
+
 This release consolidates the documentation workflow adding the contents dynamically to the new devonfw website at the same time the PDF is generated. This have been achieved using a new GitHub action that takes the contents and builds the HTMLs for the documentation section of the website. The documentation workflow proposed in the following picture is now complete:
 
 image::images/documentation_workflow.png[link="images/documentation_workflow.png"]
 
-This release also includes the first version of devon4node. We consider that node.js should be a first-class citizen inside the devonfw platform and for that reason we have included the latest development technologies for this ecosystem. CLI, schematics and other tools will allow our users to create powerful node.js applications with the same philosophy you may find in the other languages and frameworks included. More information at its section below. 
+This release also includes the first version of **devon4node**. We consider that node.js should be a first-class citizen inside the devonfw platform and for that reason we have included the latest development technologies for this ecosystem. CLI, schematics and other tools will allow our users to create powerful node.js applications with the same philosophy you may find in the other languages and frameworks included. More information at its section below. 
 
-The new devon4net 3.2.0 version is also included in this release. Based on the .NET Core 3.0 and containing lots of new features gathered from important and recent projects, it represents a great improvement and an intermediate step to provide support for the incoming .NET Core 3.1 LTS. More information at its section below.
-This release includes the final version of the new CobiGen CLI and completely integrated with the new devonfw IDE. Now using commands, you will be able to generate code the same way as you do with Eclipse. This means that you can use CobiGen on other IDEs like Visual Studio Code or IntelliJ. Besides the Update command has been implemented. Now you will be able to update easily all your CobiGen plug-ins and templates inside the CLI. 
+The new **devon4net 3.2.0** version is also included in this release. Based on the .NET Core 3.0 and containing lots of new features gathered from important and recent projects, it represents a great improvement and an intermediate step to provide support for the incoming .NET Core 3.1 LTS. More information at its section below.
+
+This release includes the final version of the new **CobiGen CLI** and completely integrated with the new devonfw IDE. Now using commands, you will be able to generate code the same way as you do with Eclipse. This means that you can use CobiGen on other IDEs like Visual Studio Code or IntelliJ. Besides the Update command has been implemented. Now you will be able to update easily all your CobiGen plug-ins and templates inside the CLI. 
 
 On the other hand, the refactoring process has been completely developed, improving the mergers and including input readers for any other languages and frameworks, allowing the creation of models to generate code from them. Last, but not least, this new version includes the new templates for devon4net, devon4ng and devon4j generation.
-And as always, My Thai Star has been updated to the latest versions of devon4j, devon4node and devon4net including completely State Management with NgRx in its devon4ng implementation upgrade.
+
+And as always, **My Thai Star**, the devonfw reference application, has been updated to the latest versions of devon4j, devon4node and devon4net including completely State Management with NgRx in its devon4ng implementation upgrade.
 
 == Changes and new features
 

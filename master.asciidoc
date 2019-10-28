@@ -21,6 +21,8 @@ include::devon4ng.wiki/master-devon4ng[leveloffset=0]
 
 include::devon4net.wiki/master-devon4net[leveloffset=0]
 
+include::devon4node.wiki/master-devon4node[leveloffset=0]
+
 include::devonfw-shop-floor.wiki/master-devonfw-shop-floor[leveloffset=0]
 
 include::cicdgen.wiki/master-cicdgen[leveloffset=0]

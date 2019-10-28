@@ -8,8 +8,3 @@ include::getting-started-download-and-setup.asciidoc[leveloffset=1]
 
 include::getting-started-the-devon-ide.asciidoc[leveloffset=1]
 
-= Devcon
-
-include::devcon-command-developers-guide.asciidoc[leveloffset=1]
-
-include::devcon-command-reference.asciidoc[leveloffset=1]

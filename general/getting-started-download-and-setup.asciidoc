@@ -17,19 +17,15 @@ The devonfw environment contains all software and tools necessary to develop the
 In order to setup the environment, following are the prerequisites:
 
 * Internet connection (including details of your proxy configuration, if necessary)
-* 2GB of free disk space
-* The ZIP containing the latest devonfw distribution
+* > 1GB of free disk space to install customized environment
+* The devonfw IDE CLI installed
 
 == Download
-The devonfw distributions can be obtained from the http://de-mucevolve02/files/devonfw/[FTP releases library] and are packaged in a _zip_ file that includes all the needed tools, software and configurations. Browse to the **current** folder in order to get the latest version. 
+IMPORTANT: Please refer to the link:setup[devonfw IDE] documentation for the **current installation process**.
 
-image::images/devconlogo_imgonly.png[,width="50"]
-.*Using devcon*
-[NOTE]
-You can do it using devcon with the command `devon dist install`, learn more  <<dist install,here>>.
-After a successful installation, you can initialize it with the command `devon dist init`, learn more <<dist init,here>>.
+Older devonfw distributions can be obtained from the http://de-mucevolve02/files/devonfw/[FTP releases library] and are packaged in a _zip_ file that includes all the needed tools, software and configurations. Browse to the corresponding version folder in order to get the latest version. 
 
-== Setup the workspace
+=== Setup the workspace for older versions
 
 1. Unzip the devonfw distribution into a directory of your choice. *The path to the devonfw distribution directory should contain no spaces*, to prevent problems with some of the tools.
 
@@ -48,7 +44,7 @@ image::images/download-install/devon_guide_environment_setup_2_create_workspace.
 
 *Note* : If you use a proxy to connect to the Internet, you have to manually configure it in Maven, Sencha Cmd and Eclipse. Next section explains about it.
 
-== Setup the workspace (Linux)
+=== Setup the workspace  for older versions (Linux)
 
 * Unzip the devonfw distribution into a directory of your choice. *The path to the devonfw distribution directory should contain no spaces*, to prevent problems with some of the tools.
 
@@ -67,52 +63,3 @@ These both . env.sh and . create-or-update-workspace will set all the softwares 
 * There are a scripts initialize.sh and uninstallUI.sh.
 ** initialize.sh : It installs angular,node, python ant subversion
 ** uninstallUI.sh : It is use to uninstalls the above softwares
-
-=== Manual Tool Configuration
-==== Maven
-
-Open the file "conf/.m2/settings.xml" in an editor
-
-image::images/download-install/devon_guide_environment_setup_3_proxy_maven.png[, width="450", link="images/download-install/devon_guide_environment_setup_3_proxy_maven.png"]
-
-Remove the comment tags around the <proxy> section at the beginning of the file.
-
-Then update the settings to match your proxy configuration.
-
-image::images/download-install/devon_guide_environment_setup_4_proxy_maven.png[,width="450", link="images/download-install/devon_guide_environment_setup_4_proxy_maven.png"]
-
-If your proxy does not require authentication, simply remove the <username> and <password> lines.
-
-==== Sencha Cmd
-
-Open the file software/Sencha/Cmd/default/sencha.cfg in an editor
-
-image::images/download-install/devon_guide_environment_setup_5_proxy_sencha.png[, width="450", link="images/download-install/devon_guide_environment_setup_5_proxy_sencha.png"]
-
-Search for the property definition of "cmd.jvm.args" (around line 45).
-
-Comment the existing property definition and uncomment the line above it.
-
-Then update the settings to match your proxy configuration.
-
-image::images/download-install/devon_guide_environment_setup_6_proxy_sencha.png[, width="450", link="images/download-install/devon_guide_environment_setup_6_proxy_sencha.png"]
-
-If your proxy does not require authentication, simply remove the "-Dhttp.proxyUser", "-DhttpProxyPassword", "-Dhttps.proxyUser" and "-Dhttps.proxyPassword" parameters.
-
-==== Eclipse
-
-Open eclipse by executing "eclipse-main.bat".
-
-image::images/download-install/devon_guide_environment_setup_7_proxy_eclipse.png[, width="350", link="images/download-install/devon_guide_environment_setup_7_proxy_eclipse.png"]
-
-In the Eclipse preferences dialog, go to "General - Network Connection".
-
-image::images/download-install/devon_guide_environment_setup_8_proxy_eclipse.png[, width="450", link="images/download-install/devon_guide_environment_setup_8_proxy_eclipse.png"]
-
-Switch from "Native" to "Manual"
-
-Enter your proxy configuration
-
-image::images/download-install/devon_guide_environment_setup_9_proxy_eclipse.png[, width="450", link="images/download-install/devon_guide_environment_setup_9_proxy_eclipse.png"]
-
-Thats All!!!

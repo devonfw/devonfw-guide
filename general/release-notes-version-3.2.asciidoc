@@ -1,0 +1,244 @@
+:toc: macro
+toc::[]
+
+
+:doctype: book
+:reproducible:
+:source-highlighter: rouge
+:listing-caption: Listing
+
+
+= devonfw Release notes 3.2 “Homer”
+
+
+== Introduction
+
+We are proud to announce the immediate release of devonfw version 3.2 (code named “Homer” during development). This version is the first one that contains the **new devonfw IDE** by default, so there is no need to download a huge ZIP with the whole distribution regardless of the use to which it will be put. The new devonfw IDE CLI will allow any user to setup a customized development environment completely configured with access to all the devonfw features, frameworks and tools. As we access to the official IDEs this is also the first version macOS compatible. 
+
+This release consolidates the documentation workflow adding the contents dynamically to the new devonfw website at the same time the PDF is generated. This have been achieved using a new GitHub action that takes the contents and builds the HTMLs for the documentation section of the website. The documentation workflow proposed in the following picture is now complete:
+
+image::images/documentation_workflow.png[link="images/documentation_workflow.png"]
+
+This release also includes the **first version of devon4node**. We consider that node.js should be a first-class citizen inside the devonfw platform and for that reason we have included the latest development technologies for this ecosystem. The devon4node CLI, schematics and other tools will allow our users to create powerful node.js applications with the same philosophy you may find in the other languages and frameworks included. More information at its section below. 
+
+The new **devon4net 3.2.0 version** is also included in this release. Based on the .NET Core 3.0 and containing lots of new features gathered from important and recent projects, it represents a great improvement and an intermediate step to provide support for the incoming .NET Core 3.1 LTS. More information at its section below.
+
+This release includes the final version of the **new CobiGen CLI** and completely integrated with the new devonfw IDE. Now using commands, you will be able to generate code the same way as you do with Eclipse. This means that you can use CobiGen on other IDEs like Visual Studio Code or IntelliJ. Besides the Update command has been implemented. Now you will be able to update easily all your CobiGen plug-ins and templates inside the CLI. 
+
+On the other hand, the refactoring process has been completely developed, improving the mergers and including input readers for any other languages and frameworks, allowing the creation of models to generate code from them. Last, but not least, this new version includes the new templates for devon4net, devon4ng and devon4j generation.
+
+And as always, **My Thai Star** has been updated to the latest versions of devon4j, devon4node and devon4net including completely State Management with NgRx in its devon4ng implementation upgrade.
+
+== Changes and new features
+
+=== devonfw-ide
+
+We have entirely rewritten our automated solution for your local IDE (integrated desktop environment). The former oasp4j-ide and devonfw distributions with their extra-large gigabite zip files are not entirely replaced with devonfw-ide. This new solution is provided as a small *.tar.gz file that is publicly available. It works on all platforms and has been tested on Windows, MacOS, and Linux. After extraction you only need to run a `setup` script. Here you provide a settings git URL for your customer project or simply hit return for testing or small projects. After reading and confirming the terms of use it will download all required tools in the proper versions for your operating system and configure them. Instead of various confusing scripts there is now only one CLI command `devon` for all use-cases what gives a much better user experience.
+
+To get started go to the https://github.com/devonfw/ide/blob/master/documentation/Home.asciidoc#devon-ide[home page]. There is even a https://github.com/devonfw/ide/blob/master/documentation/migration-from-devonfw-3.0.0-or-lower.asciidoc#migration-from-oasp4j-ide[migration-guide] if you are currently used to the old approach and want to quickly jump into the new solution.
+
+=== My Thay Star Sample Application
+
+The new release of My Thai Star has focused on the following improvements:
+
+* Release 3.2.0.
+* devon4j:
+** devon4j 3.2.0 integrated.
+** Spring Boot 2.1.9 integrated.
+** SAP 4/HANA prediction use case.
+** Bug fixes.
+* devon4ng:
+** SAP 4/HANA prediction use case.
+** 2FA togglable (two factor authentication).
+** NgRx full integrated (PR #285).
+* devon4net
+** devon4net for dotnet core 3.0 updated
+** Updated the API contract compatible with the other stacks
+** JWT implementation reviewed to increase security
+** ASP.NET users database dependencies removed
+** HTTP2 support
+** More clear CRUD pattern implementation
+* devon4node
+** TypeScript 3.6.3.
+** Based on Nest framework.
+** Configuration Module
+** Added cors and security headers
+** Added mailer module and email templates.
+** Built in winston logger
+** Custom ClassSerializerInterceptor
+* Mr.Checker
+** Example cases for end-to-end test.
+** Production line configuration.
+* CICD
+** Improved integration with Production Line
+** New Traefik load balancer and reverse proxy
+** New deployment from artifact
+** New CICD pipelines
+** New deployment pipelines
+** Automated creation of pipelines in Jenkins
+
+=== Documentation updates
+
+This release addresses the new documentation workflow, being now possible to keep the documentation synced with any change. The new documentation includes the following contents:
+
+* Getting started
+* devonfw ide 
+* devon4j documentation
+* devon4ng documentation
+* devon4net documentation
+* devon4node documentation
+* CobiGen documentation
+* devonfw-shop-floor documentation
+* cicdgen documentation
+* devonfw testing with MrChecker
+* My Thai Star documentation
+* Contribution guide
+* Release notes
+
+=== devon4j
+
+The following changes have been incorporated in devon4j:
+
+* Completed full support from Java8 to Java11
+* Several security fixes
+* Upgrade to Spring Boot 2.1.9
+* Upgrade to Spring 5.1.8
+* Upgrade to JUnit 5 (requires migration via devonfw-ide)
+* Improved JPA support for IdRef
+* Improved auditing metadata support
+* Many improvements to documentation (added JDK guide, architecture-mapping, JMS, etc.)
+* For all details see https://github.com/devonfw/devon4j/milestone/6?closed=1[milestone].
+
+=== devon4ng
+
+The following changes have been incorporated in devon4ng:
+
+* Angular CLI 8.3.1,
+* Angular 8.2.11,
+* Angular Material 8.2.3,
+* Ionic 4.11.1,
+* Capacitor 1.2.1 as Cordova replacement,
+* NgRx 8.3 support for State Management, 
+* devon4ng Angular application template updated to Angular 8.2.11 with visual improvements and bugfixes https://github.com/devonfw/devon4ng-application-template 
+* devon4ng Ionic application template updated to 4.11.1 and improved https://github.com/devonfw/devon4ng-ionic-application-template 
+* Improved devon4ng Angular application template with state management using Angular 8 and NgRx 8 https://github.com/devonfw/devon4ng-ngrx-template
+* Documentation and samples updated to latest versions:
+** Web Components with Angular Elements
+** Initial configuration with App Initializer pattern
+** Error Handling
+** PWA with Angular and Ionic
+** Lazy Loading
+** Library construction
+** Layout with Angular Material
+** Theming with Angular Material
+
+=== devon4net
+
+The following changes have been incorporated in devon4net:
+
+* Updated to latest .net core 3.0 version
+
+* Template
+** Global configuration automated. devon4net can be instantiated on any .net core application template with no effort
+** Added support for HTTP2 
+** Number of libraries minimized
+** Architecture layer review. More clear and scalable
+** Added red button functionality (aka killswitch) to stop attending API request with custom error
+** Improved API error management
+** Added support to only accept request from clients with a specific client certificate on Kestrel server. Special thanks to Bart Roozendaal (Capgemini NL)
+** All components use IOptions pattern to be set up properly
+** Swagger generation compatible con open api v3
+* Modules
+** The devon4net netstandard libraries have been updated to netstandard 2.1
+
+** JWT:
+*** Added token encryption (token cannot be decrypted anymore by external parties). Now You can choose the encryption algorithm depending on your needs
+*** Added support for secret key or certificate encryption
+*** Added authorization for swagger portal 
+
+** Circuit breaker
+*** Added support to bypass certificate validation
+*** Added support to use a certificate for https communications using Microsoft's httpclient factory
+
+** Unit of Work
+*** Repository classes unified and reviewed for increasing performance and reduce the consumed memory 
+*** Added support for different database servers: In memory, Cosmos, MySQL + MariaDB, Firebird, PostgreSQL, Oracle, SQLite, Access, MS Local.
+
+=== devon4node
+
+The following changes have been incorporated in devon4node:
+
+* TypeScript 3.6.3.
+* Based on Nest framework.
+* Complete backend implementation.
+* New devon4node CLI. It will provide you some commands
+** new: create a new devon4node interactively
+** generate: generate code based on schematics
+** db: manage the database
+* New devon4node schematics
+** application: create a new devon4node application
+** config-module: add a configuration module to the project
+** mailer: install and configure the devon4node mailer module
+** typeorm: install TypeORM in the project
+** auth-jwt: add users and auth-jwt modules to the project
+** swagger: expose an enpoint with the autogenerated swagger
+** security: add cors and other sercurity headers to the project.
+** crud: create all CRUD for an entity
+** entity: create an entity
+* New mailer module
+* New common library
+* Build in winston logger
+* Custom ClassSerializerInterceptor
+* Extendable base entity
+* New application samples
+
+
+=== CobiGen
+
+* CobiGen core new features:
+** CobiGen CLI: Update command implemented. Now you will be able to update easily all your CobiGen plug-ins and templates inside the CLI. Please take a look into the https://github.com/devonfw/tools-cobigen/wiki/howto_Cobigen-CLI-generation[documentation] for more info.
+*** CobiGen CLI is now JDK11 compatible.
+*** CobiGen CLI commandlet for devonfw-ide has been added. You can use it to setup easily your CLI and to run CobiGen related commands.
+*** Added a version provider so that you will be able to know all the CobiGen plug-ins versions.
+*** Added a process bar when the CLI is downloading the CobiGen plug-ins.
+** CobiGen refactoring finished: With this refactoring we have been able to decouple Cobigen completely from the target and input language. This facilitates the creation of parsers and mergers for any language. For more information please take a look https://github.com/devonfw/tools-cobigen/wiki/howto_create-external-plugin[here].
+*** New TypeScript input reader: We are now able to parse any TypeScript class and generate code using the parsed information. We currently use https://github.com/typeorm/typeorm/blob/master/docs/entities.md#what-is-entity[TypeORM] entities as a base for generation.
+** Improving CobiGen templates: 
+*** Updated devon4ng-NgRx templates to NgRx 8.
+*** Generation of an Angular client using as input a https://github.com/typeorm/typeorm/blob/master/docs/entities.md#what-is-entity[TypeORM] entity. This is possible thanks to the new TypeScript input reader.
+*** .Net templates have been upgraded to .Net Core 3.0
+** CobiGen for Eclipse is now JDK11 compatible.
+** Fixed bugs when adapting templates and other bugs on the CobiGen core. 
+
+=== devonfw shop floor
+
+* Added devon4ng OpenShift templates
+* Added devon4j OpenShift templates
+* Added devon4node OpenShift templates
+* Added more methods to link https://github.com/devonfw-forge/devon-production-line-shared-lib [devonfw Production Line shared library]
+* Updated link: https://github.com/devonfw-forge/devon-production-line[devonfw Production Line templates]
+
+==== cicdgen
+
+* Patched minor bugs
+
+=== sonar-devon4j-plugin
+
+sonar-devon4j-plugin is a SonarQube plugin for architecture governance of devon4j applications. It verifies the architecture and conventions of devon4j, the Java stack of devonfw. The following changes have been incorporated:
+* Plugin was renamed from sonar-devon-plugin to sonar-devon4j-plugin
+* Rules/checks have been added to verify naming conventions
+* New rule for proper JPA datatype mapping
+* Proper tagging of rules as architecture-violation and not as bug, etc.
+* Several improvements have been made to prepare the plugin to enter the SonarQube marketplace, what will happen with the very next release.
+* Details can be found here: https://github.com/devonfw/sonar-devon4j-plugin/milestone/2?closed=1
+
+=== Devonfw Testing 
+
+==== Mr.Checker
+The Mr.Checker Test Framework is an automated testing framework for functional testing of web applications, API web services, Service Virtualization, Security and in coming future native mobile apps, and databases. All modules have tangible examples of how to build resilient integration test cases based on delivered functions. Mr.Checker updates and improvements:
+
+* Examples available under embedded project “MrChecker-App-Under-Test” and in project wiki: https://github.com/devonfw/devonfw-testing/wiki 
+* How to install: 
+** Wiki : https://github.com/devonfw/devonfw-testing/wiki/How-to-install 
+* Release Note: 
+

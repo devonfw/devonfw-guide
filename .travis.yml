@@ -44,8 +44,8 @@ jobs:
       if: (type = push) AND (commit_message !~ /^PDF devonfw guide \| Travis CI build number.*$/)
       script:
         # Update Website on success
-        - git clone https://${USER}:${GITHUB_TOKEN}@github.com/${ORG}/devonfw-official-website.git --recurse-submodules
-        - cd devonfw-official-website/${REPO_CONSOLIDATE}
+        - git clone https://${USER}:${GITHUB_TOKEN}@github.com/${ORG}/devonfw.github.io.git --recurse-submodules
+        - cd devonfw.github.io/${REPO_CONSOLIDATE}
         - git checkout master
         - git pull
         - cd ..

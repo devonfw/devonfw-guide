@@ -14,6 +14,7 @@ This repository contains a collection of guides and documents from the different
 - **devon4j**: Module for Java
 - **devon4net**: Module for .net
 - **devon4ng**: Module for Angular
+- **devon4node**: Module from node.js
 - **devonfw shop floor**: Set of documentation, tools and methodologies used to configure provisioning, development and uat environments used in devonfw projects.
 - **devonfw testing**: Module for testing.
 - **My Thai Star**: devonfw reference application.

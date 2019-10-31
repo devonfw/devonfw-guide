@@ -232,13 +232,3 @@ sonar-devon4j-plugin is a SonarQube plugin for architecture governance of devon4
 * Several improvements have been made to prepare the plugin to enter the SonarQube marketplace, what will happen with the very next release.
 * Details can be found here: https://github.com/devonfw/sonar-devon4j-plugin/milestone/2?closed=1
 
-=== Devonfw Testing 
-
-==== Mr.Checker
-The Mr.Checker Test Framework is an automated testing framework for functional testing of web applications, API web services, Service Virtualization, Security and in coming future native mobile apps, and databases. All modules have tangible examples of how to build resilient integration test cases based on delivered functions. Mr.Checker updates and improvements:
-
-* Examples available under embedded project “MrChecker-App-Under-Test” and in project wiki: https://github.com/devonfw/devonfw-testing/wiki 
-* How to install: 
-** Wiki : https://github.com/devonfw/devonfw-testing/wiki/How-to-install 
-* Release Note: 
-

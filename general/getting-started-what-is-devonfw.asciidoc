@@ -46,31 +46,35 @@ Check out the links for more details.
 
 == Custom Tools
 
-=== Pre-installed Software
+=== devonfw IDE
 
-- _Eclipse_: pre-configured and fully functional IDE to develop Java based apps.
+The `devonfw-ide` is the new and fantastic tool to automatically download, install, setup and update the IDE (integrated development environment) of your _devonfw_ projects.
 
-- _Visual Studio Code_: pre-configured and fully functional IDE to develop applications. 
+==== IDEs
 
-- _Java_: all the Java environment configured and ready to be used within the distribution.
+It supports the following IDEs:
 
-- _Maven_: to manage project dependencies.
+* link:eclipse[Eclipse]
+* link:vscode[Visual Studio Code]
+* link:intellij[IntelliJ]
 
-- _Node_: a Node js environment configured and ready to be used within the distribution.
+==== Platforms
 
-- _Sonarqube_: a code quality tool.
+It supports the following platforms:
 
-- _Tomcat_: a web server ready to test the deploy of our artifacts.
+* link:java[java] (see also https://github.com/devonfw/devon4j/wiki[devon4j])
+* link:cs[C#] (see https://devon4net.github.io/[devon4net])
+* link:node[node].js and link:ng[angular] (see https://github.com/devonfw/devon4ng/wiki[devon4ng])
 
-=== Devcon
+==== Build-Systems
 
-For project management and other life-cycle related tasks, _devonfw_ provides also https://github.com/devonfw/devcon[Devcon], a command line and graphic user interface cross platform tool.
+It supports the following build-systems:
 
-With _Devcon_, users can automate the creation of new projects (both server and client), build and run those and even, for server projects, deploy locally on Tomcat.
+* link:mvn[mvn] (maven)
+* link:npm[npm]
+* link:gradle[gradle]
 
-image::images/devcon/devcon.png[,width="550", link="images/devon/devcon.png"]
-
-All those tasks can be done manually using _Maven_, _Tomcat_, _Sencha Cmd_, _Bower_, _Gulp_, etc. but with _Devcon_ users have the possibility of managing the projects without the necessity of dealing with all those different tools.
+However, also other IDEs, platforms, or tools can be easily integrated as link:cli#commandlet[commandlet].
 
 === Cobigen
 
@@ -78,24 +82,5 @@ _Cobigen_ is a code generator included in the context of _devonfw_ that allows u
 
 image::images/cobigen.png[,width="550", link="images/devon/cobigen.png"]
 
-== devonfw Modules
+Following the same philosophy CobiGen now bundles a new command line interface (CLI) that enables the generation of code using few commands. This feature allows us to decouple CobiGen from Eclipse and be able to use it alongside VS Code or IntelliJ.
 
-As a part of the goal of productivity boosting, _devonfw_ also provides a set of _modules_ to the developers, created from real projects requirements, that can be connected to projects for saving all the work of a new implementation.
-
-The current available modules are:
-
-- _async_: module to manage asynchronous web calls in a _Spring_ based server app.
-
-- _i18n_: module for internationalization.
-
-- _integration_: implementation of https://projects.spring.io/spring-integration/[_Spring Integration_].
-
-- _microservices_: a set of archetypes to create a complete microservices infrastructure based on https://cloud.spring.io/spring-cloud-netflix/[_Spring Cloud_Netflix].
-
-- _reporting_: a module to create reports based on http://community.jaspersoft.com/project/jasperreports-library[_Jasper Reports_] library.
-
-- _winauth active directory_: a module to authenticate users against an _Active Directory_.
-
-- _winauth single sign on_: module that allows applications to authenticate the users by the Windows credentials.
-
-Find more about devonfw <<devonfw Outline,_here_>>.

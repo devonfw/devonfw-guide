@@ -18,7 +18,7 @@ Please note that the _devonfw_ name is a registered trademark of image:images/Ca
 
 == Building Blocks of the Platform
 
-image::images/introduction/devon_buildingblocks.png[,width="650",devonfw Building blocks,link="images/introduction/devon_buildingblocks.png"]
+image::images/introduction/devonfwcatalog.png[,width="650",devonfw Building blocks,link="images/introduction/devonfwcatalog.png"]
 
 devonfw uses a state-of-the-art open source core reference architecture for the server (today considered as commodity in the IT-industry) and on top of it an ever increasing number of high-value assets that are developed by Capgemini.
 

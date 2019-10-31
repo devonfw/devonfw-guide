@@ -46,9 +46,9 @@ jobs:
         # Update Website on success
         - git clone https://${USER}:${GITHUB_TOKEN}@github.com/${ORG}/devonfw.github.io.git --recurse-submodules
         - cd devonfw.github.io/${REPO_CONSOLIDATE}
-        - git checkout master
+        - git checkout develop
         - git pull
         - cd ..
         - git add ${REPO_CONSOLIDATE}
-        - git commit -m"[DocUpdate]"
-        - git push origin master
+        - git commit -m "[DocUpdate]"
+        - git push origin develop

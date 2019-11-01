@@ -1,6 +1,0 @@
-:toc:
-toc::[]
-
-= Update
-
-Moved https://github.com/devonfw/.github/blob/master/CONTRIBUTING.asciidoc#contributing[here].

@@ -1,14 +1,13 @@
 = Contributing Guide
 
-include::Contributing-Code.asciidoc[leveloffset=1]
+include::https://raw.githubusercontent.com/devonfw/.github/master/CONTRIBUTING.asciidoc[leveloffset=1]
 
-include::Contributing-Code-of-Conduct.asciidoc[leveloffset=1]
-
-include::Contributing-Development-Guidelines.asciidoc[leveloffset=1]
+include::https://raw.githubusercontent.com/devonfw/.github/master/CODE_OF_CONDUCT.md[leveloffset=1]
+// In case original can't be directly included because it's '.md', use the .asciidoc copy:
+// include::Contributing-Code-of-Conduct.asciidoc[leveloffset=1]
+// If it does work, delete the .asciidoc copy from this directory!
 
 include::Contributing-Git-Fork-Guide.asciidoc[leveloffset=1]
-
-include::Contributing-Wiki.asciidoc[leveloffset=1]
 
 == OSS Compliance
 

@@ -76,9 +76,9 @@ It supports the following build-systems:
 
 However, also other IDEs, platforms, or tools can be easily integrated as link:cli#commandlet[commandlet].
 
-=== Cobigen
+=== CobiGen
 
-_Cobigen_ is a code generator included in the context of _devonfw_ that allows users to generate all the structure and code of the components, helping to save a lot of time wasted in repetitive tasks.
+_CobiGen_ is a code generator included in the context of _devonfw_ that allows users to generate all the structure and code of the components, helping to save a lot of time wasted in repetitive tasks.
 
 image::images/cobigen.png[,width="550", link="images/devon/cobigen.png"]
 

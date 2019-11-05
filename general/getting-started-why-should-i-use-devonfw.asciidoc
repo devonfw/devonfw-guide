@@ -8,7 +8,7 @@ toc::[]
 
 = Why should I use devonfw?
 
-Devonnfw aims at providing a framework which is oriented at development of web applications based on the Java EE programming model using the Spring framework project as the default implementation.
+Devonfw aims at providing a framework which is oriented at development of web applications based on the Java EE programming model using the Spring framework project as the default implementation.
 
 == Objectives
 
@@ -73,7 +73,7 @@ Having all the dependencies self-contained in the distribution's _zip_ file, use
 
 devonfw package provides:
 
- - Implementation blueprints for a modern cloud-ready server and a choice on JS-Client technologies (either open source AngularJs or a very rich and impressive solution based on commercial Sencha UI).
+ - Implementation blueprints for a modern cloud-ready server and a choice on JS-Client technologies (either open source Angular or a very rich and impressive solution based on commercial Sencha UI).
 
  - Quality documentation and step-by-step quick start guides.
 

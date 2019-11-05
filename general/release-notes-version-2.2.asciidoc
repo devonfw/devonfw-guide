@@ -23,7 +23,7 @@ The main focus of the Courage release is the renewed introduction of "OASP for J
 
 - Component Gallery
 
-- New Cobigen templates for generation of both Angular 4 and Ionic 3 UI components ("screens")
+- New CobiGen templates for generation of both Angular 4 and Ionic 3 UI components ("screens")
 
 - Integration of Covalent and Bootstrap offering a large number of components
 
@@ -135,7 +135,7 @@ See: https://github.com/oasp/oasp4j
 Wiki: https://github.com/oasp/oasp4j/wiki
 
 == Microservices Netflix
-devonfw now includes a microservices implementation based on Spring Cloud Netflix. It provides a Netflix OSS integrations for Spring Boot apps through autoconfiguration and binding to the Spring Environment. It  offers microservices archetypes and a complete user guide with all the details to start creating microservices with devonfw.
+devonfw now includes a microservices implementation based on Spring Cloud Netflix. It provides a Netflix OSS integrations for Spring Boot apps through auto-configuration and binding to the Spring Environment. It  offers microservices archetypes and a complete user guide with all the details to start creating microservices with devonfw.
 
 See: https://github.com/devonfw-forge/devon-guide/wiki/devon-microservices
 
@@ -176,7 +176,7 @@ See: https://github.com/devonfw/devon/wiki/cookbook-compose-for-redis-module
 
 == More Deployment options to JEE Application Servers and Docker/CloudFoundry
 
-The platform now fully supports deployment on the latest version of Weblogic, Websphere, Wildfly (JBoss) as well as Docker and Cloudfoundtry
+The platform now fully supports deployment on the latest version of Weblogic, WebSphere, Wildfly (JBoss) as well as Docker and Cloud Foundry.
 
 See:    https://github.com/devonfw/devon/wiki/Deployment-on-WebLogic
     https://github.com/devonfw/devon/wiki/cookbook-Deployment-on-WebSphere

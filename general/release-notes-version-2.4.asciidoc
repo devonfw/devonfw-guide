@@ -10,7 +10,7 @@ toc::[]
 
 == Introduction
 
-We are proud to announce the immediate release of devonfw version 2.4 (code named “EVE” during development). This version is the first one that fully embraces Open Source, including components like the documentation assets and Cobigen. Most of the IP (Intellectual Property or proprietary) part of devonfw are now published under the Apache License version 2.0 (with the documentation under the Creative Commons License (Attribution-NoDerivatives)). This includes the GitHub repositories where all the code and documentation is located. All of these repositories are now open for public viewing as well. 
+We are proud to announce the immediate release of devonfw version 2.4 (code named “EVE” during development). This version is the first one that fully embraces Open Source, including components like the documentation assets and CobiGen. Most of the IP (Intellectual Property or proprietary) part of devonfw are now published under the Apache License version 2.0 (with the documentation under the Creative Commons License (Attribution-NoDerivatives)). This includes the GitHub repositories where all the code and documentation is located. All of these repositories are now open for public viewing as well.
 
 “EVE” contains a slew of new features but in essence it is already driven by what we expect to be the core focus of 2018: strengthening the platform and improving quality.
 
@@ -29,13 +29,13 @@ Last but not least, this release contains the formal publication of the devonfw 
 
 === devonfw 2.4 is Open Source
 
-This version is the first release of devonfw that fully embraces Open Source, including components like the documentation assets and Cobigen. This is done in response to intensive market pressure and demands from the MU´s (Public Sector France, Netherlands)
+This version is the first release of devonfw that fully embraces Open Source, including components like the documentation assets and CobiGen. This is done in response to intensive market pressure and demands from the MU´s (Public Sector France, Netherlands)
 
 Most of the IP (Intellectual Property or proprietary) part of devonfw are now published under the Apache License version 2.0 (with the documentation under the Creative Commons License (Attribution-NoDerivatives)). 
 
-So you can now use the devonfw distribution (the "zip" file), Cobigen, the devonfw modules and all other components without any worry to expose the client unwittingly to Capgemini IP.
+So you can now use the devonfw distribution (the "zip" file), CobiGen, the devonfw modules and all other components without any worry to expose the client unwittingly to Capgemini IP.
 
-*Note:* there are still some components which are IP and are not published under an OSS license. The class room trainings, the Sencha components and some Cobigen templates. But these are not includes in the distribution nor documentation and are now completely maintained separately. 
+*Note:* there are still some components which are IP and are not published under an OSS license. The class room trainings, the Sencha components and some CobiGen templates. But these are not includes in the distribution nor documentation and are now completely maintained separately.
 
 === devonfw dist 
 
@@ -44,9 +44,9 @@ So you can now use the devonfw distribution (the "zip" file), Cobigen, the devon
 ** SonarLint Plugin updated.
 ** Git Plugin updated.
 ** FindBugs Plugin updated.
-** Cobigen plugin updated. 
+** CobiGen plugin updated.
 * Other Software
-** Visual Studio Code latest version included and preconfigured with https://github.com/oasp/oasp-vscode-ide 
+** Visual Studio Code latest version included and pre-configured with https://github.com/oasp/oasp-vscode-ide
 ** Ant updated to latest.
 ** Maven updated to latest.
 ** Java updated to latest.
@@ -58,7 +58,7 @@ So you can now use the devonfw distribution (the "zip" file), Cobigen, the devon
 ** OASP4JS-application-template for Angular 6 at workspaces/examples
 
 
-=== My Thay Star Sample Application
+=== My Thai Star Sample Application
 
 The new release of My Thai Star has focused on the following improvements:
 
@@ -204,7 +204,7 @@ The MrChecker Test Framework is an automated testing framework for functional te
 ** module security - 1.0.1 (security tests against My Thai Start)
 ** module DevOps :
 *** dockerfile for Test environment execution
-*** CI + CD as jenkinsfile code
+*** CI + CD as Jenkinsfile code
 
 === devonfw methodology: Accelerated Solution Design
 

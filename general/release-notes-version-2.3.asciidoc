@@ -81,7 +81,7 @@ See: https://github.com/oasp/oasp4j/pull/589/commits
 
 A new version of Cobigen has been included. New features include: 
  
-* Swagger/Yaml Plugin for CobiGen. Cobigen is able to read a swagger definition file that follows the OpenAPI 3.0 spec and generate code. A preliminary release was already included in 2.2.1 but the current version is much more mature and stable. See: https://github.com/devonfw/tools-cobigen/wiki/howto_openapi_generation
+* Swagger/Yaml Plugin for CobiGen. CobiGen is able to read a swagger definition file that follows the OpenAPI 3.0 spec and generate code. A preliminary release was already included in 2.2.1 but the current version is much more mature and stable. See: https://github.com/devonfw/tools-cobigen/wiki/howto_openapi_generation
 * Integration of CobiGen into Maven build process. This already existed but has been improved. It consists mainly of documentation + better log output and bug fixes. See: https://github.com/devonfw/tools-cobigen/wiki/cobigen-maven_configuration
 * CobiGen Ionic CRUD App generation based on https://github.com/oasp/oasp4js-ionic-application-template
 * Cobigen_Templates project and docs updated
@@ -160,7 +160,7 @@ The Allure Test Framework is an automated testing framework for functional testi
 *** Malleable resolution ( Remote Web Design, Mobile browsers) 
 *** Support for many browsers( Internet Explorer, Edge, Chrome, Firefox, Safari)
 *** User friendly actions ( elementCheckBox, elementDropdown, etc. )
-*** Ubíquese test execution (locally, against Selenium Grid through Jenkins)
+*** Ubiquese test execution (locally, against Selenium Grid through Jenkins)
 *** Page Object Model architecture
 *** Selenium WebDriver library ver. 3.4.0
 
@@ -185,7 +185,7 @@ The .NET Core and Xamarin frameworks are still under development by a workgroup 
 
 === devonfw has been Primed by Red Hat for OpenShift
 
-OpenShift is a supported distribution of Kubernetes from Red Hat for container-based software deployment and management. It is using Docker containers and DevOps tools for accelerated application development. Using Openshift allows Capgemini to avoid Cloud Vendor lock-in. Openshift provides devonfw with a state of the art CI/CD environment (devonfw Shop Floor), providing devonfw with a platform for the whole development life cycle: from development to staging / deploy.
+OpenShift is a supported distribution of Kubernetes from Red Hat for container-based software deployment and management. It is using Docker containers and DevOps tools for accelerated application development. Using OpenShift allows Capgemini to avoid Cloud Vendor lock-in. OpenShift provides devonfw with a state of the art CI/CD environment (devonfw Shop Floor), providing devonfw with a platform for the whole development life cycle: from development to staging / deploy.
 
 See https://hub.openshift.com/primed/120-capgemini and https://github.com/oasp/s2i
 
@@ -195,13 +195,13 @@ The devonfw Harvesting process continues to add valuable components and modules 
 
 ==== Service Client support (for Micro service Projects). 
 
-This client is for consuming microservices from other application.This solution is already very flexible and customizable.As of now,this is suitable for small and simple project where two or three microservices are invoked. Donated by Jörg Holwiller. See: https://github.com/devonfw/devon-microservices
+This client is for consuming microservices from other application.This solution is already very flexible and customizable.As of now,this is suitable for small and simple project where two or three microservices are invoked. Donated by Jörg Hohwiller. See: https://github.com/devonfw/devon-microservices
 
 ==== JHipster devonfw code generation
 
-This compomnent was donated by the ADcenter in Valencia. It was made in order to comply with strong requirements (especially from the French BU) to use jHipster for code generation.
+This component was donated by the ADcenter in Valencia. It was made in order to comply with strong requirements (especially from the French BU) to use jHipster for code generation.
 
-JHipster is a code generator based on Yeoman generators. Its default generator generator-jhipster generates a specific JHipster structure. The purpose of generator-jhipster-DevonModule is to generate the structure and files of a typical OASP4j project. It is therefore equivalent to the standard OASP4j application template based Cobige code generation. 
+JHipster is a code generator based on Yeoman generators. Its default generator generator-jhipster generates a specific JHipster structure. The purpose of generator-jhipster-DevonModule is to generate the structure and files of a typical OASP4j project. It is therefore equivalent to the standard OASP4j application template based CobiGen code generation.
 
 See: https://github.com/devonfw/devon-guide/wiki/cookbook-devon-jhipster-module 
 

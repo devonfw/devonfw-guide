@@ -28,14 +28,14 @@ Friday the 12th of May 2017 OASP4J version 2.3.0 was released. Major features ad
 More details on features added can be found at https://github.com/oasp/oasp4j/milestone/23?closed=1 . 
 The OASP4j wiki and other documents are updated for release 2.3.0. 
 
-=== Cobigen Enhancements
+=== CobiGen Enhancements
 
 Previous versions of CobiGen are able to generate code for REST services only. Now it is possible to generate the code for SOAP services as well. There are two use cases available in CobiGen:
 
  - SOAP without nested data
  - SOAP nested data
 
-The "nested data" use case is when there are 3 or more entities which are interrelated with each other. Cobigen will generate code which will return the nested data. Currently Cobigen services return ETO classes, Cobigen has been enhanced as to return CTO classes (ETO + relationship). 
+The "nested data" use case is when there are 3 or more entities which are interrelated with each other. CobiGen will generate code which will return the nested data. Currently CobiGen services return ETO classes, CobiGen has been enhanced as to return CTO classes (ETO + relationship).
 
 Apart from the SOAP code generation, the capability to express nested relationships have been added to the existing ReST code generator as well.
 
@@ -45,7 +45,7 @@ See: https://github.com/devonfw/devon-guide/wiki/cookbook-cobigen-advanced-use-c
 
 To make it easier for devonfw users to design and develop applications based on microservices, this release provides a series of archetypes and resources based on _Spring Cloud Netflix_ to automate the creation and configuration of microservices.
 
-New documentation ind de devonfw Guide contais all the details to start https://github.com/devonfw-forge/devon-guide/wiki/devon-microservices[creating microservices with devonfw]
+New documentation ind de devonfw Guide contains all the details to start https://github.com/devonfw-forge/devon-guide/wiki/devon-microservices[creating microservices with devonfw]
 
 === Spring Integration Module
 
@@ -57,11 +57,11 @@ The new version of devonfw contains more elaborate and updated documentation abo
 
 == Version 2.1.1 Updates, fixes & some new features
 
-=== Cobigen code-generator fixes
+=== CobiGen code-generator fixes
 
-The Cobigen incremental code generator released in the previous version contained a regression which has now been fixed. Generating services in Batch mode whereby a package can be given as an input, using all Entities contained in that package, works again as expected.
+The CobiGen incremental code generator released in the previous version contained a regression which has now been fixed. Generating services in Batch mode whereby a package can be given as an input, using all Entities contained in that package, works again as expected.
 
-For more information see: https://github.com/devonfw/tools-cobigen/wiki[The Cobigen documentation] and the corresponding change in the https://github.com/devonfw/devon/wiki/getting-started-Cobigen[devonfw Guide]
+For more information see: https://github.com/devonfw/tools-cobigen/wiki[The CobiGen documentation] and the corresponding change in the https://github.com/devonfw/devon/wiki/getting-started-Cobigen[devonfw Guide]
 
 === Devcon enhancements
 
@@ -73,7 +73,7 @@ in Devon4Sencha there are changes in the sample application. It now complies ful
 
 === New Winauth modules
 
-The original _winauth_ module that, in previous Devon versions, implemeted the _Active Directory_ authentication and the _Single Sign-on_ authentication now has been divided in two independent modules. The _Active Directory_ authentication now is included in the new _Winauth-ad_ module whereas the _Single Sign-on_ implementation is included in a separate module called _Winauth-sso_.
+The original _winauth_ module that, in previous Devon versions, implemented the _Active Directory_ authentication and the _Single Sign-on_ authentication now has been divided in two independent modules. The _Active Directory_ authentication now is included in the new _Winauth-ad_ module whereas the _Single Sign-on_ implementation is included in a separate module called _Winauth-sso_.
 Also some improvements have been added to _Winauth-sso_ module to ease the way in which the module can be injected.
 
 For more information about the update see: https://github.com/devonfw/devon/wiki/Client-GUI-Sencha-Introduction-to-Devon4sencha[The Sencha docs within the devonfw Guide]
@@ -177,7 +177,7 @@ In order to fully support the move towards the Cloud, from version 2.1. "Balu" o
 
 === Initial ATOM support
 
-Atom is a text editor that's modern, approachable, yet hackable to the core—a tool you can customize to do anything but also use productively without ever touching a config file. It is turning into a standard for modern web development. In devonfw 2.1 "Balu" we provide a script which installs automatically the most recent version of Atom in the devonfw distribution with a preconfigured set of essential plugins. See: https://github.com/oasp/oasp-atom-ide/wiki[OASP/devonfw Atom editor ("IDE") settings & packages]
+Atom is a text editor that's modern, approachable, yet hackable to the core - a tool you can customize to do anything but also use productively without ever touching a config file. It is turning into a standard for modern web development. In devonfw 2.1 "Balu" we provide a script which installs automatically the most recent version of Atom in the devonfw distribution with a pre-configured set of essential plugins. See: https://github.com/oasp/oasp-atom-ide/wiki[OASP/devonfw Atom editor ("IDE") settings & packages]
 
 === Database support
 

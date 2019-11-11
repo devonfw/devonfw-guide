@@ -1,10 +1,7 @@
 :toc: macro
 toc::[]
-
-:doctype: book
-:reproducible:
-:source-highlighter: rouge
-:listing-caption: Listing
+:idprefix:
+:idseparator: -
 
 = Cookbook OSS Compliance
 

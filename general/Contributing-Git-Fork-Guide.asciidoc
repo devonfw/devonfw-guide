@@ -26,7 +26,7 @@ If the project owner likes your work, they might pull your fix into the original
 
 === How to fork a repository
 
-GitHub, GitLab and Bitbucket have a very accesible option to fork any repository you can access to. For example, at GitHub you will only need to do the following:
+GitHub, GitLab and Bitbucket have a very accessible option to fork any repository you can access to. For example, at GitHub you will only need to do the following:
 
 image::images/contributing/fork-github-1.PNG[Fork a Github repository]
 

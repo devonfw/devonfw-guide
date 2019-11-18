@@ -22,7 +22,7 @@ It is mandatory to follow the <<Contributor Covenant Code of Conduct,code of con
 
 Git is a version control system used for a coordinated and versioned collaboration of computer files. It enables a project to be easily worked on by multiple developers and contributors.
 
-GitHub is an online repository used by deonvfw and OASP in order to host the corresponding files. Using the command line tool or any GUI Tool as "GitHub Desktop", "Fork" or "Atlassian SourceTree" a user can easily manage project files. There are private and public repositories. Public ones can be accessed by everyone, private repositories require access permissions.
+GitHub is an online repository used by devonfw and OASP in order to host the corresponding files. Using the command line tool or any GUI Tool as "GitHub Desktop", "Fork" or "Atlassian SourceTree" a user can easily manage project files. There are private and public repositories. Public ones can be accessed by everyone, private repositories require access permissions.
 
 === Creating a new user account
 
@@ -100,7 +100,7 @@ git checkout -b myBranchName
 * Apply your modifications according to the https://github.com/devonfw/devon4j/wiki/coding-conventions[coding conventions] to the newly created branch
 * Verify your changes to only include relevant and required changes.
 * Commit your changes locally
-** When commiting changes please follow this pattern for your commit message:
+** When committing changes please follow this pattern for your commit message:
 +
 [source]
 ----
@@ -140,7 +140,7 @@ Bare in mind that, in case the changes have a big impact, the **devonfw core tea
 
 == Reviewing Pull Requests
 
-Detailed information about revieweing can be found on the https://help.github.com/articles/reviewing-changes-in-pull-requests/[official topic on GitHub Pull Requests].
+Detailed information about reviewing can be found on the https://help.github.com/articles/reviewing-changes-in-pull-requests/[official topic on GitHub Pull Requests].
 
 There are two different methods to review Pull Requests:
 
@@ -153,7 +153,7 @@ image::images/contributing/pr_commenting.PNG?raw=true[Commenting on pull request
 
 * *CI based reviews*
 +
-CI Systems like https://jenkins.io/[Jenkins] or https://travis-ci.org/[Travis.ci] are able to listen for new pull requests on specified projects. As soon as the request was made, Travis for example checks out the to-be-merged branch and builds it. This enables an automated build which could even include testcases. Finally, the CI approves the pull requests if the build was built and tested successfully, otherwise it'll let the project members know that something went wrong.
+CI Systems like https://jenkins.io/[Jenkins] or https://travis-ci.org/[Travis.ci] are able to listen for new pull requests on specified projects. As soon as the request was made, Travis for example checks out the to-be-merged branch and builds it. This enables an automated build which could even include test cases. Finally, the CI approves the pull requests if the build was built and tested successfully, otherwise it'll let the project members know that something went wrong.
 +
 .If Travis fails to build a project, it'll post the results directly to the pull request
 image::images/contributing/travis_failure.png?raw=true[Travis failed to build, width="450", link="images/contributing/travis_failure.png?raw=true"]

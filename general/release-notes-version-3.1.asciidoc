@@ -52,9 +52,9 @@ More information at https://marketplace.visualstudio.com/items?itemName=devonfw.
 ** SonarLint Plugin updated.
 ** Git Plugin updated.
 ** FindBugs Plugin updated.
-** Cobigen plugin updated. 
+** CobiGen plugin updated.
 * Other Software
-** Visual Studio Code latest version included and preconfigured with the devonfw Platform Extension Pack. 
+** Visual Studio Code latest version included and pre-configured with the devonfw Platform Extension Pack.
 ** Ant updated to latest.
 ** Maven updated to latest.
 ** Java updated to latest.
@@ -68,7 +68,7 @@ More information at https://marketplace.visualstudio.com/items?itemName=devonfw.
 ** devon4ng-ionic-application-template for Ionic 4 at workspace/samples
 
 
-=== My Thay Star Sample Application
+=== My Thai Star Sample Application
 
 The new release of My Thai Star has focused on the following improvements:
 
@@ -80,7 +80,7 @@ The new release of My Thai Star has focused on the following improvements:
 ** Bug fixes.
 * devon4ng:
 ** SAP 4/HANA prediction use case.
-** 2FA togglable (two factor authentication).
+** 2FA toggleable (two factor authentication).
 ** NgRx integration in process (PR #234).
 * devon4node
 ** TypeScript 3.1.3.
@@ -180,7 +180,7 @@ This release incorporates a new Solution Guide for Application Security based on
 *** Performance improves greatly in the CLI thanks to the lack of GUI.
 *** You will be able to use path globs for selecting multiple input files.
 *** We have implemented a search functionality so that you can easily search for increments or templates.
-** First steps taken on CobiGen refactoring: With the new refactoring we will be able to decouple Cobigen completely from the target and input language. This will facilitate the creation of parsers and mergers for any language.
+** First steps taken on CobiGen refactoring: With the new refactoring we will be able to decouple CobiGen completely from the target and input language. This will facilitate the creation of parsers and mergers for any language.
 *** NashornJS has been deprecated: It was used for executing JavaScript code inside JVM. With the refactoring, performance has improved on the TypeScript merger.
 ** Improving CobiGen templates: 
 *** Removed Covalent from Angular templates as it is not compatible with Angular 8.

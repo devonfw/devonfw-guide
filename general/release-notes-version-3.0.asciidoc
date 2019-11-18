@@ -49,9 +49,9 @@ Last but not least, the projects wikis and the devonfw Guide has once again been
 ** SonarLint Plugin updated.
 ** Git Plugin updated.
 ** FindBugs Plugin updated.
-** Cobigen plugin updated. 
+** CobiGen plugin updated.
 * Other Software
-** Visual Studio Code latest version included and preconfigured with the devonfw Platform Extension Pack. 
+** Visual Studio Code latest version included and pre-configured with the devonfw Platform Extension Pack.
 ** Ant updated to latest.
 ** Maven updated to latest.
 ** Java updated to latest.
@@ -63,7 +63,7 @@ Last but not least, the projects wikis and the devonfw Guide has once again been
 ** devon4ng-application-template for Angular 7 at workspaces/examples
 ** devon4ng-ionic-application-template for Ionic 3.20 at workspace/samples
 
-=== My Thay Star Sample Application
+=== My Thai Star Sample Application
 
 The new release of My Thai Star has focused on the following improvements:
 
@@ -211,7 +211,7 @@ This release incorporates a new Solution Guide for Application Security based on
 ** CobiGen_Templates will not need to be imported into the workspace anymore. However, If you want to adapt them, you can still click on a button that automatically imports them for you.
 ** CobiGen_Templates can be updated by one-click whenever the user wants to have the latest version.
 ** Added the possibility to reference external increments on configuration level. This is used for reducing the number of duplicated templates.
-* CobiGen_Templates project and docs updated: 
+* CobiGen_Templates project and docs updated:
 ** Spring standard has been followed better than ever.
 ** Interface templates get automatically relocated to the api project. Needed for following the new devon4j standard.
 * CobiGen Angular:

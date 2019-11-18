@@ -15,7 +15,7 @@ toc::[]
 
 We are proud to announce the immediate release of devonfw version 3.2 (code named “Homer” during development). This version is the first one that contains the **new devonfw IDE** by default, so there is no need to download a huge ZIP with the whole distribution regardless of the use to which it will be put. The new devonfw IDE CLI will allow any user to setup a customized development environment completely configured with access to all the devonfw features, frameworks and tools. As we access to the official IDEs this is also the first version macOS compatible. 
 
-This release consolidates the documentation workflow adding the contents dynamically to the new devonfw website at the same time the PDF is generated. This have been achieved using a new GitHub action that takes the contents and builds the HTMLs for the documentation section of the website. The documentation workflow proposed in the following picture is now complete:
+This release consolidates the documentation workflow adding the contents dynamically to the new devonfw website at the same time the PDF is generated. This have been achieved using a new GitHub action that takes the contents and builds the HTML files for the documentation section of the website. The documentation workflow proposed in the following picture is now complete:
 
 image::images/documentation_workflow.png[link="images/documentation_workflow.png"]
 
@@ -33,11 +33,11 @@ And as always, **My Thai Star** has been updated to the latest versions of devon
 
 === devonfw-ide
 
-We have entirely rewritten our automated solution for your local IDE (integrated desktop environment). The former oasp4j-ide and devonfw distributions with their extra-large gigabite zip files are not entirely replaced with devonfw-ide. This new solution is provided as a small *.tar.gz file that is publicly available. It works on all platforms and has been tested on Windows, MacOS, and Linux. After extraction you only need to run a `setup` script. Here you provide a settings git URL for your customer project or simply hit return for testing or small projects. After reading and confirming the terms of use it will download all required tools in the proper versions for your operating system and configure them. Instead of various confusing scripts there is now only one CLI command `devon` for all use-cases what gives a much better user experience.
+We have entirely rewritten our automated solution for your local IDE (integrated desktop environment). The former oasp4j-ide and devonfw distributions with their extra-large gigabyte zip files are not entirely replaced with devonfw-ide. This new solution is provided as a small *.tar.gz file that is publicly available. It works on all platforms and has been tested on Windows, MacOS, and Linux. After extraction you only need to run a `setup` script. Here you provide a settings git URL for your customer project or simply hit return for testing or small projects. After reading and confirming the terms of use it will download all required tools in the proper versions for your operating system and configure them. Instead of various confusing scripts there is now only one CLI command `devon` for all use-cases what gives a much better user experience.
 
 To get started go to the https://github.com/devonfw/ide/blob/master/documentation/Home.asciidoc#devon-ide[home page]. There is even a https://github.com/devonfw/ide/blob/master/documentation/migration-from-devonfw-3.0.0-or-lower.asciidoc#migration-from-oasp4j-ide[migration-guide] if you are currently used to the old approach and want to quickly jump into the new solution.
 
-=== My Thay Star Sample Application
+=== My Thai Star Sample Application
 
 The new release of My Thai Star has focused on the following improvements:
 
@@ -49,15 +49,15 @@ The new release of My Thai Star has focused on the following improvements:
 ** Bug fixes.
 * devon4ng:
 ** SAP 4/HANA prediction use case.
-** 2FA togglable (two factor authentication).
+** 2FA toggleable (two factor authentication).
 ** NgRx full integrated (PR #285).
 * devon4net
 ** devon4net for dotnet core 3.0 updated
 ** Updated the API contract compatible with the other stacks
 ** JWT implementation reviewed to increase security
-** ASP.NET users database dependencies removed
+** ASP.NET user database dependencies removed
 ** HTTP2 support
-** More clear CRUD pattern implementation
+** Clearer CRUD pattern implementation
 * devon4node
 ** TypeScript 3.6.3.
 ** Based on Nest framework.
@@ -66,7 +66,7 @@ The new release of My Thai Star has focused on the following improvements:
 ** Added mailer module and email templates.
 ** Built in winston logger
 ** Custom ClassSerializerInterceptor
-* Mr.Checker
+* MrChecker
 ** Example cases for end-to-end test.
 ** Production line configuration.
 * CICD
@@ -147,7 +147,7 @@ The following changes have been incorporated in devon4net:
 ** Improved API error management
 ** Added support to only accept request from clients with a specific client certificate on Kestrel server. Special thanks to Bart Roozendaal (Capgemini NL)
 ** All components use IOptions pattern to be set up properly
-** Swagger generation compatible con open api v3
+** Swagger generation compatible with OpenAPI v3
 * Modules
 ** The devon4net netstandard libraries have been updated to netstandard 2.1
 
@@ -181,8 +181,8 @@ The following changes have been incorporated in devon4node:
 ** mailer: install and configure the devon4node mailer module
 ** typeorm: install TypeORM in the project
 ** auth-jwt: add users and auth-jwt modules to the project
-** swagger: expose an enpoint with the autogenerated swagger
-** security: add cors and other sercurity headers to the project.
+** swagger: expose an endpoint with the auto-generated swagger
+** security: add cors and other security headers to the project.
 ** crud: create all CRUD for an entity
 ** entity: create an entity
 * New mailer module
@@ -201,7 +201,7 @@ The following changes have been incorporated in devon4node:
 *** CobiGen CLI commandlet for devonfw-ide has been added. You can use it to setup easily your CLI and to run CobiGen related commands.
 *** Added a version provider so that you will be able to know all the CobiGen plug-ins versions.
 *** Added a process bar when the CLI is downloading the CobiGen plug-ins.
-** CobiGen refactoring finished: With this refactoring we have been able to decouple Cobigen completely from the target and input language. This facilitates the creation of parsers and mergers for any language. For more information please take a look https://github.com/devonfw/tools-cobigen/wiki/howto_create-external-plugin[here].
+** CobiGen refactoring finished: With this refactoring we have been able to decouple CobiGen completely from the target and input language. This facilitates the creation of parsers and mergers for any language. For more information please take a look https://github.com/devonfw/tools-cobigen/wiki/howto_create-external-plugin[here].
 *** New TypeScript input reader: We are now able to parse any TypeScript class and generate code using the parsed information. We currently use https://github.com/typeorm/typeorm/blob/master/docs/entities.md#what-is-entity[TypeORM] entities as a base for generation.
 ** Improving CobiGen templates: 
 *** Updated devon4ng-NgRx templates to NgRx 8.

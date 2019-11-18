@@ -17,7 +17,7 @@ Please read the Open Source policy of your company first, e.g. the https://talen
 * understand the 3 license categories: "permissive", "weak copyleft" and "strong copyleft" 
 * know prominent license types as e.g. "Apache-2.0" or GPL-3.0" and what copyleft-category they are in
 * are aware that some OSS offer dual/multi-licenses
-* Understand that OSS libraries often come with sub-dependencies of other OSS carying licenses themselfes
+* Understand that OSS libraries often come with sub-dependencies of other OSS carrying licenses themselves
 
 To define sufficient OSS compliance measures, contact your IP officer or legal team as early as possible, especially if you develop software for clients.
 
@@ -43,13 +43,13 @@ Obligations need to be checked per license. Frequent obligations are:
 
 == Automate OSS handling
 
-Carefully judging the OSS usage in your project is a MANUAL activity! However, collecting OSS information and fulfilling license obligations should be automated as much as possible. A prominent professional tool to automate OSS compliance is the commercial software "Blackduck". Unfortunately it is rather expensive - either purchased or used as Saas.
+Carefully judging the OSS usage in your project is a MANUAL activity! However, collecting OSS information and fulfilling license obligations should be automated as much as possible. A prominent professional tool to automate OSS compliance is the commercial software "Black Duck". Unfortunately it is rather expensive - either purchased or used as SaaS.
 
 The most recommended lightweight tooling is a combination of Maven plugins. We will mainly use the http://www.mojohaus.org/license-maven-plugin/[Mojo Maven License Plugin]. 
 
 == Configure the Mojo Maven License Plugin 
 
-You can use it from commandline but this will limit the ability to sustainably configure it (shown later).
+You can use it from command line but this will limit the ability to sustainably configure it (shown later).
 Therefore we add it permanently as a build-plugin to the project parent-pom like this (already contained in OASP-parent-pom):
 
 [source,xml]
@@ -143,7 +143,7 @@ License-names will be harmonized in the OSS report to one common term. We propos
 
 == Retrieve licenses list
 
-For a quick initial judgement of OSS license situation run the following maven command from commandline:
+For a quick initial judgement of OSS license situation run the following maven command from command line:
 
 [source,bash]
 --------
@@ -164,7 +164,7 @@ $ mvn license:aggregate-download-licenses -Dlicense.excludedScopes=test,provided
 
 Running the aggregate-download-licenses goal creates two results. 
 
-. a license.xml that contains all used OSS depenencies (even sub-dependencies) with respective license information
+. a license.xml that contains all used OSS dependencies (even sub-dependencies) with respective license information
 . puts all used OSS-license-texts as html files into folder target/generated resources
 
 Carefully validate and judge the outcome of the license list. It is recommended to copy the license.xml to the project documentation and hand it over to your client. You may also import it into a spreadsheet to get a better overview.
@@ -215,7 +215,7 @@ You configure the plugin like this:
 </plugin>
 --------
 
-You run the plugin from commandline like this:
+You run the plugin from command line like this:
 
 [source,bash]
 --------

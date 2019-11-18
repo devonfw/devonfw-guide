@@ -33,6 +33,10 @@ include::devonfw-testing.wiki/master-devonfw-testing[leveloffset=0]
 
 include::my-thai-star.wiki/master-my-thai-star[leveloffset=0]
 
-include::general/general-contributing[leveloffset=0]
+include::.github/CONTRIBUTING[leveloffset=0]
+
+include::.github/CODE_OF_CONDUCT[leveloffset=1]
+
+include::general/general-compliance[leveloffset=1]
 
 include::general/general-release-notes[leveloffset=0]

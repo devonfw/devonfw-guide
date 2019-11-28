@@ -10,13 +10,14 @@ Download the **continuously updated devonfw guide** from [here](https://github.c
 
 This repository contains a collection of guides and documents from the different devonfw's modules, such as:
 
+- **ide**: devonfw IDE.
 - **cicdgen**: Tool to generate CI/CD configurations for devonfw projects.
 - **devon4j**: Module for Java
 - **devon4net**: Module for .net
 - **devon4ng**: Module for Angular
 - **devon4node**: Module from node.js
 - **devonfw shop floor**: Set of documentation, tools and methodologies used to configure provisioning, development and uat environments used in devonfw projects.
-- **devonfw testing**: Module for testing.
+- **MrChecker**: E2E testing framework.
 - **My Thai Star**: devonfw reference application.
 - **CobiGen**: Code-based incremental generator.
 

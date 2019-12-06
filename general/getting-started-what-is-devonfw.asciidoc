@@ -46,7 +46,7 @@ Check out the links for more details.
 
 == Custom Tools
 
-=== devonfw IDE
+=== devonfw-ide
 
 The `devonfw-ide` is the new and fantastic tool to automatically download, install, setup and update the IDE (integrated development environment) of your _devonfw_ projects.
 

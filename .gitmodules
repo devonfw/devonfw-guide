@@ -31,3 +31,6 @@
 [submodule "mrchecker.wiki"]
 	path = mrchecker.wiki
 	url = https://github.com/devonfw/mrchecker.wiki.git
+[submodule "production-line.wiki"]
+	path = production-line.wiki
+	url = https://github.com/devonfw/production-line.wiki.git

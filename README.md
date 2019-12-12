@@ -31,6 +31,6 @@ Please find the documentation how to generate a PDF for your project / wiki in t
 
 **IMPORTANT**
 
-If your directory contains huge amounts of files, maven can throw a OutOfMemoryError. More info at [Maven OutOfMemoryError](https://cwiki.apache.org/confluence/display/MAVEN/OutOfMemoryError)
+If your directory contains huge amounts of files, maven can throw a OutOfMemoryError. More info at [Maven OutOfMemoryError](https://cwiki.apache.org/confluence/display/MAVEN/OutOfMemoryError) 
 
 ---

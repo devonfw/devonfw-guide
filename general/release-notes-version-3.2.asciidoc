@@ -29,6 +29,8 @@ On the other hand, the refactoring process has been completely developed, improv
 
 And as always, **My Thai Star** has been updated to the latest versions of devon4j, devon4node and devon4net including completely State Management with NgRx in its devon4ng implementation upgrade.
 
+This is the last release with the current semantic versioning number and without a fixed release calendar. From now on the new devonfw releases will happen in April, August and December and will be named **YYYY.MM.NN**, being the first release of the next year the 2020.04.00. 
+
 == Changes and new features
 
 === devonfw-ide

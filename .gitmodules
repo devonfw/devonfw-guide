@@ -34,3 +34,6 @@
 [submodule "production-line.wiki"]
 	path = production-line.wiki
 	url = https://github.com/devonfw/production-line.wiki.git
+[submodule "getting-started.wiki"]
+	path = getting-started.wiki
+	url = https://github.com/devonfw/getting-started.wiki.git

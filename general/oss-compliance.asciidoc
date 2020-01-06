@@ -3,7 +3,7 @@ toc::[]
 :idprefix:
 :idseparator: -
 
-= Cookbook OSS Compliance
+= OSS Compliance
 
 This chapter helps you to gain transparency on OSS usage and reach OSS compliance in your project.
 

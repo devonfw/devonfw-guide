@@ -1,3 +1,0 @@
-= OSS Compliance
-
-include::Cookbook-OSS-Compliance[leveloffset=2]

@@ -11,8 +11,6 @@ Updated at {localdatetime}
 :chapter-label:
 :partnums:
 
-include::general/master-introduction[leveloffset=0]
-
 include::getting-started.wiki/master-getting-started[leveloffset=0]
 
 include::ide.wiki/master-ide[leveloffset=0]

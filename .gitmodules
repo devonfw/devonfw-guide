@@ -34,3 +34,6 @@
 [submodule "production-line.wiki"]
 	path = production-line.wiki
 	url = https://github.com/devonfw/production-line.wiki.git
+[submodule "cobigen.wiki"]
+	path = cobigen.wiki
+	url = https://github.com/devonfw/cobigen.wiki.git

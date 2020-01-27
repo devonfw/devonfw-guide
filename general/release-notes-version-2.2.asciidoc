@@ -72,7 +72,7 @@ Major changes in this release:
 * CI integration improved to integrate with GitHub for more valuable feedback
 
 
-See: https://github.com/devonfw/tools-cobigen/releases
+See: https://github.com/devonfw/cobigen/releases
 
 == MyThaiStar: New Restaurant Example, reference implementation & Methodology showcase
 

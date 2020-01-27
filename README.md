@@ -8,29 +8,32 @@ Download the **continuously updated devonfw guide** from [here](https://github.c
 
 ---
 
-This repository contains a collection of guides and documents from the different devonfw's modules, such as:
+This repository contains a collection of guides and documents from different _devonfw_ modules:
 
+- **getting started**: Standalone introduction guide.
 - **ide**: devonfw IDE.
-- **cicdgen**: Tool to generate CI/CD configurations for devonfw projects.
 - **devon4j**: Module for Java
-- **devon4net**: Module for .net
 - **devon4ng**: Module for Angular
-- **devon4node**: Module from node.js
+- **devon4net**: Module for .NET
+- **devon4node**: Module from Node.js
+- **database**: Information on selecting a suitable database.
 - **devonfw shop floor**: Set of documentation, tools and methodologies used to configure provisioning, development and uat environments used in devonfw projects.
-- **MrChecker**: E2E testing framework.
-- **My Thai Star**: devonfw reference application.
+- **cicdgen**: Tool to generate CI/CD configurations for devonfw projects.
+- **production line**: Templates and info on setting up a Jenkins PL.
 - **CobiGen**: Code-based incremental generator.
+- **MrChecker**: E2E testing framework.
+- **MyThaiStar**: devonfw reference application.
+- **contributing**: Contributing and OSS compliance guidelines, community code of conduct. 
+- **release notes**: Chagelogs and feature-lists of devonfw releases.
 
-## How is this guide organized
+## How this guide is organized
 
-Each submodule contains a master file _name-of-the-wiki.wiki/master-name-of-the-wiki.asciidoc_ which includes all the other files in the submodule. All master-*.asciidoc files are joined in *devonfw-guide/master.asciidoc\*, this way, all documents are linked and can be used to generate a unique file.
+Each submodule contains a master file `name-of-the-wiki.wiki/master-name-of-the-wiki.asciidoc` which includes all the other files in the submodule. All `master-*.asciidoc` files are joined in `devonfw-guide/master.asciidoc`. This way, all documents are linked and can be used to generate a complete file.
 
 ## How to generate a PDF
 
-Please find the documentation how to generate a PDF for your project / wiki in the [devonfw-docgen repository](https://github.com/devonfw/docgen).
+Please find the documentation how to generate a PDF for your project/wiki in the [docgen repository](https://github.com/devonfw/docgen/wiki#usage).
 
 **IMPORTANT**
 
-If your directory contains huge amounts of files, maven can throw a OutOfMemoryError. More info at [Maven OutOfMemoryError](https://cwiki.apache.org/confluence/display/MAVEN/OutOfMemoryError) 
-
----
+If your directory contains a large amount of files, Maven might throw an `OutOfMemoryError`. For information on how to fix this issue please refer to: [Maven OutOfMemoryError](https://cwiki.apache.org/confluence/display/MAVEN/OutOfMemoryError).

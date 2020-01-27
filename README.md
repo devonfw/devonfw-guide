@@ -27,7 +27,7 @@ Each submodule contains a master file _name-of-the-wiki.wiki/master-name-of-the-
 
 ## How to generate a PDF
 
-Please find the documentation how to generate a PDF for your project / wiki in the [devon-docgen repository](https://github.com/devonfw/devon-docgen).
+Please find the documentation how to generate a PDF for your project / wiki in the [devonfw-docgen repository](https://github.com/devonfw/docgen).
 
 **IMPORTANT**
 

@@ -61,7 +61,7 @@ The new version of devonfw contains more elaborate and updated documentation abo
 
 The CobiGen incremental code generator released in the previous version contained a regression which has now been fixed. Generating services in Batch mode whereby a package can be given as an input, using all Entities contained in that package, works again as expected.
 
-For more information see: https://github.com/devonfw/tools-cobigen/wiki[The CobiGen documentation] and the corresponding change in the https://github.com/devonfw/devon/wiki/getting-started-Cobigen[devonfw Guide]
+For more information see: https://github.com/devonfw/cobigen/wiki[The CobiGen documentation] and the corresponding change in the https://github.com/devonfw/devon/wiki/getting-started-Cobigen[devonfw Guide]
 
 === Devcon enhancements
 
@@ -100,7 +100,7 @@ Currently we support Sencha Ext JS with support for Angular 2 coming soon. The c
 
 Cobigen can now also be used for code-generation within the context of an engagement. It is easily extensible and the process of how to extend it for your own project is well documented. This becomes already worthwhile ("delivers ROI") when having 5+ identical elements within the project. 
 
-For more information see: https://github.com/devonfw/tools-cobigen/wiki[The Cobigen documentation] and the corresponding changer in the https://github.com/devonfw/devon/wiki/getting-started-Cobigen[devonfw Guide] and 
+For more information see: https://github.com/devonfw/cobigen/wiki[The Cobigen documentation] and the corresponding changer in the https://github.com/devonfw/devon/wiki/getting-started-Cobigen[devonfw Guide] and 
 
 === Angular 2
 

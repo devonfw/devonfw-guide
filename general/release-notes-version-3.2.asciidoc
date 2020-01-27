@@ -198,12 +198,12 @@ The following changes have been incorporated in devon4node:
 === CobiGen
 
 * CobiGen core new features:
-** CobiGen CLI: Update command implemented. Now you will be able to update easily all your CobiGen plug-ins and templates inside the CLI. Please take a look into the https://github.com/devonfw/tools-cobigen/wiki/howto_Cobigen-CLI-generation[documentation] for more info.
+** CobiGen CLI: Update command implemented. Now you will be able to update easily all your CobiGen plug-ins and templates inside the CLI. Please take a look into the https://github.com/devonfw/cobigen/wiki/howto_Cobigen-CLI-generation[documentation] for more info.
 *** CobiGen CLI is now JDK11 compatible.
 *** CobiGen CLI commandlet for devonfw-ide has been added. You can use it to setup easily your CLI and to run CobiGen related commands.
 *** Added a version provider so that you will be able to know all the CobiGen plug-ins versions.
 *** Added a process bar when the CLI is downloading the CobiGen plug-ins.
-** CobiGen refactoring finished: With this refactoring we have been able to decouple CobiGen completely from the target and input language. This facilitates the creation of parsers and mergers for any language. For more information please take a look https://github.com/devonfw/tools-cobigen/wiki/howto_create-external-plugin[here].
+** CobiGen refactoring finished: With this refactoring we have been able to decouple CobiGen completely from the target and input language. This facilitates the creation of parsers and mergers for any language. For more information please take a look https://github.com/devonfw/cobigen/wiki/howto_create-external-plugin[here].
 *** New TypeScript input reader: We are now able to parse any TypeScript class and generate code using the parsed information. We currently use https://github.com/typeorm/typeorm/blob/master/docs/entities.md#what-is-entity[TypeORM] entities as a base for generation.
 ** Improving CobiGen templates: 
 *** Updated devon4ng-NgRx templates to NgRx 8.

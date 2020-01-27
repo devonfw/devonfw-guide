@@ -13,9 +13,6 @@
 [submodule "devon4net.wiki"]
 	path = devon4net.wiki
 	url = https://github.com/devonfw/devon4net.wiki.git
-[submodule "tools-cobigen.wiki"]
-	path = tools-cobigen.wiki
-	url = https://github.com/devonfw/tools-cobigen.wiki.git
 [submodule "devon4j.wiki"]
 	path = devon4j.wiki
 	url = https://github.com/devonfw/devon4j.wiki.git

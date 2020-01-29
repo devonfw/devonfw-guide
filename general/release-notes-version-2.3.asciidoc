@@ -81,8 +81,8 @@ See: https://github.com/oasp/oasp4j/pull/589/commits
 
 A new version of Cobigen has been included. New features include: 
  
-* Swagger/Yaml Plugin for CobiGen. CobiGen is able to read a swagger definition file that follows the OpenAPI 3.0 spec and generate code. A preliminary release was already included in 2.2.1 but the current version is much more mature and stable. See: https://github.com/devonfw/tools-cobigen/wiki/howto_openapi_generation
-* Integration of CobiGen into Maven build process. This already existed but has been improved. It consists mainly of documentation + better log output and bug fixes. See: https://github.com/devonfw/tools-cobigen/wiki/cobigen-maven_configuration
+* Swagger/Yaml Plugin for CobiGen. CobiGen is able to read a swagger definition file that follows the OpenAPI 3.0 spec and generate code. A preliminary release was already included in 2.2.1 but the current version is much more mature and stable. See: https://github.com/devonfw/cobigen/wiki/howto_openapi_generation
+* Integration of CobiGen into Maven build process. This already existed but has been improved. It consists mainly of documentation + better log output and bug fixes. See: https://github.com/devonfw/cobigen/wiki/cobigen-maven_configuration
 * CobiGen Ionic CRUD App generation based on https://github.com/oasp/oasp4js-ionic-application-template
 * Cobigen_Templates project and docs updated
 * Bugfixes and Hardening

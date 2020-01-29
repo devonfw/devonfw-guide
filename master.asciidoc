@@ -11,7 +11,7 @@ Updated at {localdatetime}
 :chapter-label:
 :partnums:
 
-include::general/master-general-start[leveloffset=0]
+include::getting-started.wiki/master-getting-started[leveloffset=0]
 
 include::ide.wiki/devonfw-ide[leveloffset=0]
 
@@ -37,10 +37,6 @@ include::mrchecker.wiki/master-mrchecker[leveloffset=0]
 
 include::my-thai-star.wiki/master-my-thai-star[leveloffset=0]
 
-include::.github/CONTRIBUTING[leveloffset=0]
+include::general/master-contributing[leveloffset=0]
 
-include::.github/CODE_OF_CONDUCT[leveloffset=1]
-
-include::general/general-compliance[leveloffset=1]
-
-include::general/general-release-notes[leveloffset=0]
+include::general/master-release-notes[leveloffset=0]

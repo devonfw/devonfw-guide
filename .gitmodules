@@ -37,3 +37,6 @@
 [submodule "cobigen.wiki"]
 	path = cobigen.wiki
 	url = https://github.com/devonfw/cobigen.wiki.git
+[submodule "getting-started.wiki"]
+	path = getting-started.wiki
+	url = https://github.com/devonfw/getting-started.wiki.git

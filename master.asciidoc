@@ -11,7 +11,7 @@ Updated at {localdatetime}
 :chapter-label:
 :partnums:
 
-include::getting-started.wiki/master-getting-started[leveloffset=0]
+include::getting-started.wiki/getting-started[leveloffset=0]
 
 include::ide.wiki/devonfw-ide[leveloffset=0]
 

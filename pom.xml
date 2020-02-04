@@ -9,12 +9,12 @@
 
   <parent>
     <groupId>com.devonfw.tools</groupId>
-    <artifactId>devon-docgen</artifactId>
-    <version>4.1.0</version>
+    <artifactId>devonfw-docgen-pdf</artifactId>
+    <version>5.0.0</version>
   </parent>
 
   <properties>
-    <docgen.wiki.page>master</docgen.wiki.page>
+    <docgen.asciidoc.page>master</docgen.asciidoc.page>
   </properties>
 
 </project>

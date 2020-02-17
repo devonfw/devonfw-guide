@@ -45,7 +45,7 @@ The *devonfw dist*, or distribution, i.e. the central zip file which contains th
 ** CobiGen Plugin installed
 * Other Software
 ** Cmder integrated (when console.bat launched)
-** Visual Studio Code latest version included and pre-configured with https://github.com/oasp/oasp-vscode-ide 
+** Visual Studio Code latest version included and pre-configured with https://github.com/devonfw/extension-pack-vscode 
 ** Ant updated to latest.
 ** Maven updated to latest.
 ** Java updated to latest.

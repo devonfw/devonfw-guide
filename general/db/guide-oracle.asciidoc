@@ -26,17 +26,20 @@ sqlplus sys/Oracle18@localhost/XE as sysdba
 ```
 
 == Driver
-The oracle JDBC driver is not available in maven central. Depending on the Oracle DB version and the Java version, you can use either the 11g/ojdbc6, 12c/ojdbc7, or 12c/ojdbc8 version of the driver. Oracle JDBC drivers usually are backward and forward compatible so you should be able to use the 12c/ojdbc8 driver with an 11g DB etc. As a rule of thumb, use the 12c/ojdbc8 driver unless you must use Java7. All JDBC drivers can be downloaded: http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html[11g/ojdbc6], http://www.oracle.com/technetwork/database/features/jdbc/jdbc-drivers-12c-download-1958347.html[12c/ojdbc7], and http://www.oracle.com/technetwork/database/features/jdbc/jdbc-ucp-122-3110062.html[12c/ojdbc8]. Your project should use a maven repository server such as http://www.sonatype.org/nexus/[nexus] or https://www.jfrog.com/open-source/[artifactory]. You can even integrate the https://blogs.oracle.com/dev2dev/get-oracle-jdbc-drivers-and-ucp-from-oracle-maven-repository-without-ides[oracle maven repository] as proxy-repo in nexus.
-Your dependency for the oracle driver should look as follows (use artifactId "ojdbc6" or "ojdbc7" for the older drivers):
+The oracle JDBC driver is https://blogs.oracle.com/developers/oracle-database-client-libraries-for-java-now-on-maven-central[available in maven central]. Depending on the Oracle DB version and the Java version, you can use different `artifactId`s and `versions`:
+either the 11g/ojdbc6, 12c/ojdbc7, or 12c/ojdbc8 version of the driver. 
+
+Oracle JDBC drivers usually are backward and forward compatible so you should be able to use an older driver with a newer Oracle DB, etc. 
+Your dependency for the oracle driver should look as follows:
 
 ```
 <dependency>
-  <groupId>com.oracle.jdbdc</groupId>
-  <artifactId>ojdbc8</artifactId>
+  <groupId>com.oracle.database.jdbc</groupId>
+  <artifactId>ojdbc10</artifactId>
   <version>${oracle.driver.version}</version>
 </dependency>
 ```
-The property `oracle.driver.version` should be `19.3.0.0` for oracle 19, `11.2.0.4` for oracle 11g, etc.
+For the most recent Oracle DB 19 the property `oracle.driver.version` should be `19.3.0.0`. The number in the `artifactId` correlates to the minimum Java Version so for Java8 `artifactId` should be `ojdbc8` instead (with `oracle.driver.version` as `19.3.0.0` or `12.2.0.1`). It is fine to use `ojdbc10` with Java11.
 
 == Pooling
 In order to boost performance JDBC connections should be pooled and reused. If you are using Oracle RDBMS and do not plan to change that you can use the Oracle specific connection pool "Universal Connection Pool (UCP)" that is perfectly integrated with the Oracle driver. According to the documentation, UCP can even be used to https://docs.oracle.com/database/122/JJUCP/third-party-integration.htm#JJUCP8141[manage third party data sources]. The 11g version of UCP can be downloaded without registration http://www.oracle.com/technetwork/database/enterprise-edition/downloads/ucp-112010-099129.html[here], the 12c version of UCP is available at the same download locations as the 12c JDBC driver (see above). As a rule of thumb, use the version that is the same as the JDBC driver version.

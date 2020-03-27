@@ -26,9 +26,7 @@ sqlplus sys/Oracle18@localhost/XE as sysdba
 ```
 
 == Driver
-The oracle JDBC driver is https://blogs.oracle.com/developers/oracle-database-client-libraries-for-java-now-on-maven-central[available in maven central]. Depending on the Oracle DB version and the Java version, you can use different `artifactId`s and `versions`:
-either the 11g/ojdbc6, 12c/ojdbc7, or 12c/ojdbc8 version of the driver. 
-
+The oracle JDBC driver is https://blogs.oracle.com/developers/oracle-database-client-libraries-for-java-now-on-maven-central[available in maven central]. 
 Oracle JDBC drivers usually are backward and forward compatible so you should be able to use an older driver with a newer Oracle DB, etc. 
 Your dependency for the oracle driver should look as follows:
 

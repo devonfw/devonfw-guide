@@ -1,0 +1,289 @@
+:toc: macro
+toc::[]
+
+
+:doctype: book
+:reproducible:
+:source-highlighter: rouge
+:listing-caption: Listing
+
+
+= devonfw Release notes 2020.04
+
+== Introduction
+
+We are proud to announce the immediate release of devonfw version 2020.04. This version is the first one with the new versioning that will make easier to the community to identify when it was released since we use the year and month as many other software distributions. 
+
+This release includes lots of bug fixes and many version updates, but it is very important to highlight the following improvements:
+
+* New devonfw IDE auto-configure project feature.
+* Improved devonfw IDE plugin configuration.
+* New devon4j kafka module.
+* New devon4j JWT module.
+* New devon4j authorization of batches feature.
+* Dozer replaced with Orika in devon4j.  
+* Support for composite keys in devon4j and CobiGen.
+* Multiple enhancements for project specific plugin development and usage of project specific template sets in CobiGen.
+* Ability to adapt your own templates by making use of CobiGen CLI.
+* Better responsiveness in eclipse and bugfixes in all assets in CobiGen.
+* devon4ng updated to Angular 9, NgRx 9 and Ionic 5, including documentation, samples and templates.
+* Yarn 2 support in devon4ng.
+* devon4node updated to NestJS 7 (packages, samples and documentation)
+* devon4node TSLint replaced with ESLint.
+* @devon4node/config package added. 
+* devon4net updated to latest 3.1.3 LTS version.
+* Update of the Production Line templates for devonfw projects in devonfw shop floor. 
+* New merge feature included in the devonfw shop floor cicdgen tool.
+* Updated sonar-devon4j-plugin:
+    ** Improved coloring and other visual cues to our rule descriptions to highlight good and bad code examples.
+	** Improved the locations of issues thrown on method- and class-level.
+
+Please check the detailed list below. 
+
+This would have not been possible without the commitment and hard work of the devonfw core team, German, Indian and ADCenter Valencia colleagues and collaborators.  
+
+== devonfw IDE
+
+The consolidated list of features for this devonfw IDE release is as it follows.
+
+=== 2020.04.001
+
+Starting with this release we have changed the versioning schema in `devonfw` to `yyyy.mm.NNN` where `yyyy.mm` is the date of the planned milestone release and `NNN` is a running number increased with every bug- or security-fix update.
+
+* https://github.com/devonfw/ide/issues/394[#394] variable from devon.properties not set if not terminated with newline
+* https://github.com/devonfw/ide/issues/399[#399] launching of Intellij fails with No such file or directory error.
+* https://github.com/devonfw/ide/issues/371[#371] Eclipse plugin installation broke
+* https://github.com/devonfw/ide/issues/390[#390] maven get/set-version buggy
+* https://github.com/devonfw/ide/issues/397[#397] migration support for devon4j 2020.04.001
+* https://github.com/devonfw/ide/pull/400[#400] allow custom args for release
+
+The full list of changes for this release can be found in https://github.com/devonfw/ide/milestone/9?closed=1[milestone 2020.04.001].
+
+=== 3.3.1
+
+New release with bugfixes and new ide plugin feature:
+
+* https://github.com/devonfw/ide/issues/343[#343]: Setup can't find Bash nor Git
+* https://github.com/devonfw/ide/issues/369[#369]: Fix flattening of POMs
+* https://github.com/devonfw/ide/pull/386[#386]: Feature/clone recursive
+* https://github.com/devonfw/ide/issues/379[#379]: Use own extensions folder in devonfw-ide
+* https://github.com/devonfw/ide/pull/381[#381]: Add ability to configure VS Code plugins via settings
+* https://github.com/devonfw/ide/issues/376[#376]: Improve Eclipse plugin configuration
+* https://github.com/devonfw/ide/pull/373[#373]: Fix project import on windows
+* https://github.com/devonfw/ide/pull/374[#374]: Rework build on import
+
+The full list of changes for this release can be found in https://github.com/devonfw/ide/milestone/10?closed=1[milestone 3.3.1].
+
+=== 3.3.0
+
+New release with bugfixes and new project import feature:
+
+* https://github.com/devonfw/ide/pull/343[#343]: Detect non-admin GitForWindows and Cygwin
+* https://github.com/devonfw/ide/issues/175[#175]: Ability to clone projects and import into Eclipse automatically
+* https://github.com/devonfw/ide/issues/346[#346]: devon eclipse add-plugin parameters swapped
+* https://github.com/devonfw/ide/issues/363[#363]: devon ide update does not pull latest project settings
+* https://github.com/devonfw/ide/pull/366[#366]: update java versions to latest fix releases
+
+The full list of changes for this release can be found in https://github.com/devonfw/ide/milestone/5?closed=1[milestone 3.3.0].
+
+== devon4j
+
+The consolidated list of features for this devon4j release is as it follows.
+
+=== 2020.04.001
+
+Starting with this release we have changed the versioning schema in `devonfw` to `yyyy.mm.NNN` where `yyyy.mm` is the date of the planned milestone release and `NNN` is a running number increased with every bug- or security-fix update.
+
+The following changes have been incorporated in devon4j:
+
+* https://github.com/devonfw/devon4j/pull/233[#233]: Various version updates
+* https://github.com/devonfw/devon4j/issues/241[#241]: Add module to support JWT and parts of OAuth
+* https://github.com/devonfw/devon4j/issues/147[#147]: Switch from dozer to orika
+* https://github.com/devonfw/devon4j/pull/180[#180]: Cleanup archtype
+* https://github.com/devonfw/devon4j/pull/240[#240]: Add unreferenced guides
+* https://github.com/devonfw/devon4j/issues/202[#202]: Architecture documentation needs update for components
+* https://github.com/devonfw/devon4j/issues/145[#145]: Add a microservices article in the documentation
+* https://github.com/devonfw/devon4j/issues/198[#198]: Deploy SNAPSHOTs to OSSRH in travis CI
+* https://github.com/devonfw/devon4j/issues/90[#90]: Authorization of batches 
+* https://github.com/devonfw/devon4j/pull/221[#221]: Wrote monitoring guide
+* https://github.com/devonfw/devon4j/pull/213[#213]: Document logging of custom field in json
+* https://github.com/devonfw/devon4j/issues/138[#138]: Remove deprecated RevisionMetadata[Type]
+* https://github.com/devonfw/devon4j/issues/211[#211]: Archetype: security config broken
+* https://github.com/devonfw/devon4j/issues/109[#109]: LoginController not following devon4j to use JAX-RS but uses spring-webmvc instead
+* https://github.com/devonfw/devon4j/issues/52[#52]: Improve configuration
+* https://github.com/devonfw/devon4j/issues/39[#39]: Ability to log custom fields via SLF4J
+* https://github.com/devonfw/devon4j/issues/204[#204]: Slf4j version
+* https://github.com/devonfw/devon4j/issues/190[#190]: Rework of spring-batch integration
+* https://github.com/devonfw/devon4j/pull/210[#210]: Rework documentation for blob support
+* https://github.com/devonfw/devon4j/pull/191[#191]: Rework of devon4j-batch module
+* https://github.com/devonfw/devon4j/pull/209[#209]: Include performance info in separate fields
+* https://github.com/devonfw/devon4j/pull/207[#207]: Use more specific exception for not found entity
+* https://github.com/devonfw/devon4j/pull/208[#208]: Remove unnecesary clone
+* https://github.com/devonfw/devon4j/issues/116[#116]: Bug in JSON Mapping for ZonedDateTime
+* https://github.com/devonfw/devon4j/pull/184[#184]: Fixed BOMs so devon4j and archetype can be used again 
+* https://github.com/devonfw/devon4j/issues/183[#183]: Error in executing the project created with devon4j 
+* https://github.com/devonfw/devon4j/issues/177[#177]: Switch to new maven-parent
+* https://github.com/devonfw/devon4j/pull/169[169]: Provide a reason, why unchecked exceptions are used in devon4j
+
+Documentation is available at https://repo.maven.apache.org/maven2/com/devonfw/java/doc/devon4j-doc/2020.04.001/devon4j-doc-2020.04.001.pdf[devon4j guide 2020.04.001].
+The full list of changes for this release can be found in https://github.com/devonfw/devon4j/milestone/8?closed=1[milestone devon4j 2020.04.001].
+
+== devon4ng
+
+The consolidated list of features for this devon4ng release is as it follows.
+
+=== 2020.04.001
+
+Starting with this release we have changed the versioning schema in `devonfw` to `yyyy.mm.NNN` where `yyyy.mm` is the date of the planned milestone release and `NNN` is a running number increased with every bug- or security-fix update.
+
+* https://github.com/devonfw/devon4ng/pull/111[#111]: Yarn 2 support included
+* https://github.com/devonfw/devon4ng/pull/96[#96]: devon4ng upgrade to Angular 9
+  ** Templates and samples updated to Angular 9, NgRx 9 and Ionic 5.
+  ** New internationalization module.
+  ** Documentation updates and improvements.
+* https://github.com/devonfw/devon4ng/pull/95[#95]: Added token management info in documentation
+
+== devon4net
+
+The consolidated list of features for this devon4net release is as it follows:
+
+* Updated to latest 3.1.3 LTS version
+* Dependency Injection Autoregistration for services and repositories
+* Added multiple role managing claims in JWT
+* Added custom headers to circuit breaker
+* Reviewed default log configuration
+* Added support to order query results from database via lambda expression
+* Updated template and nuget packages
+
+== devon4node
+
+The consolidated list of features for this devon4node release is as it follows:
+
+* Upgrade to NestJS 7 (packages, samples and documentation)
+* TSLint replaced with ESLint
+* Add lerna to project to manage all the packages
+* Add @devon4node/config package
+* Add new schematics: Repository
+* Improve WinstonLogger
+* Improve documentation
+* Update dependencies to latest versions
+
+== CobiGen
+
+New release with updates and bugfixes:
+
+* devonfw templates:
+    ** https://github.com/devonfw/cobigen/issues/1063[#1063]: Upgrade devon4ng Ionic template to latest version
+    ** https://github.com/devonfw/cobigen/pull/1065[#1065]: devon4ng templates for devon4node
+    ** https://github.com/devonfw/cobigen/pull/1128[#1128]: update java templates for composite keys
+    ** https://github.com/devonfw/cobigen/issues/1130[#1130]: Update template for devon4ng application template
+    ** https://github.com/devonfw/cobigen/issues/1131[#1131]: Update template for devon4ng NgRx template
+    ** https://github.com/devonfw/cobigen/pull/1139[#1149]: .NET templates
+    ** https://github.com/devonfw/cobigen/pull/1146[#1146]: Dev ionic template update bug fix
+* TypeScript plugin: 
+    ** https://github.com/devonfw/cobigen/issues/1126[#1126]: OpenApi parse/merge issues (ionic List templates)
+* Eclipse plugin: 
+    ** https://github.com/devonfw/cobigen/issues/412[#412]: Write UI Test for HealthCheck use
+    ** https://github.com/devonfw/cobigen/issues/867[#867]: Cobigen processbar
+    ** https://github.com/devonfw/cobigen/pull/1069[#1069]: #953 dot path
+    ** https://github.com/devonfw/cobigen/issues/1099[#1099]: NPE on HealthCheck
+    ** https://github.com/devonfw/cobigen/pull/1100[#1100]: 1099 NPE on health check
+    ** https://github.com/devonfw/cobigen/pull/1101[#1101]: #867 fix import of core and api
+    ** https://github.com/devonfw/cobigen/issues/1102[#1102]: eclipse_plugin doesn't accept folders as input
+    ** https://github.com/devonfw/cobigen/pull/1134[#1134]: (Eclipse-Plugin) Resolve Template utility classes from core
+    ** https://github.com/devonfw/cobigen/pull/1142[#1142]: #1102 accept all kinds of input
+* CobiGen core:
+    ** https://github.com/devonfw/cobigen/issues/429[#429]: Reference external template files
+    ** https://github.com/devonfw/cobigen/pull/1143[#1143]: Abort generation if external trigger does not match
+    ** https://github.com/devonfw/cobigen/issues/1125[#1125]: Generation of templates from external increments does not work
+    ** https://github.com/devonfw/cobigen/issues/747[#747]: Variable assignment for external increments throws exception
+    ** https://github.com/devonfw/cobigen/pull/1133[#1133]: Bugfix/1125 generation of templates from external increments does not work
+    ** https://github.com/devonfw/cobigen/pull/1127[#1127]: #1119 added new TemplatesUtilsClassesUtil class to core
+    ** https://github.com/devonfw/cobigen/issues/953[#953]: NPE bug if foldername contains a dot
+    ** https://github.com/devonfw/cobigen/pull/1067[#1067]: Feature/158 lat variables syntax
+* CobiGen CLI:
+    ** https://github.com/devonfw/cobigen/issues/1111[#1111]: Infinity loop in mmm-code (MavenDependencyCollector.collectWithReactor) 
+    ** https://github.com/devonfw/cobigen/issues/1113[#1113]: cobigen-cli does not seem to properly resolve classes from dependencies
+    ** https://github.com/devonfw/cobigen/pull/1120[#1120]: Feature #1108 custom templates folder
+    ** https://github.com/devonfw/cobigen/pull/1115[#1115]: Fixing CLI bugs related to dependencies and custom templates jar
+    ** https://github.com/devonfw/cobigen/issues/1108[#1108]: CobiGen CLI: Allow easy use of user's templates
+    ** https://github.com/devonfw/cobigen/issues/1110[#1110]: FileSystemNotFoundException blocking cobigen-cli
+    ** https://github.com/devonfw/cobigen/pull/1138[#1138]: #1108 dev cli feature custom templates folder
+    ** https://github.com/devonfw/cobigen/pull/1136[#1136]: (Cobigen-CLI) Resolve Template utility classes from core
+
+== devonfw-shop-floor
+
+* Add documentation for deploy jenkins slaves
+* Improve documentation
+* Add devon4net Openshift template
+* Add nginx docker image for devon4ng
+* Add Openshift provisioning
+* Production Line:
+    ** Updated MTS template: add step for dependency check and change the deployment method
+    ** Add template utils: initialize instance, openshift configuration, docker configuration and install sonar plugin
+    ** Add devon4net template
+    ** Add from existing template
+    ** Improve documentation
+    ** Refactor the documentation in order to follow the devonfw wiki workflow
+    ** Update devon4j, devon4ng, devon4net and devon4node in order to be able to choose the deployment method: none, docker or openshift.
+    ** Update the tools version in order to use the latest.
+* Production Line Shared Lib
+    ** Add more fuctionality to the existing classes.
+    ** Add classes: DependencyCheckConfiguration, DockerConfiguration and OpenshiftConfiguration
+* CICDGEN
+    ** Add devon4net support
+    ** Update tools versions in Jenkinsfiles to align with Production Line templates
+    ** Add merge strategies: error, keep, override, combine
+    ** Add lerna to the project
+    ** Minor improvements in the code
+    ** Add GitHub actions workflow to validate the new changes
+    ** Improve documentation
+    ** Breaking changes:
+        *** Remove the following parameters: plurl, ocurl
+        *** Add the following parameters: dockerurl, dockercertid, registryurl, ocname and merge
+
+== Sonar devon4j plugin
+
+The consolidated list of features for this Sonar devon4j plugin release is as it follows.
+
+=== 2020.04.001
+
+This is the first version using our new versioning scheme. Here, the following issues were resolved:
+
+* https://github.com/devonfw/sonar-devon4j-plugin/issues/60[#60]: Fixed a bug in the naming check for Use-Case implementation classes
+* https://github.com/devonfw/sonar-devon4j-plugin/issues/67[#67]: Fixed a bug where the whole body of a method or a class was marked as the issue location. Now only the method / class headers will be highlighted.
+* https://github.com/devonfw/sonar-devon4j-plugin/issues/68[#68]: Made our rule descriptions more accessible by using better readable colors as well as alternative visual cues
+* https://github.com/devonfw/sonar-devon4j-plugin/issues/71[#71]: Fixed a bug where a NPE could be thrown
+* https://github.com/devonfw/sonar-devon4j-plugin/issues/74[#74]: Fixed a bug where a method always returned null
+
+Unrelated to any specific issues, there was some refactoring and cleaning up done with the following two PRs:
+
+* https://github.com/devonfw/sonar-devon4j-plugin/issues/66[PR #66]: Refactored the prefixes of our rule names from 'Devon' to 'devonfw'
+* https://github.com/devonfw/sonar-devon4j-plugin/issues/65[PR #65]: Sorted security-related test files into their own package
+
+Changes for this release can be found in https://github.com/devonfw/sonar-devon4j-plugin/milestone/3?closed=1[milestone 2020.04.001].
+
+== My Thai Star
+
+As always, our reference application, My Thai Star, contains some interesting improvements that come from the new features and bug fixes from the other assets. The list is as it follows:
+
+* devon4j - Java
+    ** Implement example batches with modified devon-batch
+    ** Upgrade spring boot version to 2.2.6 and devon4j 2020.004.001
+    ** Migrate from dozer to orika
+* devon4ng - Angular
+    ** Move configuration to NgRx store
+* devonfw shop floor - Jenkins
+    ** Update tools versions in order to align with Production Line templates
+    ** Add dependency check step (using dependency checker and yarn audit)
+    ** Send dependency checker reports to SonarQube
+    ** Changed deployment pipelines. Now pipelines are able to deploy docker containers using docker directly. No more ssh connections to execute commands in a remote machine are required.
+    ** Update documentation in order to reflect all changes
+* devon4nde - Node.js
+    ** Upgrade to NestJS 7
+    ** Add custom repositories
+    ** Add exceptions and exception filters
+    ** Add tests (missing in the previous version)
+    ** Split logic into use cases in order to make the test process easier
+    ** Minor patches and improvemets
+    ** Documentation updated in order to reflect the new implementation

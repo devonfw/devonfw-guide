@@ -40,7 +40,7 @@ This release includes lots of bug fixes and many version updates, but it is very
 
 Please check the detailed list below. 
 
-This would have not been possible without the commitment and hard work of the devonfw core team, German, Indian and ADCenter Valencia colleagues and collaborators.  
+This would have not been possible without the commitment and hard work of the devonfw core team, German, Indian and ADCenter Valencia colleagues and collaborators as, among many others, the Production Line team. 
 
 == devonfw IDE
 

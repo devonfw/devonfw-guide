@@ -31,7 +31,7 @@ This release includes lots of bug fixes and many version updates, but it is very
 * devon4node updated to NestJS 7 (packages, samples and documentation)
 * devon4node TSLint replaced with ESLint.
 * @devon4node/config package added. 
-* devon4net updated to latest 3.1.3 LTS version.
+* devon4net updated to latest .NET Core 3.1.3 LTS version.
 * Update of the Production Line templates for devonfw projects in devonfw shop floor. 
 * New merge feature included in the devonfw shop floor cicdgen tool.
 * Updated sonar-devon4j-plugin:
@@ -147,7 +147,7 @@ Starting with this release we have changed the versioning schema in `devonfw` to
 
 The consolidated list of features for this devon4net release is as it follows:
 
-* Updated to latest 3.1.3 LTS version
+* Updated to latest .NET Core 3.1.3 LTS version
 * Dependency Injection Autoregistration for services and repositories
 * Added multiple role managing claims in JWT
 * Added custom headers to circuit breaker

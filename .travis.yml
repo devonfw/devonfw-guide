@@ -1,13 +1,12 @@
 language: java
-dist: trusty
+dist: bionic
 jdk:
-  - openjdk8
+  - openjdk11
 cache:
   directories:
     - "$HOME/.m2/repository"
 env:
   global:
-    - JAVA_TOOL_OPTIONS=-Xmx4g java -version
     - ORG="devonfw"
     - EMAIL="icsddevonfwsupport.apps2@capgemini.com"
     - REPO_CONSOLIDATE="devonfw-guide"

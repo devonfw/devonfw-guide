@@ -7,7 +7,7 @@ cache:
     - "$HOME/.m2/repository"
 env:
   global:
-    - JAVA_TOOL_OPTIONS=-Xmx4g java -version
+    - JAVA_TOOL_OPTIONS=-Xmx6g java -version
     - ORG="devonfw"
     - EMAIL="icsddevonfwsupport.apps2@capgemini.com"
     - REPO_CONSOLIDATE="devonfw-guide"

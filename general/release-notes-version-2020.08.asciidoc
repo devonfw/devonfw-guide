@@ -1,0 +1,60 @@
+:toc: macro
+toc::[]
+
+
+:doctype: book
+:reproducible:
+:source-highlighter: rouge
+:listing-caption: Listing
+
+
+= devonfw Release notes 2020.08
+
+== Introduction
+
+We are proud to announce the release of devonfw version 2020.08. 
+
+This release includes lots of addition of new features, updates and bug fixes but it is very important to highlight the following improvements:
+
+== devon4j
+
+New release of `devon4j` with async REST service client support and other improvements:
+
+* https://github.com/devonfw/devon4j/issues/279[#279]: support for async service clients
+* https://github.com/devonfw/devon4j/issues/277[#277]: Update Security-Guide to recent OWASP Top (2017)
+* https://github.com/devonfw/devon4j/pull/281[#281]: cleanup documentation
+
+Documentation is available at https://repo.maven.apache.org/maven2/com/devonfw/java/doc/devon4j-doc/2020.08.001/devon4j-doc-2020.08.001.pdf[devon4j guide 2020.08.001].
+The full list of changes for this release can be found in https://github.com/devonfw/devon4j/milestone/12?closed=1[milestone devon4j 2020.08.001].
+
+== devon4node
+
+New `devon4node` version is published, the changes are:
+
+* Updated dependencies.
+* Solved bug when you introduce a name with dashes in new command.
+* Add more options to the non-interactive new command.
+
+== Sonar devon4j plugin
+
+The consolidated list of features for this `Sonar devon4j plugin` release is as it follows.
+
+With this release, we added our own quality profile:
+
+* https://github.com/devonfw/sonar-devon4j-plugin/issues/16[#16]: Install devon4j quality profile
+
+Changes for this release can be found in https://github.com/devonfw/sonar-devon4j-plugin/milestone/6?closed=1[milestone 2020.08.001]
+
+== My Thai Star with Microservices and ISTIO Service Mesh Implementation
+
+As always, our reference application, `My Thai Star` now has been implemented with Microservices and ISTIO Service Mesh features: 
+
+* devon4j - Java
+    ** My Thai Star now has a sample version on Microservices architecture.  
+    ** The github repository for the microservices version of My Thai Star is hosted at https://github.com/devonfw-sample/my-thai-star-microservices/tree/dev_mtsj_microservices[My Thai Star with Microservices]
+    ** My Thai Star Microservices now has a multi stage docker build which generates the respective docker images for all the My Thai Star services.
+    ** My Thai Star microservices has the Kubernetes artifacts available to be able to deploy into Kubernetes pods.
+    ** My Thai Star microservices has ISTIO the service mesh implementation.
+    ** Guide to implement or configure ISTIO features such as Traffic Routing, Network Resiliency features(RequestRouting, RequestTimeouts, Fault Injection, Circuit Breaker), Canary Deployments has been hosted at <<LINK>>>
+    
+    

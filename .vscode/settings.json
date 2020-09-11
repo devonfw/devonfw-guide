@@ -4,5 +4,23 @@
         "**/.project": true,
         "**/.settings": true,
         "**/.factorypath": true
-    }
+    },
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#7acef1",
+        "activityBar.activeBorder": "#ea35b5",
+        "activityBar.background": "#7acef1",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#ea35b5",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "statusBar.background": "#4cbdec",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#1eace7",
+        "titleBar.activeBackground": "#4cbdec",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#4cbdec99",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#4cbdec"
 }

@@ -177,6 +177,6 @@ As always, our reference application, `My Thai Star` now has been implemented wi
     ** My Thai Star Microservices now has a multi stage docker build which generates the respective docker images for all the My Thai Star services.
     ** My Thai Star microservices has the Kubernetes artifacts available to be able to deploy into Kubernetes pods.
     ** My Thai Star microservices has ISTIO the service mesh implementation.
-    ** Guide to implement or configure ISTIO features such as Traffic Routing, Network Resiliency features(RequestRouting, RequestTimeouts, Fault Injection, Circuit Breaker), Canary Deployments has been hosted at <<LINK>>>
+    ** Check out the guides to implement or configure ISTIO features such as Traffic Routing, Network Resiliency features(RequestRouting, RequestTimeouts, Fault Injection, Circuit Breaker), Canary Deployments.
     
     

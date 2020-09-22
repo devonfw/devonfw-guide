@@ -37,3 +37,6 @@
 [submodule "getting-started.wiki"]
 	path = getting-started.wiki
 	url = https://github.com/devonfw/getting-started.wiki.git
+[submodule "shop-floor.wiki"]
+	path = shop-floor.wiki
+	url = https://github.com/devonfw/shop-floor.wiki.git

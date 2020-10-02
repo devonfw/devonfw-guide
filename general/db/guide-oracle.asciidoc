@@ -96,3 +96,27 @@ Capgemini has used the https://projects.spring.io/spring-data-jdbc-ext/[Spring D
 Oracle sells commercial products and receives licence fees for them. This includes access to a support organization. Therefore, at an early stage of your project, prepare for contacting https://support.oracle.com[oracle support] in case of technical problems. You will need the Oracle support ID *of your customer* [i.e. the legal entity who pays the licence fee and runs the RDBMS] and your customer must grant you permission to use it in a service request - it is not legal to use a your own support ID in a customer-related project. Your customer pays for that service anyway, so use it in case of a problem!
 
 Software components like the JDBC driver or the UCP may be available without a registration or fee but they are protected by the Oracle Technology Network (OTN) License Agreement. The most important aspect of this licence agreement is the fact that an IT service provider is not allowed to simply download the Oracle software component, bundle it in a software artefact and deliver it to the customer. Instead, the Oracle software component must be (from a legal point of view) provided by the owner of the Oracle DB licence (i.e. your customer). This can be achieved in two ways: Advise your customer to install the Oracle software component in the application server as a library that can be used by your custom built system. Or, in cases where this is not feasible, e.g. in a OpenShift environment where the IT service provider delivers complete Docker images, you must advise your customer to (legally, i.e. documented in a written form) provide the Oracle software component to you, i.e. you don't download the software component from the Oracle site but receive it from your customer.
+
+== Fix for TNS-Listener issues
+
+When switching networks (e.g. due to VPN) you might end up that your local Oracle XE stopps working with this error:
+```
+Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+```
+While a reboot resolves this problem, it is a huge pain to reboot every time this error occurs as this wastes a lot of time.
+Therefore we suggest the following fix:
+
+* Go to your oracle installation and open the folder `product/«version»/dbhomeXE/network/admin`.
+* Edit the file `listener.ora` and change the value of the property `HOST` from your qualified hostname to `localhost` (`HOST = localhost`).
+* Edit the file `tnsnames.ora` and change the value of the `HOST` properties (two occurences) from your qualified hostname to `localhost` (`HOST = localhost`).
+* Reboot your machine or (on windows) restart the service `OracleServiceXE` via `services.msc`.
+* Now this problem should be gone forever and you can continue your work.
+
+On older XE versions until 11g you could run the following SQL (`sqlplus / as sysdba @reset_tns_listener.sql`):
+```
+WHENEVER SQLERROR EXIT;
+ALTER SYSTEM SET local_listener = '(ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))';
+ALTER SYSTEM REGISTER;
+EXIT;
+```

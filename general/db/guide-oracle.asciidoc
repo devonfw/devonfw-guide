@@ -52,11 +52,11 @@ Your dependency for the oracle driver should look as follows:
 For the most recent Oracle DB 19 the property `oracle.driver.version` should be `19.8.0.0`. The number in the `artifactId` correlates to the minimum Java Version so for Java8 `artifactId` should be `ojdbc8` instead. It is fine to use `ojdbc10` with Java11 or higher.
 
 == Pooling
-In order to boost performance JDBC connections should be pooled and reused. If you are using Oracle RDBMS and do not plan to change that you can use the Oracle specific connection pool "Universal Connection Pool (UCP)" that is perfectly integrated with the Oracle driver. According to the documentation, UCP can even be used to https://docs.oracle.com/database/122/JJUCP/third-party-integration.htm#JJUCP8141[manage third party data sources]. The 11g version of UCP can be downloaded without registration http://www.oracle.com/technetwork/database/enterprise-edition/downloads/ucp-112010-099129.html[here], the 12c version of UCP is available at the same download locations as the 12c JDBC driver (see above). As a rule of thumb, use the version that is the same as the JDBC driver version.
-Again, you have to upload the artefact manually to your maven repository. The dependency should look like this:
+In order to boost performance JDBC connections should be pooled and reused. If you are using Oracle RDBMS and do not plan to change that you can use the Oracle specific connection pool "Universal Connection Pool (UCP)" that is perfectly integrated with the Oracle driver. According to the documentation, UCP can even be used to https://docs.oracle.com/database/122/JJUCP/third-party-integration.htm#JJUCP8141[manage third party data sources]. 
+Like the JDBC driver also the UCP is available in maven central. The dependency should look like this:
 ```
 <dependency>
-  <groupId>com.oracle.jdbc</groupId>
+  <groupId>com.oracle.database.jdbc</groupId>
   <artifactId>ucp</artifactId>
   <version>${oracle.ucp.version}</version>
 </dependency>

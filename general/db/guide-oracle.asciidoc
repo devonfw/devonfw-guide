@@ -9,7 +9,16 @@ This section contains hints for those who use Oracle RDBMS. Besides general hint
 For local development you should setup Oracle XE (eXpress Edition).
 You need an oracle account, then you can download it from https://www.oracle.com/technetwork/database/database-technologies/express-edition/downloads/index.html[here].
 
-The most comfortable way to run it as needed is using docker. You can build your own docker image from the downloaded RPM using the https://github.com/oracle/docker-images/tree/master/OracleDatabase/SingleInstance[instructions and dockerfile from oracle]. (In case the build of the docker-image https://github.com/oracle/docker-images/issues/1133[fails reproducibly] and you want to give up with the Dockerfiles from Oracle you can also try this inofficial https://github.com/fuzziebrain/docker-oracle-xe[docker-oracle-xe] solution).
+The most comfortable way to run it as needed is using docker. You can build your own docker image from the downloaded RPM using the https://github.com/oracle/docker-images/tree/master/OracleDatabase/SingleInstance[instructions and dockerfile from oracle]. The following commands will build and start Oracle XE `18.4.0` on your machine:
+```
+git clone https://github.com/oracle/docker-images.git
+cd docker-images/OracleDatabase/SingleInstance/dockerfiles
+./buildDockerImage.sh -x -v 18.4.0
+docker run -d -p 1521:1521 --name=oracle-xe --restart=always -e ORACLE_PWD=«my-sys-pwd» oracle/database:18.4.0-xe
+```
+
+Please note that the `buildDockerImage.sh` will take a long time. Further after `docker run` has passed you need to give time for your new container to startup and setup the Oracle XE DB. So be patient and give it some time.
+(In case the build of the docker-image https://github.com/oracle/docker-images/issues/1133[fails reproducibly] and you want to give up with the Dockerfiles from Oracle you can also try this inofficial https://github.com/fuzziebrain/docker-oracle-xe[docker-oracle-xe] solution. However, this is not recommended and may lead to other problems.).
 
 To connect to your local XE database you need to use `xe` as the `SID` of your main database that can not be changed. The `hostname` should be `localhost` and the `port` is by default `1521` if you did not remap it with docker to something else. However, starting with XE 18c you need to be aware that oracle introduced a https://docs.oracle.com/database/121/CNCPT/cdbovrvw.htm[multi-tenant architecture]. Hence `xe` refers to the root `CDB` while you typically want to connect to the `PDB` (pluggable database) and XE ships with exactly one of this called `xepdb1`. To create a schema user as `sys` in root `CDB` you should first execute this SQL statement:
 ```

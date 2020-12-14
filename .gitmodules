@@ -37,3 +37,6 @@
 [submodule "shop-floor.wiki"]
 	path = shop-floor.wiki
 	url = https://github.com/devonfw/shop-floor.wiki.git
+[submodule "solicitor"]
+	path = solicitor
+	url = https://github.com/devonfw/solicitor.git

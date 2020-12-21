@@ -40,3 +40,6 @@
 [submodule "dashboard.wiki"]
 	path = dashboard.wiki
 	url = https://github.com/devonfw/dashboard.wiki.git
+[submodule "solicitor.wiki"]
+	path = solicitor.wiki
+	url = https://github.com/devonfw/solicitor.wiki.git

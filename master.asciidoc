@@ -39,6 +39,8 @@ include::my-thai-star.wiki/master-my-thai-star[leveloffset=0]
 
 include::dashboard.wiki/master-dashboard[leveloffset=0]
 
+include::solicitor.wiki/master-solicitor[leveloffset=0]
+
 include::general/master-contributing[leveloffset=0]
 
 include::general/master-release-notes[leveloffset=0]

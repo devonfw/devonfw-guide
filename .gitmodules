@@ -43,3 +43,6 @@
 [submodule "solicitor.wiki"]
 	path = solicitor.wiki
 	url = https://github.com/devonfw/solicitor.wiki.git
+[submodule "jump-the-queue.wiki"]
+	path = jump-the-queue.wiki
+	url = https://github.com/devonfw/jump-the-queue.wiki.git

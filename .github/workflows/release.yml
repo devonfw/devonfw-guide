@@ -6,11 +6,11 @@ env:
 on:
     push:
         branches:
-            - github_actions
-name: Sync Docs
+          - master
+name: Generate PDF and Update Website
 jobs:
     update-wiki:
-        if: ${{github.repository == 'devonfw/devonfw-guide'}}
+        if: "!contains(github.event.head_commit.message, 'PDF devonfw guide | GitHub Actions')"
         runs-on: ubuntu-latest
         steps:
           - name: setup variables
@@ -44,7 +44,7 @@ jobs:
           - name: Commit and push new devonfw guide
             run: |
                 git add ./devonfw_guide.pdf
-                git commit -m "PDF devonfw guide | Travis CI build number $TRAVIS_BUILD_NUMBER"
+                git commit -m "PDF devonfw guide | GitHub Actions $GITHUB_WORKFLOW $GITHUB_RUN_NUMBER"
                 git remote add origin-pdf "https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/${REPO_CONSOLIDATE}.git"
                 git push origin-pdf master
           - name: Update Website on success

@@ -9,7 +9,7 @@ on:
           - master
 name: Generate PDF and Update Website
 jobs:
-    update-wiki:
+    build:
         if: "!contains(github.event.head_commit.message, 'PDF devonfw guide | GitHub Actions')"
         runs-on: ubuntu-latest
         steps:
@@ -28,10 +28,10 @@ jobs:
                 sudo apt-get install -y imagemagick
                 cd ${REPO_CONSOLIDATE}
           - name: Checkout code
-                uses: actions/checkout@v2
+            uses: actions/checkout@v2
           - name: Set up JDK
-                uses: actions/setup-java@v1
-                with:
+            uses: actions/setup-java@v1
+            with: 
                   java-version: '11'
           - name: Fix PNG images
             run: |

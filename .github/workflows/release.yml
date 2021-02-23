@@ -6,7 +6,6 @@ env:
 on:
     push:
         branches:
-<<<<<<< HEAD
           - master
 name: Generate PDF and Update Website
 jobs:
@@ -15,16 +14,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - name: setup variable
-=======
-            - github_actions
-name: Sync Docs
-jobs:
-    update-wiki:
-        if: ${{github.repository == 'devonfw/devonfw-guide'}}
-        runs-on: ubuntu-latest
-        steps:
-          - name: setup variables
->>>>>>> 2a4f5319a3b45b3efc707daf03937c2bcb0bc21c
             run: |
                 echo "ORG=$(echo '${{ github.repository }}' | awk -F '/' '{print $1}')" >> $GITHUB_ENV
             shell: bash
@@ -39,19 +28,11 @@ jobs:
                 sudo apt-get install -y imagemagick
                 cd ${REPO_CONSOLIDATE}
           - name: Checkout code
-<<<<<<< HEAD
             uses: actions/checkout@v2
           - name: Set up JDK
             uses: actions/setup-java@v1
             with:
                 java-version: '11'
-=======
-                uses: actions/checkout@v2
-          - name: Set up JDK
-                uses: actions/setup-java@v1
-                with:
-                  java-version: '11'
->>>>>>> 2a4f5319a3b45b3efc707daf03937c2bcb0bc21c
           - name: Fix PNG images
             run: |
                 find . -name '*.png' -exec mogrify -interlace none -format png {} +
@@ -63,11 +44,7 @@ jobs:
           - name: Commit and push new devonfw guide
             run: |
                 git add ./devonfw_guide.pdf
-<<<<<<< HEAD
                 git commit -m "PDF devonfw guide | GitHub Actions $GITHUB_WORKFLOW $GITHUB_RUN_NUMBER"
-=======
-                git commit -m "PDF devonfw guide | Travis CI build number $TRAVIS_BUILD_NUMBER"
->>>>>>> 2a4f5319a3b45b3efc707daf03937c2bcb0bc21c
                 git remote add origin-pdf "https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/${REPO_CONSOLIDATE}.git"
                 git push origin-pdf master
           - name: Update Website on success

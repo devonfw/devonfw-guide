@@ -1,59 +1,59 @@
 env:
-    REPO_CONSOLIDATE: "devonfw-guide"
-    BUILD_USER: ${{ secrets.BUILD_USER }}
-    BUILD_USER_PASSWD: ${{ secrets.BUILD_USER_PASSWD }}
-    BUILD_USER_EMAIL:  ${{ secrets.BUILD_USER_EMAIL }}
+  REPO_CONSOLIDATE: "devonfw-guide"
+  BUILD_USER: ${{ secrets.BUILD_USER }}
+  BUILD_USER_PASSWD: ${{ secrets.BUILD_USER_PASSWD }}
+  BUILD_USER_EMAIL:  ${{ secrets.BUILD_USER_EMAIL }}
 on:
-    push:
-        branches:
-          - master
+  push:
+    branches:
+    - master
 name: Generate PDF and Update Website
 jobs:
-    build:
-        if: "!contains(github.event.head_commit.message, 'PDF devonfw guide | GitHub Actions')"
-        runs-on: ubuntu-latest
-        steps:
-          - name: setup variable
-            run: |
-                echo "ORG=$(echo '${{ github.repository }}' | awk -F '/' '{print $1}')" >> $GITHUB_ENV
-            shell: bash
-          - name: setup git user
-            run: |
-                git config --global user.email ${BUILD_USER_EMAIL}
-                git config --global user.name ${BUILD_USER}
-          - name: Install imagemagick
-            run: |
-                cd ..
-                sudo apt-get update
-                sudo apt-get install -y imagemagick
-                cd ${REPO_CONSOLIDATE}
-          - name: Checkout code
-            uses: actions/checkout@v2
-          - name: Set up JDK
-            uses: actions/setup-java@v1
-            with:
-                java-version: '11'
-          - name: Fix PNG images
-            run: |
-                find . -name '*.png' -exec mogrify -interlace none -format png {} +
-                find . -name '*.PNG' -exec mogrify -interlace none -format PNG {} +
-          - name: Generate PDF
-            run: |
-                mvn clean package -Ddocgen.images.dir=images,documentation -Doutput.format=pdf
-                mv ./target/generated-docs/master.pdf ./devonfw_guide.pdf
-          - name: Commit and push new devonfw guide
-            run: |
-                git add ./devonfw_guide.pdf
-                git commit -m "PDF devonfw guide | GitHub Actions $GITHUB_WORKFLOW $GITHUB_RUN_NUMBER"
-                git remote add origin-pdf "https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/${REPO_CONSOLIDATE}.git"
-                git push origin-pdf master
-          - name: Update Website on success
-            run: |
-                git clone https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/devonfw.github.io.git --recurse-submodules
-                cd devonfw.github.io/${REPO_CONSOLIDATE}
-                git checkout master
-                git pull
-                cd ..
-                git add ${REPO_CONSOLIDATE}
-                git commit -m "[DocUpdate]"
-                git push origin master
+  build:
+    if: "!contains(github.event.head_commit.message, 'PDF devonfw guide | GitHub Actions')"
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup variable
+      run: |
+        echo "ORG=$(echo '${{ github.repository }}' | awk -F '/' '{print $1}')" >> $GITHUB_ENV
+      shell: bash
+      - name: setup git user
+      run: |
+        git config --global user.email ${BUILD_USER_EMAIL}
+        git config --global user.name ${BUILD_USER}
+      - name: Install imagemagick
+      run: |
+        cd ..
+        sudo apt-get update
+        sudo apt-get install -y imagemagick
+        cd ${REPO_CONSOLIDATE}
+      - name: Checkout code
+      uses: actions/checkout@v2
+      - name: Set up JDK
+      uses: actions/setup-java@v1
+      with:
+        java-version: '11'
+      - name: Fix PNG images
+      run: |
+        find . -name '*.png' -exec mogrify -interlace none -format png {} +
+        find . -name '*.PNG' -exec mogrify -interlace none -format PNG {} +
+      - name: Generate PDF
+      run: |
+        mvn clean package -Ddocgen.images.dir=images,documentation -Doutput.format=pdf
+        mv ./target/generated-docs/master.pdf ./devonfw_guide.pdf
+      - name: Commit and push new devonfw guide
+      run: |
+        git add ./devonfw_guide.pdf
+        git commit -m "PDF devonfw guide | GitHub Actions $GITHUB_WORKFLOW $GITHUB_RUN_NUMBER"
+        git remote add origin-pdf "https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/${REPO_CONSOLIDATE}.git"
+        git push origin-pdf master
+      - name: Update Website on success
+      run: |
+        git clone https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/devonfw.github.io.git --recurse-submodules
+        cd devonfw.github.io/${REPO_CONSOLIDATE}
+        git checkout master
+        git pull
+        cd ..
+        git add ${REPO_CONSOLIDATE}
+        git commit -m "[DocUpdate]"
+        git push origin master

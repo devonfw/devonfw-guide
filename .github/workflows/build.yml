@@ -3,11 +3,14 @@ env:
   BUILD_USER: ${{ secrets.BUILD_USER }}
   BUILD_USER_PASSWD: ${{ secrets.BUILD_USER_PASSWD }}
   BUILD_USER_EMAIL:  ${{ secrets.BUILD_USER_EMAIL }}
-on: [push]
+on:
+  push:
+    branches:
+    - master
 name: Generate PDF and Update Website
 jobs:
   build:
-    if: "!startsWith(github.event.head_commit.message, 'PDF devonfw guide')"
+    if: "!contains(github.event.head_commit.message, 'PDF devonfw guide | GitHub Actions')"
     runs-on: ubuntu-latest
     steps:
       - name: setup variable

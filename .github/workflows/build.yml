@@ -7,7 +7,7 @@ on: [push]
 name: Generate PDF and Update Website
 jobs:
   build:
-    if: "!contains(github.event.head_commit.message, 'PDF devonfw guide | GitHub Actions')"
+    if: "!startsWith(github.event.head_commit.message, 'PDF devonfw guide')"
     runs-on: ubuntu-latest
     steps:
       - name: setup variable

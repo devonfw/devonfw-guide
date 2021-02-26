@@ -56,4 +56,4 @@ jobs:
         cd ..
         git add ${REPO_CONSOLIDATE}
         git commit -m "[DocUpdate]"
-        git push origin master
+        git push origin HEAD:main

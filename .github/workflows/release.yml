@@ -3,10 +3,7 @@ env:
   BUILD_USER: ${{ secrets.BUILD_USER }}
   BUILD_USER_PASSWD: ${{ secrets.BUILD_USER_PASSWD }}
   BUILD_USER_EMAIL:  ${{ secrets.BUILD_USER_EMAIL }}
-on:
-  push:
-    branches:
-    - master
+on: [push]
 name: Generate PDF and Update Website
 jobs:
   build:

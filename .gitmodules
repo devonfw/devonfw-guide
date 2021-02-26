@@ -19,9 +19,6 @@
 [submodule "devon4node.wiki"]
 	path = devon4node.wiki
 	url = https://github.com/devonfw/devon4node.wiki.git
-[submodule ".github"]
-	path = .github
-	url = https://github.com/devonfw/.github.git
 [submodule "mrchecker.wiki"]
 	path = mrchecker.wiki
 	url = https://github.com/devonfw/mrchecker.wiki.git

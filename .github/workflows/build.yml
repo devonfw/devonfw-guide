@@ -6,6 +6,7 @@ env:
 on:
   push:
     branches:
+
       - master
 name: Generate PDF and Update Website
 jobs:
@@ -57,3 +58,4 @@ jobs:
           git add ${REPO_CONSOLIDATE}
           git commit -m "[DocUpdate]"
           git push origin HEAD:main
+          

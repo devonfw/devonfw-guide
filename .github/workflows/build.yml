@@ -3,15 +3,15 @@ env:
   BUILD_USER: ${{ secrets.BUILD_USER }}
   BUILD_USER_PASSWD: ${{ secrets.BUILD_USER_PASSWD }}
   BUILD_USER_EMAIL:  ${{ secrets.BUILD_USER_EMAIL }}
-on:
+on:  
   push:
+  pull_request:
     branches:
-
-      - master
+      - $default-branch
 name: Generate PDF and Update Website
 jobs:
   build:
-    if: ${{github.repository == 'devonfw/devonfw-guide'}} && "!startsWith(github.event.head_commit.message, 'PDF devonfw guide')"
+    if: github.event.pull_request.head.repo.full_name == github.repository && "!startsWith(github.event.head_commit.message, 'PDF devonfw guide')"
     runs-on: ubuntu-latest
     steps:
       - name: setup variable
@@ -47,12 +47,12 @@ jobs:
           git add ./devonfw_guide.pdf
           git commit -m "PDF devonfw guide | GitHub Actions $GITHUB_WORKFLOW $GITHUB_RUN_NUMBER"
           git remote add origin-pdf "https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/${REPO_CONSOLIDATE}.git"
-          git push origin-pdf master
+          git push origin-pdf HEAD:main
       - name: Update Website on success
         run: |
           git clone https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/devonfw.github.io.git --recurse-submodules
           cd devonfw.github.io/${REPO_CONSOLIDATE}
-          git checkout master
+          #git checkout master
           git pull
           cd ..
           git add ${REPO_CONSOLIDATE}

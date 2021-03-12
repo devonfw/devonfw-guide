@@ -8,16 +8,16 @@ on:
   pull_request:
     branches:
       - $default-branch
+name: setup variable
+  run: |
+    echo "ORG=$(echo '${{ github.repository }}' | awk -F '/' '{print $1}')" >> $GITHUB_ENV
+  shell: bash
 name: Generate PDF and Update Website
 jobs:
   build:
+    if: "startsWith(github.repository, ORG)" && "!startsWith(github.event.head_commit.message, 'PDF devonfw guide')"
     runs-on: ubuntu-latest
     steps:
-      - name: setup variable
-        run: |
-          echo "REPO=$(echo '${{ github.event.pull_request.head.repo.full_name }}' | awk -F '/' '{print $1}')" >> $GITHUB_ENV
-          echo "ORG=$(echo '${{ github.repository }}' | awk -F '/' '{print $1}')" >> $GITHUB_ENV
-        shell: bash
       - name: setup git user
         run: |
           git config --global user.email ${BUILD_USER_EMAIL}

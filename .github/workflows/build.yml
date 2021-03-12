@@ -5,7 +5,6 @@ env:
   BUILD_USER_EMAIL:  ${{ secrets.BUILD_USER_EMAIL }}
 on:  
   push:
-  pull_request:
     branches:
       - master
 name: Generate PDF and Update Website

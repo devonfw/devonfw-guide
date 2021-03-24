@@ -1,7 +1,7 @@
 :toc: macro
 toc::[]
 
-= GigaSpaces XAP
+= GigaSpaces XAP (Smart Cache)
 
 This section is the place to share experience for those who use https://www.gigaspaces.com/products/xap/[GigaSpaces XAP] as link:guide-database.asciidoc#nosql[NoSQL database].
 
@@ -9,7 +9,7 @@ This section is the place to share experience for those who use https://www.giga
 NOTE: devonfw did not focus on the integration of this database so far. No reports have been given from our users about successfully integrating this database with any devonfw tech stack. If you want to share your knowledge or report usage, please contribute by clicking on the pen next to the section headline.If you need help on devonfw tech stack knowledge to get the integration working for you, stay in contact at https://github.com/devonfw/devonfw-guide/issues[GitHub.]
 
 == Spring-Data
-There is spring-data support available for GigaSpaces XAP via https://docs.gigaspaces.com/solution-hub/spring-data-quick-start.html[spring-data-gigaspaces].
+There is spring-data support available for GigaSpaces XAP (Smart Cache) via https://docs.gigaspaces.com/solution-hub/spring-data-quick-start.html[spring-data-gigaspaces].
 
 == Example
-There is an implementation of the sample application, My Thai Star, using GigaSpaces XAP as data storage. More details can be found on https://github.com/devonfw-forge/mts-gigaspaces[mts-gigaspaces].
+There is an implementation of the sample application, My Thai Star, using GigaSpaces XAP (Smart Cache) as data storage. More details can be found on https://github.com/devonfw-forge/mts-gigaspaces[mts-gigaspaces].

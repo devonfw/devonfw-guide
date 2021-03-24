@@ -38,7 +38,7 @@ public class ContextConfiguration {
 }
 ----
 
-To establish a connection with a running istance of GigaSpaces, a Configuration Class is required. Here a Bean will be created that retrieves via URL the name of a Space E.g. my-space (a Space is equivalent to a Database Schema). Of course a Space needs to be firstly created in order to use it (see also the Example). This bean is then used for all database typical operations. The spring-data-gigaspaces (see section below) automatically detects if a GigaSpaces Bean exists.
+To establish a connection with a running istance of GigaSpaces, a Configuration Class is required. Here a Bean will be created that retrieves via URL the name of a Space e.g. my-space (a Space is equivalent to a Database Schema). Of course a Space needs to be firstly created in order to use it (see also the Example). This bean can be used for all database typical operations e.g. create, read, update and delete data. The spring-data-gigaspaces (see section below) automatically detects if a GigaSpaces Bean exists.
 
 == Spring-Data
 There is spring-data support available for GigaSpaces XAP (Smart Cache) via https://docs.gigaspaces.com/solution-hub/spring-data-quick-start.html[spring-data-gigaspaces].

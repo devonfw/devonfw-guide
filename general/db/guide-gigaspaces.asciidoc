@@ -6,9 +6,7 @@ toc::[]
 This section is the place to share experience for those who use https://www.gigaspaces.com/products/xap/[GigaSpaces XAP] as link:guide-database.asciidoc#nosql[NoSQL database].
 
 == Attention
-NOTE: devonfw did not focus on the integration of this database so far. No reports have been given from our users about successfully integrating this database with any devonfw tech stack. If you want to share your knowledge or report usage, please contribute by clicking on the pen next to the section headline.
-
-If you need help on devonfw tech stack knowledge to get the integration working for you, stay in contact at https://github.com/devonfw/devonfw-guide/issues[GitHub.]
+NOTE: devonfw did not focus on the integration of this database so far. No reports have been given from our users about successfully integrating this database with any devonfw tech stack. If you want to share your knowledge or report usage, please contribute by clicking on the pen next to the section headline. If you need help on devonfw tech stack knowledge to get the integration working for you, stay in contact at https://github.com/devonfw/devonfw-guide/issues[GitHub.]
 
 == Spring-Data
 There is spring-data support available for GigaSpaces XAP via https://docs.gigaspaces.com/solution-hub/spring-data-quick-start.html[spring-data-gigaspaces].

@@ -12,16 +12,16 @@ NOTE: devonfw did not focus on the integration of this database so far. No repor
 GigaSpaces is currently not in the central maven repository, therefore an additional repository needs to be added along with the dependency:
 ```
 <repositories>
-		<repository>
-			<id>org.openspaces</id>
-			<url>http://maven-repository.openspaces.org</url>
-		</repository>
+    <repository>
+	<id>org.openspaces</id>
+	<url>http://maven-repository.openspaces.org</url>
+    </repository>
 </repositories>
 
 <dependency>
     <groupId>org.gigaspaces</groupId>
-		<artifactId>xap-openspaces</artifactId>
-		<version>${gsVersion}</version>
+    <artifactId>xap-openspaces</artifactId>
+    <version>${gsVersion}</version>
 </dependency>
 ```
 Of course the version (`${gsVersion}`) needs to be adopted to your needs.

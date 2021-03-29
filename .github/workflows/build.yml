@@ -13,7 +13,7 @@ name: Generate PDF and Update Website
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'devonfw/devonfw-guide' && "!startsWith(github.event.head_commit.message, 'PDF devonfw guide | GitHub Actions')" }}
+    if: ${{ github.repository == 'devonfw/devonfw-guide'}}
     steps:
       - name: setup variable
         run: |

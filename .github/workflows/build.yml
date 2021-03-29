@@ -50,6 +50,7 @@ jobs:
           repo_token: ${GITHUB_TOKEN}
           file: ./devonfw_guide.pdf
           asset_name: devonfw_guide.pdf
+          tag: ${{ github.ref }}
           overwrite: true
           body: "PDF devonfw guide | GitHub Actions $GITHUB_WORKFLOW $GITHUB_RUN_NUMBER"
       - name: Update Website on success

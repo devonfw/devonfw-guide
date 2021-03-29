@@ -47,7 +47,7 @@ jobs:
       - name: Upload the pdf guide to release
         uses: svenstaro/upload-release-action@v2
         with:
-          repo_token: ${{GITHUB_TOKEN}}
+          repo_token: ${GITHUB_TOKEN}
           file: ./devonfw_guide.pdf
           asset_name: devonfw_guide.pdf
           overwrite: true

@@ -12,8 +12,8 @@ on:
 name: Generate PDF and Update Website
 jobs:
   build:
-    runs-on: ubuntu-latest
     if: ${{ github.repository == 'devonfw/devonfw-guide'}}
+    runs-on: ubuntu-latest
     steps:
       - name: setup variable
         run: |

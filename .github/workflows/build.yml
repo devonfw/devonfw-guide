@@ -4,7 +4,6 @@ env:
   BUILD_USER: ${{ secrets.BUILD_USER }}
   BUILD_USER_PASSWD: ${{ secrets.BUILD_USER_PASSWD }}
   BUILD_USER_EMAIL:  ${{ secrets.BUILD_USER_EMAIL }}
-  GITHUB_TOKEN:  ${{ secrets.GITHUB_TOKEN }}
 on:
   push:
     branches:
@@ -47,7 +46,7 @@ jobs:
       - name: Upload the pdf guide to release
         uses: svenstaro/upload-release-action@v2
         with:
-          repo_token: ${GITHUB_TOKEN}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./devonfw_guide.pdf
           asset_name: devonfw_guide.pdf
           tag: ${{ github.ref }}

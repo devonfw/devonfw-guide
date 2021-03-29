@@ -1,3 +1,4 @@
+
 env:
   REPO_CONSOLIDATE: "devonfw-guide"
   BUILD_USER: ${{ secrets.BUILD_USER }}
@@ -11,8 +12,8 @@ on:
 name: Generate PDF and Update Website
 jobs:
   build:
-    if: ${{github.repository == 'devonfw/devonfw-guide'}}
     runs-on: ubuntu-latest
+    if: ${{ github.repository == 'devonfw/devonfw-guide' && "!startsWith(github.event.head_commit.message, 'PDF devonfw guide | GitHub Actions')" }}
     steps:
       - name: setup variable
         run: |
@@ -47,7 +48,7 @@ jobs:
           uses: svenstaro/upload-release-action@v2
           with:
             repo_token: ${{GITHUB_TOKEN}}
-            file: target/generated-docs/master.pdf
+            file: ./devonfw_guide.pdf
             asset_name: devonfw_guide.pdf
             overwrite: true
             body: "PDF devonfw guide | GitHub Actions $GITHUB_WORKFLOW $GITHUB_RUN_NUMBER"
@@ -55,6 +56,7 @@ jobs:
         run: |
           git clone https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/devonfw.github.io.git --recurse-submodules
           cd devonfw.github.io/${REPO_CONSOLIDATE}
+          #git checkout master
           git pull
           cd ..
           git add ${REPO_CONSOLIDATE}

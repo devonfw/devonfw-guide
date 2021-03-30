@@ -4,7 +4,7 @@ env:
   BUILD_USER: ${{ secrets.BUILD_USER }}
   BUILD_USER_PASSWD: ${{ secrets.BUILD_USER_PASSWD }}
   BUILD_USER_EMAIL:  ${{ secrets.BUILD_USER_EMAIL }}
-  GITHUB_TOKEN: ${{ secrets.GHA_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 on:
   push:
     branches:
@@ -48,7 +48,7 @@ jobs:
         uses: actions/create-release@v1
         id: create_release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${GITHUB_TOKEN}
         with:
           tag_name:  "Build# ${{ github.run_number }}"
           release_name: "Release ${{ github.run_number }}"
@@ -56,19 +56,19 @@ jobs:
       - name: Upload the pdf guide to release
         uses: actions/upload-release-asset@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${GITHUB_TOKEN}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./devonfw_guide.pdf
-          asset_name: devonfw_guide
+          asset_name: devonfw_guide.pdf
           asset_content_type: application/pdf
       - name: Update Website on success
         run: |
           git clone https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/devonfw.github.io.git --recurse-submodules
           cd devonfw.github.io/${REPO_CONSOLIDATE}
-          git checkout master
+          git checkout develop
           git pull
           cd ..
           git add ${REPO_CONSOLIDATE}
           git commit -m "[DocUpdate]"
-          git push origin HEAD:main
+          git push origin HEAD

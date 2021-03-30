@@ -43,13 +43,12 @@ jobs:
       - name: Generate PDF
         run: |
           mvn clean package -Ddocgen.images.dir=images,documentation -Doutput.format=pdf
-          mv ./target/generated-docs/master.pdf ./devonfw_guide.pdf
       - name: Upload the pdf guide to release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${GITHUB_TOKEN}
-          file: ./devonfw_guide.pdf
-          asset_name: devonfw_guide.pdf
+          file: ./target/generated-docs/master.pdf
+          asset_name: devonfw_guide
           tag: "Build# ${{ github.run_number }}"
           overwrite: true
           body: "PDF devonfw guide | Build# ${{ github.run_number }}"

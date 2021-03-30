@@ -62,8 +62,12 @@ jobs:
           asset_name: devonfw_guide.pdf
           asset_content_type: application/pdf
       - name: Update Website on success
+        uses: actions/checkout@v2
+        with:
+          repository: ${ORG}/devonfw.github.io.git/${REPO_CONSOLIDATE}
+          submodules: 'recursive'
+          path: ${REPO_CONSOLIDATE}
         run: |
-          git clone https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/devonfw.github.io.git --recurse-submodules
           cd devonfw.github.io/${REPO_CONSOLIDATE}
           git pull
           cd ..

@@ -65,6 +65,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: ${ORG}/devonfw.github.io.git
+          ref: develops
           submodules: 'recursive'
           path: ${REPO_CONSOLIDATE}
       - name: Update Website on success

@@ -4,7 +4,7 @@ env:
   BUILD_USER: ${{ secrets.BUILD_USER }}
   BUILD_USER_PASSWD: ${{ secrets.BUILD_USER_PASSWD }}
   BUILD_USER_EMAIL:  ${{ secrets.BUILD_USER_EMAIL }}
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GHA_TOKEN }}
 on:
   push:
     branches:
@@ -57,7 +57,7 @@ jobs:
         run: |
           git clone https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/devonfw.github.io.git --recurse-submodules
           cd devonfw.github.io/${REPO_CONSOLIDATE}
-          #git checkout master
+          git checkout master
           git pull
           cd ..
           git add ${REPO_CONSOLIDATE}

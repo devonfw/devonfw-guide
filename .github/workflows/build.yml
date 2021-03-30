@@ -43,15 +43,25 @@ jobs:
       - name: Generate PDF
         run: |
           mvn clean package -Ddocgen.images.dir=images,documentation -Doutput.format=pdf
-      - name: Upload the pdf guide to release
-        uses: svenstaro/upload-release-action@v2
+          mv ./target/generated-docs/master.pdf ./devonfw_guide.pdf
+      - name: Draft GitHub release
+        uses: actions/create-release@v1
+        id: create_release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          repo_token: ${GITHUB_TOKEN}
-          file: ./target/generated-docs/master.pdf
+          tag_name:  "Build# ${{ github.run_number }}"
+          release_name: "Release ${{ github.run_number }}"
+          draft: true
+      - name: Upload the pdf guide to release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./devonfw_guide.pdf
           asset_name: devonfw_guide
-          tag: "Build# ${{ github.run_number }}"
-          overwrite: true
-          body: "PDF devonfw guide | Build# ${{ github.run_number }}"
+          asset_content_type: application/pdf
       - name: Update Website on success
         run: |
           git clone https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/devonfw.github.io.git --recurse-submodules

@@ -64,7 +64,7 @@ jobs:
       - name: checkout website
         uses: actions/checkout@v2
         with:
-          repository: ${ORG}/devonfw.github.io.git
+          repository: devonfw/devonfw.github.io.git
           ref: develop
           submodules: 'recursive'
           path: ${REPO_CONSOLIDATE}

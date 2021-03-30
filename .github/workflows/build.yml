@@ -71,7 +71,7 @@ jobs:
           path: ${REPO_CONSOLIDATE}
       - name: Update Website on success
         run: |
-          cd devonfw.github.io/${REPO_CONSOLIDATE}
+          pwd
           git pull
           cd ..
           git add ${REPO_CONSOLIDATE}

@@ -72,8 +72,7 @@ jobs:
       - name: Update Website on success
         run: |
           pwd
-          cd ..
-          git add ${REPO_CONSOLIDATE}
+          git add .
           git commit -m "[DocUpdate]"
           git remote -v
           git push origin HEAD

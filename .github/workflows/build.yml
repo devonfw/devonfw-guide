@@ -68,11 +68,8 @@ jobs:
           ref: develop
           token: ${{ secrets.GITHUB_TOKEN }}
           submodules: 'recursive'
-          path: ${REPO_CONSOLIDATE}
       - name: Update Website on success
         run: |
           pwd
           git add .
-          git commit -m "[DocUpdate]"
           git remote -v
-          git push origin HEAD

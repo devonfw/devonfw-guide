@@ -70,6 +70,9 @@ jobs:
           submodules: 'recursive'
       - name: Update Website on success
         run: |
+          cd devonfw.github.io/devonfw-guide
+          git branch
+          git pull
           pwd
           git add .
           git remote -v

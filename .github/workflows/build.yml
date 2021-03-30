@@ -61,12 +61,13 @@ jobs:
           asset_path: ./devonfw_guide.pdf
           asset_name: devonfw_guide.pdf
           asset_content_type: application/pdf
-      - name: Update Website on success
+      - name: checkout website
         uses: actions/checkout@v2
         with:
           repository: ${ORG}/devonfw.github.io.git/${REPO_CONSOLIDATE}
           submodules: 'recursive'
           path: ${REPO_CONSOLIDATE}
+      - name: Update Website on success
         run: |
           cd devonfw.github.io/${REPO_CONSOLIDATE}
           git pull

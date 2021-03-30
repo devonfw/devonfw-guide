@@ -4,7 +4,6 @@ env:
   BUILD_USER: ${{ secrets.BUILD_USER }}
   BUILD_USER_PASSWD: ${{ secrets.BUILD_USER_PASSWD }}
   BUILD_USER_EMAIL:  ${{ secrets.BUILD_USER_EMAIL }}
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 on:
   push:
     branches:
@@ -48,7 +47,7 @@ jobs:
         uses: actions/create-release@v1
         id: create_release
         env:
-          GITHUB_TOKEN: ${GITHUB_TOKEN}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name:  "Build# ${{ github.run_number }}"
           release_name: "Release ${{ github.run_number }}"
@@ -56,7 +55,7 @@ jobs:
       - name: Upload the pdf guide to release
         uses: actions/upload-release-asset@v1
         env:
-          GITHUB_TOKEN: ${GITHUB_TOKEN}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./devonfw_guide.pdf

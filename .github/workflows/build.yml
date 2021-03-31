@@ -70,8 +70,8 @@ jobs:
           submodules: 'recursive'
       - name: Update Website on success
         run: |
-          git clone https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/devonfw.github.io.git --recurse-submodules
-          cd devonfw.github.io/${REPO_CONSOLIDATE}
+          cd devonfw-guide
+          git branch
+          git pull
           git remote -v
           ls -ltr
-          git branch

@@ -72,10 +72,6 @@ jobs:
       - name: Update Website on success
         run: |
           cd devonfw.github.io
-            git remote -v
-            git branch
-          git checkout develop
-          git remote -v
-          git branch
           git add devonfw-guide
-          pwd
+          git commit -m "[DocUpdate]"
+          git push origin HEAD:main

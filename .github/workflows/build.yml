@@ -72,11 +72,8 @@ jobs:
       - name: Update Website on success
         run: |
           cd devonfw.github.io/devonfw-guide
-          git branch
+          git checkout develop
           git remote -v
-          ls -ltr
-          pwd
-          git pull --ff-only
           cd ..
           git add devonfw-guide
           pwd

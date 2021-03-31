@@ -76,7 +76,7 @@ jobs:
           git remote -v
           ls -ltr
           pwd
-          git pull
+          git pull --ff-only
           cd ..
           git add devonfw-guide
           pwd

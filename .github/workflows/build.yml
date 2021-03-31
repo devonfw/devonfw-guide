@@ -70,9 +70,7 @@ jobs:
           submodules: 'recursive'
       - name: Update Website on success
         run: |
-          ls -ltr
           git branch
           git pull
-          pwd
-          git add .
           git remote -v
+          ls -ltr

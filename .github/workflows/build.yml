@@ -71,10 +71,10 @@ jobs:
           path: devonfw.github.io
       - name: Update Website on success
         run: |
-          cd devonfw.github.io/devonfw-guide
+          cd devonfw.github.io
             git remote -v
             git branch
-          git checkout -b develop origin/develop
+          git checkout develop
           git remote -v
           git branch
           cd ..

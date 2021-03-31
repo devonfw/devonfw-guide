@@ -66,5 +66,8 @@ jobs:
           git clone -b develop https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/devonfw.github.io.git --recurse-submodules
           ls -ltr
           cd devonfw.github.io/devonfw-guide
+          git pull
+          cd ..
+          git add devonfw-guide
           git branch
           pwd

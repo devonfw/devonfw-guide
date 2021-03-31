@@ -71,8 +71,12 @@ jobs:
           path: devonfw.github.io
       - name: Update Website on success
         run: |
-          cd devonfw.github.io
+          cd devonfw.github.io/devonfw-guide
           git branch
           git remote -v
           ls -ltr
+          pwd
+          git pull
+          cd ..
+          git add devonfw-guide
           pwd

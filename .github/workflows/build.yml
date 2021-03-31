@@ -72,7 +72,9 @@ jobs:
       - name: Update Website on success
         run: |
           cd devonfw.github.io/devonfw-guide
-          git checkout -b develop remote/develop
+            git remote -v
+            git branch
+          git checkout -b develop origin/develop
           git remote -v
           git branch
           cd ..

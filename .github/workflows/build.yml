@@ -63,7 +63,7 @@ jobs:
           asset_content_type: application/pdf
       - name: Update Website on success
         run: |
-          git clone https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/devonfw.github.io.git --recurse-submodules
+          git clone -b develop https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/devonfw.github.io.git --recurse-submodules
           ls -ltr
           cd devonfw.github.io/devonfw-guide
           git branch

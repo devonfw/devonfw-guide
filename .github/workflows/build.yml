@@ -68,10 +68,11 @@ jobs:
           ref: develop
           token: ${{ secrets.GITHUB_TOKEN }}
           submodules: 'recursive'
+          path: devonfw.github.io
       - name: Update Website on success
         run: |
-          cd devonfw-guide
+          cd devonfw.github.io
           git branch
-          git pull
           git remote -v
           ls -ltr
+          pwd

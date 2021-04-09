@@ -31,3 +31,5 @@ include::guide-blazegraph.asciidoc[leveloffset=1]
 include::guide-hbase.asciidoc[leveloffset=1]
 
 include::guide-ravendb.asciidoc[leveloffset=1]
+
+include::guide-gigaspaces.asciidoc[leveloffset=1]

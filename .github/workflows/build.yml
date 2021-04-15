@@ -62,6 +62,7 @@ jobs:
           asset_name: devonfw_guide.pdf
           asset_content_type: application/pdf
      - name: Update Website 
+       run: |
           git clone https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/devonfw.github.io.git --recurse-submodules
           cd devonfw.github.io/devonfw-guide
           git checkout master

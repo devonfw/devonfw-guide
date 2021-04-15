@@ -63,10 +63,12 @@ jobs:
           asset_content_type: application/pdf
       - name: Update Website on success
         run: |
-          git clone https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/devonfw.github.io.git --recurse-submodules
-          cd devonfw.github.io/devonfw-guide
-          git checkout master
-          git pull
+          git clone https://github.com/devonfw/devonfw.github.io.git
+          cd devonfw.github.io/
+          git submodule update --init --recursive
+          cd devonfw-guide/
+          git fetch
+          git merge origin/master
           cd ..
           git add devonfw-guide
           git commit -m "[DocUpdate]"

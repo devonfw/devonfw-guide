@@ -61,13 +61,10 @@ jobs:
           asset_path: ./devonfw_guide.pdf
           asset_name: devonfw_guide.pdf
           asset_content_type: application/pdf
-      - name: Update Website on success
-        run: |
-          git clone https://${BUILD_USER}:${BUILD_USER_PASSWD}@github.com/${ORG}/devonfw.github.io.git --recurse-submodules
-          cd devonfw.github.io/devonfw-guide
-          git checkout master
-          git pull
-          cd ..
-          git add devonfw-guide
-          git commit -m "[DocUpdate]"
-          git push origin develop
+      - name: Triger Update Website on success
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.GHA_TOKEN }}
+          repository: devonfw/devonfw.github.io
+          event-type: dispatch-update-website
+

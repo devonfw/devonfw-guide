@@ -1,0 +1,187 @@
+:toc: macro
+toc::[]
+
+
+:doctype: book
+:reproducible:
+:source-highlighter: rouge
+:listing-caption: Listing
+
+
+= devonfw Release notes 2021.04
+
+== Introduction
+
+We are proud to announce the release of devonfw version 2021.04. 
+
+This release includes lots of addition of new features, updates and bug fixes but it is very important to highlight the following improvements:
+
+== devonfw IDE
+
+The consolidated list of features for this devonfw IDE release is as it follows.
+
+=== 2021.04.001
+
+Update with the following bugfixes and improvements:
+
+* https://github.com/devonfw/ide/issues/537[#537]: Update eclipse to 2021-03
+* https://github.com/devonfw/ide/issues/287[#287]: Command autocompletion
+* https://github.com/devonfw/ide/issues/536[#536]: Improve handling of aborted downloads
+* https://github.com/devonfw/ide/issues/340[#340]: Improve CobiGen CLI with update support
+* https://github.com/devonfw/ide/issues/542[#542]: Support placeholders in settings.xml template
+* https://github.com/devonfw/ide/issues/557[#557]: minimize setup by reducing DEVON_IDE_TOOLS
+* https://github.com/devonfw/ide/issues/537[#537]: Update eclipse to 2021-03
+* https://github.com/devonfw/ide/issues/550[#550]: update maven to 3.8.1
+* https://github.com/devonfw/ide/issues/545[#545]: update devon4j to 2021.04.001 and add migration
+* https://github.com/devonfw/ide/issues/546[#546]: Problems with tm-terminal Eclipse plugin
+* https://github.com/devonfw/ide/issues/553[#553]: VSCode user-data-dir shall be part of workspace config
+
+The full list of changes for this release can be found in https://github.com/devonfw/ide/milestone/18?closed=1[milestone 2021.04.001].
+
+=== 2020.12.001
+
+Update with the following bugfixes and improvements:
+
+* https://github.com/devonfw/ide/pull/495[#495]: Documentation corrections
+* https://github.com/devonfw/ide/issues/491[#491]: Consider lombok support
+* https://github.com/devonfw/ide/pull/489[#489]: Update node to v12.19.0 and VS Code to 1.50.1
+* https://github.com/devonfw/ide/issues/470[#470]: reverse merge of workspace settings not sorting properties anymore
+* https://github.com/devonfw/ide/issues/483[#483]: Error during installation when npm is already installed
+* https://github.com/devonfw/ide/issues/415[#415]: documentation to customize settings
+* https://github.com/devonfw/ide/issues/479[#479]: Error for vscode plugin installation
+* https://github.com/devonfw/ide/issues/471[#471]: Preconfigure Project Explorer with Hierarchical Project Presentation
+
+The full list of changes for this release can be found in https://github.com/devonfw/ide/milestone/16?closed=1[milestone 2020.12.001].
+
+=== 2020.08.001
+
+Update with the following bugfixes and improvements:
+
+* https://github.com/devonfw/ide/pull/454[#454]: update to eclipse 2020.06
+* https://github.com/devonfw/ide/pull/442[#442]: update nodejs and vscode
+* https://github.com/devonfw/ide/issues/432[#432]: vsCode settings are not updated
+* https://github.com/devonfw/ide/issues/446[#446]: intellij: doConfigureEclipse: command not found
+* https://github.com/devonfw/ide/issues/440[#440]: Software update may lead to inconsistent state due to windows file locks
+* https://github.com/devonfw/ide/issues/427[#427]: release: keep leading zeros
+* https://github.com/devonfw/ide/issues/450[#450]: update settings
+* https://github.com/devonfw/ide/issues/431[#431]: devon build command not working correct for yarn or npm
+* https://github.com/devonfw/ide/issues/449[#449]: update to devon4j 2020.08.001
+
+The full list of changes for this release can be found in https://github.com/devonfw/ide/milestone/12?closed=1[milestone 2020.08.001].
+
+=== 2020.04.004
+
+Minor update with the following bugfixes and improvements:
+
+* https://github.com/devonfw/ide/issues/433[#433]: Windows: devon command line sets wrong environment variables (with tilde symbol)
+* https://github.com/devonfw/ide/pull/435[#435]: fix variable resolution on bash
+
+The full list of changes for this release can be found in https://github.com/devonfw/ide/milestone/14?closed=1[milestone 2020.04.004].
+
+=== 2020.04.003
+
+Minor update with the following bugfixes and improvements:
+
+* https://github.com/devonfw/ide/issues/395[#395]: variable from devon.properites unset if value is in double quotes
+* https://github.com/devonfw/ide/pull/429[#429]: Added script to create a meta file in the users directory after setup
+
+The full list of changes for this release can be found in https://github.com/devonfw/ide/milestone/13?closed=1[milestone 2020.04.003].
+
+=== 2020.04.002
+
+Minor update with the following bugfixes and improvements:
+
+* https://github.com/devonfw/ide/issues/418[#418]: Make projects optional
+* https://github.com/devonfw/ide/pull/421[#421]: update devon4j to 2020.04.002
+* https://github.com/devonfw/ide/issues/413[#413]: Update Eclipse to 2020-03
+* https://github.com/devonfw/ide/issues/424[#424]: Strange errors on windows if devon.properties contains mixed line endings
+* https://github.com/devonfw/ide/issues/399[#399]: launching of Intellij fails with No such file or directory error.
+* https://github.com/devonfw/ide/pull/410[#410]: fix jsonmerge for boolean and null values
+
+The full list of changes for this release can be found in https://github.com/devonfw/ide/milestone/11?closed=1[milestone 2020.04.002].
+
+== devon4j
+
+The consolidated list of features for this devon4j release is as it follows.
+
+=== 2021.04.001
+
+New release of `devon4j` with fixes, updates and improvements:
+
+* https://github.com/devonfw/devon4j/issues/370[#370]: Minor updates (spring-boot 2.4.4, jackson 2.12.2, CXF 3.4.3, etc.) 
+* https://github.com/devonfw/devon4j/issues/366[#366]: BaseTest.isInitialSetup() broken
+* https://github.com/devonfw/devon4j/issues/85[#85]: ci-friendly-maven also for archetype
+* https://github.com/devonfw/devon4j/issues/373[#373]: CORS starter not part of devon4j release
+* https://github.com/devonfw/devon4j/issues/164[#164]: Flattened pom for core project invalid
+* https://github.com/devonfw/devon4j/issues/323[#323]: Add spring integration test to archetype
+* https://github.com/devonfw/devon4j/pull/351[#351]: improved error handling of service client
+* https://github.com/devonfw/devon4j/issues/71[#71]: improve documentation for strong password encryption
+* https://github.com/devonfw/devon4j/issues/354[#354]: JMS senders should not be part of data access layer, but logical layer
+* https://github.com/devonfw/devon4j/pull/337[#377]: updated T-Architecture
+* https://github.com/devonfw/devon4j/issues/294[#294]: integrate sonarcloud analysis into devon4j CI pipeline
+
+Documentation is available at https://repo.maven.apache.org/maven2/com/devonfw/java/doc/devon4j-doc/2021.04.001/devon4j-doc-2021.04.001.pdf[devon4j guide 2021.04.001].
+The full list of changes for this release can be found in https://github.com/devonfw/devon4j/milestone/15?closed=1[milestone devon4j 2020.04.001].
+
+=== 2020.12.001
+
+New release of `devon4j` with pluggable web security (CSRF starter) and `CompletableFuture` support for async REST service client as well as other improvements:
+
+* https://github.com/devonfw/devon4j/issues/283[#283]: Support for CompletableFuture in async service client
+* https://github.com/devonfw/devon4j/issues/307[#307]: Fix CSRF protection support
+* https://github.com/devonfw/devon4j/issues/287[#287]: spring-boot update to 2.3.3
+* https://github.com/devonfw/devon4j/issues/288[#288]: Update jackson to 2.11.2
+* https://github.com/devonfw/devon4j/issues/293[#293]: Update owasp-dependency-check plugin version to 5.3.2
+* https://github.com/devonfw/devon4j/pull/302[#302]: added guide for project/app structure
+* https://github.com/devonfw/devon4j/pull/315[#315]: devon4j documentation correction
+* https://github.com/devonfw/devon4j/pull/306[#306]: improve documentation to launch app
+
+Documentation is available at https://repo.maven.apache.org/maven2/com/devonfw/java/doc/devon4j-doc/2020.12.001/devon4j-doc-2020.12.001.pdf[devon4j guide 2020.12.001].
+The full list of changes for this release can be found in https://github.com/devonfw/devon4j/milestone/14?closed=1[milestone devon4j 2020.12.001].
+
+=== 2020.08.001
+
+New release of `devon4j` with async REST service client support and other improvements:
+
+* https://github.com/devonfw/devon4j/issues/279[#279]: support for async service clients
+* https://github.com/devonfw/devon4j/issues/277[#277]: Update Security-Guide to recent OWASP Top (2017)
+* https://github.com/devonfw/devon4j/pull/281[#281]: cleanup documentation
+
+Documentation is available at https://repo.maven.apache.org/maven2/com/devonfw/java/doc/devon4j-doc/2020.08.001/devon4j-doc-2020.08.001.pdf[devon4j guide 2020.08.001].
+The full list of changes for this release can be found in https://github.com/devonfw/devon4j/milestone/12?closed=1[milestone devon4j 2020.08.001].
+
+=== 2020.04.002
+
+Minor update of `devon4j` with the following bugfixes and small improvements:
+
+* https://github.com/devonfw/devon4j/issues/261[#261]: JUnit4 backward compatibility
+* https://github.com/devonfw/devon4j/pull/267[#267]: Fix JWT permission expansion
+* https://github.com/devonfw/devon4j/issues/254[#254]: JWT Authentication support for devon4j-kafka
+* https://github.com/devonfw/devon4j/issues/258[#258]: archetype is still lacking a .gitignore
+* https://github.com/devonfw/devon4j/pull/273[#273]: Update libs
+* https://github.com/devonfw/devon4j/pull/271[#271]: Do not enable resource filtering by default
+* https://github.com/devonfw/devon4j/issues/255[#255]: Kafka: Support different retry configuration for different topics
+
+Documentation is available at https://repo.maven.apache.org/maven2/com/devonfw/java/doc/devon4j-doc/2020.04.002/devon4j-doc-2020.04.002.pdf[devon4j guide 2020.04.002].
+The full list of changes for this release can be found in https://github.com/devonfw/devon4j/milestone/11?closed=1[milestone devon4j 2020.04.002].
+
+== devon4ng
+
+Updated template and samples to Angular 11.
+
+== CobiGen
+
+TODO
+
+== MrChecker
+
+MrChecker Test Framework is an end to end test automation framework written in Java. It is an automated testing framework for functional testing of web applications, API web services, Service Virtualization, Security, native mobile apps and, in the near future, databases. All modules have tangible examples of how to build resilient integration test cases based on delivered functions. Two new modules are added to MrChecker:
+
+* DB Module - we have created a module intended to make testing efforts on DBs easier. It is founded on JPA in conjunction with Hibernate and therefore supports both high level, object based access to DB entities via the IDao interface and low level, native SQL commands via the EntityManager class .
+
+* CLI Module - we have created a module intended to make testing command line applications like compilers or batches easier and faster. Huge success here is that, team using this solution was able to prepare a test suite, without app provided, basing only on documentation and using mocking technique.
+
+== Trainings/tutorials   
+
+* Katakoda tutorials : https://katacoda.com/devonfw
+* Youtube tutorials : https://www.youtube.com/channel/UCtb1p-24jus-QoXy49t9Xzg

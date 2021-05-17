@@ -5,9 +5,9 @@ env:
   BUILD_USER_PASSWD: ${{ secrets.BUILD_USER_PASSWD }}
   BUILD_USER_EMAIL:  ${{ secrets.BUILD_USER_EMAIL }}
 on:
-  push:
-    branches:
-      - master
+  repository_dispatch:
+    types: [dispatch-update-guide]
+  workflow_dispatch:
 name: Generate PDF and Update Website
 jobs:
   build:

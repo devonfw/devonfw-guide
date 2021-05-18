@@ -31,6 +31,8 @@ jobs:
           cd ${REPO_CONSOLIDATE}
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          submodules: recursive
       - name: Set up JDK
         uses: actions/setup-java@v1
         with:

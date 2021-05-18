@@ -1,7 +1,7 @@
 = Contributing
 
-include::../.github/CONTRIBUTING[leveloffset=1]
+include::../devonfw-github/CONTRIBUTING[leveloffset=1]
 
-include::../.github/CODE_OF_CONDUCT[leveloffset=1]
+include::../devonfw-github/CODE_OF_CONDUCT[leveloffset=1]
 
 include::oss-compliance[leveloffset=1]

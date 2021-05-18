@@ -19,10 +19,6 @@
 [submodule "devon4node.wiki"]
 	path = devon4node.wiki
 	url = https://github.com/devonfw/devon4node.wiki.git
-[submodule ".github"]
-	path = .github
-	name = devonfw-github
-	url = https://github.com/devonfw/.github.git
 [submodule "mrchecker.wiki"]
 	path = mrchecker.wiki
 	url = https://github.com/devonfw/mrchecker.wiki.git
@@ -50,3 +46,6 @@
 [submodule "sonar-devon4j-plugin.wiki"]
 	path = sonar-devon4j-plugin.wiki
 	url = https://github.com/devonfw/sonar-devon4j-plugin.wiki.git
+[submodule "devonfw-github"]
+	path = devonfw-github
+	url = https://github.com/devonfw/.github.git

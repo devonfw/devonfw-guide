@@ -50,3 +50,6 @@
 [submodule "sonar-devon4j-plugin.wiki"]
 	path = sonar-devon4j-plugin.wiki
 	url = https://github.com/devonfw/sonar-devon4j-plugin.wiki.git
+[submodule "devonfw-github"]
+	path = devonfw-github
+	url = https://github.com/devonfw/.github.git

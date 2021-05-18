@@ -47,3 +47,6 @@
 [submodule "jump-the-queue.wiki"]
 	path = jump-the-queue.wiki
 	url = https://github.com/devonfw/jump-the-queue.wiki.git
+[submodule "sonar-devon4j-plugin.wiki"]
+	path = sonar-devon4j-plugin.wiki
+	url = https://github.com/devonfw/sonar-devon4j-plugin.wiki.git

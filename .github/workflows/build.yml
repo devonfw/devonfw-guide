@@ -4,6 +4,8 @@ env:
   BUILD_USER: ${{ secrets.BUILD_USER }}
   BUILD_USER_PASSWD: ${{ secrets.BUILD_USER_PASSWD }}
   BUILD_USER_EMAIL:  ${{ secrets.BUILD_USER_EMAIL }}
+  MAVEN_OPTS: "-Xmx4096m -Xms2048m"
+  JAVA_OPTS: "-Xmx4096m -Xms2048m"
 on:
   repository_dispatch:
     types: [dispatch-update-guide]

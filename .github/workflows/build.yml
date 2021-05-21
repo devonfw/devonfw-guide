@@ -43,28 +43,6 @@ jobs:
         run: |
           find . -name '*.png' -exec mogrify -interlace none -format png {} +
           find . -name '*.PNG' -exec mogrify -interlace none -format PNG {} +
-      - name: Generate PDF
-        run: |
-          mvn clean package -Ddocgen.images.dir=images,documentation -Doutput.format=pdf
-          mv ./target/generated-docs/master.pdf ./devonfw_guide.pdf
-      - name: Draft GitHub release
-        uses: actions/create-release@v1
-        id: create_release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name:  "Build# ${{ github.run_number }}"
-          release_name: "Release #${{ github.run_number }}"
-          draft: true
-      - name: Upload the pdf guide to release
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./devonfw_guide.pdf
-          asset_name: devonfw_guide.pdf
-          asset_content_type: application/pdf
       - name: Trigger update website on success
         uses: peter-evans/repository-dispatch@v1
         with:

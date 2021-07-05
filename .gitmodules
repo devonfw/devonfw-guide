@@ -49,3 +49,6 @@
 [submodule "devonfw-github"]
 	path = devonfw-github
 	url = https://github.com/devonfw/.github.git
+[submodule "devon4quarkus.wiki"]
+	path = devon4quarkus.wiki
+	url = https://github.com/devonfw/devon4quarkus.wiki.git

@@ -96,7 +96,7 @@ Furthermore: an email and Twitter micro service were integrated in my-thai-star.
 === Documentation refactoring
 
 The complete devonfw guide is restructured and refactored. Getting started guides are added for easy start with devonfw.Integration of the new Tutorial with the existing devonfw Guide whereby existing chapters of the previous tutorial were converted to Cookbook chapters. Asciidoctor is used for devonfw guide PDF generation. 
-See: https://github.com/devonfw/devon-guide/wiki
+See: https://github.com/devonfw/devonfw-guide/wiki
 
 === OASP4JS
 

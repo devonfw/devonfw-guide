@@ -211,7 +211,7 @@ This component has been donated by, has been harvested from system in use by, Ca
 
 === And lots more, among others:
 
-* OASP4J/devonfw docker based build IN a docker process. See: https://github.com/devonfw/devon-guide/wiki/Dockerfile-for-the-maven-based-spring.io-projects
+* OASP4J/devonfw docker based build IN a docker process. See: https://github.com/devonfw/shop-floor/blob/develop/documentation/dsf-configure-dockerfile.asciidoc
 
 * CI test boot archetype. This is for unit testing.This will create a sample project and add sample web service to it. A Jenkins job will start oasp4j server and will call web service. See: https://github.com/devonfw/devonfw-shop-floor/tree/master/testing/Oasp4jTestingScripts
 

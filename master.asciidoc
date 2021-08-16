@@ -41,6 +41,8 @@ include::dashboard.wiki/master-dashboard[leveloffset=0]
 
 include::solicitor.wiki/master-solicitor[leveloffset=0]
 
+include::hangar.wiki/hangar[leveloffset=0]
+
 include::general/master-contributing[leveloffset=0]
 
 include::general/master-release-notes[leveloffset=0]

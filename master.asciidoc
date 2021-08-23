@@ -27,9 +27,15 @@ include::general/db/master-database[leveloffset=0]
 
 include::shop-floor.wiki/master-devonfw-shop-floor[leveloffset=0]
 
-include::cicdgen.wiki/master-cicdgen[leveloffset=0]
+= CI/CD
+There are different CICD tools:
+[.internal]
+production-line
 
-include::production-line.wiki/master-production-line[leveloffset=0]
+include::cicdgen.wiki/master-cicdgen[leveloffset=+1]
+
+= Prouction Line Template
+include::website-internal/production-line/index[leveloffset=+1]
 
 include::cobigen.wiki/master-cobigen[leveloffset=0]
 

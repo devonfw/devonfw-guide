@@ -30,12 +30,11 @@ include::shop-floor.wiki/master-devonfw-shop-floor[leveloffset=0]
 = CI/CD
 There are different CICD tools:
 [.internal]
-production-line
+production-line-link
 
 include::cicdgen.wiki/master-cicdgen[leveloffset=+1]
 
-= Prouction Line Template
-include::website-internal/production-line/index[leveloffset=+1]
+include::website-internal/production-line/index[leveloffset=0]
 
 include::cobigen.wiki/master-cobigen[leveloffset=0]
 

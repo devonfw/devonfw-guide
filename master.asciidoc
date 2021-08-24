@@ -34,7 +34,7 @@ production-line-link
 
 include::cicdgen.wiki/master-cicdgen[leveloffset=+1]
 
-include::website-internal/production-line/index[leveloffset=0]
+include::production-line.wiki/master-production-line[leveloffset=0]
 
 include::cobigen.wiki/master-cobigen[leveloffset=0]
 

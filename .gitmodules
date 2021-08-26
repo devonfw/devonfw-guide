@@ -55,3 +55,6 @@
 [submodule "hangar.wiki"]
 	path = hangar.wiki
 	url = https://github.com/devonfw/hangar.wiki.git
+	[submodule "website-internal"]
+	path = website-internal
+	url = https://devon.s2-eu.capgemini.com/gitlab/devonfw/website-internal.git

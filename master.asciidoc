@@ -25,17 +25,19 @@ include::devon4node.wiki/master-devon4node[leveloffset=0]
 
 include::general/db/master-database[leveloffset=0]
 
-include::cicdgen.wiki/master-cicdgen[leveloffset=0]
+= Tools
+
+include::cicdgen.wiki/master-cicdgen[leveloffset=+1]
+
+include::cobigen.wiki/master-cobigen[leveloffset=+1]
+
+include::mrchecker.wiki/master-mrchecker[leveloffset=+1]
+
+include::dashboard.wiki/master-dashboard[leveloffset=+1]
 
 include::production-line.wiki/master-production-line[leveloffset=0]
 
-include::cobigen.wiki/master-cobigen[leveloffset=0]
-
-include::mrchecker.wiki/master-mrchecker[leveloffset=0]
-
 include::my-thai-star.wiki/master-my-thai-star[leveloffset=0]
-
-include::dashboard.wiki/master-dashboard[leveloffset=0]
 
 include::solicitor.wiki/master-solicitor[leveloffset=0]
 

@@ -207,7 +207,7 @@ See: https://github.com/devonfw/devon-guide/wiki/cookbook-devon-jhipster-module
 
 ==== Simple Jenkins task status dashboard
 
-This component has been donated by, has been harvested from system in use by, Capgemini  Valencia. This dashboard, apart from an optional gamification element, allows the display of multiple Jenkins instances. See: https://github.com/oasp/jenkins_view 
+This component has been donated by, has been harvested from system in use by, Capgemini  Valencia. This dashboard, apart from an optional gamification element, allows the display of multiple Jenkins instances. 
 
 === And lots more, among others:
 

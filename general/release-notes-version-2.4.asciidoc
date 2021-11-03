@@ -102,7 +102,7 @@ The following changes have been incorporated in OASP4J:
 === OASP4JS
 The following changes have been incorporated in OASP4JS:
 
-* First version of the new client application architecture guide https://github.com/oasp-forge/oasp4js-wiki/wiki 
+* First version of the new client application architecture guide https://github.com/oasp/oasp4js/wiki
 * Angular CLI 6,
 * Angular 6,
 * Angular Material 6 and Covalent 2.0.0-beta.1,

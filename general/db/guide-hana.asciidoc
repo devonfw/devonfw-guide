@@ -32,9 +32,9 @@ You can run HANA in several ways:
 ** Via a pre-configured https://developers.sap.com/group.hxe-install-vm.html[virtual machine] (Windows, Linux, OS X)
 ** Installed natively on your https://developers.sap.com/group.hxe-install-binary.html[local machine] (Linux only)
 * In the cloud
-** Via a pre-configured machine on the https://developers.sap.com/tutorials/hxe-gcp-getting-started-launcher.html[Google Cloud Platform]
-** Via a pre-configured machine in the https://developers.sap.com/tutorials/hxe-ms-azure-marketplace-getting-started.html[Microsoft Azure Cloud]
-** Via a pre-configured machine on https://developers.sap.com/tutorials/hxe-aws-setup.html[Amazon Web Services]
+** Refer https://cloud.google.com/solutions/sap/docs/sap-hana-deployment-guide[Google Cloud Platform]
+** Refer https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/hana-example-installation[Microsoft Azure Cloud]
+** Refer https://aws.amazon.com/sap/solutions/saphana/[Amazon Web Services]
 
 To get started with SAP HANA, Express Edition you can check out the https://developers.sap.com/topics/sap-hana-express.html#tutorials[tutorials] at the https://developers.sap.com/[SAP Developer Center].
 

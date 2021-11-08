@@ -96,7 +96,7 @@ Furthermore: an email and Twitter micro service were integrated in my-thai-star.
 === Documentation refactoring
 
 The complete devonfw guide is restructured and refactored. Getting started guides are added for easy start with devonfw.Integration of the new Tutorial with the existing devonfw Guide whereby existing chapters of the previous tutorial were converted to Cookbook chapters. Asciidoctor is used for devonfw guide PDF generation. 
-See: https://github.com/devonfw/devon-guide/wiki
+See: https://github.com/devonfw/devonfw-guide/wiki
 
 === OASP4JS
 
@@ -111,7 +111,7 @@ The following changes have been incorporated in OASP4JS:
 
 === Admin interface for oasp4j apps 
 
-The new version includes an Integration of an admin interface for oasp4j apps (Spring Boot). This module is based on CodeCentric´s Spring Boot Admin (https://github.com/codecentric/spring-boot-admin). See: https://github.com/devonfw/devon-guide/wiki/Spring-boot-admin-Integration-with-devon4j
+The new version includes an Integration of an admin interface for oasp4j apps (Spring Boot). This module is based on CodeCentric´s Spring Boot Admin (https://github.com/codecentric/spring-boot-admin).
 
 === Devcon 
 
@@ -203,7 +203,6 @@ This component was donated by the ADcenter in Valencia. It was made in order to 
 
 JHipster is a code generator based on Yeoman generators. Its default generator generator-jhipster generates a specific JHipster structure. The purpose of generator-jhipster-DevonModule is to generate the structure and files of a typical OASP4j project. It is therefore equivalent to the standard OASP4j application template based CobiGen code generation.
 
-See: https://github.com/devonfw/devon-guide/wiki/cookbook-devon-jhipster-module 
 
 ==== Simple Jenkins task status dashboard
 
@@ -211,7 +210,7 @@ This component has been donated by, has been harvested from system in use by, Ca
 
 === And lots more, among others:
 
-* OASP4J/devonfw docker based build IN a docker process. See: https://github.com/devonfw/devon-guide/wiki/Dockerfile-for-the-maven-based-spring.io-projects
+* OASP4J/devonfw docker based build IN a docker process. 
 
 * CI test boot archetype. This is for unit testing.This will create a sample project and add sample web service to it. A Jenkins job will start oasp4j server and will call web service. See: https://github.com/devonfw/devonfw-shop-floor/tree/master/testing/Oasp4jTestingScripts
 

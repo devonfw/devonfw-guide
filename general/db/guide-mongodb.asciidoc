@@ -5,9 +5,11 @@ toc::[]
 
 This section is the place to share experience for those who use https://www.mongodb.com/[MongoDB] as link:guide-database.asciidoc#nosql[NoSQL database].
 
-== Attention
+== Java
+
+=== Attention
 NOTE: devonfw did not focus on the integration of this database so far. No reports have been given from our users about successfully integrating this database with any devonfw tech stack. If you want to share your knowledge or report usage, please contribute by clicking on the pen next to the section headline.If you need help on devonfw tech stack knowledge to get the integration working for you, stay in contact at https://github.com/devonfw/devonfw-guide/issues[GitHub.]
 
-== Driver
+=== Driver
 Please be aware that there is not a regular JDBC driver in case you are using Java (devon4j).
 For driver options see https://docs.mongodb.com/ecosystem/drivers/java/[here].

@@ -36,7 +36,9 @@ But as indicated by the questions above you need to be fully aware of what you a
 NoSQL databases can be _schemaless_ (untyped, dynamic & flexible) and/or _schemaful_ (typed, structured & strict).
 Furhter, there are different types of NoSQL databases that are discussed in the following sub-sections:
 
-=== Column DB
+=== Java
+
+==== Column DB
 Column NoSQL databases are more related to a regular xref:rdbms[RDBMS] with their tables and columns.
 However, they typically do not offer relational support with joins to the same level as you expect from an RDBMS.
 Therefore, you have to carefully design your data-model upfront with the all the knowledge how you later want to query your data.
@@ -46,7 +48,7 @@ The most prominent options are:
 * link:guide-cassandra.asciidoc[Cassandra] (high-performance, schema-based DB)
 * link:guide-hbase.asciidoc[HBase] (distributed, big-data Hadoop database)
 
-=== Key-Value DB
+==== Key-Value DB
 As indicated by the name, a key-value database stores objects as key/value pairs similar to `Properties` or `Map` in Java.
 
 The most prominent options are:
@@ -54,7 +56,7 @@ The most prominent options are:
 * link:guide-redis.asciidoc[Redis] (in-memory key/value store, especially used as cache or message broker)
 * link:guide-aerospike.asciidoc[aerospike]
 
-=== Document DB
+==== Document DB
 A document database is similar to a key-value database, but it stores objects in standard structured formats such as XML, JSON, or BSON.
 Therefore not only flat key/value pairs but even trees of hierarchical data can be stored, retrieved and queried.
 
@@ -64,7 +66,7 @@ The most prominent options are:
 * link:guide-couchdb.asciidoc[CouchDB]
 * link:guide-ravendb.asciidoc[RavenDB]
 
-=== Graph DB
+==== Graph DB
 If the connections (links/relations) between your data is key and an xref:rdbms[RDBMS] is just not flexible or fast enough for your plans, then a graph database can help you.
 They are very strong on storing and querying complex connections between entities.
 For queries there are even specific standards and languages like https://tinkerpop.apache.org/gremlin.html[Gremlin].
@@ -74,7 +76,7 @@ The most prominent options are:
 * link:guide-neo4j.asciidoc[neo4j]
 * link:guide-blazegraph.asciidoc[blazegraph]
 
-=== Hybrid DB
+==== Hybrid DB
 In addition to the above types there are some NoSQL databases that are hybrid and combine the features and aspects of these types.
 While as an architect and developer you might love the idea to get all in one, you have to be careful with your choice.
 If you do not exactly know your problem, you are not ready to make the right choice for your database.

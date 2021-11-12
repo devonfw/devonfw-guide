@@ -27,12 +27,9 @@ include::general/db/master-database[leveloffset=0]
 
 = Tools
 
-= CI/CD
-There are different CICD tools:
-[.internal]
-production-line-link
+include::cicdgen.wiki/master-cicdgen[leveloffset=1]
 
-include::cicdgen.wiki/master-cicdgen[leveloffset=+1]
+include::cobigen.wiki/master-cobigen[leveloffset=1]
 
 include::mrchecker.wiki/master-mrchecker[leveloffset=1]
 

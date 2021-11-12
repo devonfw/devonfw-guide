@@ -27,12 +27,7 @@ include::general/db/master-database[leveloffset=0]
 
 = Tools
 
-= CI/CD
-There are different CICD tools:
-[.internal]
-production-line-link
-
-include::cicdgen.wiki/master-cicdgen[leveloffset=+1]
+include::cobigen.wiki/master-cobigen[leveloffset=1]
 
 include::mrchecker.wiki/master-mrchecker[leveloffset=1]
 
@@ -40,11 +35,18 @@ include::dashboard.wiki/master-dashboard[leveloffset=1]
 
 include::solicitor.wiki/master-solicitor[leveloffset=1]
 
-include::production-line.wiki/master-production-line[leveloffset=0]
+= CI/CD
+There are different CICD tools:
+[.internal]
+production-line-link
+
+include::cicdgen.wiki/master-cicdgen[leveloffset=1]
+
+include::production-line.wiki/master-production-line[leveloffset=+1]
+
+include::hangar.wiki/hangar[leveloffset=+1]
 
 include::my-thai-star.wiki/master-my-thai-star[leveloffset=0]
-
-include::hangar.wiki/hangar[leveloffset=0]
 
 include::general/master-contributing[leveloffset=0]
 

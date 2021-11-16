@@ -184,6 +184,7 @@ See: https://github.com/devonfw/devcon/releases
 From different Business Units (countries) have contributed "incubator" frameworks:
 
 - devon4NET (Stack based on .NET Core / .NET "Classic" (4.6))
+- devon4X (Stack based on Xamarin)
 - devon4node (Stack based on Node-js/Serverless): https://github.com/devonfw/devon4node
 
 An "incubator" status means that the frameworks are production ready, all are actually already used in production, but  are still not fully compliant with the devonfw definition of a "Minimally Viable Product".     

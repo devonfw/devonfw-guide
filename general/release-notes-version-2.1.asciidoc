@@ -8,13 +8,13 @@ toc::[]
 
 = Release notes devonfw 2.1.1 "Balu"
 
-== Version 2.1.2: OASP4J updates & some new features
+== Version 2.1.2: devon4j updates & some new features
 
 We've released the latest update release of devonfw in the _Balu_ series: version 2.1.2. The next major release, code named _Courage_, will be released approximately the end of June. This current release contains the following items:
 
-=== OASP4j 2.3.0 Release
+=== devon4j 2.3.0 Release
 
-Friday the 12th of May 2017 OASP4J version 2.3.0 was released. Major features added are : 
+Friday the 12th of May 2017 devon4j version 2.3.0 was released. Major features added are : 
 
 - Database Integration with PostGres, MSSQL Server, MariaDB
 - Added docs folder for gh pages and added oomph setups
@@ -25,8 +25,7 @@ Friday the 12th of May 2017 OASP4J version 2.3.0 was released. Major features ad
 - Bugfix: Fixed the error received when the Spring Boot Application from sample application that is created from maven archetype is launched
 - Bugfix: Fix for 404 error received when clicked on the link '1. Table' in index.html of the sample application created from maven archetype
 
-More details on features added can be found at https://github.com/oasp/oasp4j/milestone/23?closed=1 . 
-The OASP4j wiki and other documents are updated for release 2.3.0. 
+The devon4j wiki and other documents are updated for release 2.3.0. 
 
 === CobiGen Enhancements
 
@@ -82,7 +81,7 @@ For more information about the update see: https://github.com/devonfw/devon/wiki
 
 There are a series of updates to the devonfw documentation, principally the devonfw Guide. Further more, from this release on, you can find the devonfw guide in the _doc_ folder of the distribution.
 
-Furthermore, the OASP4J and devonfw source-code in the "examples" workspace, have been updated to the latest version.
+Furthermore, the devon4j and devonfw source-code in the "examples" workspace, have been updated to the latest version.
 
 == Version 2.1 New features, improvements and updates
 
@@ -104,13 +103,13 @@ For more information see: https://github.com/devonfw/cobigen/wiki[The Cobigen do
 
 === Angular 2
 
-With the official release of Angular 2 and TypeScript 2, we're slowly but steadily moving to embrace  these important new players in the  web development scene. We keep supporting the Angular 1 based OASP4js framework and are planning a migration of this framework to Angular 2 in the near future. For "Balu" we've have decided to integrate "vanilla" Angular 2.
+With the official release of Angular 2 and TypeScript 2, we're slowly but steadily moving to embrace  these important new players in the  web development scene. We keep supporting the Angular 1 based devon4ng framework and are planning a migration of this framework to Angular 2 in the near future. For "Balu" we've have decided to integrate "vanilla" Angular 2.
 
 We have migrated the Restaurant Sample application to serve as a, documented and supported, blueprint for Angular 2 applications. Furthermore, we support three "kickstarter" projects which help engagement getting started with Angular2 - either using Bootstrap or Google´s Material Design - or, alternatively, Ionic 2 (the mobile framework on top of Angular 2). For more information see: https://github.com/devonfw/devonfw-angular2-kickstarter[Angular 2 Kickstarter] and https://github.com/devonfw/devonfw-ionic2-kickstarter/[Ionic 2 Kickstarter]
 
-=== OASP4J 2.2.0 Release
+=== devon4j 2.2.0 Release
 
-A new release of OASP4J, version 2.2.0, is included in this release of devonfw. This release mainly focuses on server side of oasp. i.e oasp4j.
+A new release of devon4j, version 2.2.0, is included in this release of devonfw. This release mainly focuses on server side of devonfw. i.e devon4j.
 
 Major features added are : 
 
@@ -119,11 +118,11 @@ Major features added are :
 * Database Integration with Oracle 11g
 * Added Servlet for HTTP-Debugging
 * Refactored code and improved JavaDoc
-* Bugfix: mvn spring-boot:run executes successfully for oasp4j application created using oasp4j template 
+* Bugfix: mvn spring-boot:run executes successfully for devon4j application created using devon4j template 
 * Added subsystem tests of SalesmanagementRestService and several other tests
-* Added Tests to test java packages conformance to OASP conventions
+* Added Tests to test java packages conformance to devonfw conventions
 
-More details on features added can be found at https://github.com/oasp/oasp4j/milestone/19?closed=1(here). The OASP4j wiki and other documents are updated for release 2.2.0. 
+More details on features added can be found at https://github.com/devonfw/devon4j/milestone/19?closed=1(here). The devon4j wiki and other documents are updated for release 2.2.0. 
 
 === Devon4Sencha
 
@@ -145,8 +144,8 @@ about how to configure devonfw for use in the cloud see: https://github.com/devo
 
 === Spring Data 
 
-The java server stack within devonfw, OASP4J,  is build on a very solid DDD architecture  which uses JPA for its data access layer. We now offer integration of Spring Data as an alternative or to be used in conjunction with JPA. Spring Data offers significant advantages over JPA through its query mechanism which allows the developer to specify complex queries in an easy way. Overall working with Spring Data should be quite more productive compared with JPA for the average or junior developer. And extra advantage is that Spring Data also allows - and comes with support for - the usage of NoSQL databases like MongoDB, Cassandra, DynamoDB etc. THis becomes especially critical in the Cloud where NoSQL databases typically offer better scalability than relational databases.   
-For more information see: https://github.com/devonfw/devon/wiki/cookbook-spring-data[Integrating Spring Data in OASP4J]
+The java server stack within devonfw, devon4j,  is build on a very solid DDD architecture  which uses JPA for its data access layer. We now offer integration of Spring Data as an alternative or to be used in conjunction with JPA. Spring Data offers significant advantages over JPA through its query mechanism which allows the developer to specify complex queries in an easy way. Overall working with Spring Data should be quite more productive compared with JPA for the average or junior developer. And extra advantage is that Spring Data also allows - and comes with support for - the usage of NoSQL databases like MongoDB, Cassandra, DynamoDB etc. THis becomes especially critical in the Cloud where NoSQL databases typically offer better scalability than relational databases.   
+For more information see: https://github.com/devonfw/devon/wiki/cookbook-spring-data[Integrating Spring Data in devon4j]
 
 === Videos content in the devonfw Guide
 
@@ -163,7 +162,7 @@ See: https://github.com/devonfw/devon/wiki/cookbook-dockerization[devonfw on Doc
 
 === Eclipse Neon 
 
-devonfw comes with its own pre configured and enhanced Eclipse based IDE:  the Open Source "OASP IDE" and "devonfw Distr" which falls under Capgemini IP. We've updated both versions to the latest stable version of Eclipse, Neon. From Balu onwards we support the IDE on Linux as well and we offer downloadable versions for both Windows and Linux. 
+devonfw comes with its own pre configured and enhanced Eclipse based IDE:  the Open Source "devonfw IDE" and "devonfw Distr" which falls under Capgemini IP. We've updated both versions to the latest stable version of Eclipse, Neon. From Balu onwards we support the IDE on Linux as well and we offer downloadable versions for both Windows and Linux. 
 
 See: https://github.com/devonfw/devon-guide/wiki/getting-started-the-devon-ide[The Devon IDE]
 
@@ -177,12 +176,12 @@ In order to fully support the move towards the Cloud, from version 2.1. "Balu" o
 
 === Initial ATOM support
 
-Atom is a text editor that's modern, approachable, yet hackable to the core - a tool you can customize to do anything but also use productively without ever touching a config file. It is turning into a standard for modern web development. In devonfw 2.1 "Balu" we provide a script which installs automatically the most recent version of Atom in the devonfw distribution with a pre-configured set of essential plugins. See: https://github.com/oasp/oasp-atom-ide/wiki[OASP/devonfw Atom editor ("IDE") settings & packages]
+Atom is a text editor that's modern, approachable, yet hackable to the core - a tool you can customize to do anything but also use productively without ever touching a config file. It is turning into a standard for modern web development. In devonfw 2.1 "Balu" we provide a script which installs automatically the most recent version of Atom in the devonfw distribution with a pre-configured set of essential plugins. 
 
 === Database support
 
 Through JPA (and now Spring Data as well) devonfw supports many databases. In Balu we've extended this support to prepared configuration, extensive documentations and supporting examples for all major "Enterprise" DB servers. So it becomes even easier for engagements to start using these standard database options. Currently we provide this extended support for Oracle, Microsoft SQL Server, MySQL and PostgreSQL.
-For more information see: https://github.com/devonfw/devon4j/wiki/guide-database-migration[OASP Database Migration Guide]
+For more information see: https://github.com/devonfw/devon4j/wiki/guide-database-migration[devonfw Database Migration Guide]
 
 === File upload and download 
 
@@ -209,4 +208,3 @@ Apart from the previously mentioned additions and improvements to diverse aspect
 === Contributors
 
 Many thanks to adrianbielewicz, aferre777, amarinso, arenstedt, azzigeorge, cbeldacap, cmammado, crisjdiaz, csiwiak, Dalgar, drhoet, Drophoff, dumbNickname, EastWindShak, fawinter, fbougeno, fkreis, GawandeKunal, henning-cg, hennk, hohwille, ivanderk, jarek-jpa, jart, jensbartelheimer, jhcore, jkokoszk, julianmetzler, kalmuczakm, kiran-vadla, kowalj, lgoerlach, ManjiriBirajdar, MarcoRose, maybeec, mmatczak, nelooo, oelsabba, pablo-parra, patrhel, pawelkorzeniowski, PriyankaBelorkar, RobertoGM, sekaiser, sesslinger, SimonHuber, sjimenez77, sobkowiak, sroeger, ssarmokadam, subashbasnet, szendo, tbialecki, thoptr, tsowada, znazir and anyone who we may have forgotten to add!
-

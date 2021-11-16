@@ -20,7 +20,7 @@ This release is also fully focused on deepening the platform rather than expandi
 
 Another incubator being updated is the devonfw Shop Floor which intended to be a compilation of DevOps experiences from the devonfw perspective. A new part of the release is the new Solution Guide for Application Security based on the state of the art in OWASP based application security. 
 
-There is a whole range of new features and improvements which can be seen in that light. OASP4j 2.6 changes and improves the package structure of the core Java framework. The My Thai Star sample app has now been upgraded to Angular 6, lots of bugs have been fixed and the devonfw Guide has once again been improved. 
+There is a whole range of new features and improvements which can be seen in that light. devon4j 2.6 changes and improves the package structure of the core Java framework. The My Thai Star sample app has now been upgraded to Angular 6, lots of bugs have been fixed and the devonfw Guide has once again been improved. 
 
 Last but not least, this release contains the formal publication of the devonfw Methodology or The Accelerated Solution Design - an Industry Standards based solution design and specification (documentation) methodology for Agile (and less-than-agile) projects. 
 
@@ -46,7 +46,7 @@ So you can now use the devonfw distribution (the "zip" file), CobiGen, the devon
 ** FindBugs Plugin updated.
 ** CobiGen plugin updated.
 * Other Software
-** Visual Studio Code latest version included and pre-configured with https://github.com/oasp/oasp-vscode-ide
+** Visual Studio Code latest version included and pre-configured with https://devonfw.com/website/pages/docs/cli.asciidoc.html#vscode.asciidoc
 ** Ant updated to latest.
 ** Maven updated to latest.
 ** Java updated to latest.
@@ -55,7 +55,7 @@ So you can now use the devonfw distribution (the "zip" file), CobiGen, the devon
 ** Yarn package manager updated.
 ** Python3 updated.
 ** Spyder3 IDE integrated in python3 installation updated.
-** OASP4JS-application-template for Angular 6 at workspaces/examples
+** devon4ng-application-template for Angular 6 at workspaces/examples
 
 
 === My Thai Star Sample Application
@@ -65,11 +65,11 @@ The new release of My Thai Star has focused on the following improvements:
 * Release 1.6.0.
 * Travis CI integration with Docker. Now we get a valuable feedback of the current status and when collaborators make pull requests.
 * Docker compose deployment. 
-* OASP4J:
+* devon4j:
 ** Flyway upgrade from 3.2.1 to 4.2.0
 ** Bug fixes.
-* OASP4JS:
-** Client OASP4JS updated to Angular 6.
+* devon4ng:
+** Client devon4ng updated to Angular 6.
 ** Frontend translated into 9 languages.
 ** Improved mobile and tablet views. 
 ** Routing fade animations.
@@ -79,37 +79,37 @@ The new release of My Thai Star has focused on the following improvements:
 The following contents in the devonfw guide have been updated:
 
 * devonfw OSS modules documentation.
-* Creating a new OASP4J application.
+* Creating a new devon4j application.
 * How to update Angular CLI in devonfw.
 * Include Angular i18n. 
 
 Apart from this the documentation has been reviewed and some typos and errors have been fixed. 
 
-The current development of the guide has been moved to https://github.com/oasp-forge/devon-guide/wiki in order to be available as the rest of OSS assets.
+The current development of the guide has been moved to https://github.com/devonfw/devonfw-guide/wiki in order to be available as the rest of OSS assets.
 
-=== OASP4J
-The following changes have been incorporated in OASP4J:
+=== devon4j
+The following changes have been incorporated in devon4j:
 
 * Integrate batch with archetype.
 * Application module structure and dependencies improved.
 * Issues with Application Template fixed. 
-* Solved issue where Eclipse maven template oasp4j-template-server version 2.4.0 produced pom with missing dependency spring-boot-starter-jdbc.
+* Solved issue where Eclipse maven template devon4j-template-server version 2.4.0 produced pom with missing dependency spring-boot-starter-jdbc.
 * Solved datasource issue with project archetype 2.4.0.
 * Decouple archetype from sample (restaurant).
 * Upgrade to Flyway 4.
 * Fix for issue with Java 1.8 and QueryDSL #599.
 
-=== OASP4JS
-The following changes have been incorporated in OASP4JS:
+=== devon4ng
+The following changes have been incorporated in devon4ng:
 
-* First version of the new client application architecture guide https://github.com/oasp-forge/oasp4js-wiki/wiki 
+* First version of the new client application architecture guide https://github.com/devonfw/devon4ng/wiki/meta-architecture#devonfw-reference-client-architecture
 * Angular CLI 6,
 * Angular 6,
 * Angular Material 6 and Covalent 2.0.0-beta.1,
 * Ionic 3.20.0,
 * Cordova 8.0.0,
-* OASP4JS Angular application template updated to Angular 6 with visual improvements and bugfixes https://github.com/oasp/oasp4js-application-template 
-* OASP4JS Ionic application template updated and improved https://github.com/oasp/oasp4js-ionic-application-template 
+* devon4ng Angular application template updated to Angular 6 with visual improvements and bugfixes https://github.com/devonfw/devon4ng-application-template 
+* devon4ng Ionic application template updated and improved https://github.com/devonfw/devon4ng-ionic-application-template 
 * PWA enabled.
 
 === AppSec Quick Solution Guide
@@ -141,14 +141,14 @@ This release incorporates a new Solution Guide for Application Security based on
 A new version of Devcon has been released. Fixes and new features include:
 
 * Now Devcon is OSS, with public repository at https://github.com/devonfw/devcon 
-* Updated to match current OASP4J
+* Updated to match current devon4j
 * Update to download Linux distribution.
 * Custom modules creation improvements.
 * Bugfixes. 
 
 === devonfw OSS Modules
 * Existing devonfw IP modules have been moved to OSS. 
-** They can now be accessed in any OASP4J project as optional dependencies from Maven Central.
+** They can now be accessed in any devon4j project as optional dependencies from Maven Central.
 ** The repository now has public access https://github.com/devonfw/devon
 * Starters available for modules:
 ** Reporting module
@@ -228,4 +228,3 @@ And further it is based on the essential belief or paradigm that ASD should be:
 
 For more on the devonfw Methodology / ASD, see: 
 https://github.com/devonfw/devon-methodology/blob/master/design-guidelines/Accelerated_Solution_Design.adoc
-

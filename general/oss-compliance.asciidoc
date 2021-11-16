@@ -50,7 +50,7 @@ The most recommended lightweight tooling is a combination of Maven plugins. We w
 == Configure the Mojo Maven License Plugin 
 
 You can use it from command line but this will limit the ability to sustainably configure it (shown later).
-Therefore we add it permanently as a build-plugin to the project parent-pom like this (already contained in OASP-parent-pom):
+Therefore we add it permanently as a build-plugin to the project parent-pom like this:
 
 [source,xml]
 --------

@@ -11,9 +11,9 @@ toc::[]
 == Production Line Integration
 devonfw is now fully supported on the Production Line v1.3 and the coming v2.0. Besides that, we now "eat our own dogfood" as the whole devonfw project, all "buildable assets", now run on the Production Line.
 
-== OASP4js 2.0
+== devon4ng 2.0
 
-The main focus of the Courage release is the renewed introduction of "OASP for JavaScript", or OASP4js. This new version is a completely new implementation based on Angular (version 4). This new "stack" comes with:
+The main focus of the Courage release is the renewed introduction of "devonfw for JavaScript", or devon4ng. This new version is a completely new implementation based on Angular (version 4). This new "stack" comes with:
 
 - New application templates for Angular 4 application (as well as Ionic 3)
 
@@ -32,12 +32,8 @@ The main focus of the Courage release is the renewed introduction of "OASP for J
 - A new Tutorial using my-thai-star as a starting point
 
 See: 
-https://github.com/oasp/oasp4js-application-template
-https://github.com/oasp/oasp4js-angular-catalog
-https://github.com/oasp/my-thai-star/tree/develop/angular
-
-== A new OASP Portal
-As part of the new framework(s) we have also done a complete redesign of the OASP Portal website at http://oasp.io/ which should make all things related with OASP more accessible and easier to find. 
+https://github.com/devonfw/devon4ng-application-template
+https://github.com/devonfw/my-thai-star/tree/develop/angular
 
 == New Cobigen 
 
@@ -55,7 +51,7 @@ Major changes in this release:
 
 ** JSON Merger
 
-* Refactored oasp4j templates to make use of Java template logic feature
+* Refactored devon4j templates to make use of Java template logic feature
 
 * Bugfixes:
 
@@ -88,26 +84,25 @@ A major part of the new devonfw release is the incorporation of a new applicatio
 
 The application is  accompanied by a substantial new documentation asset, the devonfw methodology, which described in detail the whole lifecycle of the development of a devonfw application, from requirements gathering to technical design. Officially my-that-star is still considered to be an incubator as especially this last part is still not as mature as it could be. But the example application and tutorial are 100% complete and functional and form a marked improvement over the "old" restaurant example app. My-Thai-star will become the standard example app from devonfw 3.0 onwards. 
 
-See:     https://github.com/oasp/my-thai-star
-         https://github.com/oasp/my-thai-star/wiki
+See:     https://github.com/devonfw/my-thai-star
+         https://github.com/devonfw/my-thai-star/wiki
 
 
-== The new OASP Tutorial
-The OASP Tutorial is a new part of the combined OASP / devonfw documentation which changes the focus of how people can get started with the platform
+== The new devonfw Tutorial
+The devonfw Tutorial is a new part of the devonfw documentation which changes the focus of how people can get started with the platform
 
-There are tutorials for OASP4j, OASP4js (Angular), OASP4fn and more to come. My-Thai-Star is used throughout the tutorial series to demonstrate the basic principles, architecture, and good practices of the different OASP "stacks". There is an elaborated exercise where the readers get to write their own application "JumpTheQueue". 
+There are tutorials for devon4j, devon4ng (Angular) and more to come. My-Thai-Star is used throughout the tutorial series to demonstrate the basic principles, architecture, and good practices of the different devonfw "stacks". There is an elaborated exercise where the readers get to write their own application "JumpTheQueue". 
 
 
 We hope that the new tutorial offers a better, more efficient way for people to get started with devonfw. Answering especially the question: how to make a devonfw application.
 
-Oasp4j tutorial: https://github.com/oasp/oasp-tutorial-sources/wiki/OASP4jGettingStartedHome
-Oasp4js tutorial: https://github.com/oasp/oasp-tutorial-sources/wiki/OASP4jsGettingStartedHome
-Oasp4fn tutorial: https://github.com/oasp/oasp-tutorial-sources/wiki/OASP4FnGettingStartedHome
+devon4j tutorial: https://devonfw.com/website/pages/docs/devon4j.asciidoc_tutorials.html
+devon4ng tutorial: https://github.com/devonfw/devon4ng/wiki
 
-== OASP4j 2.4.0
+== devon4j 2.4.0
 
-"OASP for Java" or OASP4j now includes updated versions of the latest stable versions of Spring Boot and the Spring Framework and all related dependencies. This allows guaranteed, stable, execution of any devonfw 2.X application on the latest versions of the Industry Standard Spring stack. 
-Another important new feature is a new testing architecture/infrastructure. All database options are updated to the latest versions as well as guaranteed to function on all Application Servers which should cause less friction and configuration time when starting a new OASP4j project. 
+"devonfw for Java" or devon4j now includes updated versions of the latest stable versions of Spring Boot and the Spring Framework and all related dependencies. This allows guaranteed, stable, execution of any devonfw 2.X application on the latest versions of the Industry Standard Spring stack. 
+Another important new feature is a new testing architecture/infrastructure. All database options are updated to the latest versions as well as guaranteed to function on all Application Servers which should cause less friction and configuration time when starting a new devon4j project. 
 
 Details:
 
@@ -125,14 +120,12 @@ Details:
 
 - Bugfix:Fixed the error "class file for javax.interceptor.InterceptorBinding not found" received when executing the command 'mvn site' when trying to generate javadoc using Maven javadoc plugin
 
-- Removed the deprecated API io.oasp.module.web.common.base.PropertiesWebApplicationContextInitializer
-
 - Documentation of the usage of UserDetailsService of Spring Security
 
 
-See: https://github.com/oasp/oasp4j
+See: https://github.com/devonfw/devon4j
 
-Wiki: https://github.com/oasp/oasp4j/wiki
+Wiki: https://github.com/devonfw/devon4j/wiki
 
 == Microservices Netflix
 devonfw now includes a microservices implementation based on Spring Cloud Netflix. It provides a Netflix OSS integrations for Spring Boot apps through auto-configuration and binding to the Spring Environment. It  offers microservices archetypes and a complete user guide with all the details to start creating microservices with devonfw.
@@ -145,7 +138,7 @@ The new Eclipse devonfw distribution is now based on Eclipse OOMPH, which allows
 == Visual Studio Code / Atom
 The devonfw distro now contains Visual Studio Code alongside Eclipse in order to provide a default, state of the art, environment for web based development.
 
-See: https://github.com/oasp/oasp-vscode-ide
+See: https://devonfw.com/website/pages/docs/cli.asciidoc.html#vscode.asciidoc
 
 == More I18N options
 The platform now contains more documentation and a conversion utility which makes it easier to share i18n resource files between the different frameworks.
@@ -187,13 +180,12 @@ Devcon is now fully supported on Linux which, together with the devonfw distro r
 
 See: https://github.com/devonfw/devcon/releases
 
-== New OASP Incubators
+== New devonfw Incubators
 From different Business Units (countries) have contributed "incubator" frameworks:
 
-- OASP4NET (Stack based on .NET Core / .NET "Classic" (4.6))
-- OASP4X (Stack based on Xamarin) 
-- OASP4Fn (Stack based on Node-js/Serverless): https://github.com/oasp/oasp4fn
+- devon4NET (Stack based on .NET Core / .NET "Classic" (4.6))
+- devon4node (Stack based on Node-js/Serverless): https://github.com/devonfw/devon4node
 
-An "incubator" status means that the frameworks are production ready, all are actually already used in production, but  are still not fully compliant with the OASP definition of a "Minimally Viable Product".     
+An "incubator" status means that the frameworks are production ready, all are actually already used in production, but  are still not fully compliant with the devonfw definition of a "Minimally Viable Product".     
 
-During this summer the OASP4NET and OASP4X repos will be properly installed. In the mean time, if you want to have access to the source code, please contact the _devonfw Core Team_.
+During this summer devon4NET will be properly installed. In the mean time, if you want to have access to the source code, please contact the _devonfw Core Team_.

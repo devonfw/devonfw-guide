@@ -38,8 +38,6 @@ The "nested data" use case is when there are 3 or more entities which are interr
 
 Apart from the SOAP code generation, the capability to express nested relationships have been added to the existing ReST code generator as well.
 
-See: https://github.com/devonfw/devon-guide/wiki/cookbook-cobigen-advanced-use-cases-soap-and-nested-data
-
 === Micro services module (Spring Cloud/Netflix OSS)
 
 To make it easier for devonfw users to design and develop applications based on microservices, this release provides a series of archetypes and resources based on _Spring Cloud Netflix_ to automate the creation and configuration of microservices.
@@ -48,11 +46,7 @@ New documentation ind de devonfw Guide contains all the details to start https:/
 
 === Spring Integration Module
 
-Based on the _Java Message Service_ (JMS) and _Spring Integration_, the devonfw _Integration module_ provides a communication system (sender/subscriber) out-of-the-box with simple channels (only to send and read messages), request and reply channels (to send messages and responses) and request & reply asynchronously channels. You can find more details about the implementation in the https://github.com/devonfw/devon-guide/wiki/cookbook-integration-module[devonfw guide]. 
-
-=== WebSphere & Wildfly deployment documentation
-
-The new version of devonfw contains more elaborate and updated documentation about deployment on https://github.com/devonfw/devon-guide/wiki/cookbook-Deployment-on-WebSphere[WebSpere] and https://github.com/devonfw/devon-guide/wiki/cookbook-Deployment-on-Wildfly[Wildfly].
+Based on the _Java Message Service_ (JMS) and _Spring Integration_, the devonfw _Integration module_ provides a communication system (sender/subscriber) out-of-the-box with simple channels (only to send and read messages), request and reply channels (to send messages and responses) and request & reply asynchronously channels. 
 
 == Version 2.1.1 Updates, fixes & some new features
 
@@ -145,26 +139,22 @@ about how to configure devonfw for use in the cloud see: https://github.com/devo
 === Spring Data 
 
 The java server stack within devonfw, devon4j,  is build on a very solid DDD architecture  which uses JPA for its data access layer. We now offer integration of Spring Data as an alternative or to be used in conjunction with JPA. Spring Data offers significant advantages over JPA through its query mechanism which allows the developer to specify complex queries in an easy way. Overall working with Spring Data should be quite more productive compared with JPA for the average or junior developer. And extra advantage is that Spring Data also allows - and comes with support for - the usage of NoSQL databases like MongoDB, Cassandra, DynamoDB etc. THis becomes especially critical in the Cloud where NoSQL databases typically offer better scalability than relational databases.   
-For more information see: https://github.com/devonfw/devon/wiki/cookbook-spring-data[Integrating Spring Data in devon4j]
 
 === Videos content in the devonfw Guide
 
-The devonfw Guide is the single, authoritative tutorial and reference ("cookbook") for all things devonfw, targeted at the general developer working with the platform (there is another document for Architects).  It is clear and concise but because of the large scope and wide reach of devonfw, it comes with a hefty 370+ pages. For the impatient - and sometimes images do indeed say more than words - we've added 17 videos to the Guide which significantly speed up getting started with the diverse aspects of devonfw.
+The devonfw Guide is the single, authoritative tutorial and reference ("cookbook") for all things devonfw, targeted at the general developer working with the platform (there is another document for Architects).  It is clear and concise but because of the large scope and wide reach of devonfw, it comes with a hefty 370+ pages. For the impatient - and sometimes images do indeed say more than words - we've added videos to the Guide which significantly speed up getting started with the diverse aspects of devonfw.
 
-For more information see: https://coconet.capgemini.com/sf/frs/do/listReleases/projects.apps2_devon/frs.videos[Video releases on TeamForge]
+For more information on videos check out our https://www.youtube.com/channel/UCtb1p-24jus-QoXy49t9Xzg[devonfw Youtube channel] 
 
 === Containerisation with Docker and the Production Line
 
 Docker (see: https://www.docker.com/) containers wrap a piece of software in a complete filesystem that contains everything needed to run: code, runtime, system tools, system libraries – anything that can be installed on a server. Docker containers resemble virtual machines but are far more resource efficient. Because of this, Docker and related technologies like Kubernetes are taking the Enterprise and Cloud by storm. We have certified and documented the usage of devonfw on Docker so we can now firmly state that "devonfw is Docker" ready. All the more so as the iCSD Production Line is now supporting devonfw as well. The Production Line is a Docker based set of methods and tools that make possible to develop custom software to our customers on time and with the expected quality. By having first-class support for devonfw on the Production Line, iCSD has got an unified, integral solution which covers all the phases involved on the application development cycle from requirements to testing and hand-off to the client. 
 
-See: https://github.com/devonfw/devon/wiki/cookbook-dockerization[devonfw on Docker] and https://github.com/devonfw/devon/wiki/devon-guide-production-line[devonfw on the Production Line]
-
-
 === Eclipse Neon 
 
 devonfw comes with its own pre configured and enhanced Eclipse based IDE:  the Open Source "devonfw IDE" and "devonfw Distr" which falls under Capgemini IP. We've updated both versions to the latest stable version of Eclipse, Neon. From Balu onwards we support the IDE on Linux as well and we offer downloadable versions for both Windows and Linux. 
 
-See: https://github.com/devonfw/devon-guide/wiki/getting-started-the-devon-ide[The Devon IDE]
+See: https://github.com/devonfw/ide/wiki[The Devon IDE]
 
 === Default Java 8 with Java 7 compatibility
 
@@ -183,17 +173,13 @@ Atom is a text editor that's modern, approachable, yet hackable to the core - a 
 Through JPA (and now Spring Data as well) devonfw supports many databases. In Balu we've extended this support to prepared configuration, extensive documentations and supporting examples for all major "Enterprise" DB servers. So it becomes even easier for engagements to start using these standard database options. Currently we provide this extended support for Oracle, Microsoft SQL Server, MySQL and PostgreSQL.
 For more information see: https://github.com/devonfw/devon4j/wiki/guide-database-migration[devonfw Database Migration Guide]
 
-=== File upload and download 
-
-File up and download was supported in previous version of the framework, but as these operations are common but complex, we've extended the base functionality and improved the available documentation so it becomes substantially easier to offer both File up- as well as download in devonfw based applications. See: https://github.com/devonfw/devon-guide/wiki/cookbook-File-Upload-and-Download[devonfw Guide Cookbook: File Upload and Download]
-
 === Internationalisation (I18N) improvements
 
 Likewise, existing basic Internationalisation (I18N) support has been significantly enhanced through an new devonfw module and extended to support Ext JS and Angular 2 apps as well. This means that both server as well as client side applications can be made easily to support multiple languages ("locales"), using industry standard tools and without touching programming code (essential when working with teams of translators). For more information see: https://github.com/devonfw/devon-guide/wiki/cookbook-i18n-module[The I18N (Internationalization) module] and https://github.com/devonfw/devon-guide/wiki/Client-GUI-Sencha-i18n[Client GUI Sencha i18n]
 
 === Asynchronous HTTP support 
 
-Asynchronous HTTP is an important feature allowing so-called "long polling" HTTP Requests (for streaming applications, for example) or with requests sending large amounts of data. By making HTTP Requests asynchronous, devonfw server instances can better support these types of use-cases while offering far better performance. Documentation about how to include the new devonfw module implementing this feature can be found at: https://github.com/devonfw/devon-guide/wiki/cookbook-async-module[The devonfw async module]
+Asynchronous HTTP is an important feature allowing so-called "long polling" HTTP Requests (for streaming applications, for example) or with requests sending large amounts of data. By making HTTP Requests asynchronous, devonfw server instances can better support these types of use-cases while offering far better performance. 
 
 === Security and License guarantees
 

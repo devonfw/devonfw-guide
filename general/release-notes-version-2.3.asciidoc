@@ -191,7 +191,7 @@ The devonfw Harvesting process continues to add valuable components and modules 
 
 ==== Service Client support (for Micro service Projects). 
 
-This client is for consuming microservices from other application.This solution is already very flexible and customizable.As of now,this is suitable for small and simple project where two or three microservices are invoked. Donated by Jörg Hohwiller. See: https://github.com/devonfw/devon-microservices
+This client is for consuming microservices from other application.This solution is already very flexible and customizable.As of now,this is suitable for small and simple project where two or three microservices are invoked. Donated by Jörg Hohwiller. See: https://github.com/devonfw-forge/devonfw-microservices
 
 ==== JHipster devonfw code generation
 

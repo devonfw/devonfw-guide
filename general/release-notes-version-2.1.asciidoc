@@ -8,7 +8,7 @@ toc::[]
 
 = Release notes devonfw 2.1.1 "Balu"
 
-== Version 2.1.2: devon4j updates & some new features
+== Version 2.1.2: devon4j updates and some new features
 
 We've released the latest update release of devonfw in the _Balu_ series: version 2.1.2. The next major release, code named _Courage_, will be released approximately the end of June. This current release contains the following items:
 
@@ -48,7 +48,7 @@ New documentation ind de devonfw Guide contains all the details to start https:/
 
 Based on the _Java Message Service_ (JMS) and _Spring Integration_, the devonfw _Integration module_ provides a communication system (sender/subscriber) out-of-the-box with simple channels (only to send and read messages), request and reply channels (to send messages and responses) and request & reply asynchronously channels. 
 
-== Version 2.1.1 Updates, fixes & some new features
+== Version 2.1.1 Updates, fixes and some new features
 
 === CobiGen code-generator fixes
 

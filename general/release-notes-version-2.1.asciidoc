@@ -42,7 +42,7 @@ Apart from the SOAP code generation, the capability to express nested relationsh
 
 To make it easier for devonfw users to design and develop applications based on microservices, this release provides a series of archetypes and resources based on _Spring Cloud Netflix_ to automate the creation and configuration of microservices.
 
-New documentation ind de devonfw Guide contains all the details to start https://github.com/devonfw-forge/devon-guide/wiki/devon-microservices[creating microservices with devonfw]
+New documentation ind de devonfw Guide contains all the details to start https://github.com/devonfw-forge/devonfw-microservices[creating microservices with devonfw]
 
 === Spring Integration Module
 
@@ -54,7 +54,7 @@ Based on the _Java Message Service_ (JMS) and _Spring Integration_, the devonfw 
 
 The CobiGen incremental code generator released in the previous version contained a regression which has now been fixed. Generating services in Batch mode whereby a package can be given as an input, using all Entities contained in that package, works again as expected.
 
-For more information see: https://github.com/devonfw/cobigen/wiki[The CobiGen documentation] and the corresponding change in the https://github.com/devonfw/devon/wiki/getting-started-Cobigen[devonfw Guide]
+For more information see: https://github.com/devonfw/cobigen/wiki[The CobiGen documentation]
 
 === Devcon enhancements
 
@@ -68,8 +68,6 @@ in Devon4Sencha there are changes in the sample application. It now complies ful
 
 The original _winauth_ module that, in previous Devon versions, implemented the _Active Directory_ authentication and the _Single Sign-on_ authentication now has been divided in two independent modules. The _Active Directory_ authentication now is included in the new _Winauth-ad_ module whereas the _Single Sign-on_ implementation is included in a separate module called _Winauth-sso_.
 Also some improvements have been added to _Winauth-sso_ module to ease the way in which the module can be injected.
-
-For more information about the update see: https://github.com/devonfw/devon/wiki/Client-GUI-Sencha-Introduction-to-Devon4sencha[The Sencha docs within the devonfw Guide]
 
 === General updates
 
@@ -93,13 +91,13 @@ Currently we support Sencha Ext JS with support for Angular 2 coming soon. The c
 
 Cobigen can now also be used for code-generation within the context of an engagement. It is easily extensible and the process of how to extend it for your own project is well documented. This becomes already worthwhile ("delivers ROI") when having 5+ identical elements within the project. 
 
-For more information see: https://github.com/devonfw/cobigen/wiki[The Cobigen documentation] and the corresponding changer in the https://github.com/devonfw/devon/wiki/getting-started-Cobigen[devonfw Guide] and 
+For more information see: https://github.com/devonfw/cobigen/wiki[The Cobigen documentation] 
 
 === Angular 2
 
 With the official release of Angular 2 and TypeScript 2, we're slowly but steadily moving to embrace  these important new players in the  web development scene. We keep supporting the Angular 1 based devon4ng framework and are planning a migration of this framework to Angular 2 in the near future. For "Balu" we've have decided to integrate "vanilla" Angular 2.
 
-We have migrated the Restaurant Sample application to serve as a, documented and supported, blueprint for Angular 2 applications. Furthermore, we support three "kickstarter" projects which help engagement getting started with Angular2 - either using Bootstrap or Google´s Material Design - or, alternatively, Ionic 2 (the mobile framework on top of Angular 2). For more information see: https://github.com/devonfw/devonfw-angular2-kickstarter[Angular 2 Kickstarter] and https://github.com/devonfw/devonfw-ionic2-kickstarter/[Ionic 2 Kickstarter]
+We have migrated the Restaurant Sample application to serve as a, documented and supported, blueprint for Angular 2 applications. Furthermore, we support three "kickstarter" projects which help engagement getting started with Angular2 - either using Bootstrap or Google´s Material Design - or, alternatively, Ionic 2 (the mobile framework on top of Angular 2). 
 
 === devon4j 2.2.0 Release
 
@@ -123,18 +121,16 @@ More details on features added can be found at https://github.com/devonfw/devon4
 Devon4Sencha is an alternative view layer for web applications developed with devonfw. It is based on Sencha Ext JS. As it requires a license for commercial applications it is not provided as Open Source and is considered to be part of the IP of Capgemini.
 
 These libraries provide support for creating SPA (Single Page Applications) with a very rich set of components for both desktop and mobile. In the new version we extend this functionality to support for "Universal Apps", the Sencha specific term for true multi-device applications which make it possible to develop a single application for desktop, tablet as well as mobile devices. In the latest version Devon4Sencha has been upgraded to support Ext JS 6.2 and we now support the usage of Cobigen as well as Sencha Architect as extra option to improve developer productivity.
-For more information about the update see: https://github.com/devonfw/devon/wiki/Client-GUI-Sencha-Introduction-to-Devon4sencha[The Sencha docs within the devonfw Guide]
 
 === Devcon enhancements
 
 The Devon Console, Devcon, is a cross-platform command line tool running on the JVM that provides many automated tasks around the full life-cycle of Devon applications, from installing the basic working environment and generating a new project, to running a test server and deploying an application to production. It can be used by the engagements to integrate with their proprietary tool chain.
 
-In this new release we have added an optional graphical user interface (with integrated help) which makes using Devcon even easier to use. Another new feature is that it is now possible to easily extend it with commands just by adding your own or project specific Javascript files. This makes it an attractive option for project task automation. You can find more information in the https://github.com/devonfw/devon/wiki/devcon-command-developers-guide[Devcon Command Developers Guide]
+In this new release we have added an optional graphical user interface (with integrated help) which makes using Devcon even easier to use. Another new feature is that it is now possible to easily extend it with commands just by adding your own or project specific Javascript files. This makes it an attractive option for project task automation.
 
 === Ready for the Cloud 
 
-devonfw is in active use in the Cloud, with projects running on IBM Bluemix and on Amazon AWS. The focus is very much to keep Cloud-specific functionality decoupled from the devonfw core. The engagement can choose between - and easily configure the use of - either CloudFoundry or Spring Cloud (alternatively, you can run devonfw in Docker containers in the Cloud as well. See elsewhere in the release notes). For more information 
-about how to configure devonfw for use in the cloud see: https://github.com/devonfw/devon/wiki/cookbook-dockerization[devonfw on Docker] and https://github.com/devonfw/devon/wiki/devon-in-bluemix[devonfw in IBM Bluemix]
+devonfw is in active use in the Cloud, with projects running on IBM Bluemix and on Amazon AWS. The focus is very much to keep Cloud-specific functionality decoupled from the devonfw core. The engagement can choose between - and easily configure the use of - either CloudFoundry or Spring Cloud (alternatively, you can run devonfw in Docker containers in the Cloud as well. See elsewhere in the release notes). 
 
 === Spring Data 
 
@@ -175,7 +171,7 @@ For more information see: https://github.com/devonfw/devon4j/wiki/guide-database
 
 === Internationalisation (I18N) improvements
 
-Likewise, existing basic Internationalisation (I18N) support has been significantly enhanced through an new devonfw module and extended to support Ext JS and Angular 2 apps as well. This means that both server as well as client side applications can be made easily to support multiple languages ("locales"), using industry standard tools and without touching programming code (essential when working with teams of translators). For more information see: https://github.com/devonfw/devon-guide/wiki/cookbook-i18n-module[The I18N (Internationalization) module] and https://github.com/devonfw/devon-guide/wiki/Client-GUI-Sencha-i18n[Client GUI Sencha i18n]
+Likewise, existing basic Internationalisation (I18N) support has been significantly enhanced through an new devonfw module and extended to support Ext JS and Angular 2 apps as well. This means that both server as well as client side applications can be made easily to support multiple languages ("locales"), using industry standard tools and without touching programming code (essential when working with teams of translators). 
 
 === Asynchronous HTTP support 
 

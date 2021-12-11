@@ -8,7 +8,7 @@ toc::[]
 
 = devonfw Release notes 2.3 "Dash"
 
-== Release: improving & strengthening the Platform
+== Release: improving and strengthening the Platform
  
 We are proud to announce the immediate release of *devonfw version 2.3* (code named “_Dash_” during development).  This release comes with a bit of a delay as we decided to wait for the publication of devon4j 2.5. “Dash” contains a slew of new features but in essence it is already driven by what we expect to be the core focus of 2018: strengthening the platform and improving quality.
 
@@ -92,7 +92,7 @@ Furthermore: an email and Twitter micro service were integrated in my-thai-star.
 === Documentation refactoring
 
 The complete devonfw guide is restructured and refactored. Getting started guides are added for easy start with devonfw.Integration of the new Tutorial with the existing devonfw Guide whereby existing chapters of the previous tutorial were converted to Cookbook chapters. Asciidoctor is used for devonfw guide PDF generation. 
-See: https://github.com/devonfw/devon-guide/wiki
+See: https://github.com/devonfw/devonfw-guide/wiki
 
 === devon4ng
 
@@ -107,7 +107,7 @@ The following changes have been incorporated in devon4ng:
 
 === Admin interface for devon4j apps 
 
-The new version includes an Integration of an admin interface for devon4j apps (Spring Boot). This module is based on CodeCentric´s Spring Boot Admin (https://github.com/codecentric/spring-boot-admin). See: https://github.com/devonfw/devon-guide/wiki/Spring-boot-admin-Integration-with-devon4j
+The new version includes an Integration of an admin interface for devon4j apps (Spring Boot). This module is based on CodeCentric´s Spring Boot Admin (https://github.com/codecentric/spring-boot-admin).
 
 === Devcon 
 
@@ -191,7 +191,7 @@ The devonfw Harvesting process continues to add valuable components and modules 
 
 ==== Service Client support (for Micro service Projects). 
 
-This client is for consuming microservices from other application.This solution is already very flexible and customizable.As of now,this is suitable for small and simple project where two or three microservices are invoked. Donated by Jörg Hohwiller. See: https://github.com/devonfw/devon-microservices
+This client is for consuming microservices from other application.This solution is already very flexible and customizable.As of now,this is suitable for small and simple project where two or three microservices are invoked. Donated by Jörg Hohwiller. See: https://github.com/devonfw-forge/devonfw-microservices
 
 ==== JHipster devonfw code generation
 
@@ -199,15 +199,13 @@ This component was donated by the ADcenter in Valencia. It was made in order to 
 
 JHipster is a code generator based on Yeoman generators. Its default generator generator-jhipster generates a specific JHipster structure. The purpose of generator-jhipster-DevonModule is to generate the structure and files of a typical devon4j project. It is therefore equivalent to the standard devon4j application template based CobiGen code generation.
 
-See: https://github.com/devonfw/devon-guide/wiki/cookbook-devon-jhipster-module 
-
 ==== Simple Jenkins task status dashboard
 
 This component has been donated by, has been harvested from system in use by, Capgemini  Valencia. This dashboard, apart from an optional gamification element, allows the display of multiple Jenkins instances. 
 
 === And lots more, among others:
 
-* devon4j/devonfw docker based build IN a docker process. See: https://github.com/devonfw/devon-guide/wiki/Dockerfile-for-the-maven-based-spring.io-projects
+* devon4j/devonfw docker based build in a docker process.
 
 * CI test boot archetype. This is for unit testing.This will create a sample project and add sample web service to it. A Jenkins job will start devon4j server and will call web service.
 

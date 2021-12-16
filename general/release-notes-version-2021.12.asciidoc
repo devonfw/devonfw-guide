@@ -1,0 +1,74 @@
+:toc: macro
+toc::[]
+
+
+:doctype: book
+:reproducible:
+:source-highlighter: rouge
+:listing-caption: Listing
+
+
+= devonfw Release notes 2021.12
+
+== Introduction
+
+We are proud to announce the release of devonfw version 2021.12. 
+
+This release includes lots of addition of new features, updates and bug fixes but it is very important to highlight the following improvements:
+
+== devonfw IDE
+
+The consolidated list of features for this devonfw IDE release is as it follows.
+
+=== 2021.12.001
+
+Update with the following bugfixes and improvements:
+
+* https://github.com/devonfw/ide/issues/616[#616]: Default eclipse version not downloadable
+* https://github.com/devonfw/ide/pull/607[#607]: fix url from eclipse plugins
+* https://github.com/devonfw/ide/issues/453[#453]: Automatic plugin installation for IntelliJ
+* https://github.com/devonfw/ide/issues/601[#601]: Update of node.js to 14.17.6 to fix CVE-2021-22930
+* https://github.com/devonfw/ide/pull/625[#625]: There is no doIsQuiet yet for CobiGen
+
+== devon4j
+
+The consolidated list of features for this devon4j release is as it follows.
+
+=== 2021.04.003
+
+Bugfix release of with the following stories:
+
+* https://github.com/devonfw/devon4j/issues/336[#336]: archetype contains batch artefacts even when no batch was generated
+* https://github.com/devonfw/devon4j/issues/385[#385]: Access-control should honor roles by default
+* https://github.com/devonfw/devon4j/issues/397[#397]: security-jwt should support the claim "groups" from the microprofile jwt
+* https://github.com/devonfw/devon4j/issues/284[#284]: Support for synchronous rest client using HTTP client
+* https://github.com/devonfw/devon4j/issues/393[#393]: devon4j JpaInitializer documentation not matching releases
+* https://github.com/devonfw/devon4j/issues/216[#216]: ability to generate OpenApi files automatically from JAX-RS services
+
+Documentation is available at https://repo.maven.apache.org/maven2/com/devonfw/java/doc/devon4j-doc/2021.04.003/devon4j-doc-2021.04.003.pdf[devon4j guide 2021.04.003].
+The full list of changes for this release can be found in https://github.com/devonfw/devon4j/milestone/19?closed=1[milestone devon4j 2020.04.003].
+
+=== 2021.04.002
+
+Bugfix release of with the following stories:
+
+* https://github.com/devonfw/devon4j/issues/389[#389]: archetype build broken with ci-friendly-maven
+* https://github.com/devonfw/devon4j/pull/391[#391]: jasypt documentation improvements
+* https://github.com/devonfw/devon4j/pull/387[#387]: rebuild and updated diagram with drawio
+
+Documentation is available at https://repo.maven.apache.org/maven2/com/devonfw/java/doc/devon4j-doc/2021.04.002/devon4j-doc-2021.04.002.pdf[devon4j guide 2021.04.002].
+The full list of changes for this release can be found in https://github.com/devonfw/devon4j/milestone/18?closed=1[milestone devon4j 2020.04.002].
+
+== devon4ng
+
+In this release we have introduced some new samples to serve as a reference for integrating some popular 3rd-party component libraries like PrimeNG, NG-ZORRO and more with devon4ng. Also, all samples and templates are updated to the latest Angular 13:
+
+* https://github.com/devonfw/devon4ng/tree/develop/samples/AngularClarityLayout[AngularClarityLayout]: A sample front-end built with https://clarity.design[Clarity Design System].
+* https://github.com/devonfw/devon4ng/tree/develop/samples/AngularPrimeNGLayout[AngularPrimeNGLayout]: A front-end reference app for demoing the https://primefaces.org/primeng/showcase/#/[PrimeNG] library. 
+* https://github.com/devonfw/devon4ng/tree/develop/samples/AngularZorroLayout[AngularZorroLayout]: A front-end integrated with the https://ng.ant.design/docs/introduce/en[NG-ZORRO] library.
+* https://github.com/devonfw/devon4ng/tree/v13[v13]: Updated all samples and templates to Angular 13.
+
+== Trainings/tutorials   
+
+* Katakoda tutorials : https://katacoda.com/devonfw
+* Youtube tutorials : https://www.youtube.com/channel/UCtb1p-24jus-QoXy49t9Xzg

@@ -59,6 +59,30 @@ Bugfix release of with the following stories:
 Documentation is available at https://repo.maven.apache.org/maven2/com/devonfw/java/doc/devon4j-doc/2021.04.002/devon4j-doc-2021.04.002.pdf[devon4j guide 2021.04.002].
 The full list of changes for this release can be found in https://github.com/devonfw/devon4j/milestone/18?closed=1[milestone devon4j 2020.04.002].
 
+== Quarkus
+
+=== Documentation update
+
+* Separated the Java section of the homepage into 'General', 'Spring' and 'Quarkus'
+* Guiding the reader
+    - Pros and cons of Quarkus
+    - Guide to the Reader
+    - Guiding for a decision between Spring and Quarkus
+* Added getting started guide with Quarkus
+* Project structure: Defined 'new' modern project structure for Quarkus applications
+* Added and updated different technical guides for Quarkus
+
+=== Reference applications
+
+* devon4quarkus-product
+https://github.com/devonfw-sample/devon4quarkus-reference is application including a REST service for product management including different concepts documented in the devon4j documentation. Additionally it demonstrates Kubernetes deployment and Helm charts.
+
+* devon4quarkus-order
+https://github.com/devonfw-sample/devon4quarkus-order
+Application including a REST service for order management. Connected with the devon4quarkus-product application via REST client approach (gets the products from there)
+    - Similar feature as the devon4quarkus-product application
+    - Includes REST client using tkit-mp-restclient-plugin with API first approach
+
 == devon4ng
 
 In this release we have introduced some new samples to serve as a reference for integrating some popular 3rd-party component libraries like PrimeNG, NG-ZORRO and more with devon4ng. Also, all samples and templates are updated to the latest Angular 13:
@@ -81,6 +105,10 @@ In this release we have introduced some new samples to serve as a reference for 
  * Google protobuf integration (updated libraries, retry pattern)
  * Code review. Start your project with 0 Errors / 0 Warnings
  * Component options cleaned and reviewed
+
+== CobiGen
+
+This is bug fix release of CobiGen more details can be found in https://github.com/devonfw/cobigen/milestone/187?closed=1[here].
 
 == Trainings/tutorials   
 

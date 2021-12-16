@@ -68,6 +68,20 @@ In this release we have introduced some new samples to serve as a reference for 
 * https://github.com/devonfw/devon4ng/tree/develop/samples/AngularZorroLayout[AngularZorroLayout]: A front-end integrated with the https://ng.ant.design/docs/introduce/en[NG-ZORRO] library.
 * https://github.com/devonfw/devon4ng/tree/v13[v13]: Updated all samples and templates to Angular 13.
 
+== devon4net
+
+ * Real modular clean+onion architecture
+ * .NET 6 Updated
+ * API,Kafka, Protobuf, AWS templates reviewed 
+ * Component isolation (Any component can be used outside devon templates)
+ * Cloud native. AWS templates reviewed
+    - Modulairty
+    - Secrets and params as configuration options
+    - DynamoDB integration
+ * Google protobuf integration (updated libraries, retry pattern)
+ * Code review. Start your project with 0 Errors / 0 Warnings
+ * Component options cleaned and reviewed
+
 == Trainings/tutorials   
 
 * Katakoda tutorials : https://katacoda.com/devonfw

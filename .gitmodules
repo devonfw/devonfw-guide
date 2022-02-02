@@ -55,3 +55,6 @@
 [submodule "hangar.wiki"]
 	path = hangar.wiki
 	url = https://github.com/devonfw/hangar.wiki.git
+[submodule "devon4ts.wiki"]
+	path = devon4ts.wiki
+	url = https://github.com/devonfw/devon4ts.wiki.git

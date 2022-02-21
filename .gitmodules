@@ -1,60 +1,80 @@
 [submodule "devon4ng.wiki"]
 	path = devon4ng.wiki
 	url = https://github.com/devonfw/devon4ng.wiki.git
+	shallow = true
 [submodule "my-thai-star.wiki"]
 	path = my-thai-star.wiki
 	url = https://github.com/devonfw/my-thai-star.wiki.git
+	shallow = true
 [submodule "cicdgen.wiki"]
 	path = cicdgen.wiki
 	url = https://github.com/devonfw/cicdgen.wiki.git
+	shallow = true
 [submodule "devon4net.wiki"]
 	path = devon4net.wiki
 	url = https://github.com/devonfw/devon4net.wiki.git
+	shallow = true
 [submodule "devon4j.wiki"]
 	path = devon4j.wiki
 	url = https://github.com/devonfw/devon4j.wiki.git
+	shallow = true
 [submodule "ide.wiki"]
 	path = ide.wiki
 	url = https://github.com/devonfw/ide.wiki.git
+	shallow = true
 [submodule "devon4node.wiki"]
 	path = devon4node.wiki
 	url = https://github.com/devonfw/devon4node.wiki.git
+	shallow = true
 [submodule "mrchecker.wiki"]
 	path = mrchecker.wiki
 	url = https://github.com/devonfw/mrchecker.wiki.git
+	shallow = true
 [submodule "production-line.wiki"]
 	path = production-line.wiki
 	url = https://github.com/devonfw/production-line.wiki.git
+	shallow = true
 [submodule "cobigen.wiki"]
 	path = cobigen.wiki
 	url = https://github.com/devonfw/cobigen.wiki.git
+	shallow = true
 [submodule "getting-started.wiki"]
 	path = getting-started.wiki
 	url = https://github.com/devonfw/getting-started.wiki.git
+	shallow = true
 [submodule "shop-floor.wiki"]
 	path = shop-floor.wiki
 	url = https://github.com/devonfw/shop-floor.wiki.git
+	shallow = true
 [submodule "dashboard.wiki"]
 	path = dashboard.wiki
 	url = https://github.com/devonfw/dashboard.wiki.git
+	shallow = true
 [submodule "solicitor.wiki"]
 	path = solicitor.wiki
 	url = https://github.com/devonfw/solicitor.wiki.git
+	shallow = true
 [submodule "jump-the-queue.wiki"]
 	path = jump-the-queue.wiki
 	url = https://github.com/devonfw/jump-the-queue.wiki.git
+	shallow = true
 [submodule "sonar-devon4j-plugin.wiki"]
 	path = sonar-devon4j-plugin.wiki
 	url = https://github.com/devonfw/sonar-devon4j-plugin.wiki.git
+	shallow = true
 [submodule "devonfw-github"]
 	path = devonfw-github
 	url = https://github.com/devonfw/.github.git
+	shallow = true
 [submodule "devon4quarkus.wiki"]
 	path = devon4quarkus.wiki
 	url = https://github.com/devonfw/devon4quarkus.wiki.git
+	shallow = true
 [submodule "hangar.wiki"]
 	path = hangar.wiki
 	url = https://github.com/devonfw/hangar.wiki.git
+	shallow = true
 [submodule "devon4ts.wiki"]
 	path = devon4ts.wiki
 	url = https://github.com/devonfw/devon4ts.wiki.git
+	shallow = true

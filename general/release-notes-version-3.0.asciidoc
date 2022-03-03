@@ -14,15 +14,15 @@ We are proud to announce the immediate release of devonfw version 3.0 (code name
 
 The new stack names are the following:
 
-* devon4j, former OASP4J, is the new name for Java. 
-* devon4ng, former OASP4JS, is the new one for Angular.
+* devon4j, former devon4j, is the new name for Java. 
+* devon4ng, former devon4ng, is the new one for Angular.
 * devon4net, is the new .NET stack.
 * devon4X, is the new stack for Xamarin development.
 * devon4node, is the new devonfw incubator for node.js. 
 
-The new devon4j version was created directly from the latest oasp4j version (3.0.0). Hence it brings all the features and values that oasp4j offered. However, the namespace migration was used to do some housekeeping and remove deprecated code as well as reduce dependencies. Therefore your data-access layer will no longer have to depend on any third party except for devon4j as well as of course the JPA. We also have improved the application template that now comes with a modern JSON logging ready for docker and logstash based environments.
+The new devon4j version was created directly from the latest devon4j version (3.0.0). Hence it brings all the features and values that devon4j offered. However, the namespace migration was used to do some housekeeping and remove deprecated code as well as reduce dependencies. Therefore your data-access layer will no longer have to depend on any third party except for devon4j as well as of course the JPA. We also have improved the application template that now comes with a modern JSON logging ready for docker and logstash based environments.
 
-To help you upgrading we introduced a migration feature in devcon. This can automatically migrate your code from oasp4j (even older versions starting from 2.4.0) to the latest version of devon4j. There might be some small manual changes left to do but 90% of the migration will be done automatically for you. 
+To help you upgrading we introduced a migration feature in devcon. This can automatically migrate your code from devon4j (even older versions starting from 2.4.0) to the latest version of devon4j. There might be some small manual changes left to do but 90% of the migration will be done automatically for you. 
 
 Besides, the first version of the devonfw plugin for SonarQube has been released. It extends SonarQube with the ability to validate your code according to the devon4j architecture. More details at https://github.com/devonfw/sonar-devon-plugin.
 

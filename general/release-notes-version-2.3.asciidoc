@@ -8,15 +8,15 @@ toc::[]
 
 = devonfw Release notes 2.3 "Dash"
 
-== Release: improving & strengthening the Platform
+== Release: improving and strengthening the Platform
  
-We are proud to announce the immediate release of *devonfw version 2.3* (code named “_Dash_” during development).  This release comes with a bit of a delay as we decided to wait for the publication of OASP4j 2.5. “Dash” contains a slew of new features but in essence it is already driven by what we expect to be the core focus of 2018: strengthening the platform and improving quality.
+We are proud to announce the immediate release of *devonfw version 2.3* (code named “_Dash_” during development).  This release comes with a bit of a delay as we decided to wait for the publication of devon4j 2.5. “Dash” contains a slew of new features but in essence it is already driven by what we expect to be the core focus of 2018: strengthening the platform and improving quality.
 
 After one year and a half of rapid expansion, we expect the next release(s) of the devonfw 2.x series to be fully focused on deepening the platform rather than expanding it. That is to say: we should work on improving existing features rather than adding new ones and strengthen the qualitative aspects of the software development life cycle, i.e. testing, infrastructure (CI, provisioning) etc.
 
 “Dash” already is very much an example of this. This release contains the Allure Test Framework as an incubator. This is an automated testing framework for functional testing of web applications. Another incubator is the devonfw Shop Floor which intended to be a compilation of DevOps experiences from the devonfw perspective. And based on this devonfw has been _OpenShift Primed_ (“certified”) by Red Hat. 
 
-There is a whole range of new features and improvements which can be seen in that light. OASP4j 2.5 changes and improves the package structure of the core Java framework. The My Thai Star sample app has now been fully integrated in the different frameworks and the devonfw Guide has once again been significantly expanded and improved. 
+There is a whole range of new features and improvements which can be seen in that light. devon4j 2.5 changes and improves the package structure of the core Java framework. The My Thai Star sample app has now been fully integrated in the different frameworks and the devonfw Guide has once again been significantly expanded and improved. 
 
 == An industrialized platform for the ADcenter
 
@@ -54,28 +54,24 @@ The *devonfw dist*, or distribution, i.e. the central zip file which contains th
 ** Yarn package manager included.
 ** Python3 integrated
 ** Spyder3 IDE integrated in python3 installation
-** OASP4JS-application-template for Angular5 at workspaces/examples
+** devon4ng-application-template for Angular5 at workspaces/examples
 ** Devon4sencha starter templates updated
 
-=== OASP4j 2.5
+=== devon4j 2.5
 
 ==== Support for JAX-RS & JAX-WS clients
 
 With the aim to enhance the ease in consuming RESTful and SOAP web services, JAX-RS and JAX-WS clients have been introduced. They enable developers to concisely and efficiently implement portable client-side solutions that leverage existing and well-established client-side HTTP connector implementations. Furthermore, the getting started time for consuming web services has been considerably reduced with the default configuration out-of-the-box which can be tweaked as per individual project requirements. 
 
-See: https://github.com/oasp/oasp4j/issues/358
+See: https://github.com/devonfw/devon4j/issues/358
 
-==== Separate security logs for OASP4J log component
+==== Separate security logs for devon4j log component
 
-Based on OWASP(Open Web Application Security Project), OASP4J aims to give developers more control and flexibility with the logging of security events and tracking of forensic information. Furthermore, it helps classifying the information in log messages and applying masking when necessary. It provides powerful security features while based on set of logging APIs developers are already familiar with over a decade of their experience with Log4J and its successors. 
-
-See: https://github.com/oasp/oasp4j/issues/569
+Based on OWASP(Open Web Application Security Project), devon4j aims to give developers more control and flexibility with the logging of security events and tracking of forensic information. Furthermore, it helps classifying the information in log messages and applying masking when necessary. It provides powerful security features while based on set of logging APIs developers are already familiar with over a decade of their experience with Log4J and its successors. 
 
 ==== Support for Microservices
 
-Integration of an OASP4J application to a Microservices environment can now be leveraged with this release of OASP4J. Introduction of service clients for RESTful and SOAP web services based on Java EE give developers agility and ease to access microservices in the Devon framework. It significantly cuts down the efforts on part of developers around boilerplate code and stresses more focus on the business code improving overall efficiency and quality of deliverables.
-
-See: https://github.com/oasp/oasp4j/pull/589/commits
+Integration of an devon4j application to a Microservices environment can now be leveraged with this release of devon4j. Introduction of service clients for RESTful and SOAP web services based on Java EE give developers agility and ease to access microservices in the Devon framework. It significantly cuts down the efforts on part of developers around boilerplate code and stresses more focus on the business code improving overall efficiency and quality of deliverables.
 
 === Cobigen
 
@@ -83,24 +79,24 @@ A new version of Cobigen has been included. New features include:
  
 * Swagger/Yaml Plugin for CobiGen. CobiGen is able to read a swagger definition file that follows the OpenAPI 3.0 spec and generate code. A preliminary release was already included in 2.2.1 but the current version is much more mature and stable. See: https://github.com/devonfw/cobigen/wiki/howto_openapi_generation
 * Integration of CobiGen into Maven build process. This already existed but has been improved. It consists mainly of documentation + better log output and bug fixes. See: https://github.com/devonfw/cobigen/wiki/cobigen-maven_configuration
-* CobiGen Ionic CRUD App generation based on https://github.com/oasp/oasp4js-ionic-application-template
+* CobiGen Ionic CRUD App generation based on https://github.com/devonfw/devon4ng-ionic-application-template
 * Cobigen_Templates project and docs updated
 * Bugfixes and Hardening
 
 === My Thai Star Sample Application
 
-From this release on the My Thai Star application has been fully integrated in the different frameworks in the platform. Further more, a more modularized approach has been followed in the current release of My Thai star application to decouple client from implementation details. Which provides better encapsulation of code and dependency management for API and implementation classes. This has been achieved with creation of a new “API” module that contain interfaces for REST services and corresponding Request/Response objects. With existing “Core” module being dependent on “API” module. To read further you can follow the link https://github.com/oasp/my-thai-star/wiki/java-design#basic-architecture-details 
+From this release on the My Thai Star application has been fully integrated in the different frameworks in the platform. Further more, a more modularized approach has been followed in the current release of My Thai star application to decouple client from implementation details. Which provides better encapsulation of code and dependency management for API and implementation classes. This has been achieved with creation of a new “API” module that contain interfaces for REST services and corresponding Request/Response objects. With existing “Core” module being dependent on “API” module. To read further you can follow the link https://github.com/devonfw/my-thai-star/wiki/java-design#basic-architecture-details 
 
-Furthermore: an email and Twitter micro service were integrated in my-thai-star. This is just for demonstration purposes. A full micro service framework is already part of oasp4j 2.5.0
+Furthermore: an email and Twitter micro service were integrated in my-thai-star. This is just for demonstration purposes. A full micro service framework is already part of devon4j 2.5.0
 
 === Documentation refactoring
 
 The complete devonfw guide is restructured and refactored. Getting started guides are added for easy start with devonfw.Integration of the new Tutorial with the existing devonfw Guide whereby existing chapters of the previous tutorial were converted to Cookbook chapters. Asciidoctor is used for devonfw guide PDF generation. 
-See: https://github.com/devonfw/devon-guide/wiki
+See: https://github.com/devonfw/devonfw-guide/wiki
 
-=== OASP4JS
+=== devon4ng
 
-The following changes have been incorporated in OASP4JS:
+The following changes have been incorporated in devon4ng:
 
 * Angular CLI 1.6.0,
 * Angular 5.1,
@@ -109,9 +105,9 @@ The following changes have been incorporated in OASP4JS:
 * Core and Shared Modules included to follow the recommended Angular projects structure, 
 * Yarn and NPM compliant since both lock files are included in order to get a stable installation.
 
-=== Admin interface for oasp4j apps 
+=== Admin interface for devon4j apps 
 
-The new version includes an Integration of an admin interface for oasp4j apps (Spring Boot). This module is based on CodeCentric´s Spring Boot Admin (https://github.com/codecentric/spring-boot-admin). See: https://github.com/devonfw/devon-guide/wiki/Spring-boot-admin-Integration-with-devon4j
+The new version includes an Integration of an admin interface for devon4j apps (Spring Boot). This module is based on CodeCentric´s Spring Boot Admin (https://github.com/codecentric/spring-boot-admin).
 
 === Devcon 
 
@@ -187,7 +183,7 @@ The .NET Core and Xamarin frameworks are still under development by a workgroup 
 
 OpenShift is a supported distribution of Kubernetes from Red Hat for container-based software deployment and management. It is using Docker containers and DevOps tools for accelerated application development. Using OpenShift allows Capgemini to avoid Cloud Vendor lock-in. OpenShift provides devonfw with a state of the art CI/CD environment (devonfw Shop Floor), providing devonfw with a platform for the whole development life cycle: from development to staging / deploy.
 
-See https://hub.openshift.com/primed/120-capgemini and https://github.com/oasp/s2i
+See https://hub.openshift.com/primed/120-capgemini
 
 === Harvested components and modules
 
@@ -195,24 +191,22 @@ The devonfw Harvesting process continues to add valuable components and modules 
 
 ==== Service Client support (for Micro service Projects). 
 
-This client is for consuming microservices from other application.This solution is already very flexible and customizable.As of now,this is suitable for small and simple project where two or three microservices are invoked. Donated by Jörg Hohwiller. See: https://github.com/devonfw/devon-microservices
+This client is for consuming microservices from other application.This solution is already very flexible and customizable.As of now,this is suitable for small and simple project where two or three microservices are invoked. Donated by Jörg Hohwiller. See: https://github.com/devonfw-forge/devonfw-microservices
 
 ==== JHipster devonfw code generation
 
 This component was donated by the ADcenter in Valencia. It was made in order to comply with strong requirements (especially from the French BU) to use jHipster for code generation.
 
-JHipster is a code generator based on Yeoman generators. Its default generator generator-jhipster generates a specific JHipster structure. The purpose of generator-jhipster-DevonModule is to generate the structure and files of a typical OASP4j project. It is therefore equivalent to the standard OASP4j application template based CobiGen code generation.
-
-See: https://github.com/devonfw/devon-guide/wiki/cookbook-devon-jhipster-module 
+JHipster is a code generator based on Yeoman generators. Its default generator generator-jhipster generates a specific JHipster structure. The purpose of generator-jhipster-DevonModule is to generate the structure and files of a typical devon4j project. It is therefore equivalent to the standard devon4j application template based CobiGen code generation.
 
 ==== Simple Jenkins task status dashboard
 
-This component has been donated by, has been harvested from system in use by, Capgemini  Valencia. This dashboard, apart from an optional gamification element, allows the display of multiple Jenkins instances. See: https://github.com/oasp/jenkins_view 
+This component has been donated by, has been harvested from system in use by, Capgemini  Valencia. This dashboard, apart from an optional gamification element, allows the display of multiple Jenkins instances. 
 
 === And lots more, among others:
 
-* OASP4J/devonfw docker based build IN a docker process. See: https://github.com/devonfw/devon-guide/wiki/Dockerfile-for-the-maven-based-spring.io-projects
+* devon4j/devonfw docker based build in a docker process.
 
-* CI test boot archetype. This is for unit testing.This will create a sample project and add sample web service to it. A Jenkins job will start oasp4j server and will call web service. See: https://github.com/devonfw/devonfw-shop-floor/tree/master/testing/Oasp4jTestingScripts
+* CI test boot archetype. This is for unit testing.This will create a sample project and add sample web service to it. A Jenkins job will start devon4j server and will call web service.
 
-* CI test Angular starterTemplate. Testing automation for Angular applications (My Thai Star) in Continuous Integration environments by using Headless browsers and creating Node.js scripts. See: https://github.com/oasp/my-thai-star/blob/develop/angular/package.json#L8-L12 and https://github.com/oasp/my-thai-star/blob/develop/angular/karma.conf.js
+* CI test Angular starterTemplate. Testing automation for Angular applications (My Thai Star) in Continuous Integration environments by using Headless browsers and creating Node.js scripts. See: https://github.com/devonfw/my-thai-star/blob/develop/angular/package.json#L8-L12 and https://github.com/devonfw/my-thai-star/blob/develop/angular/karma.conf.js

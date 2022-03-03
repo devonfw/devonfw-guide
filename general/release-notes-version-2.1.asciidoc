@@ -8,13 +8,13 @@ toc::[]
 
 = Release notes devonfw 2.1.1 "Balu"
 
-== Version 2.1.2: OASP4J updates & some new features
+== Version 2.1.2: devon4j updates and some new features
 
 We've released the latest update release of devonfw in the _Balu_ series: version 2.1.2. The next major release, code named _Courage_, will be released approximately the end of June. This current release contains the following items:
 
-=== OASP4j 2.3.0 Release
+=== devon4j 2.3.0 Release
 
-Friday the 12th of May 2017 OASP4J version 2.3.0 was released. Major features added are : 
+Friday the 12th of May 2017 devon4j version 2.3.0 was released. Major features added are : 
 
 - Database Integration with PostGres, MSSQL Server, MariaDB
 - Added docs folder for gh pages and added oomph setups
@@ -25,8 +25,7 @@ Friday the 12th of May 2017 OASP4J version 2.3.0 was released. Major features ad
 - Bugfix: Fixed the error received when the Spring Boot Application from sample application that is created from maven archetype is launched
 - Bugfix: Fix for 404 error received when clicked on the link '1. Table' in index.html of the sample application created from maven archetype
 
-More details on features added can be found at https://github.com/oasp/oasp4j/milestone/23?closed=1 . 
-The OASP4j wiki and other documents are updated for release 2.3.0. 
+The devon4j wiki and other documents are updated for release 2.3.0. 
 
 === CobiGen Enhancements
 
@@ -39,29 +38,23 @@ The "nested data" use case is when there are 3 or more entities which are interr
 
 Apart from the SOAP code generation, the capability to express nested relationships have been added to the existing ReST code generator as well.
 
-See: https://github.com/devonfw/devon-guide/wiki/cookbook-cobigen-advanced-use-cases-soap-and-nested-data
-
 === Micro services module (Spring Cloud/Netflix OSS)
 
 To make it easier for devonfw users to design and develop applications based on microservices, this release provides a series of archetypes and resources based on _Spring Cloud Netflix_ to automate the creation and configuration of microservices.
 
-New documentation ind de devonfw Guide contains all the details to start https://github.com/devonfw-forge/devon-guide/wiki/devon-microservices[creating microservices with devonfw]
+New documentation ind de devonfw Guide contains all the details to start https://github.com/devonfw-forge/devonfw-microservices[creating microservices with devonfw]
 
 === Spring Integration Module
 
-Based on the _Java Message Service_ (JMS) and _Spring Integration_, the devonfw _Integration module_ provides a communication system (sender/subscriber) out-of-the-box with simple channels (only to send and read messages), request and reply channels (to send messages and responses) and request & reply asynchronously channels. You can find more details about the implementation in the https://github.com/devonfw/devon-guide/wiki/cookbook-integration-module[devonfw guide]. 
+Based on the _Java Message Service_ (JMS) and _Spring Integration_, the devonfw _Integration module_ provides a communication system (sender/subscriber) out-of-the-box with simple channels (only to send and read messages), request and reply channels (to send messages and responses) and request & reply asynchronously channels. 
 
-=== WebSphere & Wildfly deployment documentation
-
-The new version of devonfw contains more elaborate and updated documentation about deployment on https://github.com/devonfw/devon-guide/wiki/cookbook-Deployment-on-WebSphere[WebSpere] and https://github.com/devonfw/devon-guide/wiki/cookbook-Deployment-on-Wildfly[Wildfly].
-
-== Version 2.1.1 Updates, fixes & some new features
+== Version 2.1.1 Updates, fixes and some new features
 
 === CobiGen code-generator fixes
 
 The CobiGen incremental code generator released in the previous version contained a regression which has now been fixed. Generating services in Batch mode whereby a package can be given as an input, using all Entities contained in that package, works again as expected.
 
-For more information see: https://github.com/devonfw/cobigen/wiki[The CobiGen documentation] and the corresponding change in the https://github.com/devonfw/devon/wiki/getting-started-Cobigen[devonfw Guide]
+For more information see: https://github.com/devonfw/cobigen/wiki[The CobiGen documentation]
 
 === Devcon enhancements
 
@@ -76,13 +69,11 @@ in Devon4Sencha there are changes in the sample application. It now complies ful
 The original _winauth_ module that, in previous Devon versions, implemented the _Active Directory_ authentication and the _Single Sign-on_ authentication now has been divided in two independent modules. The _Active Directory_ authentication now is included in the new _Winauth-ad_ module whereas the _Single Sign-on_ implementation is included in a separate module called _Winauth-sso_.
 Also some improvements have been added to _Winauth-sso_ module to ease the way in which the module can be injected.
 
-For more information about the update see: https://github.com/devonfw/devon/wiki/Client-GUI-Sencha-Introduction-to-Devon4sencha[The Sencha docs within the devonfw Guide]
-
 === General updates
 
 There are a series of updates to the devonfw documentation, principally the devonfw Guide. Further more, from this release on, you can find the devonfw guide in the _doc_ folder of the distribution.
 
-Furthermore, the OASP4J and devonfw source-code in the "examples" workspace, have been updated to the latest version.
+Furthermore, the devon4j and devonfw source-code in the "examples" workspace, have been updated to the latest version.
 
 == Version 2.1 New features, improvements and updates
 
@@ -100,17 +91,17 @@ Currently we support Sencha Ext JS with support for Angular 2 coming soon. The c
 
 Cobigen can now also be used for code-generation within the context of an engagement. It is easily extensible and the process of how to extend it for your own project is well documented. This becomes already worthwhile ("delivers ROI") when having 5+ identical elements within the project. 
 
-For more information see: https://github.com/devonfw/cobigen/wiki[The Cobigen documentation] and the corresponding changer in the https://github.com/devonfw/devon/wiki/getting-started-Cobigen[devonfw Guide] and 
+For more information see: https://github.com/devonfw/cobigen/wiki[The Cobigen documentation] 
 
 === Angular 2
 
-With the official release of Angular 2 and TypeScript 2, we're slowly but steadily moving to embrace  these important new players in the  web development scene. We keep supporting the Angular 1 based OASP4js framework and are planning a migration of this framework to Angular 2 in the near future. For "Balu" we've have decided to integrate "vanilla" Angular 2.
+With the official release of Angular 2 and TypeScript 2, we're slowly but steadily moving to embrace  these important new players in the  web development scene. We keep supporting the Angular 1 based devon4ng framework and are planning a migration of this framework to Angular 2 in the near future. For "Balu" we've have decided to integrate "vanilla" Angular 2.
 
-We have migrated the Restaurant Sample application to serve as a, documented and supported, blueprint for Angular 2 applications. Furthermore, we support three "kickstarter" projects which help engagement getting started with Angular2 - either using Bootstrap or Google´s Material Design - or, alternatively, Ionic 2 (the mobile framework on top of Angular 2). For more information see: https://github.com/devonfw/devonfw-angular2-kickstarter[Angular 2 Kickstarter] and https://github.com/devonfw/devonfw-ionic2-kickstarter/[Ionic 2 Kickstarter]
+We have migrated the Restaurant Sample application to serve as a, documented and supported, blueprint for Angular 2 applications. Furthermore, we support three "kickstarter" projects which help engagement getting started with Angular2 - either using Bootstrap or Google´s Material Design - or, alternatively, Ionic 2 (the mobile framework on top of Angular 2). 
 
-=== OASP4J 2.2.0 Release
+=== devon4j 2.2.0 Release
 
-A new release of OASP4J, version 2.2.0, is included in this release of devonfw. This release mainly focuses on server side of oasp. i.e oasp4j.
+A new release of devon4j, version 2.2.0, is included in this release of devonfw. This release mainly focuses on server side of devonfw. i.e devon4j.
 
 Major features added are : 
 
@@ -119,53 +110,47 @@ Major features added are :
 * Database Integration with Oracle 11g
 * Added Servlet for HTTP-Debugging
 * Refactored code and improved JavaDoc
-* Bugfix: mvn spring-boot:run executes successfully for oasp4j application created using oasp4j template 
+* Bugfix: mvn spring-boot:run executes successfully for devon4j application created using devon4j template 
 * Added subsystem tests of SalesmanagementRestService and several other tests
-* Added Tests to test java packages conformance to OASP conventions
+* Added Tests to test java packages conformance to devonfw conventions
 
-More details on features added can be found at https://github.com/oasp/oasp4j/milestone/19?closed=1(here). The OASP4j wiki and other documents are updated for release 2.2.0. 
+More details on features added can be found at https://github.com/devonfw/devon4j/milestone/19?closed=1(here). The devon4j wiki and other documents are updated for release 2.2.0. 
 
 === Devon4Sencha
 
 Devon4Sencha is an alternative view layer for web applications developed with devonfw. It is based on Sencha Ext JS. As it requires a license for commercial applications it is not provided as Open Source and is considered to be part of the IP of Capgemini.
 
 These libraries provide support for creating SPA (Single Page Applications) with a very rich set of components for both desktop and mobile. In the new version we extend this functionality to support for "Universal Apps", the Sencha specific term for true multi-device applications which make it possible to develop a single application for desktop, tablet as well as mobile devices. In the latest version Devon4Sencha has been upgraded to support Ext JS 6.2 and we now support the usage of Cobigen as well as Sencha Architect as extra option to improve developer productivity.
-For more information about the update see: https://github.com/devonfw/devon/wiki/Client-GUI-Sencha-Introduction-to-Devon4sencha[The Sencha docs within the devonfw Guide]
 
 === Devcon enhancements
 
 The Devon Console, Devcon, is a cross-platform command line tool running on the JVM that provides many automated tasks around the full life-cycle of Devon applications, from installing the basic working environment and generating a new project, to running a test server and deploying an application to production. It can be used by the engagements to integrate with their proprietary tool chain.
 
-In this new release we have added an optional graphical user interface (with integrated help) which makes using Devcon even easier to use. Another new feature is that it is now possible to easily extend it with commands just by adding your own or project specific Javascript files. This makes it an attractive option for project task automation. You can find more information in the https://github.com/devonfw/devon/wiki/devcon-command-developers-guide[Devcon Command Developers Guide]
+In this new release we have added an optional graphical user interface (with integrated help) which makes using Devcon even easier to use. Another new feature is that it is now possible to easily extend it with commands just by adding your own or project specific Javascript files. This makes it an attractive option for project task automation.
 
 === Ready for the Cloud 
 
-devonfw is in active use in the Cloud, with projects running on IBM Bluemix and on Amazon AWS. The focus is very much to keep Cloud-specific functionality decoupled from the devonfw core. The engagement can choose between - and easily configure the use of - either CloudFoundry or Spring Cloud (alternatively, you can run devonfw in Docker containers in the Cloud as well. See elsewhere in the release notes). For more information 
-about how to configure devonfw for use in the cloud see: https://github.com/devonfw/devon/wiki/cookbook-dockerization[devonfw on Docker] and https://github.com/devonfw/devon/wiki/devon-in-bluemix[devonfw in IBM Bluemix]
+devonfw is in active use in the Cloud, with projects running on IBM Bluemix and on Amazon AWS. The focus is very much to keep Cloud-specific functionality decoupled from the devonfw core. The engagement can choose between - and easily configure the use of - either CloudFoundry or Spring Cloud (alternatively, you can run devonfw in Docker containers in the Cloud as well. See elsewhere in the release notes). 
 
 === Spring Data 
 
-The java server stack within devonfw, OASP4J,  is build on a very solid DDD architecture  which uses JPA for its data access layer. We now offer integration of Spring Data as an alternative or to be used in conjunction with JPA. Spring Data offers significant advantages over JPA through its query mechanism which allows the developer to specify complex queries in an easy way. Overall working with Spring Data should be quite more productive compared with JPA for the average or junior developer. And extra advantage is that Spring Data also allows - and comes with support for - the usage of NoSQL databases like MongoDB, Cassandra, DynamoDB etc. THis becomes especially critical in the Cloud where NoSQL databases typically offer better scalability than relational databases.   
-For more information see: https://github.com/devonfw/devon/wiki/cookbook-spring-data[Integrating Spring Data in OASP4J]
+The java server stack within devonfw, devon4j,  is build on a very solid DDD architecture  which uses JPA for its data access layer. We now offer integration of Spring Data as an alternative or to be used in conjunction with JPA. Spring Data offers significant advantages over JPA through its query mechanism which allows the developer to specify complex queries in an easy way. Overall working with Spring Data should be quite more productive compared with JPA for the average or junior developer. And extra advantage is that Spring Data also allows - and comes with support for - the usage of NoSQL databases like MongoDB, Cassandra, DynamoDB etc. THis becomes especially critical in the Cloud where NoSQL databases typically offer better scalability than relational databases.   
 
 === Videos content in the devonfw Guide
 
-The devonfw Guide is the single, authoritative tutorial and reference ("cookbook") for all things devonfw, targeted at the general developer working with the platform (there is another document for Architects).  It is clear and concise but because of the large scope and wide reach of devonfw, it comes with a hefty 370+ pages. For the impatient - and sometimes images do indeed say more than words - we've added 17 videos to the Guide which significantly speed up getting started with the diverse aspects of devonfw.
+The devonfw Guide is the single, authoritative tutorial and reference ("cookbook") for all things devonfw, targeted at the general developer working with the platform (there is another document for Architects).  It is clear and concise but because of the large scope and wide reach of devonfw, it comes with a hefty 370+ pages. For the impatient - and sometimes images do indeed say more than words - we've added videos to the Guide which significantly speed up getting started with the diverse aspects of devonfw.
 
-For more information see: https://coconet.capgemini.com/sf/frs/do/listReleases/projects.apps2_devon/frs.videos[Video releases on TeamForge]
+For more information on videos check out our https://www.youtube.com/channel/UCtb1p-24jus-QoXy49t9Xzg[devonfw Youtube channel] 
 
 === Containerisation with Docker and the Production Line
 
 Docker (see: https://www.docker.com/) containers wrap a piece of software in a complete filesystem that contains everything needed to run: code, runtime, system tools, system libraries – anything that can be installed on a server. Docker containers resemble virtual machines but are far more resource efficient. Because of this, Docker and related technologies like Kubernetes are taking the Enterprise and Cloud by storm. We have certified and documented the usage of devonfw on Docker so we can now firmly state that "devonfw is Docker" ready. All the more so as the iCSD Production Line is now supporting devonfw as well. The Production Line is a Docker based set of methods and tools that make possible to develop custom software to our customers on time and with the expected quality. By having first-class support for devonfw on the Production Line, iCSD has got an unified, integral solution which covers all the phases involved on the application development cycle from requirements to testing and hand-off to the client. 
 
-See: https://github.com/devonfw/devon/wiki/cookbook-dockerization[devonfw on Docker] and https://github.com/devonfw/devon/wiki/devon-guide-production-line[devonfw on the Production Line]
-
-
 === Eclipse Neon 
 
-devonfw comes with its own pre configured and enhanced Eclipse based IDE:  the Open Source "OASP IDE" and "devonfw Distr" which falls under Capgemini IP. We've updated both versions to the latest stable version of Eclipse, Neon. From Balu onwards we support the IDE on Linux as well and we offer downloadable versions for both Windows and Linux. 
+devonfw comes with its own pre configured and enhanced Eclipse based IDE:  the Open Source "devonfw IDE" and "devonfw Distr" which falls under Capgemini IP. We've updated both versions to the latest stable version of Eclipse, Neon. From Balu onwards we support the IDE on Linux as well and we offer downloadable versions for both Windows and Linux. 
 
-See: https://github.com/devonfw/devon-guide/wiki/getting-started-the-devon-ide[The Devon IDE]
+See: https://github.com/devonfw/ide/wiki[The Devon IDE]
 
 === Default Java 8 with Java 7 compatibility
 
@@ -177,24 +162,20 @@ In order to fully support the move towards the Cloud, from version 2.1. "Balu" o
 
 === Initial ATOM support
 
-Atom is a text editor that's modern, approachable, yet hackable to the core - a tool you can customize to do anything but also use productively without ever touching a config file. It is turning into a standard for modern web development. In devonfw 2.1 "Balu" we provide a script which installs automatically the most recent version of Atom in the devonfw distribution with a pre-configured set of essential plugins. See: https://github.com/oasp/oasp-atom-ide/wiki[OASP/devonfw Atom editor ("IDE") settings & packages]
+Atom is a text editor that's modern, approachable, yet hackable to the core - a tool you can customize to do anything but also use productively without ever touching a config file. It is turning into a standard for modern web development. In devonfw 2.1 "Balu" we provide a script which installs automatically the most recent version of Atom in the devonfw distribution with a pre-configured set of essential plugins. 
 
 === Database support
 
 Through JPA (and now Spring Data as well) devonfw supports many databases. In Balu we've extended this support to prepared configuration, extensive documentations and supporting examples for all major "Enterprise" DB servers. So it becomes even easier for engagements to start using these standard database options. Currently we provide this extended support for Oracle, Microsoft SQL Server, MySQL and PostgreSQL.
-For more information see: https://github.com/devonfw/devon4j/wiki/guide-database-migration[OASP Database Migration Guide]
-
-=== File upload and download 
-
-File up and download was supported in previous version of the framework, but as these operations are common but complex, we've extended the base functionality and improved the available documentation so it becomes substantially easier to offer both File up- as well as download in devonfw based applications. See: https://github.com/devonfw/devon-guide/wiki/cookbook-File-Upload-and-Download[devonfw Guide Cookbook: File Upload and Download]
+For more information see: https://github.com/devonfw/devon4j/wiki/guide-database-migration[devonfw Database Migration Guide]
 
 === Internationalisation (I18N) improvements
 
-Likewise, existing basic Internationalisation (I18N) support has been significantly enhanced through an new devonfw module and extended to support Ext JS and Angular 2 apps as well. This means that both server as well as client side applications can be made easily to support multiple languages ("locales"), using industry standard tools and without touching programming code (essential when working with teams of translators). For more information see: https://github.com/devonfw/devon-guide/wiki/cookbook-i18n-module[The I18N (Internationalization) module] and https://github.com/devonfw/devon-guide/wiki/Client-GUI-Sencha-i18n[Client GUI Sencha i18n]
+Likewise, existing basic Internationalisation (I18N) support has been significantly enhanced through an new devonfw module and extended to support Ext JS and Angular 2 apps as well. This means that both server as well as client side applications can be made easily to support multiple languages ("locales"), using industry standard tools and without touching programming code (essential when working with teams of translators). 
 
 === Asynchronous HTTP support 
 
-Asynchronous HTTP is an important feature allowing so-called "long polling" HTTP Requests (for streaming applications, for example) or with requests sending large amounts of data. By making HTTP Requests asynchronous, devonfw server instances can better support these types of use-cases while offering far better performance. Documentation about how to include the new devonfw module implementing this feature can be found at: https://github.com/devonfw/devon-guide/wiki/cookbook-async-module[The devonfw async module]
+Asynchronous HTTP is an important feature allowing so-called "long polling" HTTP Requests (for streaming applications, for example) or with requests sending large amounts of data. By making HTTP Requests asynchronous, devonfw server instances can better support these types of use-cases while offering far better performance. 
 
 === Security and License guarantees
 
@@ -209,4 +190,3 @@ Apart from the previously mentioned additions and improvements to diverse aspect
 === Contributors
 
 Many thanks to adrianbielewicz, aferre777, amarinso, arenstedt, azzigeorge, cbeldacap, cmammado, crisjdiaz, csiwiak, Dalgar, drhoet, Drophoff, dumbNickname, EastWindShak, fawinter, fbougeno, fkreis, GawandeKunal, henning-cg, hennk, hohwille, ivanderk, jarek-jpa, jart, jensbartelheimer, jhcore, jkokoszk, julianmetzler, kalmuczakm, kiran-vadla, kowalj, lgoerlach, ManjiriBirajdar, MarcoRose, maybeec, mmatczak, nelooo, oelsabba, pablo-parra, patrhel, pawelkorzeniowski, PriyankaBelorkar, RobertoGM, sekaiser, sesslinger, SimonHuber, sjimenez77, sobkowiak, sroeger, ssarmokadam, subashbasnet, szendo, tbialecki, thoptr, tsowada, znazir and anyone who we may have forgotten to add!
-

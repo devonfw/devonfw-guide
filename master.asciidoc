@@ -17,11 +17,9 @@ include::ide.wiki/devonfw-ide[leveloffset=0]
 
 include::devon4j.wiki/devon4j[leveloffset=0]
 
-include::devon4ng.wiki/master-devon4ng[leveloffset=0]
+include::devon4ts.wiki/Home[leveloffset=0]
 
 include::devon4net.wiki/master-devon4net[leveloffset=0]
-
-include::devon4node.wiki/master-devon4node[leveloffset=0]
 
 include::general/db/master-database[leveloffset=0]
 

@@ -39,6 +39,8 @@ include::shop-floor.wiki/master-devonfw-shop-floor[leveloffset=1]
 
 include::architecture-guidelines.wiki/master-architecture-guidelines[leveloffset=1]
 
+include::architecture-guidelines.wiki/architecture_hexgagonal/index[leveloffset=1]
+
 = CI/CD
 There are different CICD tools:
 [.internal]

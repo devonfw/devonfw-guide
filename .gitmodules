@@ -78,8 +78,4 @@
 	path = devon4ts.wiki
 	url = https://github.com/devonfw/devon4ts.wiki.git
 	shallow = true
-[submodule "architecture-guidelines.wiki"]
-	path = architecture-guidelines.wiki
-	url = https://github.com/devonfw/architecture-guidelines.wiki.git
-	shallow = true
 	

@@ -35,10 +35,6 @@ include::solicitor.wiki/master-solicitor[leveloffset=1]
 
 include::shop-floor.wiki/master-devonfw-shop-floor[leveloffset=1]
 
-= Architecture
-
-include::architecture-guidelines.wiki/master-architecture-guidelines[leveloffset=1]
-
 = CI/CD
 There are different CICD tools:
 [.internal]

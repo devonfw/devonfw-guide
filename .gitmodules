@@ -79,3 +79,6 @@
 	url = https://github.com/devonfw/devon4ts.wiki.git
 	shallow = true
 	
+[submodule "scm.wiki"]
+	path = scm.wiki
+	url = https://github.com/devonfw/scm.wiki.git
